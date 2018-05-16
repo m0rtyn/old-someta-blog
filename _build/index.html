@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-111939915-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-111939915-1');
+      
+    </script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MRTNSN</title>
+    <meta name="description" content="Связующий сайт проекта «Мартинсоновая Яма»">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=cyrillic">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/style.min.css">
+    <link rel="icon" href="assets/img/svg/dark-logo.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a>Яма</a></li>
+          <li><a href="#">Достижения</a></li>
+          <li><a href="#">Проекты</a></li>
+          <li href="#"><a href="#">Портфолио</a></li>
+          <li href="#"><a href="#">О Мартинсоне</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-logo"><img src="assets/img/svg/M-light-vector.svg">
+        <svg width="100%" viewbox="0 20 333 35">
+          <text y="45">Мартинсоновая яма</text>
+        </svg>
+      </div>
+      <h2>Посты</h2>
+      <div id="telegram-wrapper">
+        <button class="telegram-paging" id="btn-prew" type="button">next</button>
+        <script id="script" async="" src="https://telegram.org/js/telegram-widget.js" data-telegram-post="metabaza/11" data-userpic="false"></script>
+        <button class="telegram-paging" id="btn-next" type="button">prew</button>
+      </div>
+      <script>
+        const next = document.getElementById('btn-next');
+        const prew = document.getElementById('btn-prew');
+        const wrap = document.getElementById('telegram-wrapper');
+        const metaStr = 'metabaza/'
+        const nextMessage = (e) => {
+          const fr = wrap.getElementsByTagName('iframe')[0]
+          const srcParts = fr.src.split(metaStr)
+          srcParts[1] = srcParts[1].split('?')
+          srcParts[1][0] = Number(srcParts[1][0]) + 1
+          srcParts[1] = srcParts[1].join('?')
+          fr.src = srcParts.join(metaStr)
+          fr.src = srcParts.join(metaStr)
+        }
+        const prewMessage = (e) => {
+          const fr = wrap.getElementsByTagName('iframe')[0]
+          const srcParts = fr.src.split(metaStr)
+          srcParts[1] = srcParts[1].split('?')
+          if (srcParts[1][0] > 11) {
+            srcParts[1][0] = Number(srcParts[1][0]) - 1
+            srcParts[1] = srcParts[1].join('?')
+            fr.src = srcParts.join(metaStr)
+            } else {
+            srcParts[1] = srcParts[1].join('?')
+            fr.src = srcParts.join(metaStr)
+          }
+        }
+        next.addEventListener('click', nextMessage);
+        prew.addEventListener('click', prewMessage);
+      </script>
+      <h2>Статьи</h2>
+      <ul class="article-list">
+        <li class="article-item">
+          <article><a class="article-link" href="papers/invalid-martynson" alt="Статья: Невалидный Мартинсон" title="Невалидный Мартинсон"></a><span class="disqus-comment-count" data-disqus-identifier="1" data-disqus-url="invalid Martynson"></span><img class="article-img" src="assets/img/smert'.jpg"></article>
+        </li>
+        <li class="article-item">
+          <article><a href="#" alt="in progress" title="in progress"><img src="assets/img/paper-in-progress.jpg"></a></article>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+        <path fill="#dedede" d="M50 100l25-43 25 43V0H75L50 43 25 0H0v100l25-43z"></path>
+      </svg>
+    </footer>
+    <script id="dsq-count-scr" src="//mrtnsn.disqus.com/count.js" async=""></script>
+  </body>
+</html>
