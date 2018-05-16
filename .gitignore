@@ -1,0 +1,13 @@
+.idea
+*.tmp
+.history
+.vscode
+assets
+node_modules
+pug
+.gitignore
+gulpfile-old.js
+gulpfile.js
+package-lock.json
+package.json
+todo.md
