@@ -11,4 +11,9 @@ gulpfile.js
 package-lock.json
 package.json
 todo.md
-_build
+
+_build/**
+!_build/*
+!_build/**
+!_build/*/**
+!_build/*/*/**
