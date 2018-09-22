@@ -8,9 +8,11 @@
     "start": "gulpSmall",
     "build": "gulp"
   },
-  "postinstall" : "gulp",
+  "postinstall": "gulp",
   "dependencies": {
-    "system-font-css": "^2.0.1",
+    "autoprefixer": "^7.2.6",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-changed": "^3.1.1",
     "gulp-concat": "^2.6.1",
@@ -23,12 +25,11 @@
     "gulp-sass": "^4.0.1",
     "gulp-svgmin": "^1.2.4",
     "gulp-uglify": "^3.0.0",
-    "autoprefixer": "^7.2.6",
-    "cssnano": "^3.10.0",
-    "del": "^3.0.0",
+    "http-server": "^0.11.1",
     "postcss-csso": "^3.0.0",
     "postcss-fixes": "^2.0.1",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "system-font-css": "^2.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.24.4",
