@@ -174,7 +174,6 @@
 
     .contact-item {
       display: flex;
-      // justify-content: center;
       align-items: center;
       flex-flow: column;
       text-align: center;
@@ -202,14 +201,14 @@
 
   .avatar {
     width: 200px;
-    height: 200px;
     position: fixed;
-    right: 1.3em;
-    bottom: -99px;
+    right: 0;
+    bottom: -134px;
     transition: all cubic-bezier(.76,1.51,.54,.82) 0.3s;
+    padding: 1.3em;
 
     &:hover {
-      bottom: 3.3em;
+      bottom: 0;
     }
 
     img {
@@ -224,19 +223,24 @@
 
     @media screen and (max-width: 768px) {
       width: 150px;
-      bottom: -118px;
+      bottom: -132px;
+
+      img {
+        border: 0.3em solid $dark-color;
+      }
 
       &:hover {
-        bottom: 1.3em;
+        bottom: 0;
       }
     }
 
     @media screen and (max-width: 500px) {
       width: 100px;
-      bottom: -145px;
+      bottom: -108px;
+      // border: 0.3em solid $dark-color;
 
       &:hover {
-        bottom: 0.3em;
+        bottom: 0;
       }
     }
   }
