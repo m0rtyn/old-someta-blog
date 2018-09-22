@@ -10,8 +10,8 @@ const postcss = require("gulp-postcss");
 // const imagemin = require("gulp-imagemin");
 const svgmin = require("gulp-svgmin");
 const rename = require("gulp-rename");
-const server = require("browser-sync").create();
-const run = require("run-sequence");
+const browserSync = require("browser-sync").create();
+
 const del = require("del");
 
 
@@ -29,7 +29,7 @@ gulp.task("style", function() {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("public/assets/styles"))
-    .pipe(server.stream());
+    .pipe(browserSync.stream());
 });
 
 gulp.task("html", function() {
@@ -39,7 +39,7 @@ gulp.task("html", function() {
       pretty: true
     }))
     .pipe(gulp.dest("public"))
-    .pipe(server.stream());
+    .pipe(browserSync.stream());
 });
 
 gulp.task("indexhtml", function() {
@@ -49,7 +49,7 @@ gulp.task("indexhtml", function() {
       pretty: true
     }))
     .pipe(gulp.dest("public"))
-    .pipe(server.stream());
+    .pipe(browserSync.stream());
 });
 
 gulp.task("images", function() {
@@ -74,7 +74,7 @@ gulp.task("js", function () {
       // .pipe(uglify())
       .pipe(rename("script.min.js"))
       .pipe(gulp.dest("public/assets/js"))
-      .pipe(server.stream());
+      .pipe(browserSync.stream());
 });
 
 
@@ -102,14 +102,14 @@ gulp.task("js", function () {
 //     .pipe(source('script.js'))
 //     // .pipe(sourcemaps.write('./')) // writes .map file
 //     .pipe(gulp.dest("public/assets/js"))
-//     .pipe(server.stream());
+//     .pipe(browserSync.stream());
 // }
 // //====EXPERIMENTAL====
 
 
 
 gulp.task("serve", function() {
-  server.init({
+  browserSync.init({
     server: "public",
     notify: false,
     open: true
@@ -123,7 +123,7 @@ gulp.task("serve", function() {
 });
 
 gulp.task("servesmall", function() {
-  server.init({
+  browserSync.init({
     server: "public",
     notify: false,
     open: false
