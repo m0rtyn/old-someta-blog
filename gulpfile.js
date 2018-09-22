@@ -4,15 +4,16 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
-const uglify = require("gulp-uglify");
+// const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
-const imagemin = require("gulp-imagemin");
+// const imagemin = require("gulp-imagemin");
 const svgmin = require("gulp-svgmin");
 const rename = require("gulp-rename");
 const server = require("browser-sync").create();
 const run = require("run-sequence");
 const del = require("del");
+
 
 gulp.task("style", function() {
   gulp.src("assets/styles/main.scss")
@@ -70,11 +71,42 @@ gulp.task("svg", function() {
 gulp.task("js", function () {
   return gulp.src("assets/js/**/*.js")
       .pipe(concat("script.js"))
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(rename("script.min.js"))
       .pipe(gulp.dest("_build/assets/js"))
       .pipe(server.stream());
 });
+
+
+// //====EXPERIMENTAL FOR JS WITH MODULES====
+// const watchify = require('watchify');
+// const browserify = require('browserify');
+// const source = require('vinyl-source-stream');
+// // const buffer = require('vinyl-buffer');
+// const assign = require('lodash.assign');
+
+
+// var customOpts = {
+//   entries: ['./assets/js/main.js', './assets/js/telegram-paging.js'],
+//   debug: true
+// };
+// var opts = assign({}, watchify.args, customOpts);
+// var b = watchify(browserify(opts));
+
+// gulp.task('js', bundle); // so you can run `gulp js` to build the file
+// b.on('update', bundle); // on any dep update, runs the bundler
+// // b.on('log', log.info); // output build logs to terminal
+
+// function bundle() {
+//   return b.bundle()
+//     .pipe(source('script.js'))
+//     // .pipe(sourcemaps.write('./')) // writes .map file
+//     .pipe(gulp.dest("_build/assets/js"))
+//     .pipe(server.stream());
+// }
+// //====EXPERIMENTAL====
+
+
 
 gulp.task("serve", function() {
   server.init({
@@ -117,7 +149,7 @@ gulp.task("clean", function() {
     '_build/**', '!_build', '!_build/*', 
     '!_build/assets', '!_build/assets/video/**', 
     '!_build/assets/fonts/**', '_build/assets/img/**', 
-    '!_builds/show', '!_builds/show/motivation/**', 
+    '!_build/shows', '!_build/shows/motivation/**', 
   ]);
 });
 
