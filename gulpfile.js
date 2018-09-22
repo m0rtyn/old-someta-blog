@@ -153,10 +153,6 @@ gulp.task("clean", function() {
   ]);
 });
 
-gulp.task("default", function(fn) {
-  run("clean", "copy", "html", "style", "js", "images", "svg", "serve", fn)
-});
+gulp.task('default', [ "clean", "copy", "html", "style", "js", "images", "svg", "serve" ]);
 
-gulp.task("gulpSmall", function(fn) {
-  run("indexhtml", "style", "js", "servesmall", fn)
-});
+gulp.task('gulpSmall', ["indexhtml", "style", "js", "servesmall"]);
