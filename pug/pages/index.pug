@@ -21,44 +21,15 @@ block content
             a(href='#', alt='in progress', title='in progress')
               img(src='assets/img/paper-in-progress.jpg')
     section.main-page__section
-      h2 Посты
+      - const telegramPostNumber = '30';
+      h2#post-number Пост #
+        span #{telegramPostNumber}
       #telegram-wrapper
-        - var telegramPostNumber = '30';
-        button#btn-prew.telegram-paging(type='button') next
+        button#btn-prew.telegram-paging(type='button') 
+          span ◁
         script#script(async='', src='https://telegram.org/js/telegram-widget.js', data-telegram-post='metabaza/' + telegramPostNumber, data-userpic='false')
-        button#btn-next.telegram-paging(type='button') prew
-
-  script.
-    const next = document.getElementById('btn-next');
-    const prew = document.getElementById('btn-prew');
-    const wrap = document.getElementById('telegram-wrapper');
-    const metaStr = 'metabaza/'
-
-    const nextMessage = (e) => {
-      console.log('next');
-      const fr = wrap.getElementsByTagName('iframe')[0]
-      const srcParts = fr.src.split(metaStr)
-      srcParts[1] = srcParts[1].split('?')
-      srcParts[1][0] = Number(srcParts[1][0]) + 1
-      srcParts[1] = srcParts[1].join('?')
-      fr.src = srcParts.join(metaStr)
-      fr.src = srcParts.join(metaStr)
-    }
-
-    const prewMessage = (e) => {
-      console.log('prew');
-      const fr = wrap.getElementsByTagName('iframe')[0]
-      const srcParts = fr.src.split(metaStr)
-      srcParts[1] = srcParts[1].split('?')
-      if (srcParts[1][0] > 11) {
-        srcParts[1][0] = Number(srcParts[1][0]) - 1
-        srcParts[1] = srcParts[1].join('?')
-        fr.src = srcParts.join(metaStr)
-        } else {
-        srcParts[1] = srcParts[1].join('?')
-        fr.src = srcParts.join(metaStr)
-      }
-    }
-
-    next.addEventListener('click', nextMessage);
-    prew.addEventListener('click', prewMessage);
+        button#post-expander
+        button#btn-next.telegram-paging(type='button') 
+          span ▷
+        //- h3#post-number #
+        //-   span #{telegramPostNumber}
