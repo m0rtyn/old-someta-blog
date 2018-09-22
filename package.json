@@ -5,7 +5,7 @@
   "author": "martyns0n",
   "license": "ISC",
   "scripts": {
-    "start": "gulpSmall",
+    "start": "gulp gulpSmall",
     "build": "gulp"
   },
   "postinstall": "gulp",
