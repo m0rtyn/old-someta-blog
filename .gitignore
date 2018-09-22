@@ -2,9 +2,10 @@
 *.tmp
 .history
 .vscode
-assets
+assets/fonts
+assets/img
 node_modules
-pug
+# pug
 .gitignore
 gulpfile-old.js
 gulpfile.js
@@ -12,8 +13,6 @@ package-lock.json
 package.json
 todo.md
 
-_build/**
-!_build/*
-!_build/**
-!_build/*/**
-!_build/*/*/**
+_build
+vue-test
+
