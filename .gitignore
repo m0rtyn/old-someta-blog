@@ -5,7 +5,6 @@
 assets/fonts
 assets/img
 node_modules
-# pug
 .gitignore
 gulpfile-old.js
 gulpfile.js
@@ -15,5 +14,6 @@ todo.md
 yarn.lock
 
 _build
+
 vue-test
 
