@@ -1,0 +1,24 @@
+/*COMMON*/
+@import "common/variables.scss";
+@import "common/fonts.scss";
+@import "common/mixins.scss";
+@import "common/normalize.scss";
+@import "common/animations.scss";
+@import "common/common.scss";
+@import "common/utilities.scss";
+
+/*BLOCKS*/
+@import "blocks/main-logo.scss";
+@import "blocks/telegram-post.scss";
+@import "blocks/footer.scss";
+@import "blocks/header.scss";
+
+/*PAGES*/
+@import "pages/papers.scss";
+@import "pages/achievements.scss";
+@import "pages/main-page.scss";
+@import "pages/projects.scss";
+@import "pages/portfolio.scss";
+@import "pages/log.scss";
+@import "pages/metabaza-generator.scss";
+@import "pages/resume.scss";

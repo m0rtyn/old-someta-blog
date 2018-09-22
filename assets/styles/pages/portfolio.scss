@@ -1,0 +1,215 @@
+.portfolio {
+  max-width: 66%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media screen and (max-width: 768px) {
+    max-width: 99%;
+  }
+
+  h2 {
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+  }
+
+  h3 {
+    margin-top: 1em;
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+  }
+
+  .container {
+    margin: 1em -.66em;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      margin: 1em 0.13em;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  .masonry-grid-sizer {
+    width: calc(33% - 1.3em);
+  }
+
+  .masonry-grid-item {
+    margin: 0.66em;
+    border: 1px solid $light-color;
+    width: calc(33% - 1.3em);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+
+    &--width-2 {
+      width: calc(66% - 1.3em);
+    }
+
+    &--width-3 {
+      width: calc(99% - 1.3em);
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0.3em;
+      width: calc(49% - 0.66em);
+      
+      &--width-2 {
+        width: calc(99% - 0.66em);
+      }
+
+      &--width-3 {
+        width: calc(99% - 0.66em);
+      }
+    }
+
+    &:hover figcaption {
+      transform: translate(0px, -100%);
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    figcaption {
+      position: absolute;
+      width: 100%;
+      background-color: $dark-color;
+      transform: translate(0px, 0px);
+      transition: transform .33s ease-out 0s;
+      padding: .66em .99em;
+      border-top: 1px solid $light-color;
+      font-weight: bold;
+      max-width: calc(100% - 1.3em);
+    }
+  }
+
+  .old-compilation {
+
+    img {
+      margin-top: 1.3em;
+      width: 100%;
+      height: auto;
+      max-width: none;
+      max-height: none;
+    }
+  }
+
+
+// css-logo
+  @keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+  .steam-gate-logo {
+    grid-area: logo;
+    font-family: 'Visitor', 'Pixel Cyr', Arial, Serif;
+    color: #84b929;
+    display: grid;
+    grid-template-areas:
+            "img steam beta"
+            "img gate gate";
+    padding: .33em;
+    justify-content: start;
+    font-size: 48px;
+    text-decoration: none;
+    text-shadow:
+      -.5px .5px #566606,
+      -1px 1px #546404,
+      -2px 2px #526202,
+      -3px 3px #506000;
+    transform: rotateX(10deg) rotateY(-10deg);
+    width: 66%;
+    margin: auto;
+
+    img {
+      grid-area: img;
+      width: 96px;
+      margin-right: 16px;
+      animation: rotate 64s infinite linear;
+    }
+
+    .steam {
+      grid-area: steam;
+      align-self: end;
+      line-height: 30px;
+    }
+
+    .beta {
+      grid-area: beta;
+      font-size: 14px;
+      align-self: end;
+      line-height: 34px;
+      color: white;
+      text-shadow: none;
+    }
+
+    .gate{
+      grid-area: gate;
+      font-size: 60px;
+      align-self: start;
+      line-height: 30px;
+    }
+  }
+
+  //mrtnsn-achievements logo
+  .achievements-logo {
+    background-color: $light-color;
+    padding: 0.3em;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'img text';
+    grid-gap: 0.3em;
+    // align-items: center;
+    grid-template-columns: 1.3tfr 1.3fr;
+
+    &__img {
+      grid-area: img;
+      position: relative;
+      // width: 10vmax;
+      // height: 10vmax;
+
+      .m {
+        // position: absolute;
+        // width: 10vmax;
+        width: 100%;
+      }
+
+      .deal-with-it {
+        position: absolute;
+        transform: rotate(80deg);
+        width: 75.6%;
+        // width: 7.56vmax;
+        // top: 6.6vmax;
+        // left: 9.5vmax;
+      }
+
+      .deal-with-it-2 {
+        position: absolute;
+        width: 22%;
+        transform: rotate(-15deg);
+        // width: 2.195vmax;
+        // top: 3.6vmax;
+        // left: 10.8vmax;
+      }
+    }
+
+    &__text {
+      font-size: calc(24px - .5vmax + .5vmin);
+      grid-area: text;
+      display: flex;
+      flex-flow: column nowrap;
+      color: $dark-color;
+      font-family: 'Pixel Cyr', Arial, sans-serif;
+    }
+  }
+}

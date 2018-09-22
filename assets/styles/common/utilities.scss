@@ -1,0 +1,52 @@
+.small-text {
+    font-size: 0.3em;
+    font-family: system-ui, Arial, SansSerif;
+    font-weight: 400;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.text-lead {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: $y-color;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.horizontally-centered {
+    display: flex;
+    align-items: center;
+}
+
+.vertically-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-wrap {
+    flex-wrap: wrap;
+}

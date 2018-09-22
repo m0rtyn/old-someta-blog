@@ -1,0 +1,55 @@
+.metabaza-generator {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-color;
+
+  .post-card {
+    // position: relative;
+    display: grid;
+    grid-template-columns: 33%;
+    grid-template-rows: 33%;
+    grid-template-areas:
+      "mods"
+      "theme theme theme"
+      "dates space logo";
+    box-sizing: border-box;
+    padding: 1.3em;
+    width: 33em;
+    min-height: 13em;
+    background-color: $dark-color;
+  }
+
+  .post-mods {
+    grid-area: mods;
+  }
+
+  .post-mod {
+    padding: 0.3em;
+    border-radius: 0.3em;
+    background-color: $light-color;
+    color: $dark-color;
+  }
+
+  .post-date {
+    grid-area: date;
+    // position: absolute;
+    // bottom: 0;
+  }
+
+  .theme {
+    grid-area: theme;
+    // position: absolute;
+    // margin: auto;
+    text-align: center;
+    // top: 50%;
+    // transform: translate(0, -50%);
+  }
+
+  .metabaza-logo {
+    grid-area: logo;
+  }
+
+}

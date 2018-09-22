@@ -1,0 +1,80 @@
+#telegram-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.3em;
+  background-color: $dark-color;
+
+  iframe {
+    margin: 0 1.3em;
+    margin-bottom: 0;
+    width: 500px;
+    mix-blend-mode: difference;
+  }
+}
+
+#btn-next, #btn-prew {
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../img/svg/comic-triangle.svg);
+}
+
+#btn-next {
+  transform: rotate(90deg);
+}
+
+#btn-prew {
+  transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 1023px) {
+      
+  .article-list {
+    flex-flow: column nowrap;
+  }
+  
+  .article-item {
+    margin-right: 0;
+    margin-bottom: 0.3em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  #telegram-wrapper {
+    position: relative;
+
+    @media screen and (max-width: 493px) {
+      width: calc(100vw + 7px);
+      margin-left: -7px;
+    }
+
+    iframe {
+      width: 500px !important; 
+      max-width: 500px;
+      margin: 0;
+  
+      @media screen and (max-width: 493px) {
+        width: 100% !important;
+      }
+    }
+
+    .telegram-paging {
+      position: absolute;
+      z-index: 2;
+      width: 30px;
+      height: 32px;
+      padding: 0;
+      top: 16px;
+      right: 64px;
+  
+      &:last-of-type {
+        right: 16px;
+      }
+    }
+  }
+}
