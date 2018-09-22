@@ -2,14 +2,10 @@
 *.tmp
 .history
 .vscode
-assets/fonts
-assets/img
 node_modules
 .gitignore
 gulpfile-old.js
-gulpfile.js
 package-lock.json
-package.json
 todo.md
 yarn.lock
 
