@@ -1,0 +1,40 @@
+{
+  "name": "mrtnsn-pit",
+  "version": "1.1.0",
+  "description": "",
+  "author": "martyns0n",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulpSmall",
+    "build": "gulp"
+  },
+  "postinstall" : "gulp",
+  "dependencies": {
+    "system-font-css": "^2.0.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "browser-sync": "^2.24.4",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-uglify": "^3.0.0",
+    "postcss-csso": "^3.0.0",
+    "postcss-fixes": "^2.0.1",
+    "pug": "^2.0.3",
+    "run-sequence": "^2.2.1"
+  }
+}
