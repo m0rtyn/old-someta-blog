@@ -1,0 +1,64 @@
+extends ../base/layout.pug
+
+block content
+  main.main-page
+    h1.main-logo
+      img.main-logo__img(src='assets/img/svg/mrtnsn-pit__logo-2018.svg')
+      //- .main-logo__text
+      p.main-logo__mrtnsn мартынсоновая
+      p.main-logo__pit яма
+    section.main-page__section
+      h2 Статьи
+      ul.article-list
+        li.article-item
+          article
+            img.article-img(src="assets/img/smert'.jpg")
+            span.disqus-comment-count(data-disqus-identifier='1', data-disqus-url='invalid Martynson')
+            a.article-link(href='papers/invalid-martynson', alt='Статья: Невалидный Мартинсон')
+              h3 «Невалидный Мартинсон»
+        li.article-item
+          article
+            a(href='#', alt='in progress', title='in progress')
+              img(src='assets/img/paper-in-progress.jpg')
+    section.main-page__section
+      h2 Посты
+      #telegram-wrapper
+        - var telegramPostNumber = '30';
+        button#btn-prew.telegram-paging(type='button') next
+        script#script(async='', src='https://telegram.org/js/telegram-widget.js', data-telegram-post='metabaza/' + telegramPostNumber, data-userpic='false')
+        button#btn-next.telegram-paging(type='button') prew
+
+  script.
+    const next = document.getElementById('btn-next');
+    const prew = document.getElementById('btn-prew');
+    const wrap = document.getElementById('telegram-wrapper');
+    const metaStr = 'metabaza/'
+
+    const nextMessage = (e) => {
+      console.log('next');
+      const fr = wrap.getElementsByTagName('iframe')[0]
+      const srcParts = fr.src.split(metaStr)
+      srcParts[1] = srcParts[1].split('?')
+      srcParts[1][0] = Number(srcParts[1][0]) + 1
+      srcParts[1] = srcParts[1].join('?')
+      fr.src = srcParts.join(metaStr)
+      fr.src = srcParts.join(metaStr)
+    }
+
+    const prewMessage = (e) => {
+      console.log('prew');
+      const fr = wrap.getElementsByTagName('iframe')[0]
+      const srcParts = fr.src.split(metaStr)
+      srcParts[1] = srcParts[1].split('?')
+      if (srcParts[1][0] > 11) {
+        srcParts[1][0] = Number(srcParts[1][0]) - 1
+        srcParts[1] = srcParts[1].join('?')
+        fr.src = srcParts.join(metaStr)
+        } else {
+        srcParts[1] = srcParts[1].join('?')
+        fr.src = srcParts.join(metaStr)
+      }
+    }
+
+    next.addEventListener('click', nextMessage);
+    prew.addEventListener('click', prewMessage);

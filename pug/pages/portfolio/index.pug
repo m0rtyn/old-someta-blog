@@ -1,0 +1,75 @@
+extends ../../base/layout.pug
+
+block content
+  main.portfolio
+    h2 Web
+    section
+      .container.masinry-grid
+        .masonry-grid-sizer
+        figure.masonry-grid-item
+          .steam-gate-logo
+            img(src='../assets/img/portfolio/wormhole_alpha.png')
+            span.steam steam
+            sup.beta β
+            span.gate gate
+          figcaption Логотип отменённого проекта (CSS)
+        figure.masonry-grid-item
+          a(href="http://panchosancho.ru/")
+          //- video(src="../assets/img/portfolio/sancho-website-preview.mp4" style="width: 100%" loop controls)
+          img(src="../assets/img/portfolio/sancho-website.jpg", alt="")
+          figcaption Вёрстка странички для Санчо
+        figure.masonry-grid-item
+          h1.achievements-logo
+            .achievements-logo__img
+              object.deal-with-it-2(type='image/svg+xml', data='../assets/img/svg/deal-with-it2.svg') 0
+              object.m(type='image/svg+xml', data='../assets/img/svg/pixel-M.svg') M
+              object.deal-with-it(type='image/svg+xml', data='../assets/img/svg/deal-with-it.svg') 0
+            .achievements-logo__text
+              span Доска
+              span Достижений
+              span Д'Артаньяна
+          //- img(src="../assets/img/portfolio/mrtnsn__deal-with-it.png", alt="")
+          figcaption Логотип замороженного проекта (SVG + CSS)
+    h2 Архив графических работ
+    section
+      h3 2017+
+      .container.masonry-grid
+        .masonry-grid-sizer
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/tvorchestvo.png", alt="")
+          figcaption Титульник для статьи 
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/post.png", alt="")
+          figcaption Титульник статьи                
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/floating.png", alt="")
+          figcaption Титульник статьи
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/Colors.png", alt="")
+          figcaption Титульник статьи
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/brain-post.jpg", alt="")
+          figcaption Титульник для статьи
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/tractorder.jpg", alt="")
+          figcaption Логотип замороженного проекта
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/metabaza-promo.png", alt="")
+          figcaption Промо-пост канала в telegram
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/MP_release_post.jpg", alt="")
+          figcaption Релиз-пост сайта
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/NG-anons.jpg", alt="")
+          figcaption Пост анонса новогоднего события
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/NG2018-post.jpg", alt="")
+          figcaption Пост розыгрыша подарков
+        figure.masonry-grid-item
+          img(src="../assets/img/portfolio/MartynsonAva.png", alt="")
+          figcaption Векторный автопортрет  
+    section.old-compilation
+      h3 до 2016 года
+      img(src="../assets/img/portfolio/portfolio-2016.jpg", alt="")
+
+
