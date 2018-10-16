@@ -123,4 +123,4 @@ gulp.task("clean", function() {
 });
 
 gulp.task('default', [ "clean", "copy", "html", "style", "js", "images", "svg", "serve" ]);
-gulp.task('gulpSmall', ["indexhtml", "style", "js", "servesmall"]);
+gulp.task('build', [ "clean", "copy", "html", "style", "js", "images", "svg" ]);
