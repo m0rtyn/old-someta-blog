@@ -8,5 +8,6 @@ todo.md
 yarn.lock
 vue-test
 
-public/**
+public/**/
 public/index.html
+public.temp
