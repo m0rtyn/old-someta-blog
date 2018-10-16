@@ -9,3 +9,4 @@ yarn.lock
 vue-test
 
 public/**
+public/index.html
