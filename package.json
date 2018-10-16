@@ -5,8 +5,8 @@
   "author": "martyns0n",
   "license": "ISC",
   "scripts": {
-    "start": "gulp gulpSmall",
-    "build": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "postinstall": "gulp",
   "dependencies": {
