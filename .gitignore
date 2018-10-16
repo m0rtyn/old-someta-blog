@@ -9,5 +9,5 @@ yarn.lock
 vue-test
 
 public/**/
-public/index.html
+public/*.html
 public.temp
