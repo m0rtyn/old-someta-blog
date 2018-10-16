@@ -3,13 +3,9 @@
 .history
 .vscode
 node_modules
-.gitignore
-gulpfile-old.js
 package-lock.json
 todo.md
 yarn.lock
-
-_build
-
 vue-test
 
+public/**
