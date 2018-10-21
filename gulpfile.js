@@ -104,13 +104,14 @@ gulp.task("servesmall", function() {
 });
 
 gulp.task("copy", function() {
-  return gulp.src([
-    "src/assets/fonts/**/*.{woff,woff2}",
-    "src/assets/img/**/*.mp4"
-  ], {
-    base: "."
-  })
-      .pipe(gulp.dest("public"));
+  return gulp.src(
+    [
+      "./src/assets/fonts/**/*.{woff,woff2}",
+      "./src/assets/img/**/*.mp4"
+    ],
+    { base: "./src" }
+  )
+      .pipe(gulp.dest("./public/"));
 });
 
 gulp.task("clean", function() {
