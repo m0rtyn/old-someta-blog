@@ -107,7 +107,8 @@ gulp.task("copy", function() {
   return gulp.src(
     [
       "./src/assets/fonts/**/*.{woff,woff2}",
-      "./src/assets/img/**/*.mp4"
+      "./src/assets/img/**/*.mp4",
+      "./src/shows/**",
     ],
     { base: "./src" }
   )
@@ -119,7 +120,7 @@ gulp.task("clean", function() {
     'public/**', '!public', '!public/*', 
     '!public/assets', '!public/assets/video/**', 
     '!public/assets/fonts/**', 'public/assets/img/**', 
-    '!public/shows', '!public/shows/motivation/**', 
+    '!public/shows', '!public/shows/motivation/**', '!public/shows/255-shades-of-gray/**' 
   ]);
 });
 
