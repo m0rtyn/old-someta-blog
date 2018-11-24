@@ -1,26 +1,27 @@
 /*COMMON*/
-@import "common/variables.scss";
-@import "common/fonts.scss";
-@import "common/mixins.scss";
-@import "common/normalize.scss";
-@import "common/animations.scss";
-@import "common/common.scss";
-@import "common/utilities.scss";
 
+@import "./common/variables";
+@import "./common/fonts";
+@import "./common/mixins";
+@import "./common/normalize";
+@import "./common/animations";
+@import "./common/common";
+@import "./common/utilities";
 /*BLOCKS*/
-@import "blocks/main-logo.scss";
-@import "blocks/telegram-post.scss";
-@import "blocks/footer.scss";
-@import "blocks/header.scss";
 
+@import "./blocks/main-logo";
+@import "./blocks/telegram-post";
+@import "./blocks/footer";
+@import "./blocks/header";
 /*PAGES*/
-@import "pages/papers.scss";
-@import "pages/achievements.scss";
-@import "pages/main-page.scss";
-@import "pages/projects.scss";
-@import "pages/portfolio.scss";
-@import "pages/log.scss";
-@import "pages/metabaza-generator.scss";
-@import "pages/resume.scss";
-@import "pages/donation.scss";
 
+@import "../../pug/pages/style";
+@import "../../pug/pages/papers/style";
+@import "../../pug/pages/achievements/style";
+@import "../../pug/pages/projects/style";
+@import "../../pug/pages/portfolio/style";
+@import "../../pug/pages/log/style";
+@import "../../pug/pages/metabaza-generator/style";
+@import "../../pug/pages/donation/style";
+@import "../../pug/pages/shows/style";
+@import "../../pug/pages/resume/style";
