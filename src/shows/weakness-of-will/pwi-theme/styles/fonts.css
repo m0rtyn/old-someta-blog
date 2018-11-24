@@ -1,0 +1,44 @@
+/* // ------------------------------------------------------------------
+// Fonts
+// ------------------------------------------------------------------
+// 1. TTNorms ........... Text font
+// 2. TTNorms Light ..... Headings font
+// 3. TTNorms Mono ...... Code font
+// ------------------------------------------------------------------
+
+// Font */
+
+@font-face {
+	font-family:TTNorms;
+	src:url(../fonts/TTNorms-Regular.woff2) format('woff2');
+	}
+@font-face {
+	font-weight:bold;
+	font-family:TTNorms;
+	src:url(../fonts/TTNorms-Medium.woff2) format('woff2');
+	}
+@font-face {
+	font-style:italic;
+	font-family:TTNorms;
+	src:url(../fonts/TTNorms-Italic.woff2) format('woff2');
+	}
+@font-face {
+	font-style:italic;
+	font-weight:bold;
+	font-family:TTNorms;
+	src:url(../fonts/TTNnorms-MediumItalic.woff2) format('woff2');
+	}
+
+/* // Font Light */
+
+@font-face {
+	font-family:TTNorms Light;
+	src:url(../fonts/TTNorms-Light.woff2) format('woff2');
+	}
+
+/* // Roboto Mono
+
+// @font-face {
+// 	font-family:TTNorms Mono;
+// 	src:url(../fonts/roboto-mono-regular.woff2) format('woff2');
+// 	} */
