@@ -116,6 +116,17 @@ dir {
   // }
 }
 
+.basic-page {
+  // margin: 0 auto;
+  max-width: 66%; // position: relative;
+  // line-height: 3.3em;
+  display: flex;flex-flow: column nowrap;
+  flex: 1;
+  @media screen and (max-width: 768px) {
+    max-width: 99%;
+  }
+}
+
 .tip {
   position: relative;
   border-bottom: 0.1em dashed currentColor;
