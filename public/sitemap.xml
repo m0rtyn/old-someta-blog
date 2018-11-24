@@ -9,7 +9,48 @@
 
 <url>
   <loc>https://mrtnsn.me/</loc>
-  <lastmod>2018-04-17T14:03:19+00:00</lastmod>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/log/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/projects/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/resume/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/shows/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/contacts/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/papers/invalid-martynson/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/shows/weakness-of-will/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mrtnsn.me/shows/255-shades-of-gray/</loc>
+  <lastmod>2018-11-24T19:12:44+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
