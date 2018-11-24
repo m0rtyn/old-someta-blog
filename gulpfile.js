@@ -107,7 +107,7 @@ gulp.task("copy", function() {
   return gulp.src(
     [
       "./src/assets/fonts/**/*.{woff,woff2}",
-      "./src/assets/img/**/*.mp4",
+      "./src/assets/video/**/*.mp4",
       "./src/shows/**",
     ],
     { base: "./src" }
