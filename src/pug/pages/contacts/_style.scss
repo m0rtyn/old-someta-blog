@@ -1,18 +1,22 @@
 .contacts-page {
   margin: 0 auto;
+
   ul {
     list-style-type: none;
   }
+
   li {
     margin-bottom: 0.3em;
   }
+
   span {
-    width: 100px;
-    text-align: right;
     display: inline-block;
+    text-align: right;
+    width: 100px;
   }
+
   a {
-    width: 200px;
     margin: 0 1.3em;
+    width: 200px;
   }
 }
