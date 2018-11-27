@@ -1,0 +1,18 @@
+.contacts {
+  margin: 0 auto;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    margin-bottom: 0.3em;
+  }
+  span {
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+  }
+  a {
+    width: 200px;
+    margin: 0 1.3em;
+  }
+}
