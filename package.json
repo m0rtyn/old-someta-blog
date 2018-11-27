@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "browser-sync": "^2.24.4",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "stylelint": "^9.8.0",
+    "stylelint-scss": "^3.4.0"
   }
 }
