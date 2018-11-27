@@ -1,0 +1,155 @@
+#achievements {
+  width: 100%;
+  padding: 4vmax 4vmax 21vmax 4vmax;
+  box-sizing: border-box;
+  grid-template-areas:
+    "logo"
+    "renounces"
+    "numbers"
+    "games";
+  font-family: 'Pixel Cyr', Arial, sans-serif;
+  display: grid;
+  grid-gap: 4vmax;
+  background-color: $light-color;
+  .logo {
+    margin: 0;
+    grid-area: logo;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: calc(24px - .5vmax + .5vmin);
+    &__img {
+      width: 10vmax;
+      height: 10vmax;
+      .m {
+        position: absolute;
+        width: 10vmax;
+      }
+      .deal-with-it {
+        position: absolute;
+        width: 7.56vmax;
+        transform: rotate(80deg);
+        top: 6.6vmax;
+        left: 9.5vmax;
+      }
+      .deal-with-it-2 {
+        position: absolute;
+        width: 2.195vmax;
+        top: 3.6vmax;
+        left: 10.8vmax;
+        transform: rotate(-15deg);
+      }
+    }
+    &__text {
+      display: flex;
+      flex-flow: column nowrap;
+      color: $dark-color;
+      font-family: 'Pixel Cyr', Arial, sans-serif;
+    }
+  }
+  .renouncements, .numbers, .games {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    h2 {
+      font-size: calc(20px - .5vmax + .5vmin);
+      margin: 0 0 1vw 0;
+      color: $dark-color;
+      font-family: 'Pixel Cyr', Arial, sans-serif;
+    }
+    div {
+      display: flex;
+      flex-flow: row wrap;
+      .achievement {
+        --container-paddings: calc(1vw * 2);
+        --achievements-borders: calc(.5vw /*BORDER*/ * 2 * 3 /*DIVIDER*/);
+        --achievements-paddings: calc(3vw /*PADDING*/ * 2 * 3 /*DIVIDER*/);
+        --achievements-margins: calc(1vw /*MARGIN*/ * 2 * 3 /*DIVIDER*/);
+        --achievement-width: calc(100vw - var(--container-paddings)
+                                        - var(--achievements-borders)
+                                        - var(--achievements-margins)
+                                        - var(--achievements-paddings)) / 13 /*ДЕЛИТЕЛЬ*/;
+        //Регулировать размер изменением ДЕЛИТЕЛЯ в конце
+
+        width: var(--achievement-width);
+        height: var(--achievement-width);
+        border: .33vw solid #212121; /*BORDER*/
+        margin: 1vw; /*MARGIN*/
+        padding: 3vw; /*PADDING*/
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        img {
+          image-rendering: pixelated;
+          width: calc(var(--achievement-width) * 0.66); /*66% of WIDTH*/
+        }
+        &::after { /*ОПИСАНИЕ ИКОНКИ*/
+          background-color: rgba(222, 33, 222, .8);
+          padding: 3vmax 0 9vmax 0;
+          position: fixed;
+          content: '';
+          color: #212121;
+          opacity: 0;
+          text-align: center;
+          bottom: 0;
+          left: 0;
+          width: 100vw; //calc( var(--achievement-width) - var(--achievements-borders) / 3 );
+          font-size: calc(16px + .5vmax);
+          transition: opacity .8s;
+        }
+        &:hover::after {
+          content: attr(achiev-title);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*MEDIA=======================================================================*/
+/*DESKTOP=====================================================================*/
+
+@media screen and (min-width: 800px) {
+  .achievements {
+    font-family: 'Pixel Cyr', Arial, sans-serif;
+    display: grid;
+    grid-template-areas:
+            "logo renounces"
+            "logo numbers"
+            "logo games";
+    align-content: center;
+    justify-content: start;
+    grid-auto-columns: auto 1fr auto;
+    grid-gap: 24px 120px;
+    .logo {
+      margin: 0;
+      grid-area: logo;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+    .renouncements, .numbers, .games {
+      justify-self: start;
+      display: grid;
+      grid-template-areas:
+              "title title title title title"
+              "one two three four five";
+      justify-content: start;
+      grid-gap: 16px 32px;
+      //.cross {
+      //  position: absolute;
+      //  display: flex;
+      //  justify-content: center;
+      //  align-items: center;
+      //  width: 100px;
+      //  height: 100px;
+      //  color: red;
+      //  font-size: 60px;
+      //}
+    }
+  }
+}

@@ -1,0 +1,55 @@
+#log {
+  margin: 0 auto;
+  h2 {
+    margin-bottom: 1.3em;
+    text-align: center;
+  }
+  
+  section {
+    margin-bottom: 1.3em;
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 0.3em;
+    @media screen and (max-width: 768px) {
+      padding: 0 1.3em;
+    }
+  }
+  h3.year {
+    color: $c-color;
+    margin-left: -33px;
+    @media screen and (max-width: 768px) {
+      margin-left: 1.3em;
+    }
+  }
+  li.record {
+    margin: 0.3em 0;
+    margin-left: 1.3em;
+    max-width: 70ch;
+    position: relative;
+    padding-left: 0.3em;
+    span {
+      position: absolute;
+      left: -54px;
+      top: 3px;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 50ch;
+      margin-left: 3.3em;
+    }
+  }
+  .date {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    background-color: $light-color;
+    color: $dark-color;
+    border-radius: 3px;
+    padding: 0 0.3em;
+    margin-right: 0.3em;
+  }
+  .explanation {
+    margin-top: 3.3em;
+    font-size: calc(1em / 1.3);
+  }
+}
