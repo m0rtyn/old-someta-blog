@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.24.4",
+    "gulp-htmlmin": "^5.0.1",
     "jstransformer-markdown-it": "^2.1.0",
     "run-sequence": "^2.2.1",
     "stylelint": "^9.8.0",
