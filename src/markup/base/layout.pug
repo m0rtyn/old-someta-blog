@@ -2,6 +2,7 @@ block variables
     - let description = 'Веблог об идеях и проектах Мартына';
     - let title = 'Мартынсоновая Яма';
     - let keywords = 'мета, проекты, модели, системы, концепции, идеи, креативность, продуктивность, рациональность, программирование, веб, развитие';
+    - let scriptSrc = 'assets/js/telegram-widget.js'
 
 doctype html
 html(lang='ru')
@@ -41,5 +42,5 @@ html(lang='ru')
         include ../blocks/header.pug
         block content
         include ../blocks/footer.pug
-        script#dsq-count-scr(src='https://mrtnsn.disqus.com/count.js')
-        script(type="text/javascript", src="assets/js/script.min.js")
+        script(type="text/javascript", src=scriptSrc)
+        script(type="text/javascript", src="/assets/js/_masonry.min.js")

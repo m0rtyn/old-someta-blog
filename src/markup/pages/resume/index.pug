@@ -1,12 +1,17 @@
 extends ../../base/layout.pug
 
+block variables
+    - let title = 'Резюме Мартына';
+    - let description = 'Дизайнер и разработчик, а также прожектер Мартын продаёт своё время и услуги в обмен на деньги и возможность оставаться собой';
+    - let keywords = 'верстальщик, дизайнер, разработчк, фронтендер, фронтенд, фронт-енд, программист, веб-разработчик, markup, UI, frontender, frontend-developer, резюме, специалист, React, Javascript, HTML, CSS, Vue, Sass, Scss, PostCSS, Junior, Middle';
+
 block content
     main#resume.basic-page
         h1.text-center 
             |Резюме 
             span.tip.pseudonym Мартынa
             span Мартыненко Владимира Андреевича 
-            .version ver. 0.3.4
+            .version ver. 0.3.7
         p.space-between
             span.text-lead Опытный верстальщик /
                 br 
@@ -53,9 +58,11 @@ block content
             h3 Выступления
             span
                 |Доклад 
-                a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo') «Не QWERTY единой» 📹
+                a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo') «Не QWERTY единой» 📹
                 |, лекция 
-                a.link(href='https://martyns0n.github.io/weakness-of-will/') «Слабость Воли»
+                a.link(href='https://martyns0n.github.io/weakness-of-will/') «Слабость Воли» 🖼️
+                |, доклад 
+                a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo') «255&nbsp;оттенков&nbsp;серого»&nbsp;📹
             h3 Книги
             span.books
                 |«Большая книга CSS», «Секреты CSS» , «Implementing responsive design», «Building HTML5 games with ImpactJS», «On web typography», «Becoming a better programmer» , «Джедайские техники»
@@ -111,7 +118,7 @@ block content
                     h4.text-center >40.000₽
                     ul
                         li Знакомство с директорами
-                        li Офис в <20min пути
+                        li Офис в &lt;20min пути
                         li Внутренние курсы
                         li Белая зарплата
                         li Опенсорс
