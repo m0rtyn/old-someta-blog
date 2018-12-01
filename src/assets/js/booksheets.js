@@ -6,9 +6,26 @@ xhr.open(
   false
 )
 
-xhr.send();
+xhr.send()
 
 if (xhr.status != 200) {
-  alert(xhr.status + ': ' + xhr.statusText); // пример вывода: 404: Not Found
+  console.log(xhr.status + ': ' + xhr.statusText) // пример вывода: 404: Not Found
 } else {
-  alert(xhr.responseText); // responseText -- текст ответа.
+  console.log(JSON.parse(xhr.responseText))
+  const booksheet = JSON.parse(xhr.responseText)
+  const booksRoot = document.getElementById('books')
+  let table = booksRoot.getElementsByTagName('table')
+  const tbody = document.createElement('TBODY')
+
+  for (let i = 0; i < booksheet.result.length; i++) {
+    var tr = document.createElement('TR')
+    tbody.appendChild(tr)
+    for (var j = 0; j < booksheet.result[i].length; j++) {
+      var td = document.createElement('td')
+      tr.appendChild(td)
+      td.appendChild(document.createTextNode(booksheet.result[i][j]))
+    }
+  }
+
+  table[0].appendChild(tbody)
+}
