@@ -4,14 +4,13 @@ const gulp = require('gulp')
 const pug = require('gulp-pug')
 const sass = require('gulp-sass')
 const concat = require('gulp-concat')
-// const uglify = require("gulp-uglify");
 const plumber = require('gulp-plumber')
 const postcss = require('gulp-postcss')
-// const imagemin = require("gulp-imagemin");
 const svgmin = require('gulp-svgmin')
 const rename = require('gulp-rename')
 const browserSync = require('browser-sync').create()
 const del = require('del')
+const htmlmin = require('gulp-htmlmin')
 
 gulp.task('style', function() {
   gulp
@@ -42,6 +41,7 @@ gulp.task('pug', function() {
         pretty: true,
       })
     )
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('public'))
     .pipe(browserSync.stream())
 })
@@ -60,16 +60,9 @@ gulp.task('indexPug', function() {
 })
 
 gulp.task('images', function() {
-  return (
-    gulp
-      .src('src/assets/img/**/**/*.{png,jpg,gif}')
-      // .pipe(imagemin([
-      //   imagemin.optipng({optimizationLevel: 3}),
-      //   imagemin.jpegtran({progressive: true}),
-      //   imagemin.gifsicle()
-      // ]))
-      .pipe(gulp.dest('public/assets/img'))
-  )
+  return gulp
+    .src('src/assets/img/**/**/*.{png,jpg,gif}')
+    .pipe(gulp.dest('public/assets/img'))
 })
 
 gulp.task('svg', function() {
@@ -80,39 +73,22 @@ gulp.task('svg', function() {
 })
 
 gulp.task('js', function() {
-  return (
-    gulp
-      .src('src/js/**/*.js')
-      .pipe(concat('script.js'))
-      // .pipe(uglify())
-      .pipe(rename('script.min.js'))
-      .pipe(gulp.dest('public/assets/js'))
-      .pipe(browserSync.stream())
-  )
+  return gulp
+    .src('src/assets/js/**/*.js')
+    .pipe(gulp.dest('public/assets/js'))
+    .pipe(browserSync.stream())
 })
 
 gulp.task('serve', function() {
   browserSync.init({
     server: 'public',
-    notify: false,
-    open: true,
+    notify: true,
+    open: false,
   })
 
   gulp.watch('src/**/**/*.scss', ['style'])
   gulp.watch('src/markup/**/**/**/**/*.pug', ['pug'])
   gulp.watch('src/assets/img/**/*.*', ['images'])
-  gulp.watch('src/js/**/*.js', ['js'])
-})
-
-gulp.task('servesmall', function() {
-  browserSync.init({
-    server: 'public',
-    notify: false,
-    open: false,
-  })
-
-  gulp.watch('src/assets/styles/**/*.scss', ['style'])
-  gulp.watch('src/markup/**/**/**/**/*.pug', ['indexPug'])
   gulp.watch('src/js/**/*.js', ['js'])
 })
 
