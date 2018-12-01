@@ -1,0 +1,16 @@
+extends ../../base/layout.pug
+
+block variables
+  - let scriptSrc = '/assets/js/booksheets.js'
+
+block content
+  main#books.basic-page
+    h1.text-center Книжная таблицa
+    h2.text-center 2018
+    table
+      thead
+        th Имя списка
+        th Вес
+        th Название книги
+        th Теги
+        th Статус
