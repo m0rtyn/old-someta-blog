@@ -1,3 +1,44 @@
 #books {
   margin: 0 auto;
+
+  table {
+    margin-top: 3.3em;
+  }
+
+  thead {}
+
+  tbody {}
+
+  tr {}
+
+  th {
+    text-align: left;
+
+    &.book-status {
+      font-size: 8px;
+    }
+  }
+
+  td {}
+
+  .book-tags {}
+
+  .book-status {
+    color: $light-color;
+    text-align: center;
+    // width: 1ch !important;
+    overflow-x: hidden;
+  }
+
+  .status-done {
+    background-color: $g-color;
+  }
+
+  .status-in-progress {
+    background-color: $b-color;
+  }
+
+  .status-stopped {
+    background-color: $r-color;
+  }
 }
