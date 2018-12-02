@@ -8,24 +8,57 @@ xhr.open(
 
 xhr.send()
 
-if (xhr.status != 200) {
-  console.log(xhr.status + ': ' + xhr.statusText) // пример вывода: 404: Not Found
-} else {
-  console.log(JSON.parse(xhr.responseText))
-  const booksheet = JSON.parse(xhr.responseText)
-  const booksRoot = document.getElementById('books')
-  let table = booksRoot.getElementsByTagName('table')
-  const tbody = document.createElement('TBODY')
-
-  for (let i = 0; i < booksheet.result.length; i++) {
-    var tr = document.createElement('TR')
-    tbody.appendChild(tr)
-    for (var j = 0; j < booksheet.result[i].length; j++) {
-      var td = document.createElement('td')
-      tr.appendChild(td)
-      td.appendChild(document.createTextNode(booksheet.result[i][j]))
-    }
+const errorMessage = xhr.status + ': ' + xhr.statusText
+const createTableCell = (tr, cellText, index, type) => {
+  let tableCell = document.createElement(type)
+  tr.appendChild(tableCell)
+  tableCell.appendChild(cellText)
+  switch (index) {
+    case 0:
+      tableCell.classList.add('recommendation-list-name')
+      break
+    case 1:
+      tableCell.classList.add('recommendation-weight')
+      break
+    case 2:
+      tableCell.classList.add('book-name')
+      break
+    case 3:
+      tableCell.classList.add('book-tags')
+      break
+    case 4:
+      tableCell.classList.add('book-status')
+      cellText.data == '✔'
+        ? tableCell.classList.add('status-done')
+        : cellText.data == '►'
+        ? tableCell.classList.add('status-in-progress')
+        : cellText.data == '■'
+        ? tableCell.classList.add('status-stopped')
+        : null
+      break
   }
-
-  table[0].appendChild(tbody)
 }
+
+const fillTable = () => {
+  const bookSheet = JSON.parse(xhr.response).result
+  const booksRoot = document.getElementById('books')
+  const table = document.getElementById('booksTable')
+  const tbody = document.createElement('TBODY')
+  const thead = document.createElement('THEAD')
+
+  bookSheet.forEach((row, i, arr) => {
+    let tr = document.createElement('TR')
+    i === 0 ? thead.appendChild(tr) : tbody.appendChild(tr)
+    row.forEach((cell, j, arr) => {
+      const cellText = document.createTextNode(bookSheet[i][j])
+      i === 0
+        ? createTableCell(tr, cellText, j, 'TH')
+        : createTableCell(tr, cellText, j, 'TD')
+    })
+  })
+
+  table.appendChild(thead)
+  table.appendChild(tbody)
+}
+
+xhr.status != 200 ? console.log(errorMessage) : fillTable()
