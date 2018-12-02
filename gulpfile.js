@@ -89,7 +89,7 @@ gulp.task('serve', function() {
   gulp.watch('src/**/**/*.scss', ['style'])
   gulp.watch('src/markup/**/**/**/**/*.pug', ['pug'])
   gulp.watch('src/assets/img/**/*.*', ['images'])
-  gulp.watch('src/js/**/*.js', ['js'])
+  gulp.watch('src/assets/js/**/*.js', ['js'])
 })
 
 gulp.task('copy', function() {
