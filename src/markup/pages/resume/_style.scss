@@ -1,15 +1,18 @@
 #resume {
   margin: auto;
   position: relative;
+
   h2,
   h3,
   p {
     margin-top: 1.3em;
   }
+
   .text-lead,
   .location {
     margin: 0 0.3em;
   }
+
   .skills,
   .experience,
   .motivation,
@@ -20,6 +23,7 @@
     margin: 3.3em;
     padding: 1.3em;
     border: 3px solid currentColor;
+
     h2 {
       position: absolute;
       margin: 0;
@@ -30,6 +34,7 @@
       padding-right: 0.3em;
       color: $dark-color;
       background-color: $light-color;
+
       &::after {
         content: '';
         display: block;
@@ -43,17 +48,20 @@
         z-index: -1;
       }
     }
+
     @media screen and (max-width: 768px) {
       margin-left: 0;
       margin-right: 0;
     }
   }
+
   .key {
     padding: 0.3em;
     text-align: center;
     margin-top: 1.3em;
     font-weight: 700;
   }
+
   .books {
     .link {
       display: block;
@@ -61,42 +69,52 @@
       margin-left: auto;
     }
   }
+
   .special {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.3em;
+
     li {
       margin-top: 0.3em;
     }
+
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
       grid-gap: 0;
     }
   }
+
   .features {
     h3 {
       color: $y-color;
     }
   }
+
   .bugs {
     h3 {
       color: $r-color;
     }
   }
+
   .salary {
     margin-left: -1.3em;
     margin-right: -1.3em;
+
     h4 {
       margin-top: 0;
     }
+
     li {
       margin-top: 0.3em;
     }
+
     @media screen and (max-width: 768px) {
       margin-left: 0;
       margin-right: 0;
     }
   }
+
   .plans {
     padding-left: 0;
     list-style-type: none;
@@ -104,17 +122,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.3em;
+
     h4 {
       color: $g-color;
       font-size: 1.3em;
     }
+
     @media screen and (max-width: 1173px) {
       grid-template-columns: 1fr 1fr;
     }
+
     @media screen and (max-width: 439px) {
       grid-template-columns: 1fr;
     }
   }
+
   .plan {
     flex-grow: 1;
     flex-shrink: 1;
@@ -122,10 +144,12 @@
     box-sizing: border-box;
     padding: 1.3em;
     border: 1px solid $g-color;
+
     ul {
       list-style-type: square;
     }
   }
+
   .sale {
     width: 100%;
     display: inline-block;
@@ -136,6 +160,7 @@
     margin-top: 0;
     box-sizing: border-box;
   }
+
   .contacts {
     .contact-list {
       list-style-type: none;
@@ -143,29 +168,36 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1.3em;
       padding: 0;
+
       @media screen and (max-width: 1044px) {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: '1 2' '3';
+        grid-template-areas: '1 2''3';
       }
+
       @media screen and (max-width: 430px) {
         grid-template-columns: 1fr;
       }
     }
+
     .contact-item {
       display: flex;
       align-items: center;
       flex-flow: column;
       text-align: center;
       font-weight: 700;
+
       @media screen and (max-width: 430px) {
         flex-flow: row wrap;
+
         span {
           margin-left: 0.3em;
         }
       }
     }
+
     .icon-emoji {
       margin-bottom: 0.3em;
+
       @media screen and (max-width: 430px) {
         font-size: 1.3em;
         margin-bottom: 0;
@@ -173,6 +205,7 @@
       }
     }
   }
+
   .avatar {
     width: 200px;
     position: fixed;
@@ -180,40 +213,54 @@
     bottom: -134px;
     transition: all cubic-bezier(0.76, 1.51, 0.54, 0.82) 0.3s;
     padding: 1.3em;
+
     &:hover {
       bottom: 0;
     }
+
     img {
       width: 100%;
       filter: grayscale(1);
       border-radius: 50%;
     }
+
     figcaption {
       background-color: $dark-color;
     }
+
     @media screen and (max-width: 768px) {
       width: 150px;
       bottom: -132px;
+
       img {
         border: 0.3em solid $dark-color;
       }
+
       &:hover {
         bottom: 0;
       }
     }
+
     @media screen and (max-width: 500px) {
       width: 100px;
       bottom: -108px;
+
       &:hover {
         bottom: 0;
       }
     }
   }
+
+  .code-examples {
+    margin-top: 0;
+  }
+
   @media screen and (max-width: 768px) {
     max-width: 99%;
     padding-left: 0.3em;
     padding-right: 0.3em;
   }
+
   @media screen and (max-width: 500px) {
     max-width: 100%;
     padding-left: 0;
