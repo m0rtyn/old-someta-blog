@@ -7,7 +7,6 @@ function dateDiffInDays(a, b) {
   return Math.floor((utc2 - utc1) / _MS_PER_DAY)
 }
 
-// test it
 const a = new Date('2016-05-01')
 const b = new Date()
 const diffInDays = dateDiffInDays(a, b)

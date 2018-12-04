@@ -2,8 +2,10 @@ extends ../../base/layout.pug
 
 block variables
     - let title = 'Резюме Мартына';
-    - let description = 'Дизайнер и разработчик, а также прожектер Мартын продаёт своё время и услуги в обмен на деньги и возможность оставаться собой';
+    - let description = 'Разработчик, дизайнер, а также прожектер Мартын продаёт своё время и умения в обмен на деньги и возможность оставаться собой';
     - let keywords = 'верстальщик, дизайнер, разработчк, фронтендер, фронтенд, фронт-енд, программист, веб-разработчик, markup, UI, frontender, frontend-developer, резюме, специалист, React, Javascript, HTML, CSS, Vue, Sass, Scss, PostCSS, Junior, Middle';
+    - let scriptSrc = '/assets/js/resume.js'
+    //- - let scriptSrc = ''
 
 block content
     main#resume.basic-page
@@ -11,7 +13,7 @@ block content
             |Резюме 
             span.tip.pseudonym Мартынa
             span Мартыненко Владимира Андреевича 
-            .version ver. 0.4.2
+            .version ver. 1.2.0
         p.space-between
             span.text-lead Опытный верстальщик /
                 br 
@@ -21,70 +23,62 @@ block content
                 br
                 |🚇 Чкаловская / Петроградская
         
-        section.skills
-            h2 Навыки
-            h3.no-margin Стек
-            span TypeScript, ES6, React, Postcss, Pug, Sass, Gulp, Grunt, Bootstrap 3-4, Foundation for emails
-            //- h3 Методологии
-            //- span Адаптивность, кроссбраузерность, БЭМ, mobile first, atomic CSS, email-вёрстка
-            h3 Инструменты
-            span Win/Lin/Mac, VSCode, Photoshop/Illustrator, Sketch, Figma, Zeplin, Invision, Avocode, Notion
-            h3 Есть опыт работы
-            span Angular 2+, Vue, Webpack
-            //- h3 Ключевоэ
-            .key 
-                |Сделаю поддерживаемую вёрстку. Уместно впишусь в команду. 
-                |Полажу с дизайнерами и менеджерами.
-
         section.experience
             h2 Опыт
-            span.text-lead.no-margin ⏱️ В сфере с июня 2016 года
-            h3 Образование
-            span ВУЗ'ов не оканчивал. Читаю книжки и прохожу курсы (Hexlet, HTMLacademy, Udacity и т.д.)
-            h3 Где работал
-            span Армасети, Noveo, Black Deck Crew, HTMLacademy, Breadhead
-            h3 Для каких проектов верстал/разрабатывал
-            span
-                | Сервис для финансирования и оказания медициской помощи людям с онкологией, 
-                | сервис мониторинга цен и закака лекарств, 
-                | игра «тайкун» про разработку ПО, 
-                | сервис steam-рулетка на внутриигровые предметы, 
-                | сервис для улучшения показателей в гольфе и бейсболе,
-                | платформа для онлайн шопинга, 
-                | приложение для рассылки спама😡, 
-                | Рассылка продающих электронных писем, 
+            span.no-margin ⏱️ Работаю в IT 
+            span#time
+            h3 Где верстал/разрабатывал
+            ul.timeline
+                li.milestone Армасети
+                    ul.sublist
+                        li Рассылка электронных писем
+                        li Приложение для рассылки спама😡
+                        li Сервис steam-рулетка на внутриигровые предметы 
+                li.milestone Noveo
+                    ul.sublist
+                        li Платформа для онлайн шопинга
+                        li Сервис для улучшения показателей в гольфе и бейсболе
+                li.milestone BlackDeckCrew
+                    ul.sublist
+                        li Игра «goto >IT»
+                li.milestone HTML Academy
+                    ul.sublist
+                        li В качестве наставника помог закончить курс по базовой вёрстке
+                li.milestone Breadhead
+                    ul.sublist
+                        li Сервис мониторинга цен и заказа лекарств
+                        li Cервис финансирования и оказания медицинской помощи онкобольным
             //- h3 Сторонние проекты
             //- span Канал в телеграме @metabaza, блог «Мартынсоновая Яма», наставничество по базовой вёрстке, подкаст о проективности «Протопилот Альфаᵝ» ❄, формат встреч «Проблемы Белых Идей» ❄
-            h3 Примеры кода
-            ul.code-examples
-                li.code-example Парсинг JSON и оборачивание ссылок в компонент (React, TypeScript, RegExp) 
-                    a.link(target="_blank" href="https://gist.github.com/martyns0n/1811fdde774523a44e1004a6ba369307") gist
-                li.code-example Парсинг данных с телеграм-канала, вывод карточек с постами, фильтрация (Express.js, Node.js, React, ES6, HTML, CSS, telegram-channel-scraper) 
-                    a.link(target="_blank" href="https://github.com/martyns0n/breadhead-test-task") client&nbsp;repo
-                    |, 
-                    a.link(target="_blank" href="https://github.com/martyns0n/server-for-breadhead-test-task") server&nbsp;repo
-                li.code-example Получение данных с Google Sheets и генерация таблицы прочитанных книг (ES6, HTML, CSS) 
-                    a.link(target="_blank" href="https://github.com/martyns0n/mrtnsn-website/blob/master/src/assets/js/booksheets.js") code
-                li.code-example Лендинг для конференции с самописным паралаксом 
-                    a.link(target="_blank" href="https://github.com/martyns0n/it-nonstop-landing") repo
-                li.code-example Весь этот сайт (HTML&CSS&JS) 
-                    a.link(target="_blank" href="https://github.com/martyns0n/mrtnsn-website") repo
-                li.code-example Календарь-таблица событий (Angular 2+, HTML, CSS) *Старое тестовое задание* 
-                    a.link(target="_blank" href="https://github.com/martyns0n/test-timetable") repo
             h3 Выступления
-            span
-                |Доклад 
-                a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo') «Не QWERTY единой» 📹
-                |, лекция 
-                a.link(href='https://martyns0n.github.io/weakness-of-will/') «Слабость Воли» 🖼️
-                |, доклад 
-                a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo') «255&nbsp;оттенков&nbsp;серого»&nbsp;📹
-            h3 Книги
+            ul.speeches
+                li
+                    a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo') «Не&nbsp;QWERTY&nbsp;единой»&nbsp;📹
+                li
+                    a.link(href='https://martyns0n.github.io/weakness-of-will/') «Слабость&nbsp;Воли»&nbsp;🖼️
+                li
+                    a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo') «255&nbsp;оттенков&nbsp;серого»&nbsp;📹
+            h3 Прочёл
             span.books
                 |«Большая книга CSS», «Секреты CSS» , «Implementing responsive design», «Building HTML5 games with ImpactJS», «On web typography», «Becoming a better programmer» , «Джедайские техники», «Путь программиста», «Идеальный программист»
                 br
                 a.link(href="https://docs.google.com/spreadsheets/d/18YNuWP4Z6fZSGoK9rN5PyQe13YDgYQo7GhGFkO4Q08M/edit?usp=sharing")
                     span.text-right Полный список книг
+
+        section.skills
+            h2 Навыки
+            h3.no-margin Стек
+            span TypeScript, ES6, React, Postcss, Pug, Sass, Gulp
+            //- h3 Методологии
+            //- span Адаптивность, кроссбраузерность, БЭМ, mobile first, atomic CSS, email-вёрстка
+            h3 Инструменты
+            span VSCode, Photoshop/Illustrator, Sketch, Figma
+            //- h3 Есть опыт работы
+            //- span Angular 2+, Vue, Webpack
+            //- h3 Ключевоэ
+            .key 
+                |Сделаю поддерживаемую вёрстку. Уместно впишусь в команду. 
+                |Полажу с дизайнерами и менеджерами.
 
         //- section.motivation
         //-     h2 Мотивация    
@@ -109,7 +103,7 @@ block content
                     li Избегаю стимуляции веществами
                     li Работаю по технике Pomodoro
                     li Сохраняю рассудок к вечеру
-                    li Читаю проф. литературу
+                    //- li Читаю проф. литературу
                     li Работаю стоя
                     //- li 
                     //-     span.tip Проективен
@@ -117,8 +111,8 @@ block content
             .bugs
                 h3.no-margin.text-center Баги
                 ul
-                    li Разговариваю на английском в настоящем времени
-                    li Презираю высшее образование в России
+                    li Пока разговариваю на английском в настоящем времени
+                    li Не уважаю высшее образование в СНГ
                     li Не знаю паттернов проектирования
                     li Избегаю общих праздников
                     li Панибратствую
@@ -175,11 +169,13 @@ block content
                         a(href="https://vk.com/martyns0n") VK
                         |, etc.
 
+
         figure.avatar.no-margin
             img(src="../../../assets/img/mrtnsn-resume-avatar.jpg" alt="фотография Мартына")
             figcaption.text-center Фотография Мартына 👨‍✈️
 
-
+        //- a(href="#code-examples").link-for-evil-martians Ссылка для Марсиан
+        //-     img(src="/assets/img/evil-martians-logo.png" alt="evil martians logo").evil-martians-logo
 
         //- figure.logo
         //-     svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 100 100')
