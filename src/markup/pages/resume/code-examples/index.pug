@@ -1,0 +1,49 @@
+extends ../../../base/layout.pug
+
+block variables
+    - let title = 'Резюме Мартына';
+    - let description = 'Разработчик, дизайнер, а также прожектер Мартын продаёт своё время и умения в обмен на деньги и возможность оставаться собой';
+    - let keywords = 'верстальщик, дизайнер, разработчк, фронтендер, фронтенд, фронт-енд, программист, веб-разработчик, markup, UI, frontender, frontend-developer, резюме, специалист, React, Javascript, HTML, CSS, Vue, Sass, Scss, PostCSS, Junior, Middle';
+    //- - let scriptSrc = '/assets/js/resume.js'
+    - let scriptSrc = ''
+
+block content
+    main#code-examples.basic-page
+      h3#code-examples Примеры кода
+      ul.code-examples
+          li.code-example
+            span.description Парсинг JSON и оборачивание ссылок из текста в компонент
+              br
+              |(React, TypeScript, RegExp)
+            a.link(target="_blank" href="https://gist.github.com/martyns0n/1811fdde774523a44e1004a6ba369307") gist
+          li.code-example
+            span.description Парсинг данных с телеграм-канала, вывод карточек с постами, фильтрация 
+              br
+              |(Express.js, Node.js, React, ES6, HTML, CSS, telegram-channel-scraper) 
+            span
+              a.link(target="_blank" href="https://github.com/martyns0n/breadhead-test-task") client&nbsp;repo
+              br
+              a.link(target="_blank" href="https://github.com/martyns0n/server-for-breadhead-test-task") server&nbsp;repo
+          li.code-example
+            span.description Получение данных с Google Sheets и генерация таблицы прочитанных книг
+              br
+              |(HTML&CSS&JS)  
+            a.link(target="_blank" href="https://github.com/martyns0n/mrtnsn-website/blob/master/src/assets/js/booksheets.js") code
+          li.code-example
+            span.description Лендинг для конференции JFALL в Польше
+              br
+              |(HTML&CSS&JS) 
+            span
+              a.link(target="_blank" href="https://github.com/martyns0n/it-nonstop-landing") repo
+              br
+              a.link(target="_blafk" href="http://jfall.pl/") site
+          //- li.code-example
+          //-   span.description Весь этот сайт
+          //-     br
+          //-     |(HTML&CSS&JS) 
+          //-   a.link(target="_blank" href="https://github.com/martyns0n/mrtnsn-website") repo
+          li.code-example
+            span.description Календарь-таблица событий
+              br
+              |(Angular 2+, HTML, CSS) *Старое тестовое задание* 
+            a.link(target="_blank" href="https://github.com/martyns0n/test-timetable") repo
