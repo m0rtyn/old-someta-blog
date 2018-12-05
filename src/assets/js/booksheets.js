@@ -14,18 +14,18 @@ const createTableCell = (tr, cellText, index, type) => {
   tr.appendChild(tableCell)
   tableCell.appendChild(cellText)
   switch (index) {
-    case 0:
-      tableCell.classList.add('recommendation-list-name')
-      break
-    case 1:
-      tableCell.classList.add('recommendation-weight')
-      break
+    // case 0:
+    //   tableCell.classList.add('recommendation-list-names')
+    //   break
+    // case 1:
+    //   tableCell.classList.add('recommendation-weight')
+    //   break
     case 2:
       tableCell.classList.add('book-name')
       break
-    case 3:
-      tableCell.classList.add('book-tags')
-      break
+    // case 3:
+    //   tableCell.classList.add('book-tags')
+    //   break
     case 4:
       tableCell.classList.add('book-status')
       cellText.data == '✔'
