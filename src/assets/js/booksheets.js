@@ -14,9 +14,9 @@ const createTableCell = (tr, cellText, index, type) => {
   tr.appendChild(tableCell)
   tableCell.appendChild(cellText)
   switch (index) {
-    // case 0:
-    //   tableCell.classList.add('recommendation-list-names')
-    //   break
+    case 0:
+      tableCell.classList.add('recommendation-list-names')
+      break
     // case 1:
     //   tableCell.classList.add('recommendation-weight')
     //   break
