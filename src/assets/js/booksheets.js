@@ -17,15 +17,15 @@ const createTableCell = (tr, cellText, index, type) => {
     case 0:
       tableCell.classList.add('recommendation-list-names')
       break
-    // case 1:
-    //   tableCell.classList.add('recommendation-weight')
-    //   break
+    case 1:
+      tableCell.classList.add('recommendation-weight')
+      break
     case 2:
       tableCell.classList.add('book-name')
       break
-    // case 3:
-    //   tableCell.classList.add('book-tags')
-    //   break
+    case 3:
+      tableCell.classList.add('book-tags')
+      break
     case 4:
       tableCell.classList.add('book-status')
       cellText.data == '✔'
