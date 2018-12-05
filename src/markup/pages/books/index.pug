@@ -7,4 +7,10 @@ block content
   main#books.basic-page
     h1.text-center Книжная таблицa
     h2.text-center 2018
-    table#booksTable
+    table#booksTable( cellspacing="0")
+      colgroup
+        col.recommendation-list-names
+        col.recommendation-weight
+        col.book-name
+        col.book-tags
+        col.book-status
