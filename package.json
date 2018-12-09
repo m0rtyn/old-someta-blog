@@ -32,10 +32,15 @@
     "system-font-css": "^2.0.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.2.0",
     "browser-sync": "^2.24.4",
+    "gulp-babel": "^8.0.0",
     "gulp-htmlmin": "^5.0.1",
     "jstransformer-markdown-it": "^2.1.0",
     "run-sequence": "^2.2.1",
-    "stylelint-scss": "^3.4.0"
+    "stylelint": "^9.9.0",
+    "stylelint-scss": "^3.4.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }
