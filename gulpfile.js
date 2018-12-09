@@ -11,8 +11,9 @@ const rename = require('gulp-rename')
 const browserSync = require('browser-sync').create()
 const del = require('del')
 const htmlmin = require('gulp-htmlmin')
+const babel = require('gulp-babel')
 
-gulp.task('style', function() {
+gulp.task('style', function () {
   gulp
     .src('src/assets/styles/main.scss')
     .pipe(plumber())
@@ -32,7 +33,7 @@ gulp.task('style', function() {
     .pipe(browserSync.stream())
 })
 
-gulp.task('pug', function() {
+gulp.task('pug', function () {
   return gulp
     .src('src/markup/pages/**/*.pug')
     .pipe(plumber())
@@ -41,45 +42,37 @@ gulp.task('pug', function() {
         pretty: true,
       })
     )
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('public'))
     .pipe(browserSync.stream())
 })
 
-gulp.task('indexPug', function() {
+gulp.task('js', function () {
   return gulp
-    .src('src/markup/base/layout.pug')
-    .pipe(plumber())
-    .pipe(
-      pug({
-        pretty: true,
-      })
-    )
-    .pipe(gulp.dest('public'))
+    .src('src/assets/js/*.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('public/assets/js'))
     .pipe(browserSync.stream())
 })
 
-gulp.task('images', function() {
+gulp.task('images', function () {
   return gulp
     .src('src/assets/img/**/**/*.{png,jpg,gif}')
     .pipe(gulp.dest('public/assets/img'))
 })
 
-gulp.task('svg', function() {
+gulp.task('svg', function () {
   return gulp
-    .src('src/assets/img/svg/*.svg')
+    .src('src/**/**/**/*.svg')
     .pipe(svgmin())
-    .pipe(gulp.dest('public/assets/img/svg'))
+    .pipe(gulp.dest('public/'))
 })
 
-gulp.task('js', function() {
-  return gulp
-    .src('src/assets/js/**/*.js')
-    .pipe(gulp.dest('public/assets/js'))
-    .pipe(browserSync.stream())
-})
-
-gulp.task('serve', function() {
+gulp.task('serve', function () {
   browserSync.init({
     server: 'public',
     notify: true,
@@ -92,20 +85,21 @@ gulp.task('serve', function() {
   gulp.watch('src/assets/js/**/*.js', ['js'])
 })
 
-gulp.task('copy', function() {
+gulp.task('copy', function () {
   return gulp
     .src(
       [
         './src/assets/fonts/**/*.{woff,woff2}',
         './src/assets/video/**/*.mp4',
         './src/shows/**',
-      ],
-      { base: './src' }
+      ], {
+        base: './src'
+      }
     )
     .pipe(gulp.dest('./public/'))
 })
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del.sync([
     'public/**',
     '!public',
