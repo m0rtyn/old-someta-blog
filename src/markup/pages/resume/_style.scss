@@ -167,6 +167,12 @@
     box-sizing: border-box;
   }
 
+  .locked {
+    display: block;
+    margin: 0.3em auto;
+    width: 3.3em;
+  }
+
   .contacts {
     .contact-list {
       list-style-type: none;
