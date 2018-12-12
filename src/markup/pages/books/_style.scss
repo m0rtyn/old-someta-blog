@@ -13,6 +13,16 @@
     color: $dark-color;
   }
 
+  colgroup {
+    .recommendation-list-names {
+      width: 20ch;
+    }
+
+    .book-name {
+      width: 100ch;
+    }
+  }
+
   thead {
     background-color: $light-color;
     color: $dark-color;
@@ -31,19 +41,22 @@
 
   td {
     padding: 0.3em;
+
+    &.recommendation-list-names {
+      font-family: monospace;
+      color: $y-color;
+      font-size: calc(1em / 1.3)
+    }
+
+    &.recommendation-weight {
+      text-align: center;
+    }
+
+    &.book-status {
+      text-align: center;
+    }
   }
 
-  .recommendation-list-names {
-    max-width: 20ch;
-  }
-
-  .recommendation-weight {
-    text-align: center;
-  }
-
-  .book-status {
-    text-align: center;
-  }
 
   .status-done {
     background-color: $g-color;
