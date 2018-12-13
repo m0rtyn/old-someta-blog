@@ -5,14 +5,8 @@
     margin-top: 1.3em;
   }
 
-  .book-name,
-  .book-tags,
-  .book-status {
-    background-color: $light-color;
-    padding: 0 0.3em;
-    color: $dark-color;
-  }
 
+  // columns
   colgroup {
     .recommendation-list-names {
       width: 20ch;
@@ -23,12 +17,26 @@
     }
   }
 
+  // row groups
   thead {
     background-color: $light-color;
     color: $dark-color;
     font-size: 1.3em;
   }
 
+  tbody tr {
+    transform: translate(-3.3em, -1.3em);
+    opacity: 0;
+    transition: all ease-in 0.3s;
+    will-change: transform, opacity;
+
+    &.transition {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+
+  // cells
   th {
     text-align: left;
     border-bottom: 3px solid $dark-color;
@@ -42,6 +50,14 @@
   td {
     padding: 0.3em;
 
+    &.book-name,
+    &.book-tags,
+    &.book-status {
+      background-color: $light-color;
+      padding: 0 0.3em;
+      color: $dark-color;
+    }
+
     &.recommendation-list-names {
       font-family: monospace;
       color: $y-color;
@@ -54,25 +70,24 @@
 
     &.book-status {
       text-align: center;
+
+      &.status-done,
+      &.status-in-progress,
+      &.status-stopped {
+        color: $light-color;
+      }
+
+      &.status-done {
+        background-color: $g-color;
+      }
+
+      &.status-in-progress {
+        background-color: $b-color;
+      }
+
+      &.status-stopped {
+        background-color: $r-color;
+      }
     }
-  }
-
-
-  .status-done {
-    background-color: $g-color;
-  }
-
-  .status-in-progress {
-    background-color: $b-color;
-  }
-
-  .status-stopped {
-    background-color: $r-color;
-  }
-
-  .status-done,
-  .status-in-progress,
-  .status-stopped {
-    color: $light-color;
   }
 }
