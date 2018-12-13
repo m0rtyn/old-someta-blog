@@ -3,6 +3,7 @@ const table = document.getElementById('booksTable')
 const tbody = document.createElement('TBODY')
 const thead = document.createElement('THEAD')
 const secondaryTbody = document.createElement('TBODY')
+let index = 0;
 
 const createTableParts = bookArray => {
   table.appendChild(thead)
@@ -11,7 +12,10 @@ const createTableParts = bookArray => {
   bookArray.forEach((row, i, arr) => {
     setTimeout(() => {
       fillTableParts(row, i, bookArray)
-    }, 100 * i)
+      index = i
+      console.log(index % 100 === 0)
+      if (index === 50) table.appendChild(secondaryTbody)
+    }, 100 * i);
   })
 }
 
