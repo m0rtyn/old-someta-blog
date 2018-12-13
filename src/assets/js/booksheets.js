@@ -13,7 +13,6 @@ const createTableParts = bookArray => {
     setTimeout(() => {
       fillTableParts(row, i, bookArray)
       index = i
-      console.log(index % 100 === 0)
       if (index === 50) table.appendChild(secondaryTbody)
     }, 100 * i);
   })
@@ -29,19 +28,24 @@ const fillTableParts = (row, i, bookArray) => {
 }
 
 const createTableRow = (tr, i) => {
+  const animationClass = 'transition'
   if (i === 0) {
     thead.appendChild(tr)
-  } else if (i < 33) {
+  } else if (i <= 33) {
     let promise = new Promise((resolve) => {
       setTimeout(() => {
         tbody.appendChild(tr)
-      }, 33);
+      }, 1);
       resolve()
     });
     promise
-      .then(() => tbody.lastChild.classList.add('transition'))
+      .then(() => {
+        console.log(i, tbody.lastChild)
+        tbody.lastChild &&
+          tbody.lastChild.classList.add(animationClass)
+      })
   } else {
-    tr.classList.add('transition')
+    tr.classList.add(animationClass)
     secondaryTbody.appendChild(tr)
   }
 }
