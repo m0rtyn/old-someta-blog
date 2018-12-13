@@ -2,6 +2,7 @@ const booksRoot = document.getElementById('books')
 const table = document.getElementById('booksTable')
 const tbody = document.createElement('TBODY')
 const thead = document.createElement('THEAD')
+const secondaryTbody = document.createElement('TBODY')
 
 const createTableParts = bookArray => {
   table.appendChild(thead)
@@ -26,7 +27,7 @@ const fillTableParts = (row, i, bookArray) => {
 const createTableRow = (tr, i) => {
   if (i === 0) {
     thead.appendChild(tr)
-  } else {
+  } else if (i < 33) {
     let promise = new Promise((resolve) => {
       setTimeout(() => {
         tbody.appendChild(tr)
@@ -35,7 +36,10 @@ const createTableRow = (tr, i) => {
     });
     promise
       .then(() => tbody.lastChild.classList.add('transition'))
-  };
+  } else {
+    tr.classList.add('transition')
+    secondaryTbody.appendChild(tr)
+  }
 }
 
 const createTableCell = (tr, cellText, index, type) => {
