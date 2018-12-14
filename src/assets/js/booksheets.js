@@ -1,4 +1,4 @@
-// const booksRoot = document.getElementById('books');
+/* eslint-env browser */
 const table = document.getElementById('booksTable');
 const tbody = document.createElement('TBODY');
 const thead = document.createElement('THEAD');
@@ -21,11 +21,11 @@ const setBookStatus = (cell, text) => {
   }
 };
 
-const createTableCell = (tr, cellText, index, type) => {
+const createTableCell = (tr, cellText, i, type) => {
   const tableCell = document.createElement(type);
   tr.appendChild(tableCell);
   tableCell.appendChild(cellText);
-  switch (index) {
+  switch (i) {
     case 0:
       tableCell.classList.add('recommendation-list-names');
       break;
@@ -91,4 +91,6 @@ fetch(
   'https://script.google.com/macros/s/AKfycbyncOZcKRu3_shSLYYescpIelkontkjdTuCRONzfXIXK0Jl5Vqb/exec',
 )
   .then(response => response.json())
-  .then(({ result }) => createTableParts(result));
+  .then(({
+    result,
+  }) => createTableParts(result));
