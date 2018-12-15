@@ -54,9 +54,7 @@ const appendTableRow = (tr, i) => {
 
   if (i === 0) {
     thead.appendChild(tr);
-  }
-
-  if (i <= readingTarget) {
+  } else if (i <= readingTarget) {
     const promise = new Promise((resolve) => {
       setTimeout(() => {
         tbody.appendChild(tr);
