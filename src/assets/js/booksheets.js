@@ -1,8 +1,8 @@
 /* eslint-env browser */
 const table = document.getElementById('booksTable');
-const tbody = document.createElement('TBODY');
 const thead = document.createElement('THEAD');
-const secondaryTbody = document.createElement('TBODY');
+const tbody = document.createElement('TBODY');
+const tfoot = document.createElement('TFOOT');
 let index = 0;
 
 const setBookStatus = (cell, text) => {
@@ -27,18 +27,15 @@ const createTableCell = (tr, cellText, i, type) => {
   tableCell.appendChild(cellText);
   switch (i) {
     case 0:
-      tableCell.classList.add('recommendation-list-names');
-      break;
-    case 1:
       tableCell.classList.add('recommendation-weight');
       break;
-    case 2:
+    case 1:
       tableCell.classList.add('book-name');
       break;
-    case 3:
+    case 2:
       tableCell.classList.add('book-tags');
       break;
-    case 4:
+    case 3:
       tableCell.classList.add('book-status');
       setBookStatus(tableCell, cellText.data);
       break;
@@ -47,44 +44,56 @@ const createTableCell = (tr, cellText, i, type) => {
   }
 };
 
-const createTableRow = (tr, i) => {
+const appendWithAnimation = (animationClass) => {
+  if (tbody.lastChild) tbody.lastChild.classList.add(animationClass);
+};
+
+const appendTableRow = (tr, i) => {
   const animationClass = 'transition';
+  const readingTarget = 50;
+
   if (i === 0) {
     thead.appendChild(tr);
-  } else if (i <= 50) {
+  }
+
+  if (i <= readingTarget) {
     const promise = new Promise((resolve) => {
       setTimeout(() => {
         tbody.appendChild(tr);
       }, 1);
       resolve();
     });
-    promise.then(() => tbody.lastChild && tbody.lastChild.classList.add(animationClass));
+    promise.then(appendWithAnimation(animationClass));
   } else {
     tr.classList.add(animationClass);
-    secondaryTbody.appendChild(tr);
+    tfoot.appendChild(tr);
   }
 };
 
-const fillTableParts = (row, i, bookArray) => {
+const createTableRow = (row, i, bookArray) => {
   const tr = document.createElement('TR');
+
   row.forEach((cell, j) => {
     const cellText = document.createTextNode(bookArray[i][j]);
     createTableCell(tr, cellText, j, i === 0 ? 'TH' : 'TD');
   });
-  createTableRow(tr, i);
+  appendTableRow(tr, i);
 };
 
-const createTableParts = (bookArray) => {
-  table.appendChild(thead);
-  table.appendChild(tbody);
-
+const fillTableParts = (bookArray) => {
   bookArray.forEach((row, i) => {
     setTimeout(() => {
-      fillTableParts(row, i, bookArray);
+      createTableRow(row, i, bookArray);
       index = i;
-      if (index === 50) table.appendChild(secondaryTbody);
+      if (index === 50) table.appendChild(tfoot);
     }, 100 * i);
   });
+};
+
+const createTable = (data) => {
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  fillTableParts(data);
 };
 
 fetch(
@@ -93,4 +102,4 @@ fetch(
   .then(response => response.json())
   .then(({
     result,
-  }) => createTableParts(result));
+  }) => createTable(result));
