@@ -62,6 +62,12 @@ gulp.task('js', () => gulp
   .pipe(gulp.dest('public/assets/js'))
   .pipe(browserSync.stream()));
 
+gulp.task('jsDebug', () => gulp
+  .src('src/assets/js/*.js')
+  .on('error', handleError)
+  .pipe(gulp.dest('public/assets/js'))
+  .pipe(browserSync.stream()));
+
 gulp.task('images', () => gulp
   .src('src/assets/img/**/**/*.{png,jpg,gif}')
   .pipe(gulp.dest('public/assets/img')));
@@ -81,7 +87,7 @@ gulp.task('serve', () => {
   gulp.watch('src/**/**/*.scss', ['style']);
   gulp.watch('src/markup/**/**/**/**/*.pug', ['pug']);
   gulp.watch('src/assets/img/**/*.*', ['images']);
-  gulp.watch('src/assets/js/**/*.js', ['js']);
+  gulp.watch('src/assets/js/**/*.js', ['jsDebug']);
 });
 
 gulp.task('copy', () => gulp
@@ -109,12 +115,12 @@ gulp.task('clean', () => del.sync([
   '!public/shows/255-shades-of-gray/**',
 ]));
 
-gulp.task('default', [
+gulp.task('dev', [
   'clean',
   'copy',
   'pug',
   'style',
-  'js',
+  'jsDebug',
   'images',
   'svg',
   'serve',
