@@ -91,7 +91,7 @@ const fillTableParts = (bookArray) => {
 const createTable = (data) => {
   table.appendChild(thead);
   table.appendChild(tbody);
-  fillTableParts(data);
+  return data;
 };
 
 fetch(
@@ -100,4 +100,5 @@ fetch(
   .then(response => response.json())
   .then(({
     result,
-  }) => createTable(result));
+  }) => createTable(result))
+  .then(fillTableParts);
