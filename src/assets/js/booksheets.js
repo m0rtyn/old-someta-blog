@@ -3,6 +3,7 @@ const table = document.getElementById('booksTable');
 const thead = document.createElement('THEAD');
 const tbody = document.createElement('TBODY');
 const tfoot = document.createElement('TFOOT');
+const queue = [];
 let index = 0;
 
 const setBookStatus = (cell, text) => {
@@ -44,27 +45,37 @@ const createTableCell = (tr, cellText, i, type) => {
   }
 };
 
-const appendWithAnimation = (animationClass) => {
-  if (tbody.lastChild) tbody.lastChild.classList.add(animationClass);
+const render = (target, row) => {
+  target.appendChild(row);
 };
 
-const appendTableRow = (tr, i) => {
+const appendTableRow = (target, row, isAsync = false) => {
   const animationClass = 'transition';
+
+  if (isAsync) {
+    queue.push([render, [target, row]]);
+    queue.push([row.classList.add, [animationClass]]);
+  } else {
+    render(target, row);
+  }
+};
+
+if (queue === []) {
+  setInterval(() => {
+    const task = queue.pop();
+    task[0].apply(task[1]);
+  }, 1);
+}
+
+const defineTablePart = (tr, i) => {
   const readingTarget = 50;
 
   if (i === 0) {
-    thead.appendChild(tr);
+    appendTableRow(thead, tr);
   } else if (i <= readingTarget) {
-    const promise = new Promise((resolve) => {
-      setTimeout(() => {
-        tbody.appendChild(tr);
-      }, 1);
-      resolve();
-    });
-    promise.then(appendWithAnimation(animationClass));
+    appendTableRow(tbody, tr, true);
   } else {
-    tr.classList.add(animationClass);
-    tfoot.appendChild(tr);
+    appendTableRow(tfoot, tr);
   }
 };
 
@@ -75,7 +86,7 @@ const createTableRow = (row, i, bookArray) => {
     const cellText = document.createTextNode(bookArray[i][j]);
     createTableCell(tr, cellText, j, i === 0 ? 'TH' : 'TD');
   });
-  appendTableRow(tr, i);
+  defineTablePart(tr, i);
 };
 
 const fillTableParts = (bookArray) => {
