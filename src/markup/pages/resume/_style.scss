@@ -270,6 +270,7 @@
   .timeline {
     list-style-type: square;
     position: relative;
+    padding-left: 3.3em;
 
     &::before {
       content: '';
@@ -278,8 +279,21 @@
       height: 100%;
       width: 1px;
       border-left: 1px dotted $light-color;
-      margin-left: 0.3em;
+      margin-left: 2.3em;
       left: 0;
+    }
+
+    &::after {
+      content: "↑";
+      padding-bottom: .3em;
+      position: absolute;
+      top: 26%;
+      left: -2%;
+      font-size: 3.3em;
+      font-family: monospace;
+      background-image: url(../icons/clock.svg);
+      background-repeat: no-repeat;
+      background-position: center bottom;
     }
 
     .milestone {
