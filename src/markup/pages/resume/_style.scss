@@ -285,15 +285,12 @@
 
     &::after {
       content: "↑";
-      padding-bottom: .3em;
       position: absolute;
-      top: 26%;
-      left: -2%;
+      top: 0;
+      left: 0;
       font-size: 3.3em;
       font-family: monospace;
-      background-image: url(../icons/clock.svg);
-      background-repeat: no-repeat;
-      background-position: center bottom;
+      line-height: 0.6;
     }
 
     .milestone {
