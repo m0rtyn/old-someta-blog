@@ -44,11 +44,6 @@ const createTableCell = (tr, cellText, i, type) => {
   }
 };
 
-const appendWithAnimation = (tr, animationClass = 'transition') => {
-  if (tbody.lastChild) tbody.lastChild.classList.add(animationClass);
-  // tr.classList.add(animationClass);
-};
-
 const appendTableRow = (tr, i) => {
   const animationClass = 'transition';
   const readingTarget = 50;
@@ -57,12 +52,13 @@ const appendTableRow = (tr, i) => {
     thead.appendChild(tr);
   } else if (i <= readingTarget) {
     const promise = new Promise((resolve) => {
-      tbody.appendChild(tr);
+      const appendedChild = tbody.appendChild(tr);
       setTimeout(() => {
-        resolve(animationClass);
-      }, 33);
+        resolve(appendedChild);
+      }, 133);
     });
-    promise.then(appendWithAnimation);
+    promise
+      .then(child => child.classList.add(animationClass));
   } else {
     tr.classList.add(animationClass);
     tfoot.appendChild(tr);
