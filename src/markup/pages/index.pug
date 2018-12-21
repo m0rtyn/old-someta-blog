@@ -18,8 +18,10 @@ block content
               h3 «Невалидный Мартинсон»
         li.article-item
           article
-            a(href='#', alt='in progress', title='in progress')
-              img(src='./assets/img/paper-in-progress.jpg' alt="статья в процессе")
+            img.article-img(src='./assets/img/paper-in-progress.jpg' alt="Сон")
+            span.disqus-comment-count(data-disqus-identifier='2', data-disqus-url='sleep')
+            a.article-link(href='./papers/sleep')
+              h3 Сон
     section.main-page__section
       - const telegramPostNumber = '63';
       h2#post-number Пост #
