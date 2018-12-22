@@ -8,11 +8,12 @@ block variables
 
 block content
     main#resume.basic-page
-        h1.text-center 
-            |Резюме 
-            span.tip.pseudonym Мартынa
-            span Мартыненко Владимира Андреевича 
-            .version ver. 1.2.10
+        header
+            h1.text-center 
+                |Резюме 
+                span.tip.pseudonym Мартынa
+                span Мартыненко Владимира Андреевича 
+                .version ver. 1.2.10
         p.space-between
             span.text-lead Опытный верстальщик /
                 br 
@@ -22,7 +23,7 @@ block content
                 br
                 |🚇 Чкаловская / Петроградская
         
-        section.experience
+        section.resume-part.experience
             h2 Опыт
             span.no-margin ⏱️ Работаю в IT 
             span#time
@@ -67,7 +68,7 @@ block content
                 a.link(href="https://docs.google.com/spreadsheets/d/18YNuWP4Z6fZSGoK9rN5PyQe13YDgYQo7GhGFkO4Q08M/edit?usp=sharing")
                     span.text-right Полный список книг
 
-        section.skills
+        section.resume-part.skills
             h2 Навыки
             h3.no-margin Стек
             span TypeScript, ES6, React, Postcss, Pug, Sass, Gulp
@@ -82,7 +83,7 @@ block content
                 |Сделаю поддерживаемую вёрстку. Уместно впишусь в команду. 
                 |Полажу с дизайнерами и менеджерами.
 
-        //- section.motivation
+        //- section.resume-part.motivation
         //-     h2 Мотивация    
         //-     h3.no-margin Работа мечты
         //-     span Начитанные коллеги, прогрессивный менеджмент, гибкий график, продуктовая компания, офис
@@ -91,7 +92,7 @@ block content
         //-     h3 Взгляды
         //-     span Ненасильственность, рационализм, технологичность, проективность
 
-        section.special
+        section.resume-part.special
             h2 Особенности
             .features
                 h3.no-margin.text-center Фичи
@@ -120,7 +121,7 @@ block content
                     li Панибратствую
                     li Самозванец
 
-        section.salary
+        section.resume-part.salary
             h2 Сколько стою
             ul.plans
                 li.plan 
@@ -152,17 +153,21 @@ block content
                         li Много легаси кода
                         li Самописный фреймворк
                         li Корпоративы в стрип-барах
-        section.contacts
+
+        section.resume-part.contacts
             h2 Контакты
             ul.contact-list
                 li.contact-item
-                    .icon-emoji 📧
+                    //- .icon-emoji 📧
+                    img.icon-contacts(src="../assets/icons/mail.svg")
                     a(href="mailto: mrtnsn.dev@gmail.com") mrtnsn.dev@gmail.com
                 li.contact-item
-                    .icon-emoji 📞
+                    //- .icon-emoji 📞
+                    img.icon-contacts(src="../assets/icons/phone-call.svg")
                     a(href="+79994644321") +7 (999) 464-43-21
                 li.contact-item
-                    .icon-emoji 🌐
+                    //- .icon-emoji 🌐
+                    img.icon-contacts(src="../assets/icons/www.svg")
                     |@martyns0n
                     br
                     span
