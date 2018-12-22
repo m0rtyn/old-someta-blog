@@ -13,12 +13,7 @@
     margin: 0 0.3em;
   }
 
-  .skills,
-  .experience,
-  .motivation,
-  .special,
-  .salary,
-  .contacts {
+  .resume-part {
     position: relative;
     margin: 3.3em;
     padding: 1.3em;
@@ -63,7 +58,6 @@
   }
 
   .speeches {
-    // padding: 0;
     margin: 0;
     list-style-type: square;
   }
@@ -174,6 +168,24 @@
   }
 
   .contacts {
+    background-color: $light-color;
+    color: $dark-color;
+    border-color: $light-color;
+
+    // h2 {
+    //   color: $light-color;
+    //   background-color: $dark-color;
+
+    //   &::after {
+    //     border-bottom-color: $dark-color;
+    //     border-right-color: $dark-color;
+    //   }
+    // }
+
+    a, a:active, a:focus {
+      color: $dark-color;
+    }
+
     .contact-list {
       list-style-type: none;
       display: grid;
@@ -215,6 +227,12 @@
         margin-bottom: 0;
         margin-right: 0.3em;
       }
+    }
+
+    .icon-contacts {
+      width: 3.3em;
+      padding: 0.3em;
+      box-sizing: border-box;
     }
   }
 
