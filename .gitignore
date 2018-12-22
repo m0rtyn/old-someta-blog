@@ -2,11 +2,13 @@
 *.tmp
 .history
 .vscode
+.cache
 node_modules
 package-lock.json
 todo.md
 yarn.lock
 vue-test
+dist
 
 public/**/
 public/*.html
