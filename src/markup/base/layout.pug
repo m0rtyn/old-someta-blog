@@ -1,8 +1,8 @@
 block variables
     - let description = 'Веблог об идеях и проектах Мартына';
     - let title = 'Мартынсоновая Яма';
-    - let keywords = 'мета, проекты, модели, системы, концепции, идеи, креативность, продуктивность, рациональность, программирование, веб, развитие';
-    - let scriptSrc = 'assets/js/telegram-widget.js'
+    - let keywords = 'мета, проекты, модели, системы, концепции, идеи, изобретения, креативность, продуктивность, рациональность, программирование, веб, развитие';
+    - let scriptSrc = 'assets/js/main-page.js'
 
 doctype html
 html(lang='ru')
@@ -39,9 +39,8 @@ html(lang='ru')
         link(rel='manifest', href='/site.webmanifest')
         
     body
-        include ../blocks/header.pug
+        include ../blocks/header/header.pug
         block content
-        include ../blocks/footer.pug
+        include ../blocks/footer/footer.pug
+
         script(type="text/javascript", src=scriptSrc, async)
-        script(type="text/javascript", src="/assets/js/_masonry.min.js")
-        //- script(type="text/javascript", src="/assets/js/main.js")

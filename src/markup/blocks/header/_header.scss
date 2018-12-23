@@ -1,0 +1,137 @@
+.header {
+  background-color: $dark-color;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border: 1px solid $light-color;
+    display: block;
+    position: relative;
+    transition-duration: 0.3s;
+    padding: 1.3em;
+    background-color: $dark-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-color;
+      border-color: $dark-color;
+      color: $dark-color;
+      font-weight: bold;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #nav {
+    padding: 0.3em 1.3em;
+    font-family: Roboto Mono, 'Courier New', Courier, monospace;
+    display: flex;
+    z-index: 1;
+
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      margin-left: auto;
+      width: 100%;
+      position: absolute;
+      text-align: right;
+      right: 0;
+      transform: translate(100%);
+      transition: transform 0.3s ease-out;
+
+      &.slip-appearance {
+        transform: translate(0%);
+      }
+    }
+  }
+
+
+  #burger {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 3.3em;
+    padding: 0.3em;
+    border: 1px solid $light-color;
+    position: absolute;
+    right: 100%;
+    background-color: $dark-color;
+    margin: 1.3rem;
+    transform: translate(400%);
+    transition: transform .3s ease-out;
+
+    &.slip-appearance {
+      transform: translate(0);
+    }
+  }
+
+  .dropdown {
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      .subnav-item {
+        background-color: $light-color;
+        color: $dark-color;
+        border-color: $dark-color;
+      }
+    }
+  }
+
+  .link-nav {
+    color: $light-color;
+    cursor: pointer;
+  }
+
+  .subnav {
+    // background: $dark-color;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-out;
+    left: -2px;
+    top: calc(100% + 1px);
+    display: none;
+
+    @media screen and (max-width: 500px) {
+      width: 50%;
+    }
+  }
+
+  .subnav-item {
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: translateX(1.3em);
+    }
+  }
+
+  ul li:hover>ul,
+  .subnav:hover,
+  .subnav:focus {
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+
+  .evil {
+    text-align: right;
+    flex-grow: 1;
+  }
+}
