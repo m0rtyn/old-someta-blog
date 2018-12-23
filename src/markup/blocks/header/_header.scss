@@ -20,7 +20,7 @@
       background-color: $light-color;
       border-color: $dark-color;
       color: $dark-color;
-      font-weight: bold;
+      // font-weight: bold;
     }
   }
 
@@ -60,7 +60,7 @@
 
   #burger {
     font-family: monospace;
-    font-weight: bold;
+    // font-weight: bold;
     font-size: 3.3em;
     padding: 0.3em;
     border: 1px solid $light-color;
@@ -68,8 +68,11 @@
     right: 100%;
     background-color: $dark-color;
     margin: 1.3rem;
-    transform: translate(400%);
-    transition: transform .3s ease-out;
+
+    @media screen and (max-width: 500px) {
+      transform: translate(400%);
+      transition: transform .3s ease-out;
+    }
 
     &.slip-appearance {
       transform: translate(0);
