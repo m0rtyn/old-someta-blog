@@ -1,5 +1,4 @@
 /*COMMON*/
-
 @import "./common/variables";
 @import "./common/fonts";
 @import "./common/mixins";
@@ -7,14 +6,14 @@
 @import "./common/animations";
 @import "./common/common";
 @import "./common/utilities";
-/*BLOCKS*/
 
+/*BLOCKS*/
 @import "./blocks/main-logo";
 @import "./blocks/telegram-post";
-@import "./blocks/footer";
-@import "./blocks/header";
-/*PAGES*/
+@import "../../markup/blocks/footer/footer";
+@import "../../markup/blocks/header/header";
 
+/*PAGES*/
 @import "../../markup/pages/style";
 @import "../../markup/pages/papers/style";
 @import "../../markup/pages/achievements/style";
