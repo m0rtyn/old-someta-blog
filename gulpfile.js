@@ -125,4 +125,13 @@ gulp.task('dev', [
   'svg',
   'serve',
 ]);
-gulp.task('build', ['clean', 'copy', 'pug', 'style', 'js', 'images', 'svg']);
+
+gulp.task('build', [
+  'clean',
+  'copy',
+  'pug',
+  'style',
+  'js',
+  'images',
+  'svg',
+]);
