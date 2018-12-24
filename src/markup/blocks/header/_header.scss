@@ -60,11 +60,10 @@
 
   #burger {
     font-family: monospace;
-    // font-weight: bold;
     font-size: 3.3em;
     padding: 0.3em;
     border: 1px solid $light-color;
-    position: absolute;
+    position: fixed;
     right: 100%;
     background-color: $dark-color;
     margin: 1.3rem;
