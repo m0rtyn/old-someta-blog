@@ -1,27 +1,29 @@
 extends ../base/layout.pug
 
 block content
-  main.main-page
+  main#main-page
     h1.main-logo
       img.main-logo__img(src='./assets/img/svg/mrtnsn-pit__logo-2018.svg' alt="логотип")
       //- .main-logo__text
       p.main-logo__mrtnsn мартынсоновая
       p.main-logo__pit яма
+
     section.main-page__section
       h2 Статьи
       ul.article-list
         li.article-item
           article
             img.article-img(src="./assets/img/smert'.jpg" alt="статья «Невалидный Мартын»")
-            span.disqus-comment-count(data-disqus-identifier='1', data-disqus-url='invalid Martyn')
+            span.disqus-comment-count(data-disqus-identifier='1', data-disqus-url='https://mrtnsn.me/papers/invalid-martyn')
             a.article-link(href='./papers/invalid-martyn')
-              h3 «Невалидный Мартын»
+              h3 Невалидный Мартын
         li.article-item
           article
             img.article-img(src='./assets/img/paper-in-progress.jpg' alt="Сон")
-            span.disqus-comment-count(data-disqus-identifier='2', data-disqus-url='sleep')
+            span.disqus-comment-count(data-disqus-identifier='2', data-disqus-url='https://mrtnsn.me/papers/sleep')
             a.article-link(href='./papers/sleep')
               h3 Сон
+
     section.main-page__section
       - const telegramPostNumber = '63';
       h2#post-number Пост #

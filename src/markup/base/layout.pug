@@ -4,6 +4,10 @@ block variables
     - let keywords = 'мета, проекты, модели, системы, концепции, идеи, изобретения, креативность, продуктивность, рациональность, программирование, веб, развитие';
     - let scriptSrc = 'assets/js/main.js'
 
+    - let pageUrl = '';
+    - let pageIdentifier = 0;
+    - let pageTitle = '';
+
 doctype html
 html(lang='ru')
     head
@@ -28,12 +32,13 @@ html(lang='ru')
         meta(http-equiv="cache-control" content="cache")
         meta(http-equiv="content-language" content="ru")
 
-        link(rel='apple-touch-icon', href='/icon.png')
+        //- fonts
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=cyrillic')
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic")
         //- styles
         link(rel='stylesheet', type='text/css', href='/assets/styles/style.min.css')
         //- favicons
+        link(rel='apple-touch-icon', href='/icon.png')
         link(rel='icon', href='/assets/img/svg/dark-logo.svg', sizes='any', type='image/svg+xml')
         link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
         link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
@@ -45,5 +50,6 @@ html(lang='ru')
         block content
         include ../blocks/footer/footer.pug
 
+        script(id="dsq-count-scr" src="//mrtnsn.disqus.com/count.js" async)
         script(type="text/javascript", src=scriptSrc, async)
         script(type="text/javascript", src="/assets/js/main.js", async)

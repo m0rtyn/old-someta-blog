@@ -1,0 +1,42 @@
+#sleep {
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  li {
+    p:not(:first-of-type) {
+      margin-top: .3em;
+    }
+  }
+
+  .text-container {
+    max-width: 40ch;
+  }
+
+  .img-title {
+    width: 280px;
+    min-height: 200px;
+    margin-left: 1.3em;
+    background-image: url(../img/tom-cat.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $dark-color;
+    background-blend-mode: luminosity;
+    border: 1px solid $light-color;
+
+    @media screen and (max-height: ) {}
+  }
+
+  .md-text {
+    max-width: 70ch;
+    margin: auto;
+  }
+}

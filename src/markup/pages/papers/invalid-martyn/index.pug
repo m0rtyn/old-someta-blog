@@ -1,9 +1,12 @@
 extends ../../../base/layout.pug
 
 block variables
-    - let title = 'Невалидный Мартын';
-    - let description = 'Статья с рефлексией на тему смерти и жизни Мартына';
-    - let keywords = 'мета, рассеянный склероз, болезнь, смерть, магнитно-резонансная томография, пульс терапия, паралич, обострение, диагноз, цель, 22 век';
+  - let title = 'Невалидный Мартын';
+  - let description = 'Статья с рефлексией на тему смерти и жизни Мартына';
+  - let keywords = 'мета, рассеянный склероз, болезнь, смерть, магнитно-резонансная томография, пульс терапия, паралич, обострение, диагноз, цель, 22 век';
+
+  - let pageUrl = 'https://mrtnsn.me/papers/invalid-martyn';
+  - let pageIdentifier = 1;
 
 block content
   main#invalid-martyn.paper
@@ -144,9 +147,9 @@ block content
       *RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
       var disqus_config = function () {
-        this.page.url = 'https://mrtnsn.me/papers/invalid-martynson';
-        this.page.identifier = 1;
-        this.page.title = 'invalid Martynson';
+        this.page.url = pageUrl;
+        this.page.identifier = pageIdentifier;
+        this.page.title = title;
       };
       (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
