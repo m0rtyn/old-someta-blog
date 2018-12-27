@@ -32,7 +32,7 @@
     background-blend-mode: luminosity;
     border: 1px solid $light-color;
 
-    @media screen and (max-height: 768px) {
+    @media screen and (max-width: 1023px) {
       margin-top: 1.3em;
     }
   }
