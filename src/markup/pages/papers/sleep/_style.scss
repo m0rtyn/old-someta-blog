@@ -33,6 +33,7 @@
     border: 1px solid $light-color;
 
     @media screen and (max-width: 1023px) {
+      margin-left: 0;
       margin-top: 1.3em;
     }
   }
