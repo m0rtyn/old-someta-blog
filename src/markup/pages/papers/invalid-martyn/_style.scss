@@ -4,6 +4,6 @@
   }
 
   .intro {
-    width: 100%;
+    width: calc(100% - (384px + 3em));
   }
 }
