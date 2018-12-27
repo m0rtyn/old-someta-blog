@@ -32,7 +32,9 @@
     background-blend-mode: luminosity;
     border: 1px solid $light-color;
 
-    @media screen and (max-height: ) {}
+    @media screen and (max-height: 768px) {
+      margin-top: 1.3em;
+    }
   }
 
   .md-text {
