@@ -53,10 +53,12 @@
     text-align: left;
     border-bottom: 3px solid $dark-color;
     padding: 0.3em;
-    position: sticky;
     top: 0;
-    z-index: 1;
     background-color: $light-color;
+    position: sticky;
+    transform: translate(0);
+    will-change: transform;
+    z-index: 1;
 
     &.book-status,
     &.recommendation-weight {
