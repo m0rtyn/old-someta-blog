@@ -94,6 +94,14 @@
 
   .dropdown {
     cursor: default;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: "▼";
+    }
 
     &:hover,
     &:focus,
@@ -103,6 +111,10 @@
         color: $dark-color;
         border-color: $dark-color;
       }
+    }
+
+    &>span {
+      margin-right: auto;
     }
   }
 
@@ -117,9 +129,9 @@
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease-out;
-    left: -2px;
     top: calc(100% + 1px);
     display: none;
+    width: 100%;
 
     @media screen and (max-width: 500px) {
       width: 50%;
@@ -129,6 +141,8 @@
   .subnav-item {
     transform: translateX(0);
     transition: transform 0.3s ease-out;
+    width: 100%;
+    box-sizing: border-box;
 
     &:hover,
     &:focus,
@@ -148,6 +162,6 @@
 
   .evil {
     text-align: right;
-    flex-grow: 1;
+    flex-grow: 13;
   }
 }
