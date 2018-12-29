@@ -1,9 +1,9 @@
 #header {
   background-color: $dark-color;
+  z-index: 2;
 
   @media screen and (max-width: 500px) {
     width: 100vw;
-    z-index: 1;
     position: absolute;
   }
 
@@ -59,7 +59,7 @@
   }
 
   #nav {
-    padding: 0.3em 1.3em;
+    padding: 0 1.3em;
     font-family: Roboto Mono, 'Courier New', Courier, monospace;
     z-index: 2;
 
@@ -71,7 +71,6 @@
       margin-left: auto;
       display: none;
       width: 100%;
-      // position: absolute;
       text-align: right;
       right: 0;
       transform: translate(100%);
@@ -98,6 +97,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    // box-sizing: border-box;
 
     &::after {
       content: "▼";
@@ -113,25 +113,25 @@
     cursor: pointer;
   }
 
-  .subnav {
-    visibility: hidden;
-    opacity: 0;
+  .list-subnav {
     position: absolute;
+    transform: translateY(-100%);
     transition: all 0.3s ease-out;
     top: 100%;
     width: 100%;
+    z-index: -1;
 
     @media screen and (max-width: 500px) {
       width: 50%;
     }
   }
 
-  .subnav-item {
+  .item-subnav {
     transform: translateX(0);
     transition: transform 0.3s ease-out;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 0;
+    margin-bottom: -1px;
     background-color: $light-color;
     color: $dark-color;
     border-color: $dark-color;
@@ -139,18 +139,13 @@
     &:hover,
     &:focus,
     &:active {
-      transform: translateX(1.3em);
+      transform: translateX(-1.3em);
     }
   }
 
-  .list-nav li:hover>.subnav,
-  .subnav:hover,
-  .subnav:focus {
+  .dropdown:hover>.list-subnav,
+  .dropdown:focus>.list-subnav {
     transform: translateY(0);
-    z-index: 2;
-    visibility: visible;
-    opacity: 1;
-    display: block;
   }
 
   .evil {
