@@ -1,12 +1,9 @@
 extends ../../../base/layout.pug
 
 block variables
-  - let title = 'Сон';
-  - let description = 'Статья о том, как починить сон';
-  - let keywords = 'сон, синий, световая температура, красный, мелатонин, ритм, образ жизни';
-
-  - let pageUrl = 'https://mrtnsn.me/papers/sleep';
-  - let pageIdentifier = '2';
+  - var title = 'Сон';
+  - var description = 'Статья о том, как починить сон';
+  - var keywords = 'сон, синий, световая температура, красный, мелатонин, ритм, образ жизни';
 
 block content
   main#sleep.paper
@@ -111,10 +108,14 @@ block content
       /**
       *RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      var pageUrl = 'https://mrtnsn.me/papers/sleep';
+      var pageIdentifier = '2';
+      var pageTitle = 'sleep'
+
       var disqus_config = function () {
         this.page.url = pageUrl;
         this.page.identifier = pageIdentifier;
-        this.page.title = title;
+        this.page.title = pageTitle;
       };
       (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
