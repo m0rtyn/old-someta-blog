@@ -1,9 +1,9 @@
 header#header
   #burger ☰
   nav#nav: ul.list-nav
-    a.link-nav(href='/'): li.nav-item Яма
+    a.item-nav.link-nav(href='/'): li Яма
 
-    li.dropdown
+    li.item-nav.dropdown
       span Проекты
       ul.list-subnav
         a(class="link-subnav" href="http://tele.ga/metabaza" target="_blank"): li.item-subnav Метабаза
@@ -23,14 +23,14 @@ header#header
         //- a(class="link-subnav" href="/achievements"): li.item-subnav Достижения
         a(class="link-subnav" href="/contacts"): li.item-subnav Контакты
 
-    //- li.dropdown Изобретения
+    //- li.item-nav.dropdown Изобретения
     //-   ul.list-subnav
     //-     a(class="link-subnav" href="#"): li.item-subnav Манифест потребления
     //-     a(class="link-subnav" href="#"): li.item-subnav Идеятация
     //-     a(class="link-subnav" href="#"): li.item-subnav Клавиатурная раскладка Мартына
     //-     a(class="link-subnav" href="#"): li.item-subnav Каша
 
-    a.link-nav.evil(href='/donation'): li Зло
+    a.item-nav.link-nav.evil(href='/donation'): li Зло
 
 
 
