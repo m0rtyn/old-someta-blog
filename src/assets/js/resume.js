@@ -12,11 +12,11 @@ function dateDiffInDays(a, b) {
 const a = new Date('2016-05-01');
 const b = new Date();
 const diffInDays = dateDiffInDays(a, b);
-const integerYears = Math.floor(diffInDays / 365);
-const integerMonthes = Math.floor((diffInDays - integerYears * 365) / 30.5);
-const integerDays = Math.floor(
-  diffInDays - integerYears * 365 - integerMonthes * 30.5,
-);
+// const integerYears = Math.floor(diffInDays / 365);
+// const integerMonthes = Math.floor((diffInDays - integerYears * 365) / 30.5);
+// const integerDays = Math.floor(
+//   diffInDays - integerYears * 365 - integerMonthes * 30.5,
+// );
 const output = document.getElementById('time');
 // const passedTime = `${integerYears}y ${integerMonthes}m ${integerDays}d`;
 const roundedPassedDays = Math.floor(diffInDays / 10) * 10;
