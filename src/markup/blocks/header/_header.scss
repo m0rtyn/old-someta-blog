@@ -19,6 +19,7 @@
     transition-duration: 0.3s;
     padding: 1.3em;
     background-color: $dark-color;
+    cursor: pointer;
 
     &:hover,
     &:focus,
@@ -99,6 +100,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     @media screen and (max-width: 500px) {
       justify-content: start;
@@ -152,6 +154,12 @@
     }
   }
 
+  .dropdown:hover>.list-subnav,
+  .dropdown:focus>.list-subnav,
+  .dropdown:active>.list-subnav {
+    transform: translateY(0);
+  }
+
   .item-subnav {
     transform: translateX(0);
     transition: transform 0.3s ease-out;
@@ -161,16 +169,12 @@
     background-color: $light-color;
     color: $dark-color;
     border-color: $dark-color;
+    cursor: pointer;
 
     &:hover,
     &:focus,
     &:active {
       transform: translateX(1.3em);
     }
-  }
-
-  .dropdown:hover>.list-subnav,
-  .dropdown:focus>.list-subnav {
-    transform: translateY(0);
   }
 }
