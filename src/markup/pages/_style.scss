@@ -8,12 +8,16 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 0.3em;
+    margin-bottom: 1.3em;
     text-align: center;
   }
 
   .main-page__section {
-    margin-bottom: 1.3em;
+    margin-bottom: 3.3em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   a {
@@ -25,16 +29,23 @@
     display: flex;
     padding: 0;
     margin: 0;
+
+    @media screen and (max-width: 1023px) {
+      flex-flow: column nowrap;
+    }
   }
 
   .article-item {
-    margin: 0.3em;
+    margin-right: 1.3em;
     position: relative;
     border: 1px solid $g-color;
     width: 13.3em;
-    // height: 1.3em;
     box-sizing: border-box;
     padding: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
 
     &:hover .article-img,
     &:focus .article-img,
@@ -47,10 +58,12 @@
     &:hover .disqus-comment-count,
     &:focus .disqus-comment-count {
       filter: none;
-      transform: translate(-1.33em, -1.33em);
+      transform: translate(-1.3em, -1.3em);
 
       @media screen and (max-width: 768px) {
-        transform: translateY(-1.33em);
+        transform: translateY(-1.3em);
+        margin: 0;
+        margin-right: 1.3em;
       }
     }
 
@@ -61,34 +74,43 @@
       margin-top: 0.3em;
       font-weight: normal;
     }
-  }
 
-  .article-link {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    transform: translate(0);
-    transition: transform 0.3s ease-out;
-    text-decoration: none;
-  }
+    @media screen and (max-width: 1023px) {
+      margin-right: 0;
+      margin-bottom: 1.3em;
 
-  .disqus-comment-count {
-    position: absolute;
-    top: 0;
-    transform: translate(0);
-    transition: transform 0.3s ease-out;
-    background-color: $dark-color;
-    mix-blend-mode: difference;
-    z-index: -2;
-  }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
-  .article-img {
-    width: 100%;
-    padding: 0;
-    transform: translate(0);
-    transition: transform 0.3s ease-out;
-    display: block;
+    .article-link {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      transform: translate(0);
+      transition: transform 0.3s ease-out;
+      text-decoration: none;
+    }
+
+    .disqus-comment-count {
+      position: absolute;
+      top: 0;
+      transform: translate(0);
+      transition: transform 0.3s ease-out;
+      background-color: $dark-color;
+      mix-blend-mode: difference;
+      z-index: -2;
+    }
+
+    .article-img {
+      width: 100%;
+      padding: 0;
+      transform: translate(0);
+      transition: transform 0.3s ease-out;
+      display: block;
+    }
   }
 }
