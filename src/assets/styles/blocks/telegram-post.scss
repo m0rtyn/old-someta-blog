@@ -5,6 +5,7 @@
   background-color: $dark-color;
   position: relative;
   width: 636px;
+
   &::before {
     content: "";
     display: block;
@@ -16,18 +17,23 @@
     z-index: 0;
     margin-left: 4px;
   }
+
   iframe {
     margin: 0 0.3em;
     margin-bottom: 0;
     width: 515px;
     mix-blend-mode: darken;
+
     &.cutted {
       max-height: 96px !important;
+
       &~#post-expander {
         top: 100%;
+
         &::after {
           content: "Развернуть";
         }
+
         &::before {
           content: "▪▪▪";
           display: block;
@@ -36,6 +42,7 @@
       }
     }
   }
+
   #post-expander {
     border: none;
     text-align: center;
@@ -50,17 +57,21 @@
     top: calc(100% - 10px);
     box-sizing: border-box;
     border-left: 7px solid $dark-color;
+
     &::after {
       content: "Свернуть";
       border-bottom: 1px dashed $dark-color;
     }
+
     &::before {
       content: "";
     }
+
     &:focus {
       outline: none;
     }
   }
+
   #post-number {
     position: absolute;
     top: 0;
@@ -84,33 +95,28 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .article-list {
-    flex-flow: column nowrap;
-  }
-  .article-item {
-    margin-right: 0;
-    margin-bottom: 0.3em;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
   #telegram-wrapper {
     position: relative;
+
     &::before {
       width: 98.6%;
     }
+
     @media screen and (max-width: 493px) {
       width: calc(100vw + 7px);
       margin-left: -7px;
     }
+
     iframe {
       width: 500px !important;
       max-width: 500px;
       margin: 0;
+
       @media screen and (max-width: 493px) {
         width: 100% !important;
       }
     }
+
     .telegram-paging {
       position: absolute;
       z-index: 2;
@@ -119,6 +125,7 @@
       right: 1.3em;
       font-size: 1.3em;
       color: $dark-color;
+
       &:last-of-type {
         right: 0;
       }
