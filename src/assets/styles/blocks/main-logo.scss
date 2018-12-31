@@ -2,19 +2,19 @@
   font-size: 1.3rem;
   display: grid;
   grid-template-areas:
-          "img mrtnsn"
-          "img pit";
+    "img mrtnsn"
+    "img pit";
   grid-template-columns: auto auto;
   grid-template-rows: 1.3fr 3.3fr;
   grid-gap: 0.9em;
-  margin-bottom: 1.3em;
+  margin-bottom: 3.3em;
   font-family: "Pixel Cyr";
   // text-shadow: -0.5px 0.5px $m-color, -1px 1px $m-color, -2px 2px $m-color;
   cursor: pointer;
 
   .main-logo__img {
     grid-area: img;
-    height: calc( 1.3em + 3.3em );
+    height: calc(1.3em + 3.3em);
   }
 
   .main-logo__mrtnsn {
@@ -29,7 +29,8 @@
     line-height: 73%;
   }
 
-  .main-logo__mrtnsn, .main-logo__pit {
+  .main-logo__mrtnsn,
+  .main-logo__pit {
     &:active {
       text-shadow: none;
     }
@@ -37,5 +38,10 @@
 
   @media screen and (max-width: 1023px) {
     font-size: initial;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-right: auto;
+    margin-left: 1.3em;
   }
 }
