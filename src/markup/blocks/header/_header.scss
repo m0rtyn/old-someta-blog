@@ -22,8 +22,8 @@
     cursor: pointer;
 
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
+    // &:active {
       background-color: $light-color;
       border-color: $dark-color;
       color: $dark-color;
@@ -155,8 +155,8 @@
   }
 
   .dropdown:hover>.list-subnav,
-  .dropdown:focus>.list-subnav,
-  .dropdown:active>.list-subnav {
+  .dropdown:focus>.list-subnav {
+  // .dropdown:active>.list-subnav {
     transform: translateY(0);
   }
 
@@ -172,8 +172,8 @@
     cursor: pointer;
 
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
+    // &:active {
       transform: translateX(1.3em);
     }
   }
