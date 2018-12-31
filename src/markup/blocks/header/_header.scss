@@ -5,6 +5,7 @@
   @media screen and (max-width: 500px) {
     width: 100vw;
     position: absolute;
+    background-color: transparent;
   }
 
   ul {
@@ -39,8 +40,6 @@
   #burger {
     font-family: monospace;
     font-size: 3.3em;
-    padding: 0.3em;
-    border: 1px solid $light-color;
     position: absolute;
     right: 0;
     background-color: $dark-color;
@@ -71,16 +70,14 @@
 
     @media screen and (max-width: 500px) {
       margin-left: auto;
-      display: none;
       width: 100%;
       text-align: right;
       right: 0;
-      transform: translate(100%);
+      transform: translateY(-100%);
       transition: transform 0.3s ease-out;
 
       &.slip-appearance {
-        transform: translate(0%);
-        display: block;
+        transform: translateY(0%);
       }
     }
   }
