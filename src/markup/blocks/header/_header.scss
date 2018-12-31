@@ -23,7 +23,7 @@
 
     &:hover,
     &:focus {
-    // &:active {
+      // &:active {
       background-color: $light-color;
       border-color: $dark-color;
       color: $dark-color;
@@ -47,6 +47,7 @@
     margin: 1.3rem;
     cursor: pointer;
     display: none;
+    line-height: 1;
 
     @media screen and (max-width: 500px) {
       display: block;
@@ -156,7 +157,7 @@
 
   .dropdown:hover>.list-subnav,
   .dropdown:focus>.list-subnav {
-  // .dropdown:active>.list-subnav {
+    // .dropdown:active>.list-subnav {
     transform: translateY(0);
   }
 
@@ -173,7 +174,7 @@
 
     &:hover,
     &:focus {
-    // &:active {
+      // &:active {
       transform: translateX(1.3em);
     }
   }
