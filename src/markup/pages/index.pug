@@ -12,13 +12,16 @@ block content
       ul.article-list
         li.article-item
           article
-            img.article-img(src="./assets/img/smert'.jpg" alt="статья «Невалидный Мартын»")
+            video.article-cover(autoplay='autoplay', loop='loop', muted)
+              source(src='./assets/video/clean.mp4', type='video/mp4')
+            //- img.article-cover(src="./assets/img/smert'.jpg" alt="статья «Невалидный Мартын»")
             span.disqus-comment-count(data-disqus-identifier='1', data-disqus-url='https://mrtnsn.me/papers/invalid-martyn')
             a.article-link(href='./papers/invalid-martyn')
               h3 Невалидный Мартын
         li.article-item
           article
-            img.article-img(src='./assets/img/paper-in-progress.jpg' alt="Сон")
+            video.article-cover(autoplay='autoplay', loop='loop', muted)
+              source(src='./assets/video/alarm-clock.mp4', type='video/mp4')
             span.disqus-comment-count(data-disqus-identifier='2', data-disqus-url='https://mrtnsn.me/papers/sleep')
             a.article-link(href='./papers/sleep')
               h3 Сон
