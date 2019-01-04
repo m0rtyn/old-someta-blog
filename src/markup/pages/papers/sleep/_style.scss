@@ -21,21 +21,7 @@
   }
 
   .img-title {
-    width: 280px;
-    min-height: 200px;
-    margin-left: 1.3em;
     background-image: url(../img/tom-cat.jpg);
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: $dark-color;
-    background-blend-mode: luminosity;
-    border: 1px solid $light-color;
-
-    @media screen and (max-width: 1023px) {
-      margin-left: 0;
-      margin-top: 1.3em;
-    }
   }
 
   .md-text {
