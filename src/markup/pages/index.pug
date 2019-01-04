@@ -13,8 +13,7 @@ block content
         li.article-item
           article
             video.article-cover(autoplay='autoplay', loop='loop', muted)
-              source(src='./assets/video/clean.mp4', type='video/mp4')
-            //- img.article-cover(src="./assets/img/smert'.jpg" alt="статья «Невалидный Мартын»")
+              source(src='./assets/video/death-dance.mp4', type='video/mp4')
             span.disqus-comment-count(data-disqus-identifier='1', data-disqus-url='https://mrtnsn.me/papers/invalid-martyn')
             a.article-link(href='./papers/invalid-martyn')
               h3 Невалидный Мартын
@@ -24,7 +23,17 @@ block content
               source(src='./assets/video/alarm-clock.mp4', type='video/mp4')
             span.disqus-comment-count(data-disqus-identifier='2', data-disqus-url='https://mrtnsn.me/papers/sleep')
             a.article-link(href='./papers/sleep')
-              h3 Сон
+              h3 Как починить сон?
+        li.article-item
+          article
+            video.article-cover(autoplay='autoplay', loop='loop', muted)
+              source(src='./assets/video/senior-pomodor.mp4', type='video/mp4')
+            span.disqus-comment-count(
+              data-disqus-identifier='3',
+              data-disqus-url='https://mrtnsn.me/papers/pmdr'
+            )
+            a.article-link(href='./papers/pmdr')
+              h3 🍅
 
     section.main-page__section
       - const telegramPostNumber = '63';

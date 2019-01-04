@@ -1,0 +1,97 @@
+extends ../../../base/layout.pug
+
+block variables
+  - var title = '🍅';
+  - var description = 'Статья о помидорах';
+  - var keywords = 'помодоро, pomodoro, циклы, ультрадиарные,';
+
+block content
+  main#pmdr.paper
+    header
+      
+
+      .intro.text-container
+        h1 🍅
+          .version 02.01.19
+        p
+          |Лорем ипсум
+      .img-title
+    .md-text
+      :markdown-it(linkify langPrefix='highlight-')
+        ## Введение
+
+          ### Шум
+
+          #### Рассеянность
+
+          ### Помодоро
+
+          #### Внимание
+
+          ### Зачем?
+
+          * обобщение опыта
+          * получение фидбека
+          * помодорная революция
+
+        ## Повествование
+
+          ### Продуктивость
+
+          #### х10 специалист
+
+          * знающий
+          * способный
+          * опытный
+          * разборчивый
+          * ёмкий
+        
+          ### Циклы
+
+          #### Три уровня детализации циклов
+
+          ##### Простейший
+
+          ##### Продвинутый
+
+          ##### Гибкий
+
+          ### Отдых это тоже работа
+
+          #### Мозг
+
+          ##### Дефолт-система
+
+          #### Скука
+
+          #### Правильный отдых
+
+        ## Заключение
+
+          ### Минусы
+
+          ### Что дальше
+
+        
+    #disqus_thread.disqus-wrapper
+    script.
+      /**
+      *RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      var pageUrl = 'https://mrtnsn.me/papers/pmdr';
+      var pageIdentifier = '3';
+      var pageTitle = 'pmdr'
+
+      var disqus_config = function () {
+        this.page.url = pageUrl;
+        this.page.identifier = pageIdentifier;
+        this.page.title = pageTitle;
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://mrtnsn.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    noscript
+      | Пожалуйста включите JavaScript для просмотра комментариев.
