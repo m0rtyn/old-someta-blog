@@ -1,0 +1,44 @@
+block variables
+    - var description = 'Веблог об идеях и проектах Мартына. Место сбора всех статей и постов на тему сознания, программирования, нейронаук и прочей философии. Экспериментальная площадка для обучения дизайну и разработке в вебе на практике, так что не ругайте сильно за грубые косяки.';
+    - var title = 'Мартынсоновая Яма';
+    - var keywords = 'мета, проекты, модели, системы, концепции, идеи, изобретения, креативность, продуктивность, рациональность, программирование, веб, развитие';
+    - var scriptSrc = '';
+
+doctype html
+html(lang='ru')
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111939915-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111939915-1');
+
+    meta(name="yandex-verification" content="890d7087302c8e0d")
+    meta(name="p:domain_verify" content="be569f132eb8b7a7fbdaa631b5b1b76e")
+
+    title #{title}
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='description', content=description)
+    meta(name="keywords" content=keywords)
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name="author" content="Martyn Son")
+    meta(name="robots" content="index, follow")
+    meta(http-equiv="content-type" content="text/html;UTF-8")
+    meta(http-equiv="cache-control" content="cache")
+    meta(http-equiv="content-language" content="ru")
+
+    //- fonts
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=cyrillic')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic")
+    //- styles
+    link(rel='stylesheet', type='text/css', href='/assets/styles/style.min.css')
+    //- favicons
+    link(rel='apple-touch-icon', href='/icon.png')
+    link(rel='icon', href='/assets/img/svg/dark-logo.svg', sizes='any', type='image/svg+xml')
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+    link(rel='manifest', href='/site.webmanifest')
+      
+  block layout

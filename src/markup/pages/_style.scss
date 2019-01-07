@@ -1,10 +1,8 @@
 #main-page {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: start;
-  align-items: center;
-  flex: 1;
+  display: grid;
   overflow: hidden;
+  max-height: 100%;
+  flex-grow: 1;
 
   h2 {
     margin: 0;
