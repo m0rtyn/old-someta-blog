@@ -69,7 +69,7 @@ gulp.task('jsDebug', () => gulp
   .pipe(browserSync.stream()));
 
 gulp.task('images', () => gulp
-  .src('src/assets/img/**/**/*.{png,jpg,gif}')
+  .src('src/assets/img/**/**/*.{png,jpg,gif,webp}')
   .pipe(gulp.dest('public/assets/img')));
 
 gulp.task('svg', () => gulp
