@@ -22,15 +22,26 @@ block content
         br
         p 
             |Если тебе нравится деятельность Мартына и ты хочешь развития его проектов, то достаточно отблагодарить в сообщении.
-            //- br
-            //- |Для тех, кто готов приблизить Мартына к мечте о самоокупаемости проектов, есть способы денежножной поддержки. И это тот случай, когда даже ~10 рублей ценны как жест одобрения.
+        p
+            |Для тех, кто готов приблизить Мартына к мечте о самоокупаемости проектов, есть способы денежной поддержки. И это тот случай, когда даже ~10 рублей ценны как жест одобрения.
 
-        //- .support-buttons
-        //-     .patreon
-        //-         button Поддержать
-        //-     .ya-money
-        //-         button Поддержать
-        //-     .crypto
-        //-         button Поддержать
-        //-     .banks
-        //-         button Поддержать
+        .support-buttons
+            form.ya-money(
+                method='POST',
+                action='https://money.yandex.ru/quickpay/confirm.xml'
+            )
+                input(type='hidden', name='receiver', value='410012047589106')
+                input(type='hidden', name='formcomment', value='Проект «Мартынсоновая Яма»')
+                input(type='hidden', name='short-dest', value='Проект «Мартынсоновая Яма»')
+                input(type='hidden', name='label', value='$order_id')
+                input(type='hidden', name='quickpay-form', value='donate')
+                input(type='hidden', name='targets', value='транзакция {order_id}')
+                input(type='hidden', name='sum', value='100', data-type='number')
+                input(name='comment', value='Комментарий')
+                input(type='hidden', name='need-fio', value='false')
+                input(type='hidden', name='need-email', value='false')
+                input(type='hidden', name='need-phone', value='false')
+                input(type='hidden', name='need-address', value='false')
+                input(type='submit', value='Перевести')
+            .patreon
+                a(href='https://www.patreon.com/mrtnsn') Поддержать
