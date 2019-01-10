@@ -2,10 +2,13 @@ extends ../../base/layout.pug
 
 block content
   main#log.basic-page
-    h2 Лог важных событий*
+    h1.title Лог событий*
     section 
       h3.year 2019
       ul
+        li.record
+          span.date 10 Jan
+          | Запуск проекта Куб
 
     section 
       h3.year 2018
@@ -14,8 +17,11 @@ block content
           span.date 31 Dec
           | Прочитал 50 книг за год
         li.record
+          span.date 02 Dec
+          | Стрим первого Митдауна
+        li.record
           span.date ?? Dec
-          | Прочитал все романы Виктора Пелевина
+          | Прочитаны все романы Виктора Пелевина
         li.record
           span.date 29 Oct
           | Знакомство с Милославом

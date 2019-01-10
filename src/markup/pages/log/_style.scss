@@ -8,6 +8,10 @@
 
   section {
     margin-bottom: 1.3em;
+
+    &:first-of-type {
+      margin-top: 1.3em;
+    }
   }
 
   ul {

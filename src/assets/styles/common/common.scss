@@ -74,6 +74,16 @@ em {
   font-style: normal;
 }
 
+.title {
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 1.3em;
+    max-width: 75%;
+    text-align: left !important;
+  }
+}
+
 //OTHER================================================================================================================//
 ::selection {
   background-color: $b-color;
@@ -129,7 +139,6 @@ dir {
 }
 
 .basic-page {
-  // line-height: 3.3em;
   display: flex;
   flex: 1;
   flex-flow: column nowrap; // margin: 0 auto;
@@ -137,6 +146,7 @@ dir {
 
   @media screen and (max-width: 768px) {
     max-width: 99%;
+
   }
 }
 
