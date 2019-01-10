@@ -1,13 +1,30 @@
-extends ../base/layout.pug
+extends ../base/main-page-layout.pug
 
 block content
   main#main-page
-    h1.main-logo
-      img.main-logo__img(src='./assets/img/svg/mrtnsn-pit__logo-2018.svg' alt="логотип")
-      span.main-logo__mrtnsn мартынсоновая
-      span.main-logo__pit яма
 
-    section.main-page__section
+    section.about
+      h1.main-logo
+        img.main-logo__img(src='./assets/img/svg/mrtnsn-pit__logo-2018.svg' alt="логотип")
+        span.main-logo__mrtnsn мартинсоновая
+        span.main-logo__pit яма
+
+    section.posts
+      //- - var telegramPostNumber = 130;
+      //- h2#post-number Пост #
+      //-   span #{telegramPostNumber}
+      //- #telegram-wrapper
+      //-   button#btn-prew.telegram-paging(type='button') 
+      //-     span ◁
+      //-   script#script(async='', src='https://telegram.org/js/telegram-widget.js', data-telegram-post='metabaza/' + telegramPostNumber, data-userpic='false')
+      //-   button#post-expander
+      //-   button#btn-next.telegram-paging(type='button') 
+      //-     span ▷
+      h2 Посты
+      //- include ../blocks/metabaza/metabaza.pug
+      include ../blocks/metabaza/ChatExport_09_01_2019/messages.html
+
+    section.articles
       h2 Статьи
       ul.article-list
         li.article-item
@@ -34,15 +51,3 @@ block content
             )
             a.article-link(href='./papers/pmdr')
               h3 🍅
-
-    section.main-page__section
-      - var telegramPostNumber = 130;
-      h2#post-number Пост #
-        span #{telegramPostNumber}
-      #telegram-wrapper
-        button#btn-prew.telegram-paging(type='button') 
-          span ◁
-        script#script(async='', src='https://telegram.org/js/telegram-widget.js', data-telegram-post='metabaza/' + telegramPostNumber, data-userpic='false')
-        button#post-expander
-        button#btn-next.telegram-paging(type='button') 
-          span ▷
