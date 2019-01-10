@@ -1,16 +1,19 @@
 .main-logo {
-  font-size: 1.3rem;
+  font-size: 1em;
   display: grid;
   grid-template-areas:
     "img mrtnsn"
     "img pit";
   grid-template-columns: auto auto;
-  grid-template-rows: 1.3fr 3.3fr;
+  grid-template-rows: auto auto;
+  justify-content: start;
+  // grid-template-rows: 1.3fr 3.3fr;
   grid-gap: 0.9em;
   margin-bottom: 3.3em;
   font-family: "Pixel Cyr";
   // text-shadow: -0.5px 0.5px $m-color, -1px 1px $m-color, -2px 2px $m-color;
   cursor: pointer;
+  justify-content: center;
 
   .main-logo__img {
     grid-area: img;
