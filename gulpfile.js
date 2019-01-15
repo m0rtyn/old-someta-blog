@@ -12,6 +12,7 @@ const babel = require('gulp-babel');
 const postcssFixes = require('postcss-fixes');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const remove = require('gulp-html-remove');
 
 
 gulp.task('style', () => {
@@ -52,6 +53,12 @@ const handleError = (error) => {
   console.log(error.toString());
   this.emit('end');
 };
+
+gulp.task('exported-html-cleaner', () => gulp
+  .src('src/markup/blocks/metabaza/ChatExport*/messages.html')
+  .pipe(remove('head, .page_header'))
+  .pipe(rename('index.html'))
+  .pipe(gulp.dest('src/markup/blocks/metabaza')));
 
 gulp.task('js', () => gulp
   .src('src/assets/js/*.js')
@@ -118,6 +125,7 @@ gulp.task('clean', () => del.sync([
 gulp.task('dev', [
   'clean',
   'copy',
+  'exported-html-cleaner',
   'pug',
   'style',
   'jsDebug',
