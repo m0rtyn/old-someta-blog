@@ -39,6 +39,7 @@
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "gulp-babel": "^8.0.0",
+    "gulp-html-remove": "^0.1.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0",
     "jstransformer-markdown-it": "^2.1.0",
