@@ -1,5 +1,8 @@
 extends ../base/main-page-layout.pug
 
+block variables
+    - let scriptSrc = '/assets/js/home.js'
+
 block content
   main#main-page
 
@@ -9,7 +12,7 @@ block content
         span.main-logo__mrtnsn мартинсоновая
         span.main-logo__pit яма
 
-    section.posts
+    section#posts
       //- - var telegramPostNumber = 130;
       //- h2#post-number Пост #
       //-   span #{telegramPostNumber}
@@ -22,7 +25,7 @@ block content
       //-     span ▷
       h2 Посты
       //- include ../blocks/metabaza/metabaza.pug
-      include ../blocks/metabaza/ChatExport_09_01_2019/messages.html
+      include ../blocks/metabaza/index.html
 
     section.articles
       h2 Статьи
