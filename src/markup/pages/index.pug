@@ -6,51 +6,42 @@ block variables
 block content
   main#main-page
 
-    section.about
-      h1.main-logo
-        img.main-logo__img(src='./assets/img/svg/mrtnsn-pit__logo-2018.svg' alt="логотип")
-        span.main-logo__mrtnsn мартинсоновая
-        span.main-logo__pit яма
-
-    section#posts
-      //- - var telegramPostNumber = 130;
-      //- h2#post-number Пост #
-      //-   span #{telegramPostNumber}
-      //- #telegram-wrapper
-      //-   button#btn-prew.telegram-paging(type='button') 
-      //-     span ◁
-      //-   script#script(async='', src='https://telegram.org/js/telegram-widget.js', data-telegram-post='metabaza/' + telegramPostNumber, data-userpic='false')
-      //-   button#post-expander
-      //-   button#btn-next.telegram-paging(type='button') 
-      //-     span ▷
-      h2 Посты
-      //- include ../blocks/metabaza/metabaza.pug
-      include ../blocks/metabaza/index.html
+    +main-logo()
 
     section.articles
       h2 Статьи
       ul.article-list
         li.article-item
           article
-            video.article-cover(autoplay='autoplay', loop='loop', muted)
+            video.article-cover(loop='loop', muted)
               source(src='./assets/video/death-dance.mp4', type='video/mp4')
-            span.disqus-comment-count(data-disqus-identifier='1', data-disqus-url='https://mrtnsn.me/papers/invalid-martyn')
+            //- span.disqus-comment-count(
+            //-   data-disqus-identifier='1', data-disqus-url='https://mrtnsn.me/papers/invalid-martyn'
+            //- )
             a.article-link(href='./papers/invalid-martyn')
               h3 Невалидный Мартын
         li.article-item
           article
-            video.article-cover(autoplay='autoplay', loop='loop', muted)
+            video.article-cover(loop='loop', muted)
               source(src='./assets/video/alarm-clock.mp4', type='video/mp4')
-            span.disqus-comment-count(data-disqus-identifier='2', data-disqus-url='https://mrtnsn.me/papers/sleep')
+            //- span.disqus-comment-count(
+            //-   data-disqus-identifier='2',
+            //-   data-disqus-url='https://mrtnsn.me/papers/sleep'
+            //- )
             a.article-link(href='./papers/sleep')
               h3 Как починить сон?
         li.article-item
           article
-            video.article-cover(autoplay='autoplay', loop='loop', muted)
+            video.article-cover(loop='loop', muted)
               source(src='./assets/video/senior-pomodor.mp4', type='video/mp4')
-            span.disqus-comment-count(
-              data-disqus-identifier='3',
-              data-disqus-url='https://mrtnsn.me/papers/pmdr'
-            )
+            //- span.disqus-comment-count(
+            //-   data-disqus-identifier='3',
+            //-   data-disqus-url='https://mrtnsn.me/papers/pmdr'
+            //- )
             a.article-link(href='./papers/pmdr')
               h3 🍅
+
+    section#posts
+      include ../blocks/metabaza/index.html
+
+    
