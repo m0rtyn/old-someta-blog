@@ -4,8 +4,9 @@ footer {
   cursor: default;
   user-select: none;
   bottom: 0;
-  margin: 1.3em;
-  width: calc(100vw - 1.3em * 2);
+  // padding: 1.3em;
+  height: 3.3rem;
+  width: 100vw;
   box-sizing: padding-box;
   display: flex;
   align-items: center;
