@@ -74,6 +74,27 @@ em {
   font-style: normal;
 }
 
+//SCROLLBAR===================================================================//
+* {
+  &::-webkit-scrollbar {
+    background-color: var(--color-light);
+    width: 1.3em;
+  }
+
+  // &::-webkit-scrollbar-button {
+  //   background-color: transparent;
+  // }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-light);
+    border: .3em solid var(--color-dark);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-light);
+  }
+}
 
 //OTHER================================================================================================================//
 ::selection {
@@ -131,8 +152,14 @@ dir {
 
 .main-page-layout {
   height: 100vh;
-  overflow-y: hidden;
-  display: flex;
+  // overflow-y: hidden;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-rows: 3.3em auto 3.3em;
+  // align-items: stretch;
 }
 
 .basic-page {
