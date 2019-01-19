@@ -2,7 +2,7 @@
 h1,
 h2,
 h3 {
-  font-family: 'Roboto Slab', 'Book Antiqua', Palatino, 'Palatino Linotype',
+  font-family: 'Anonymous Pro', 'Book Antiqua', Palatino, 'Palatino Linotype',
     'Palatino LT STD', Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -39,7 +39,10 @@ p {
   margin: 0;
 
   .version {
-    font-family: monospace;
+    font-family: 'Anonymous Pro',
+      'Courier New',
+      Courier,
+      monospace;
     font-size: calc(1rem);
   }
 
@@ -48,7 +51,7 @@ p {
 
     &::before {
       content: '´';
-      left: 2ch;
+      left: 1ch;
       position: absolute;
     }
   }
@@ -158,8 +161,12 @@ dir {
     'header'
     'main'
     'footer';
-  grid-template-rows: 3.3em auto 3.3em;
+  grid-template-rows: 3.3rem auto 3.3rem;
   // align-items: stretch;
+
+  @media screen and (max-width: 500px) {
+    grid-template-rows: auto 3.3rem;
+  }
 }
 
 .basic-page {

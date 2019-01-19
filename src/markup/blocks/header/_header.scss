@@ -38,7 +38,10 @@
   }
 
   #burger {
-    font-family: monospace;
+    font-family: 'Anonymous Pro',
+      'Courier New',
+      Courier,
+      monospace;
     font-size: 3.3em;
     position: absolute;
     right: 0;
@@ -61,7 +64,10 @@
 
   #nav {
     padding: 0 1.3em;
-    font-family: Roboto Mono, 'Courier New', Courier, monospace;
+    font-family: 'Anonymous Pro',
+      'Courier New',
+      Courier,
+      monospace;
     z-index: 2;
     height: 3.3rem;
 
@@ -74,7 +80,7 @@
       width: 100%;
       text-align: right;
       right: 0;
-      transform: translateY(-100%);
+      transform: translateY(-200%);
       transition: transform 0.3s ease-out;
 
       &.slip-appearance {

@@ -48,7 +48,10 @@
   }
 
   .date {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Anonymous Pro',
+      'Courier New',
+      Courier,
+      monospace;
     font-size: 12px;
     background-color: $light-color;
     color: $dark-color;

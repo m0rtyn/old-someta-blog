@@ -1,20 +1,11 @@
-#telegram-channel {
-  width: 100%;
-  padding: 1.3em;
-  max-height: 33.3em;
-  overflow-y: scroll;
-  box-sizing: border-box;
-}
-
-strong {
-  font-weight: 700;
-}
-
 code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: 'Anonymous Pro',
+    'Courier New',
+    Courier,
+    monospace;
 }
 
 code {
@@ -58,8 +49,10 @@ pre {
 }
 
 .page_wrap {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: $light-color;
+  color: $dark-color;
+  padding: 1.3em;
+  margin-right: 1.3em;
 }
 
 .page_wrap a {
@@ -71,26 +64,6 @@ pre {
   text-decoration: underline;
 }
 
-.page_header {
-  // position: fixed;
-  z-index: 10;
-  background-color: #ffffff;
-  width: 100%;
-  border-bottom: 1px solid #e3e6e8;
-}
-
-.page_header .content {
-  width: 480px;
-  margin: 0 auto;
-  border-radius: 0 !important;
-}
-
-.page_header a.content {
-  background-repeat: no-repeat;
-  background-position: 24px 21px;
-  background-size: 24px 24px;
-}
-
 .bold {
   color: #212121;
   font-weight: 700;
@@ -100,20 +73,7 @@ pre {
   color: #70777b;
 }
 
-.page_header .content .text {
-  padding: 24px 24px 22px 24px;
-  font-size: 22px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.page_header a.content .text {
-  padding: 24px 24px 22px 82px;
-}
-
 .page_body {
-  padding-top: 64px;
   width: 100%;
   margin: 0 auto;
 }
@@ -124,6 +84,10 @@ pre {
 
 .with_divider {
   border-top: 1px solid #e3e6e8;
+}
+
+.userpic_wrap {
+  display: none;
 }
 
 .userpic_link {
@@ -304,11 +268,12 @@ a.block_link:hover {
 }
 
 .history {
-  padding: 16px 0;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .message {
-  margin: 0 -10px;
+  // margin: 0 -10px;
   transition: background-color 2.0s ease;
 }
 
@@ -346,7 +311,7 @@ div.selected {
 }
 
 .default.joined {
-  margin-top: -10px;
+  // margin-top: -10px;
 }
 
 .default .from_name {
@@ -359,11 +324,12 @@ div.selected {
   font-weight: normal;
 }
 
-.default .body {
-  margin-left: 60px;
-}
+// .default .body {
+//   margin-left: 60px;
+// }
 
 .default .text {
+  max-width: 60ch;
   word-wrap: break-word;
   line-height: 150%;
 }
@@ -374,7 +340,7 @@ div.selected {
 }
 
 .default .media {
-  margin: 0 -10px;
+  // margin: 0 -10px;
   padding: 5px 10px;
 }
 
@@ -531,10 +497,6 @@ div.toast_shown {
   background-image: url(../img/telegram/images/section_other.png)
 }
 
-.page_header a.content {
-  background-image: url(../img/telegram/images/back.png);
-}
-
 .media_call .fill {
   background-image: url(../img/telegram/images/media_call.png)
 }
@@ -611,10 +573,6 @@ only screen and (min-device-pixel-ratio: 2) {
 
   .section.other {
     background-image: url(../img/telegram/images/section_other@2x.png);
-  }
-
-  .page_header a.content {
-    background-image: url(../img/telegram/images/back@2x.png);
   }
 
   .media_call .fill {
