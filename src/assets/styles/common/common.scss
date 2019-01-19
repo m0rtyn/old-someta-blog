@@ -4,6 +4,7 @@ h2,
 h3 {
   font-family: 'Anonymous Pro', 'Book Antiqua', Palatino, 'Palatino Linotype',
     'Palatino LT STD', Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
 }
 
 h1 {
@@ -46,15 +47,18 @@ p {
     font-size: calc(1rem);
   }
 
-  .pseudonym {
+  .accented {
     position: relative;
 
-    &::before {
-      content: '´';
-      left: 1ch;
+    &::after {
+      content: "´";
       position: absolute;
+      right: -0.04ch;
+      top: -.04ch;
+      line-height: 1;
     }
   }
+
 }
 
 button {
