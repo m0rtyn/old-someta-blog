@@ -123,173 +123,175 @@ em {
     background-color: var(--color-dark);
     border: 1px solid var(--color-light);
   }
+}
 
-  //OTHER================================================================================================================//
-  ::selection {
-    background-color: $b-color;
+//OTHER================================================================================================================//
+::selection {
+  background-color: $b-color;
+  color: $light-color;
+}
+
+html {
+  background-color: $dark-color;
+  color: $light-color;
+  font-family: system-ui, Arial, SansSerif;
+  font-size: $font-size;
+  line-height: $line-height;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.basic-page {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap; // margin: 0 auto;
+  max-width: 66%; // position: relative;
+
+  @media screen and (max-width: 768px) {
+    max-width: 99%;
+
+  }
+}
+
+a {
+  color: $light-color;
+
+  &:active {
     color: $light-color;
   }
 
-  html {
-    background-color: $dark-color;
+  &:focus {
     color: $light-color;
+  }
+}
+
+ul,
+ol,
+menu,
+dir {
+  margin-bottom: 1.3em;
+  margin-top: 1.3em;
+  padding-left: 1.3em; // @media screen and (min-width: 768px) {
+  //   padding-left: 0;
+  // }
+}
+
+.main-page-layout {
+  height: 100vh;
+  // overflow-y: hidden;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-rows: 3.3rem auto 3.3rem;
+  // align-items: stretch;
+
+  @media screen and (max-width: 500px) {
+    grid-template-rows: auto 3.3rem;
+  }
+}
+
+.basic-page {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap; // margin: 0 auto;
+  max-width: 66%; // position: relative;
+
+  @media screen and (max-width: 768px) {
+    max-width: 99%;
+
+  }
+}
+
+.tip {
+  border-bottom: 0.1em dashed currentColor;
+  cursor: help;
+  display: inline-block;
+  height: calc(1em + 0.1em);
+  position: relative;
+  text-shadow: 0 1px 0 $dark-color, 0.1em 0 0 $dark-color,
+    -0.1em 0 0 $dark-color;
+
+  &+span {
+    display: none;
+  }
+
+  &:hover+span {
+    background-color: $light-color;
+    color: $dark-color;
+    display: inline-block;
     font-family: system-ui, Arial, SansSerif;
-    font-size: $font-size;
-    line-height: $line-height;
-    max-width: 100vw;
-    overflow-x: hidden;
+    font-size: calc(1rem / 1.3);
+    font-weight: normal;
+    padding: 0.3em;
+    position: absolute;
+  }
+}
+
+.link {
+  color: $light-color;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 $dark-color;
+
+  &:hover {
+    color: $c-color;
+    text-shadow: none;
+
+    &::after {
+      color: transparent;
+    }
+
+    &::before {
+      border: 1px solid $c-color;
+      height: 100%;
+      left: -3px;
+      padding: 0 3px;
+    }
   }
 
-  body {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0;
-    min-height: 100vh;
+  &::after {
+    color: $light-color;
+    content: 'ꜛ';
   }
 
-  .basic-page {
-    display: flex;
-    flex: 1;
-    flex-flow: column nowrap; // margin: 0 auto;
-    max-width: 66%; // position: relative;
+  &::before {
+    border-bottom: 1px solid $c-color;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    transition: all 0.13s ease-out;
+    width: calc(100% - 1ch);
+    z-index: -1;
+  }
 
-    @media screen and (max-width: 768px) {
-      max-width: 99%;
-
+  &.person {
+    &::before {
+      border-color: $light-color;
     }
 
-    a {
+    &:hover {
       color: $light-color;
 
-      &:active {
-        color: $light-color;
-      }
-
-      &:focus {
-        color: $light-color;
+      ::before {
+        border-color: $light-color;
       }
     }
+  }
+}
 
-    ul,
-    ol,
-    menu,
-    dir {
-      margin-bottom: 1.3em;
-      margin-top: 1.3em;
-      padding-left: 1.3em; // @media screen and (min-width: 768px) {
-      //   padding-left: 0;
-      // }
-    }
-
-    .main-page-layout {
-      height: 100vh;
-      // overflow-y: hidden;
-      display: grid;
-      grid-template-areas:
-        'header'
-        'main'
-        'footer';
-      grid-template-rows: 3.3rem auto 3.3rem;
-      // align-items: stretch;
-
-      @media screen and (max-width: 500px) {
-        grid-template-rows: auto 3.3rem;
-      }
-    }
-
-    .basic-page {
-      display: flex;
-      flex: 1;
-      flex-flow: column nowrap; // margin: 0 auto;
-      max-width: 66%; // position: relative;
-
-      @media screen and (max-width: 768px) {
-        max-width: 99%;
-
-      }
-    }
-
-    .tip {
-      border-bottom: 0.1em dashed currentColor;
-      cursor: help;
-      display: inline-block;
-      height: calc(1em + 0.1em);
-      position: relative;
-      text-shadow: 0 1px 0 $dark-color, 0.1em 0 0 $dark-color,
-        -0.1em 0 0 $dark-color;
-
-      &+span {
-        display: none;
-      }
-
-      &:hover+span {
-        background-color: $light-color;
-        color: $dark-color;
-        display: inline-block;
-        font-family: system-ui, Arial, SansSerif;
-        font-size: calc(1rem / 1.3);
-        font-weight: normal;
-        padding: 0.3em;
-        position: absolute;
-      }
-    }
-
-    .link {
-      color: $light-color;
-      position: relative;
-      text-decoration: none;
-      text-shadow: 1px 1px 0 $dark-color;
-
-      &:hover {
-        color: $c-color;
-        text-shadow: none;
-
-        &::after {
-          color: transparent;
-        }
-
-        &::before {
-          border: 1px solid $c-color;
-          height: 100%;
-          left: -3px;
-          padding: 0 3px;
-        }
-      }
-
-      &::after {
-        color: $light-color;
-        content: 'ꜛ';
-      }
-
-      &::before {
-        border-bottom: 1px solid $c-color;
-        bottom: 0;
-        content: '';
-        display: block;
-        height: 1px;
-        left: 0;
-        padding: 0;
-        position: absolute;
-        transition: all 0.13s ease-out;
-        width: calc(100% - 1ch);
-        z-index: -1;
-      }
-
-      &.person {
-        &::before {
-          border-color: $light-color;
-        }
-
-        &:hover {
-          color: $light-color;
-
-          ::before {
-            border-color: $light-color;
-          }
-        }
-      }
-    }
-
-    .icon-emoji {
-      font-size: 3.3em;
-    }
+.icon-emoji {
+  font-size: 3.3em;
+}
