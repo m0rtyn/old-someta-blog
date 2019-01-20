@@ -243,7 +243,7 @@
     position: fixed;
     right: 0;
     bottom: -134px;
-    transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    transition: all var(--magic-bezier) 0.3s;
     padding: 1.3em;
 
     &:hover {
