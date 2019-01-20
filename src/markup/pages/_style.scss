@@ -1,11 +1,11 @@
 #main-page {
   display: grid;
   grid-template-areas:
-    'logo posts'
-    'articles posts';
+    "logo posts"
+    "articles posts";
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: min-content;
-  max-height: 100%;
+  grid-template-rows: [row1-start] min-content [row1-end row2-start] max-content [row2-end];
+  height: 100%;
   flex-grow: 1;
   flex-shrink: 1;
   grid-gap: 3.3em;
@@ -15,9 +15,11 @@
   @media screen and (max-width: 500px) {
     grid-template-areas:
       "logo"
-      "posts"
       "articles";
     grid-template-columns: auto;
+    grid-template-rows: auto;
+    // display: flex;
+    // flex-direction: column;
   }
 
   h2 {
@@ -34,6 +36,10 @@
     grid-area: posts;
     max-height: calc(100vh - 3.3rem * 3);
     overflow-y: scroll;
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
 
   .articles {
@@ -41,6 +47,13 @@
     display: flex;
     flex-direction: column;
     align-self: start;
+    grid-row-start: row1-end / row2-end;
+
+    @media screen and (max-width: 500px) {
+      // height: 50vh;
+      overflow: auto;
+      flex: 1 1 50vh;
+    }
   }
 
   .article-list {
@@ -54,13 +67,15 @@
     margin: auto;
     padding: .3em;
     padding-right: 1.3em;
-    // height: 50vh;
-
     flex: 1 1 50vh;
 
     @media screen and (max-width: 1023px) {
-      // flex-flow: column nowrap;
       padding: 0 1.3em;
+    }
+
+    @media screen and (max-width: 500px) {
+      height: 100%;
+      overflow: auto;
     }
   }
 
