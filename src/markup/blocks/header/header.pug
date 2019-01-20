@@ -1,36 +1,38 @@
 header#header
   #burger ☰
   nav#nav: ul.list-nav
-    a.item-nav.link-nav(href='/'): li Яма
+    a.item-nav.link-nav(href='/'): li.item-sublink Яма
 
     li.item-nav.dropdown
-      span Проекты
+      span.title-item Проекты
       ul.list-subnav
-        a(class="link-subnav" href="http://tele.ga/metabaza" target="_blank"): li.item-subnav Метабаза
-        a(class="link-subnav" href="https://anchor.fm/protopilotalpha"): li.item-subnav Протопилот
-        //- a(class="link-subnav" href="#"): li.item-subnav Проблемы Белых Идей
-        //- a(class="link-subnav" href="https://crema.today"): li.item-subnav Кремá Тудей
+        a.link-subnav(href="http://tele.ga/metabaza" target="_blank"): li.item-subnav: span Метабаза
+        a.link-subnav(href="https://anchor.fm/protopilotalpha"): li.item-subnav: span Протопилот
+        //- a.link-subnav(href="#"): li.item-subnav: span Проблемы Белых Идей
+        //- a.link-subnav(href="https://crema.today"): li.item-subnav: span Кремá Тудей
 
-    li.dropdown
-      span Мартын  
+    li.item-nav.dropdown
+      span.title-item Мартын  
       ul.list-subnav
-        //- a(class="link-subnav" href="#"): li.item-subnav О Мартыне
-        a(class="link-subnav" href="/log"): li.item-subnav Лог
-        a(class="link-subnav" href="/resume"): li.item-subnav Резюме
-        a(class="link-subnav" href="/shows"): li.item-subnav Выступления
-        a(class="link-subnav" href="/books"): li.item-subnav Книги
-        //- a(class="link-subnav" href="/portfolio"): li.item-subnav Портфолио
-        //- a(class="link-subnav" href="/achievements"): li.item-subnav Достижения
-        a(class="link-subnav" href="/contacts"): li.item-subnav Контакты
+        //- a.link-subnav(href="#"): li.item-subnav: span О Мартыне
+        a.link-subnav(href="/log"): li.item-subnav: span Лог событий
+        a.link-subnav(href="/resume"): li.item-subnav: span Резюме
+        a.link-subnav(href="/shows"): li.item-subnav: span Выступления
+        a.link-subnav(href="/books"): li.item-subnav: span Книги
+        //- a.link-subnav(href="/portfolio"): li.item-subnav: span Портфолио
+        //- a.link-subnav(href="/achievements"): li.item-subnav: span Достижения
+        a.link-subnav(href="/contacts"): li.item-subnav: span Контакты
 
     //- li.item-nav.dropdown Изобретения
     //-   ul.list-subnav
-    //-     a(class="link-subnav" href="#"): li.item-subnav Манифест потребления
-    //-     a(class="link-subnav" href="#"): li.item-subnav Идеятация
-    //-     a(class="link-subnav" href="#"): li.item-subnav Клавиатурная раскладка Мартына
-    //-     a(class="link-subnav" href="#"): li.item-subnav Каша
+    //-     a.link-subnav(href="#"): li.item-subnav: span Манифест потребления
+    //-     a.link-subnav(href="#"): li.item-subnav: span Идеятация
+    //-     a.link-subnav(href="#"): li.item-subnav: span Клавиатурная раскладка Мартына
+    //-     a.link-subnav(href="#"): li.item-subnav: span Каша
 
-    a.item-nav.link-nav.evil(href='/donation'): li Зло
+    a.item-nav.link-nav.evil(href='/donation'): li.item-sublink Зло
+    
+    #close-menu ✖
 
 
 

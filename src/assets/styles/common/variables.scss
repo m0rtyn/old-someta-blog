@@ -6,7 +6,11 @@ html {
   --color-b: #2121DE;
   --color-c: #21DEDE;
   --color-m: #DE21DE;
-  --color-y: #DEDE21;  
+  --color-y: #DEDE21;
+
+  --magic-bezier: cubic-bezier(.25, .8, .25, 1);
+
+  --font-monotype: 'Anonymous Pro', 'Courier New', Courier, monospace;
 }
 
 $dark-color: #212121;
