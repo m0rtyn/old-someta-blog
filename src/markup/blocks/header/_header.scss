@@ -105,6 +105,10 @@
     }
   }
 
+  .link-home {
+    text-align: center;
+  }
+
   .home-icon {
     height: 1rem;
     fill: currentColor;
@@ -133,7 +137,7 @@
   }
 
   .item-nav {
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
     max-height: 3.3em;
     transition: all 0.3s var(--magic-bezier);
 
@@ -177,7 +181,7 @@
     }
   }
 
-  .evil {
+  .link-evil {
     flex-grow: 13;
 
     li {
@@ -226,7 +230,7 @@
   }
 
   .title-item {
-    margin-right: auto;
+    margin-right: 1.3em;
 
     @media screen and (max-width: 500px) {
       display: block;
