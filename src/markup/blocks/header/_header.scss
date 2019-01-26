@@ -15,12 +15,10 @@
   }
 
   li {
-    border: 1px solid $light-color;
     display: block;
     position: relative;
     transition-duration: .3s;
     transition-delay: .3s;
-    background-color: $dark-color;
     cursor: pointer;
 
     &:hover,
@@ -32,7 +30,6 @@
     }
 
     @media screen and (max-width: 500px) {
-      // border: none;
       height: 100%;
     }
   }
@@ -100,6 +97,7 @@
 
         .list-nav {
           transform: translateY(0);
+          height: 100%;
         }
       }
     }
@@ -107,19 +105,24 @@
 
   .link-home {
     text-align: center;
+
+    li {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .home-icon {
-    height: 1rem;
+    height: 1em;
     fill: currentColor;
   }
 
   .list-nav {
     display: flex;
+    align-items: flex-start;
     // height: 100%;
 
     li {
-      padding: 1.3em 1.3em;
       align-items: center;
     }
 
@@ -128,18 +131,21 @@
       transform: translateY(-100%);
       transition: all 0.3s var(--magic-bezier);
       flex-direction: column;
+      align-items: stretch;
 
       li {
         height: auto;
-        padding: .3em 1.3em;
       }
     }
   }
 
   .item-nav {
-    // flex: 1 1 auto;
+    height: 1.3em;
     max-height: 3.3em;
     transition: all 0.3s var(--magic-bezier);
+    padding: 1.3em;
+    border: 1px solid $light-color;
+    background-color: $dark-color;
 
     &:hover.dropdown,
     &:focus.dropdown {
@@ -182,7 +188,7 @@
   }
 
   .link-evil {
-    flex-grow: 13;
+    flex-grow: 1;
 
     li {
       display: flex;
@@ -211,13 +217,13 @@
 
     @media screen and (max-width: 500px) {
       flex-direction: column;
-      padding-bottom: 0;
       transition: all .3s var(--magic-bezier) .3s;
+      box-sizing: border-box;
     }
 
     &:hover>.list-subnav,
     &:focus>.list-subnav {
-      // .dropdown:active>.list-subnav {
+      // &:active>.list-subnav {
       transform: translateY(0) scale(1) translateX(0);
     }
 
@@ -269,6 +275,8 @@
     color: $dark-color;
     border-color: $dark-color;
     cursor: pointer;
+    padding: .3em 1.3em;
+    border: 1px solid var(--color-dark);
 
     @media screen and (max-width: 500px) {
       border: none;
@@ -291,7 +299,6 @@
         position: absolute;
         top: 0;
         font-size: 1em;
-        // border: 1px solid black;
         line-height: 1;
       }
     }
