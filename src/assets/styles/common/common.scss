@@ -204,14 +204,17 @@ dir {
 
   @media screen and (max-width: 500px) {
     grid-template-rows: auto 3.3rem;
+    grid-template-areas:
+      'header'
+      'main';
   }
 }
 
 .basic-page {
   display: flex;
   flex: 1;
-  flex-flow: column nowrap; // margin: 0 auto;
-  max-width: 66%; // position: relative;
+  flex-flow: column nowrap;
+  max-width: 66%;
 
   @media screen and (max-width: 768px) {
     max-width: 99%;

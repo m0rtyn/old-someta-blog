@@ -4,7 +4,7 @@
     "logo posts"
     "articles posts";
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: [row1-start] min-content [row1-end row2-start] max-content [row2-end];
+  grid-template-rows: [first-line] min-content [second-line] max-content [third-line];
   height: 100%;
   flex-grow: 1;
   flex-shrink: 1;
@@ -13,13 +13,9 @@
   align-items: start;
 
   @media screen and (max-width: 500px) {
-    grid-template-areas:
-      "logo"
-      "articles";
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    // display: flex;
-    // flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h2 {
@@ -47,12 +43,12 @@
     display: flex;
     flex-direction: column;
     align-self: start;
-    grid-row-start: row1-end / row2-end;
+    grid-row: second-line / span third-line;
 
     @media screen and (max-width: 500px) {
-      // height: 50vh;
-      overflow: auto;
-      flex: 1 1 50vh;
+      overflow: initial;
+      flex-grow: 1;
+      margin: 3.3em auto;
     }
   }
 
@@ -75,7 +71,7 @@
 
     @media screen and (max-width: 500px) {
       height: 100%;
-      overflow: auto;
+      overflow: initial;
     }
   }
 
@@ -111,6 +107,12 @@
       }
     }
 
+    @media screen and (max-width: 1023px) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     h3 {
       color: $dark-color;
       background-color: $light-color;
@@ -118,11 +120,9 @@
       font-size: 1em;
       padding: 0.3em;
       font-weight: normal;
-    }
 
-    @media screen and (max-width: 1023px) {
-      &:last-child {
-        margin-bottom: 0;
+      @media screen and (max-width: 1023px) {
+        font-weight: bold;
       }
     }
 
