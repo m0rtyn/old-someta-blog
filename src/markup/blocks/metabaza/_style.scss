@@ -315,9 +315,10 @@ div.selected {
 }
 
 .default .from_name {
-  color: #3892db;
-  font-weight: 700;
-  padding-bottom: 5px;
+  // color: #3892db;
+  // font-weight: 700;
+  // padding-bottom: 5px;
+  display: none;
 }
 
 .default .from_name .details {
