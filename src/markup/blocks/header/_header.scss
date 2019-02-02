@@ -18,16 +18,16 @@
     display: block;
     position: relative;
     transition-duration: .3s;
-    transition-delay: .3s;
+    // transition-delay: .3s;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
-      // &:active {
-      background-color: $light-color;
-      border-color: $dark-color;
-      color: $dark-color;
-    }
+    // &:hover,
+    // &:focus {
+    //   // &:active {
+    //   background-color: $light-color;
+    //   border-color: $dark-color;
+    //   color: $dark-color;
+    // }
 
     @media screen and (max-width: 500px) {
       height: 100%;
@@ -152,6 +152,14 @@
       max-height: 13.3em;
     }
 
+    &:hover,
+    &:focus {
+      // &:active {
+      background-color: $light-color;
+      border-color: $dark-color;
+      color: $dark-color;
+    }
+
     @media screen and (max-width: 500px) {
       font-size: 1.3em;
     }
@@ -217,7 +225,7 @@
 
     @media screen and (max-width: 500px) {
       flex-direction: column;
-      transition: all .3s var(--magic-bezier) .3s;
+      transition: all .3s var(--magic-bezier);
       box-sizing: border-box;
     }
 
@@ -251,7 +259,7 @@
   .list-subnav {
     position: absolute;
     transform: translateY(-100%);
-    transition: all .3s var(--magic-bezier) .3s;
+    transition: all .3s var(--magic-bezier);
     top: 100%;
     width: 100%;
     z-index: -1;
@@ -267,7 +275,7 @@
 
   .item-subnav {
     transform: translateX(0);
-    transition: all .3s val(--magic-bezier) .3s;
+    transition: all .3s val(--magic-bezier);
     width: 100%;
     box-sizing: border-box;
     margin-bottom: -1px;
