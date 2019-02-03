@@ -5,6 +5,10 @@
 
   .intro {
     width: calc(100% - (384px + 3em));
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
   }
 
   .jean-martin {
