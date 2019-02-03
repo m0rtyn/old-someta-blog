@@ -54,6 +54,22 @@ pre {
   padding: 1.3em;
   margin-right: 1.3em;
   margin-top: 3.3em;
+  border: .3em solid var(--color-light);
+
+  &::-webkit-scrollbar {
+    background-color: var(--color-dark);
+    width: 1.3em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-dark);
+    border: .3em solid var(--color-light);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-dark);
+  }
 }
 
 .page_wrap a {
@@ -284,7 +300,8 @@ div.selected {
 }
 
 .service {
-  padding: 10px 24px;
+  padding: .3em 1.3em;
+  padding-top: 1.3em;
 }
 
 .service .body {
@@ -308,7 +325,8 @@ div.selected {
 }
 
 .default {
-  padding: 10px;
+  padding: .3em;
+  padding-top: 0;
 }
 
 .default.joined {
