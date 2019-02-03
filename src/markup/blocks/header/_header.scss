@@ -20,14 +20,6 @@
     transition-duration: .3s;
     cursor: pointer;
 
-    // &:hover,
-    // &:focus {
-    //   // &:active {
-    //   background-color: $light-color;
-    //   border-color: $dark-color;
-    //   color: $dark-color;
-    // }
-
     @media screen and (max-width: 500px) {
       height: 100%;
     }
