@@ -51,10 +51,10 @@ pre {
 .page_wrap {
   background-color: $light-color;
   color: $dark-color;
-  padding: 1.3em;
+  padding: 1.3em 3.3em;
   margin-right: 1.3em;
   margin-top: 3.3em;
-  border: .3em solid var(--color-light);
+  border: 1.3em solid var(--color-light);
 
   &::-webkit-scrollbar {
     background-color: var(--color-dark);

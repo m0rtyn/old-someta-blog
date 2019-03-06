@@ -3,7 +3,7 @@
   grid-template-areas:
     "logo posts"
     "articles posts";
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: [first-line] min-content [second-line] auto [third-line];
   height: 100%;
   flex-grow: 1;
@@ -34,7 +34,7 @@
     grid-area: posts;
     grid-row: first-line / span third-line;
     position: relative;
-    height: 70%;
+    height: 66%;
 
     &>div {
       position: absolute;
