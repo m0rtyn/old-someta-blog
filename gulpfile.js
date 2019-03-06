@@ -55,8 +55,8 @@ const handleError = (error) => {
 };
 
 gulp.task('exported-html-cleaner', () => gulp
-  .src('src/markup/blocks/metabaza/ChatExport*/messages.html')
-  .pipe(remove('head, .page_header'))
+  .src('src/markup/blocks/metabaza/ChatExport/messages.html')
+  .pipe(remove('head, .page_header, .sticker, .photo'))
   .pipe(rename('index.html'))
   .pipe(gulp.dest('src/markup/blocks/metabaza')));
 
