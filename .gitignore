@@ -13,3 +13,5 @@ dist
 public/**/
 public/*.html
 public.temp
+
+src/markup/blocks/metabaza/**/*
