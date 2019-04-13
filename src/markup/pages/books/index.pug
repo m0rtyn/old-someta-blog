@@ -6,10 +6,11 @@ block variables
 block content
   main#books.basic-page
     h1.title Книжная таблицa
-    h2.text-center 2019
-    table#booksTable( cellspacing="0")
+    //- h2.text-center 2019
+    table#booksTable(cellspacing="0")
       colgroup
-        col.recommendation-weight
         col.book-name
-        col.book-tags
-        col.book-status
+        col.book-review
+      thead
+        th Название книги
+        th Пара слов

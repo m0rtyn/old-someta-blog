@@ -5,6 +5,7 @@
 
   table {
     margin-top: 1.3em;
+    width: 100%;
   }
 
 
@@ -12,27 +13,29 @@
   colgroup {
     width: 100%;
 
-    .recommendation-weight {
-      width: 10%;
-    }
+  //   .recommendation-weight {
+  //     width: 10%;
+  //   }
 
     .book-name {
-      width: 68%;
+      width: 50%;
     }
 
-    .book-tags {
-      width: 10%;
+    .book-review {
+      width: 50%;
     }
 
-    .book-status {
-      width: 12%;
-    }
+  //   .book-tags {
+  //     width: 10%;
+  //   }
+
+  //   .book-status {
+  //     width: 12%;
+  //   }
   }
 
   // row groups
   thead {
-    // background-color: $light-color;
-    color: $dark-color;
     font-size: 1.3em;
   }
 
@@ -48,67 +51,75 @@
     }
   }
 
+  tbody tr, tfoot tr {
+      &.year-heading {
+        font-family: 'Anonymous Pro', 'Book Antiqua', Palatino, 'Palatino Linotype',
+        'Palatino LT STD', Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.3em;
+    }
+  }
+
   // cells
   th {
+    background-color: $dark-color;
     text-align: left;
-    border-bottom: 3px solid $dark-color;
+    border-bottom: 3px solid $light-color;
     padding: 0.3em;
     top: 0;
-    background-color: $light-color;
     position: sticky;
     transform: translate(0);
     will-change: transform;
     z-index: 1;
 
-    &.book-status,
-    &.recommendation-weight {
-      font-size: calc(1em / 1.3);
-      padding: 0;
-      text-align: center;
-    }
+    // &.book-status,
+    // &.recommendation-weight {
+    //   font-size: calc(1em / 1.3);
+    //   padding: 0;
+    //   text-align: center;
+    // }
 
-    &.recommendation-weight {
-      text-align: center;
-    }
+    // &.recommendation-weight {
+    //   text-align: center;
+    // }
   }
 
   td {
-    padding: 0.3em;
+    padding: 1.3em 0.3em 0.3em;;
 
-    &.book-name,
-    &.book-tags {
-      background-color: $light-color;
-      color: $dark-color;
-    }
+    // &.book-name,
+    // &.book-tags {
+    //   background-color: $light-color;
+    //   color: $dark-color;
+    // }
 
-    &.recommendation-weight {
-      text-align: center;
-    }
+    // &.recommendation-weight {
+    //   text-align: center;
+    // }
 
-    &.book-tags {
-      font-size: calc(1em / 1.3);
-    }
+    // &.book-tags {
+    //   font-size: calc(1em / 1.3);
+    // }
 
-    &.book-status {
-      text-align: center;
+    // &.book-status {
+    //   text-align: center;
 
-      &.status-done,
-      &.status-in-progress,
-      &.status-stopped {
-        color: $light-color;
-      }
+    //   &.status-done,
+    //   &.status-in-progress,
+    //   &.status-stopped {
+    //     color: $light-color;
+    //   }
 
-      &.status-done {
-        color: $g-color;
-      }
+    //   &.status-done {
+    //     color: $g-color;
+    //   }
 
-      &.status-in-progress {
-        color: $b-color;
-      }
+    //   &.status-in-progress {
+    //     color: $b-color;
+    //   }
 
-      &.status-stopped {
-        color: $r-color;
-      }
-    }
+    //   &.status-stopped {
+    //     color: $r-color;
+    //   }
+    // }
   }
 }
