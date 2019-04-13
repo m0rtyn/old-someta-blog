@@ -5,40 +5,48 @@ const tbody = document.createElement('TBODY');
 const tfoot = document.createElement('TFOOT');
 let index = 0;
 
-const setBookStatus = (cell, text) => {
-  switch (text) {
-    case '✔':
-      cell.classList.add('status-done');
-      break;
-    case '►':
-      cell.classList.add('status-in-progress');
-      break;
-    case '■':
-      cell.classList.add('status-stopped');
-      break;
-    default:
-      break;
-  }
-};
+// const setBookStatus = (cell, text) => {
+//   switch (text) {
+//     case '✔':
+//       cell.classList.add('status-done');
+//       break;
+//     case '►':
+//       cell.classList.add('status-in-progress');
+//       break;
+//     case '■':
+//       cell.classList.add('status-stopped');
+//       break;
+//     default:
+//       break;
+//   }
+// };
 
 const createTableCell = (tr, cellText, i, type) => {
   const tableCell = document.createElement(type);
-  tr.appendChild(tableCell);
+  const yearTitleRegex = /^(20\d{2}(-20\d{2})?)|детство$/ig;
+
   tableCell.appendChild(cellText);
+  tr.appendChild(tableCell);
+  // console.log(yearTitleRegex.test(cellText));
+
+  if (yearTitleRegex.test(cellText.data)) {
+    tr.classList.add('year-heading');
+  }
+
   switch (i) {
     case 0:
-      tableCell.classList.add('recommendation-weight');
-      break;
-    case 1:
       tableCell.classList.add('book-name');
       break;
-    case 2:
-      tableCell.classList.add('book-tags');
+    case 1:
+      tableCell.classList.add('book-review');
       break;
-    case 3:
-      tableCell.classList.add('book-status');
-      setBookStatus(tableCell, cellText.data);
-      break;
+    // case 2:
+    //   tableCell.classList.add('book-tags');
+    //   break;
+    // case 3:
+    //   tableCell.classList.add('book-status');
+    //   setBookStatus(tableCell, cellText.data);
+    //   break;
     default:
       break;
   }
@@ -70,7 +78,7 @@ const createTableRow = (row, i, bookArray) => {
 
   row.forEach((cell, j) => {
     const cellText = document.createTextNode(bookArray[i][j]);
-    createTableCell(tr, cellText, j, i === 0 ? 'TH' : 'TD');
+    createTableCell(tr, cellText, j, 'TD');
   });
   appendTableRow(tr, i);
 };
@@ -86,7 +94,6 @@ const fillTableParts = (bookArray) => {
 };
 
 const createTable = (data) => {
-  table.appendChild(thead);
   table.appendChild(tbody);
   return data;
 };
