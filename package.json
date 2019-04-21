@@ -6,7 +6,8 @@
   "license": "ISC",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   },
   "postinstall": "gulp",
   "dependencies": {
@@ -39,6 +40,7 @@
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "gulp-babel": "^8.0.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-html-remove": "^0.1.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0",
