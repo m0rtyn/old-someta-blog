@@ -148,5 +148,4 @@ gulp.task('deploy', () => gulp
   .src('./public/**/*')
   .pipe(ghPages({
     branch: 'master',
-    push: false,
   })));
