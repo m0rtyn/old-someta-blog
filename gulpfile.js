@@ -146,8 +146,9 @@ gulp.task('build', [
 
 gulp.task(
   'deploy',
-  () => ghpages.publish('public',
+  () => ghpages.publish('public/',
     {
+      src: '**/*',
       branch: 'master',
       push: false,
     },
