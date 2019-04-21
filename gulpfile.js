@@ -13,7 +13,7 @@ const postcssFixes = require('postcss-fixes');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const remove = require('gulp-html-remove');
-
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('style', () => {
   gulp
@@ -143,3 +143,7 @@ gulp.task('build', [
   'images',
   'svg',
 ]);
+
+gulp.task('deploy', () => gulp
+  .src('./public/**/**/**/*')
+  .pipe(ghPages()));
