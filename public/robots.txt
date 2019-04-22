@@ -2,4 +2,4 @@ User-Agent: *
 Disallow: 
 Allow: /
 
-Sitemap: https://mrtnsn.me/sitemap.xml
+Sitemap: https://martyn.guru/sitemap.xml
