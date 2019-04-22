@@ -318,7 +318,12 @@
 
     .milestone {
       font-size: 1.3em;
-      margin-bottom: 0.3em;
+      margin-bottom: 1.3em;
+    }
+
+    .year {
+      font-family: var(--font-heading);
+      font-size: var(--font-size-small);
     }
 
     .sublist {
