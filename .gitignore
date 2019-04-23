@@ -11,6 +11,7 @@ yarn.lock
 vue-test
 dist
 .publish
+.publish/**/*
 
 public/**/
 public/*.html
