@@ -10,6 +10,7 @@ todo.md
 yarn.lock
 vue-test
 dist
+.publish
 
 public/**/
 public/*.html
