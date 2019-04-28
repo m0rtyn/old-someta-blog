@@ -1,13 +1,17 @@
 extends ../../base/layout.pug
 
+block variables
+  - let scriptSrc = '/assets/js/log.js'
+
 block content
   main#log.basic-page
     h1.title Лог событий*
+    #life-calendar
     section 
       h3.year 2019
       ul
         li.record
-          span.date 7 Mar
+          span.date 07 Mar
           | Куплен третий ноутбук (MacBook 12')
         li.record
           span.date ?? Feb

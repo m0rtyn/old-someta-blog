@@ -100,15 +100,37 @@
 }
 
 #life-calendar {
+  font-family: var(--font-heading);
   counter-reset: year;
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-gap: 1px;
-  max-width: calc(1.3em * 52);
-  padding-right: 1.3em;
+  width: 13em;
+  border: 1px solid var(--color-light);
+  position: absolute;
+  margin-top: 6.3em;
+  margin-right: 6.3em;
+  right: 0;
+  
+  &::before, &::after  {
+    position: absolute;
+    display: block;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    font-weight: 700;
+  }
 
-  @media (min-width: 480px) {
-    grid-gap: .13em;
+  &::before {
+    content: "Прожито";
+    color: var(--color-dark);
+    margin-top: 1.3em;
+  }
+
+  &::after {
+    content: "Недожито";
+    color: var(--color-light);
+    margin-bottom: 1.3em;
+    bottom: 0;
   }
 
   .week {
@@ -121,7 +143,7 @@
     display: block;
     width: 100%;
     padding-bottom: 100%;
-    background: var(--color-light);
+    // background: var(--color-light);
   }
   
   .week-passed::before {
@@ -130,7 +152,7 @@
   
   .week::after {
     position: absolute;
-    left: calc(100% + .3em);
+    left: calc(100% + 1.3em);
     top: 50%;
     transform: translateY(-50%);
     font-size: var(--font-size-small);
