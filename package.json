@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "deploy": "gulp build && gulp deploy"
+    "deploy": "gulp build && node deploy.js"
   },
   "postinstall": "gulp",
   "dependencies": {
