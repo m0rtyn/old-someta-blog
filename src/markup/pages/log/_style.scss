@@ -24,7 +24,7 @@
   }
 
   h3.year {
-    color: $c-color;
+    color: var(--color-y);
     margin-left: -33px;
 
     @media screen and (max-width: 768px) {
@@ -96,5 +96,56 @@
   .explanation {
     margin-top: 3.3em;
     font-size: var(--font-size-small);
+  }
+}
+
+#life-calendar {
+  counter-reset: year;
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-gap: 1px;
+  max-width: calc(1.3em * 52);
+  padding-right: 1.3em;
+
+  @media (min-width: 480px) {
+    grid-gap: .13em;
+  }
+
+  .week {
+    position: relative;
+    display: block;
+  }
+  
+  .week::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    background: var(--color-light);
+  }
+  
+  .week-passed::before {
+    background: var(--color-r);
+  }
+  
+  .week::after {
+    position: absolute;
+    left: calc(100% + .3em);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--font-size-small);
+    line-height: 1;
+  }
+  
+  .week:nth-child(52)::after {
+    content: 'Год';
+  }
+  
+  .week:nth-child(52n) {
+    counter-increment: year;
+  }
+  
+  .week:nth-child(520n)::after {
+    content: counter(year);
   }
 }

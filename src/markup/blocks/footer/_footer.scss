@@ -11,13 +11,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $g-color;
+  color: var(--color-g);
 
   svg {
     width: 1em;
 
     path {
-      fill: $g-color;
+      fill: var(--color-g);
     }
   }
 

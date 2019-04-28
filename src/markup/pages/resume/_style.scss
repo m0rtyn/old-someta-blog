@@ -93,7 +93,7 @@
 
   .bugs {
     h3 {
-      color: $r-color;
+      color: var(--color-r);
     }
   }
 
@@ -124,7 +124,7 @@
     grid-gap: 1.3em;
 
     h4 {
-      color: $g-color;
+      color: var(--color-g);
       font-size: 1.3em;
     }
 
@@ -143,7 +143,7 @@
     min-width: 176px;
     box-sizing: border-box;
     padding: 1.3em;
-    border: 1px solid $g-color;
+    border: 1px solid var(--color-g);
 
     ul {
       list-style-type: square;

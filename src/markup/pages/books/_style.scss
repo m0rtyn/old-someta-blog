@@ -110,15 +110,15 @@
     //   }
 
     //   &.status-done {
-    //     color: $g-color;
+    //     color: var(--color-g);
     //   }
 
     //   &.status-in-progress {
-    //     color: $b-color;
+    //     color: var(--color-b);
     //   }
 
     //   &.status-stopped {
-    //     color: $r-color;
+    //     color: var(--color-r);
     //   }
     // }
   }

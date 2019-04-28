@@ -82,7 +82,7 @@ button {
 
 //OTHER================================================================================================================//
 ::selection {
-  background-color: $b-color;
+  background-color: var(--color-b);
   color: $light-color;
 }
 
@@ -116,7 +116,7 @@ button {
 
 //OTHER================================================================================================================//
 ::selection {
-  background-color: $b-color;
+  background-color: var(--color-b);
   color: $light-color;
 }
 
@@ -243,7 +243,7 @@ dir {
   text-shadow: 1px 1px 0 $dark-color;
 
   &:hover {
-    color: $c-color;
+    color: var(--color-y);
     text-shadow: none;
 
     &::after {
@@ -251,7 +251,7 @@ dir {
     }
 
     &::before {
-      border: 1px solid $c-color;
+      border: 1px solid var(--color-y);
       height: 100%;
       left: -3px;
       padding: 0 3px;
@@ -264,7 +264,7 @@ dir {
   }
 
   &::before {
-    border-bottom: 1px solid $c-color;
+    border-bottom: 1px solid var(--color-y);
     bottom: 0;
     content: '';
     display: block;

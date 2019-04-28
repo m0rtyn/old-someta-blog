@@ -112,7 +112,7 @@
   .article-item {
     margin-bottom: 1.3em;
     position: relative;
-    background-color: $g-color;
+    background-color: var(--color-g);
     // max-width: 13.3em;
     box-sizing: border-box;
     padding: 0;
