@@ -9,13 +9,15 @@ block variables
 block content
     main#resume.basic-page
         header
+            figure.avatar
+                img(src="../../../assets/img/mrtnsn-resume-avatar.jpg" alt="фотография Мартына")
             h1.title 
                 |Резюме 
                 span.tip М
                     span.accented а
                     |ртынa
                 span Мартыненко Владимира Андреевича 
-                .version ver. 2.0.3
+                .version ver. 2.1.0
         p.space-between
             span.text-lead Front-end разработчик
             span.location.text-right
@@ -34,26 +36,32 @@ block content
                     .working-position Фронтэндер
                         span.year  2019
                     ul.sublist
-                        li Череда испытательных сроков. Из CIP ушёл сам.
+                        li Научился писать логику
+                        li Научился делать компоненты
+                        li Научился настраивать линтеры в новом проекте
+                        li Научился флексить задачи и укладываться в срок
                 li.milestone
                     | HTML Academy
                     .working-position Наставник
                         span.year  2018
                     ul.sublist
+                        li Научился стримить code review
                         li Помог закончить курс по базовой вёрстке одному студенту
                 li.milestone
                     | BlackDeckCrew
                     .working-position Верстальщик
                         span.year  2018
                     ul.sublist
-                        li Перевёл проект с Bootstrap 3 на 4-ую версию с кастомной темой
+                        li Oбновил легаси-вёрстку
+                        li Полюбил регулярные выражения
                         li Переверстал прототип под дизайн-макет
                 li.milestone
                     | Noveo
                     .working-position Верстальщик
                         span.year  2017—2018
                     ul.sublist
-                        li Участвовал в 3-ёх проектах
+                        li Научился Git и Git flow
+                        li Много вёрстки, много багов
                         li Провёл лекцию по основам вёрстки для стажёров
                 li.milestone
                     | Армасети
@@ -61,22 +69,22 @@ block content
                         span.year  2016—2017
                     ul.sublist
                         li Улучшил внешний вид писем
-                        li Oптимизировал вёрстку писем
+                        li Поставил на поток вёрстку писем
             h3 Примеры кода
             span Пришлю примеры с подробными комментариям по вашему запросу
             //- h3 Сторонние проекты
             //- span Канал в телеграме @metabaza, блог «Яма Мартына», подкаст о проективности «Протопилот Альфаᵝ», формат встреч «Проблемы Белых Идей»
-            h3 Выступления
-            ul.speeches
-                li
-                    a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo' target="_blank") «Не&nbsp;QWERTY&nbsp;единой»&nbsp;📹
-                li
-                    a.link(href='https://martyns0n.github.io/weakness-of-will/' target="_blank") «Слабость&nbsp;Воли»&nbsp;🖼️
-                li
-                    a.link(href='https://www.youtube.com/watch?v=4MQ-gY05CY4&feature=youtu.be&t=304' target="_blank") «255&nbsp;оттенков&nbsp;серого»&nbsp;📹
+            //- h3 Выступления
+            //- ul.speeches
+            //-     li
+            //-         a.link(href='https://www.youtube.com/watch?v=UH5iXdGQpFo' target="_blank") «Не&nbsp;QWERTY&nbsp;единой»&nbsp;📹
+            //-     li
+            //-         a.link(href='https://martyns0n.github.io/weakness-of-will/' target="_blank") «Слабость&nbsp;Воли»&nbsp;🖼️
+            //-     li
+            //-         a.link(href='https://www.youtube.com/watch?v=4MQ-gY05CY4&feature=youtu.be&t=304' target="_blank") «255&nbsp;оттенков&nbsp;серого»&nbsp;📹
             h3 Прочёл
             span.books
-                |«Большая книга CSS», «Секреты CSS» , «Implementing responsive design», «Building HTML5 games with ImpactJS», «On web typography», «Becoming a better programmer» , «Джедайские техники», «Путь программиста», «Идеальный программист», «Чистая архитектура»
+                |«Большая книга CSS», «Секреты CSS», «Типографика и вёрстка», «Implementing responsive design», «Building HTML5 games with ImpactJS», «On web typography», «Becoming a better programmer», «Джедайские техники», «Путь программиста», «Идеальный программист», «Чистая архитектура», «Грокаем алгоритмы»
                 br
                 a.link(href="../books/" target="_blank")
                     span.text-right Полный список книг
@@ -124,7 +132,7 @@ block content
                     //- li Сохраняю рассудок к вечеру
                     li Смотрю по докладу в день
                     li Работаю стоя
-                    li Умею в ФФФ
+                    //- li Умею в ФФФ
             .bugs
                 h3.no-margin.text-center Баги
                 ul
@@ -195,9 +203,9 @@ block content
                         |, etc.
 
 
-        figure.avatar.no-margin
-            img(src="../../../assets/img/mrtnsn-resume-avatar.jpg" alt="фотография Мартына")
-            figcaption.text-center Фотография Мартына 👨‍✈️
+        //- figure.avatar.no-margin
+        //-     img(src="../../../assets/img/mrtnsn-resume-avatar.jpg" alt="фотография Мартына")
+        //-     figcaption.text-center Фотография Мартына 👨‍✈️
 
         //- a(href="#code-examples").link-for-evil-martians Ссылка для Марсиан
         //-     img(src="/assets/img/evil-martians-logo.png" alt="evil martians logo").evil-martians-logo

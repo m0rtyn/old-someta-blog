@@ -240,14 +240,18 @@
 
   .avatar {
     width: 200px;
-    position: fixed;
-    right: 0;
-    bottom: -134px;
-    transition: all var(--magic-bezier) 0.3s;
-    padding: 1.3em;
-
-    &:hover {
-      bottom: 0;
+    // padding: 1.3em;
+    margin: 3.3em auto 0;
+    
+    .hideaway {
+      transition: all var(--magic-bezier) 0.3s;
+      bottom: -134px;
+      right: 0;
+      position: fixed;
+      
+      &:hover {
+        bottom: 0;
+      }
     }
 
     img {
@@ -281,6 +285,10 @@
         bottom: 0;
       }
     }
+  }
+
+  .title {
+    margin-top: .3em;
   }
 
   .code-examples {
@@ -334,8 +342,9 @@
     .sublist {
       font-size: calc(1rem / 1.3);
       margin: 0;
+      margin-left: 1.3em;
       padding: 0;
-      list-style-type: none;
+      list-style-type: "▪ ";
     }
   }
 
