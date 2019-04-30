@@ -72,6 +72,10 @@
         font-family: 'Anonymous Pro', 'Book Antiqua', Palatino, 'Palatino Linotype',
         'Palatino LT STD', Georgia, 'Times New Roman', Times, serif;
         font-size: 1.3em;
+
+        td {
+          border-bottom: 1px solid var(--color-light);
+        }
     }
   }
 
@@ -100,7 +104,9 @@
   }
 
   td {
-    padding: 1.3em 0.3em 0.3em;;
+    padding: 1.3em 0.3em 0.3em;
+    vertical-align: top;
+
 
     // &.book-name,
     // &.book-tags {
