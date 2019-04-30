@@ -29,10 +29,6 @@
   colgroup {
     width: 100%;
 
-  //   .recommendation-weight {
-  //     width: 10%;
-  //   }
-
     .book-name {
       width: 50%;
     }
@@ -40,14 +36,6 @@
     .book-review {
       width: 50%;
     }
-
-  //   .book-tags {
-  //     width: 10%;
-  //   }
-
-  //   .book-status {
-  //     width: 12%;
-  //   }
   }
 
   // row groups
@@ -90,58 +78,14 @@
     transform: translate(0);
     will-change: transform;
     z-index: 1;
-
-    // &.book-status,
-    // &.recommendation-weight {
-    //   font-size: calc(1em / 1.3);
-    //   padding: 0;
-    //   text-align: center;
-    // }
-
-    // &.recommendation-weight {
-    //   text-align: center;
-    // }
   }
 
   td {
     padding: 1.3em 0.3em 0.3em;
     vertical-align: top;
+  }
 
-
-    // &.book-name,
-    // &.book-tags {
-    //   background-color: $light-color;
-    //   color: $dark-color;
-    // }
-
-    // &.recommendation-weight {
-    //   text-align: center;
-    // }
-
-    // &.book-tags {
-    //   font-size: calc(1em / 1.3);
-    // }
-
-    // &.book-status {
-    //   text-align: center;
-
-    //   &.status-done,
-    //   &.status-in-progress,
-    //   &.status-stopped {
-    //     color: $light-color;
-    //   }
-
-    //   &.status-done {
-    //     color: var(--color-g);
-    //   }
-
-    //   &.status-in-progress {
-    //     color: var(--color-b);
-    //   }
-
-    //   &.status-stopped {
-    //     color: var(--color-r);
-    //   }
-    // }
+  .title {
+    margin-top: 3.3em;
   }
 }
