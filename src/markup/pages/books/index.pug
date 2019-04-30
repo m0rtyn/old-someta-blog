@@ -6,7 +6,7 @@ block variables
 block content
   main#books.basic-page
     h1.title Книжная таблицa
-    //- h2.text-center 2019
+
     table#booksTable(cellspacing="0")
       colgroup
         col.book-name
@@ -14,3 +14,13 @@ block content
       thead
         th Название книги
         th Мнение
+
+    #loader
+      svg(xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid" viewbox="0 0 100 100")
+        g(fill="#dedede" transform="matrix(.8 0 0 .8 10 2)")
+          polygon(points="73 50 50 11 28 50 50 50")
+            animatetransform(attributename="transform" begin="0s" calcmode="linear" dur="3.3s" keytimes="0;1" repeatcount="indefinite" type="rotate" values="0 50 38.5;360 50 38.5")
+          polygon(points="5 89 50 89 28 50")
+            animatetransform(attributename="transform" begin="0s" calcmode="linear" dur="3.3s" keytimes="0;1" repeatcount="indefinite" type="rotate" values="0 27.5 77.5;360 27.5 77.5")
+          polygon(points="73 50 50 89 95 89")
+            animatetransform(attributename="transform" begin="0s" calcmode="linear" dur="3.3s" keytimes="0;1" repeatcount="indefinite" type="rotate" values="0 72.5 77.5;360 72 77.5")

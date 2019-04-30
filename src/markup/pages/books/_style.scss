@@ -3,6 +3,22 @@
   width: 100%;
   min-height: 100vh;
 
+  #loader {
+    width: 13.3em;
+    margin: 1.3em auto;
+    opacity: 1;
+    transition: opacity .3s ease-out;
+
+    svg, g, polygon {
+    animation-play-state: running;
+    animation-delay: 0s;
+    }
+
+    &.fade-out {
+      opacity: 0;
+    }
+  }
+
   table {
     margin-top: 1.3em;
     width: 100%;

@@ -3,6 +3,7 @@ const table = document.getElementById('booksTable');
 const thead = document.createElement('THEAD');
 const tbody = document.createElement('TBODY');
 const tfoot = document.createElement('TFOOT');
+const loader = document.getElementById('loader');
 let index = 0;
 
 // const setBookStatus = (cell, text) => {
@@ -93,8 +94,14 @@ const fillTableParts = (bookArray) => {
   });
 };
 
+const hideLoader = () => loader.classList.add('fade-out');
+
 const createTable = (data) => {
-  table.appendChild(tbody);
+  hideLoader();
+
+  setTimeout(() => {
+    table.appendChild(tbody);
+  }, 300);
   return data;
 };
 
