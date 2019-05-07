@@ -30,13 +30,13 @@
     display: block;
   }
 
-  #posts {
+  .posts {
     grid-area: posts;
     grid-row: first-line / span third-line;
     position: relative;
     height: 70%;
 
-    &>.page_wrap {
+    #posts-previews {
       position: absolute;
       top: 0;
       left: 0;
@@ -51,6 +51,23 @@
       border: 1.3em solid var(--color-light);
       border-left-width: 0;
       border-right-width: .3em;
+    }
+
+    #posts-previews > ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    .post-link {
+      font-family: var(--font-heading);
+      color: var(--color-dark);
+      font-weight: 700;
+      font-size: var(--font-size-medium);
+    }
+
+    .post-item {
+      margin-bottom: 1.3em;
     }
 
     .link {

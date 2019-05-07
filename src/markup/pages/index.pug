@@ -2,7 +2,8 @@ extends ../base/main-page-layout.pug
 
 block variables
     - let scriptSrc = '/assets/js/home.js'
-
+    - let scriptSrc2 = '/assets/js/posts.js'
+    
 block content
   main#main-page
 
@@ -10,9 +11,8 @@ block content
 
     +papers()
 
-    section#posts
+    section.posts
       h2 Посты из 
         a.link(href="https://t.me/metabaza" target="_blank" rel="noopener") Метабазы
-      include ../blocks/metabaza/index.html
-
-    
+      #posts-previews
+        
