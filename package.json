@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "deploy": "gulp build && node deploy.js"
+    "deploy": "gulp build && node deploy.js",
+    "generate-posts-json": "node posts-json-generator"
   },
   "postinstall": "gulp",
   "dependencies": {
