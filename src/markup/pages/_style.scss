@@ -65,7 +65,7 @@
       color: var(--color-dark);
       text-decoration: none;
       transform: translateX(0);
-      transition: transform .13s ease-out;
+      transition: transform .33s var(--magic-bezier);
 
       &:hover {
         transform: translateX(0.3em);
@@ -88,6 +88,10 @@
     .post-item {
       margin-bottom: 3.3em;
       position: relative;
+
+      &:first-of-type {
+        margin-bottom: 0;
+      }
     }
 
     .post-date {
