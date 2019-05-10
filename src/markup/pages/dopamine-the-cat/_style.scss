@@ -1,22 +1,40 @@
 #dopamine-the-cat {
-  margin: 0 auto;
+  margin: 0 auto 3.3em;
   display: flex;
   flex-flow: row wrap;
+
+  @media screen and (max-width: 768px) {
+    flex-flow: column nowrap;
+  }
 
   .title {
     display: inline-block;
     width: 100%;
-    margin-bottom: 1.3em;
+    margin: 3.3em auto 1.3em;
   }
 
   img {
     width: 50%;
+    max-width: 240px;
+    margin: 1.3em auto auto;
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+      max-height: 300px;
+      margin-bottom: 1.3em;
+    }
   }
 
   p {
     box-sizing: border-box;
     font-size: var(--font-size-medium);
     width: 50%;
-    padding: 1.3em;
+    padding: 0 1.3em 1.3em;
+    margin: auto;
+
+    @media screen and (max-width: 500px) {
+      width: auto;
+      padding: 0 .3em;
+    }
   }
 }
