@@ -1,0 +1,17 @@
+#posts {
+  margin: 3.3em auto;
+
+  h1, h2, h3 {
+    margin-top: 1.3em;
+  }
+
+  p {
+    margin: 1.3em auto 0;;
+    max-width: 70ch;
+    
+    @media screen and (min-width: 768px) {
+      font-size: var(--font-size-medium);
+      max-width: 54ch;
+    }
+  }
+}
