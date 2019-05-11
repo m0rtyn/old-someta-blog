@@ -11,6 +11,10 @@
     display: inline-block;
     width: 100%;
     margin: 3.3em auto 1.3em;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 0;
+    }
   }
 
   img {
