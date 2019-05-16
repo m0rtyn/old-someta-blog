@@ -18,3 +18,5 @@ public/*.html
 public.temp
 
 src/markup/blocks/metabaza/**/*
+
+posts.json
