@@ -1,0 +1,9 @@
+extends ../../base/layout.pug
+
+block variables
+  - let scriptSrc = '/assets/js/posts.js'
+
+block content
+  main#posts.basic-page
+    h1.title Посты
+    +posts()
