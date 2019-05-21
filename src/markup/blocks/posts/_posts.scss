@@ -2,17 +2,26 @@
   grid-area: posts;
   grid-row: first-line / span third-line;
   position: relative;
-  height: 70%;
+  height: 63vh;
+
+  .post-item {
+    margin-bottom: 3.3em;
+    position: relative;
+    transform: translateX(0);
+    transition: transform .33s var(--magic-bezier);
+  
+    &:hover {
+      transform: translateX(0.3em);
+    }
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+  }
 
   .post-link {
     color: var(--color-dark);
     text-decoration: none;
-    transform: translateX(0);
-    transition: transform .33s var(--magic-bezier);
-
-    &:hover {
-      transform: translateX(0.3em);
-    }
   }
 
   .post-title {
@@ -23,7 +32,7 @@
     margin-bottom: .3em;
 
     &::after {
-      content: " ►"
+      content: " >"
     }
 
     @media screen and (min-width: 500px) {
@@ -41,22 +50,12 @@
     }
   }
 
-  .post-item {
-    margin-bottom: 3.3em;
-    position: relative;
-
-    &:first-of-type {
-      margin-bottom: 0;
-    }
-  }
-
   .post-date {
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 0;
     font-size: var(--font-size-small);
     font-weight: 100;
-    margin-top: 1.3em;
   }
 
   .post-tag {

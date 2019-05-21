@@ -4,7 +4,7 @@
     "logo posts"
     "papers posts";
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: [first-line] min-content [second-line] auto [third-line];
+  grid-template-rows: [first-line] 80px [second-line] auto [third-line];
   height: 100%;
   flex-grow: 1;
   flex-shrink: 1;
