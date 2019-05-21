@@ -1,5 +1,11 @@
 /* eslint-env browser */
 
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'Escape') {
+    window.location.assign('/');
+  }
+});
+
 const createPosts = (data) => {
   const container = document.getElementById('posts-previews');
   const postList = document.createElement('UL');
@@ -19,7 +25,7 @@ const createPosts = (data) => {
     postItem.classList.add('post-item');
 
     postLink.classList.add('post-link');
-    postLink.href = postPath;
+    postLink.href = `/${postPath}`;
 
     postTitle.classList.add('post-title');
     postTitle.innerHTML = title;
@@ -32,7 +38,7 @@ const createPosts = (data) => {
     postDate.innerHTML = data[i].date;
 
     postTag.classList.add('post-tag');
-    postTag.innerHTML = data[i].tag ? `#${data[i].tag}` : '';
+    postTag.innerHTML = data[i].tag ? `#${data[i].tag} ` : '';
 
     setTimeout(() => {
       postLink.appendChild(postTitle);
