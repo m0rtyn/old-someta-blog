@@ -60,14 +60,17 @@
   
     &:hover .paper-cover,
     &:focus .paper-cover,
+    &:active .paper-cover,
     &:hover .paper-link,
-    &:focus .paper-link {
+    &:focus .paper-link,
+    &:active .paper-link {
       filter: none;
       transform: translate(0.3em, 0.3em);
     }
   
     &:hover .disqus-comment-count,
-    &:focus .disqus-comment-count {
+    &:focus .disqus-comment-count,
+    &:active .disqus-comment-count {
       filter: none;
       transform: translate(-1.3em, -1.3em);
   
