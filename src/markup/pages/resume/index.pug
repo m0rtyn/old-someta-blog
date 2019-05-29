@@ -9,15 +9,18 @@ block variables
 block content
     main#resume.basic-page
         header
-            figure.avatar
-                img(src="../../../assets/img/mrtnsn-resume-avatar.jpg" alt="фотография Мартына")
+            figure.avatar-container
+                .avatar
+                    img.avatar-front(src="/assets/img/mrtnsn-resume-avatar.jpg" alt="фотография Мартына")
+                    img.avatar-back(src="/assets/img/svg/logo.svg" alt="фотография Мартына")
+
             h1.title 
                 |Резюме 
                 span.tip М
                     span.accented а
                     |ртынa
                 span Мартыненко Владимира Андреевича 
-                .version ver. 2.3.1
+                .version ver. 2.4.0
         p.space-between
             span.text-lead Front-end разработчик
             span.location.text-right
@@ -43,6 +46,7 @@ block content
                         span.year  2019
                     ul.sublist
                         li Научился писать логику
+                        li Попробовал React, Vue, Typescript
                         li Научился делать компоненты
                         li Научился настраивать линтеры
                         li Научился флексить задачи
@@ -53,7 +57,7 @@ block content
                         span.year  2018
                     ul.sublist
                         li Научился стримить code review
-                        li Помог закончить курс по базовой вёрстке одному студенту
+                        li Помог закончить курс по базовой вёрстке студенту
                 li.milestone
                     | BlackDeckCrew (стартап Александра Гапака)
                     .working-position Верстальщик
@@ -61,7 +65,7 @@ block content
                     ul.sublist
                         li Oбновил легаси-вёрстку
                         li Полюбил регулярные выражения
-                        li Переверстал прототип под дизайн-макет
+                        li Переверстал прототип игры под дизайн-макет
                 li.milestone
                     | Noveo
                     .working-position Верстальщик
@@ -75,6 +79,7 @@ block content
                     .working-position Email верстальщик 
                         span.year  2016—2017
                     ul.sublist
+                        li Попробовал Angular 2+
                         li Улучшил внешний вид писем
                         li Поставил на поток вёрстку писем
             h3 Примеры кода
@@ -116,7 +121,9 @@ block content
 
         section.resume-part.motivation
             h2 Мотивация    
-            <figure><embed src="https://wakatime.com/share/@martyns0n/debbff7f-df4b-4230-bfa8-97af2addaea1.svg"></embed></figure>
+            <figure>
+                <embed src="https://wakatime.com/share/@martyns0n/b9dd838f-e9f6-4c4f-96a0-235b2def189c.svg"></embed>
+            </figure>
             h3.no-margin Работа мечты
             span Опытные коллеги, селф-менеджмент, гибкий график, поощрение участия и выступлений на проф. мероприятиях
             //- h3 Задачи мечты
@@ -138,6 +145,7 @@ block content
                     li Встаю в ~7, туплю в 20:00, ложусь в 22:00
                     li Люблю выступать на мероприятиях
                     li Избегаю стимуляции веществами
+                    li Живу двунедельными спринтами
                     li 
                         span Работаю по методу 
                         span.tip Матадоро
@@ -185,7 +193,9 @@ block content
                 li.plan 
                     h4.text-center 199.999,99₽
                     ul
-                        li Наебизнес
+                        li
+                            span.tip Наебизнес
+                            span Неэтичное и грубое извлечение прибыли из широкого охвата потребителей
                         li Много легаси
                         li Самописный фреймворк
                         li Грубый трекинг времени
