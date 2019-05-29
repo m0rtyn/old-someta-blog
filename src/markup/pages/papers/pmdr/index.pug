@@ -2,8 +2,8 @@ extends ../../../base/layout.pug
 
 block variables
   - var title = '🍅';
-  - var description = 'Статья о помидорах';
-  - var keywords = 'помодоро, pomodoro, циклы, ультрадиарные,';
+  - var description = 'Статья о методе Помодоро';
+  - var keywords = 'помодоро, pomodoro, циклы, ультрадиарные циклы, продуктивность, работа, рабочий ритм';
 
 block content
   main#pmdr.paper
@@ -11,10 +11,10 @@ block content
       
 
       .intro.text-container
-        h1 🍅
+        h1 Метод Помодоро
           .version 18.02.19
-        p
-          |Эта статья является планом для доклада о Помодоро.
+        //- p
+        //-   |Эта статья является планом для доклада о Помодоро.
         //- ul.table-of-contents
         //-   li Введение
         //-   li Продуктивность
@@ -23,7 +23,7 @@ block content
         //-   li
       //- .img-title
     .md-text
-      include:markdown-it(linkify langPrefix='highlight-') ./article.md
+      include:markdown-it(linkify langPrefix='highlight-') ./pomodoro.md
         
     #disqus_thread.disqus-wrapper
     script.
