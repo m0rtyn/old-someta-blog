@@ -1,5 +1,7 @@
 extends ../../base/layout.pug
 
+block variables
+  - var scriptSrc = '/assets/js/likely.js';
 
 block content
   //date:
@@ -8,3 +10,5 @@ block content
     +link-back()
     :markdown-it(linkify langPrefix='highlight-')
       # TITLE
+
+    +likely-buttons()
