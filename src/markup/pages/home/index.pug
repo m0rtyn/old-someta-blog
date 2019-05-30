@@ -1,8 +1,14 @@
-extends ../base/main-page-layout.pug
+extends ../../base/main-page-layout.pug
 
 block variables
     - let scriptSrc = '/assets/js/home.js'
     - let scriptSrc2 = '/assets/js/posts.js'
     
 block content
-  main#main-page
+  main#home
+
+    +main-logo()
+
+    +papers()
+
+    +posts()

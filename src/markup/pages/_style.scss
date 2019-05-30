@@ -1,32 +1,3 @@
 #main-page {
-  display: grid;
-  grid-template-areas:
-    "logo posts"
-    "papers posts";
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: [first-line] 80px [second-line] auto [third-line];
-  height: 100%;
-  flex-grow: 1;
-  flex-shrink: 1;
-  grid-gap: 3.3em;
-  padding: 3.3em 1.3em 0 1.3em;
-  align-items: start;
-  min-width: 0;
-  min-height: 0;
 
-  @media screen and (max-width: 500px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  h2 {
-    margin: 0;
-    margin-bottom: 1.3em;
-    text-align: center;
-  }
-
-  a {
-    display: block;
-  }
 }
