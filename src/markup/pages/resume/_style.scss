@@ -246,12 +246,19 @@
     height: 13.3em;
     margin: 3.3em auto 0;
 
+    @media screen and (max-width: 500px) {
+      width: 13.3em;
+      height: 13.3em;
+      margin: 3.3em auto 0;
+    }
+
     &:hover .avatar {
       transform: rotateY(180deg);
     }
   } 
 
   .avatar {
+    margin: auto;
     width: 100%;
     height: 100%;
     position: relative;
@@ -278,28 +285,6 @@
     
     figcaption {
       background-color: $dark-color;
-    }
-    
-    @media screen and (max-width: 768px) {
-      width: 150px;
-      bottom: -132px;
-      
-      img {
-        border: 0.3em solid $dark-color;
-      }
-      
-      &:hover {
-        bottom: 0;
-      }
-    }
-    
-    @media screen and (max-width: 500px) {
-      width: 100px;
-      bottom: -108px;
-      
-      &:hover {
-        bottom: 0;
-      }
     }
   }
   
