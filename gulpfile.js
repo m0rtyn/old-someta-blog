@@ -13,26 +13,30 @@ const postcssFixes = require('postcss-fixes');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const remove = require('gulp-html-remove');
+const sitemap = require('gulp-sitemap');
 
-gulp.task('style', () => {
-  gulp
-    .src('src/assets/styles/main.scss')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(
-      postcss([
-        postcssFixes,
-        autoprefixer,
-        cssnano({
-          safe: true,
-          calc: false,
-        }),
-      ]),
-    )
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('public/assets/styles'))
-    .pipe(browserSync.stream());
-});
+const handleError = (error) => {
+  console.log(error.toString());
+  this.emit('end');
+};
+
+gulp.task('style', () => gulp
+  .src('src/assets/styles/main.scss')
+  .pipe(plumber())
+  .pipe(sass())
+  .pipe(
+    postcss([
+      postcssFixes,
+      autoprefixer,
+      cssnano({
+        safe: true,
+        calc: false,
+      }),
+    ]),
+  )
+  .pipe(rename('style.min.css'))
+  .pipe(gulp.dest('public/assets/styles'))
+  .pipe(browserSync.stream()));
 
 gulp.task('pug', () => gulp
   .src('src/markup/pages/**/*.pug')
@@ -48,16 +52,11 @@ gulp.task('pug', () => gulp
   .pipe(gulp.dest('public'))
   .pipe(browserSync.stream()));
 
-const handleError = (error) => {
-  console.log(error.toString());
-  this.emit('end');
-};
-
-gulp.task('exported-html-cleaner', () => gulp
-  .src('src/markup/blocks/metabaza/ChatExport/messages.html')
-  .pipe(remove('head, .page_header, .sticker, .photo'))
-  .pipe(rename('index.html'))
-  .pipe(gulp.dest('src/markup/blocks/metabaza')));
+// gulp.task('exported-html-cleaner', () => gulp
+//   .src('src/markup/blocks/metabaza/ChatExport/messages.html')
+//   .pipe(remove('head, .page_header, .sticker, .photo'))
+//   .pipe(rename('index.html'))
+//   .pipe(gulp.dest('src/markup/blocks/metabaza')));
 
 gulp.task('js', () => gulp
   .src('src/assets/js/*.js')
@@ -121,10 +120,20 @@ gulp.task('clean', () => del.sync([
   '!public/shows/255-shades-of-gray/**',
 ]));
 
+gulp.task('sitemap', () => gulp
+  .src(['public/**/**/index.html', 'public/**/*.html'], {
+    read: false,
+  })
+  .pipe(sitemap({
+    siteUrl: 'https://martyn.guru',
+    priority: (siteUrl, loc) => (loc.match(/papers|posts/g) ? 1 : 0.5),
+  }))
+  .pipe(gulp.dest('./public')));
+
 gulp.task('dev', [
   'clean',
   'copy',
-  'exported-html-cleaner',
+  // 'exported-html-cleaner',
   'pug',
   'style',
   'jsDebug',
@@ -137,6 +146,7 @@ gulp.task('build', [
   'clean',
   'copy',
   'pug',
+  'sitemap',
   'style',
   'js',
   'images',
