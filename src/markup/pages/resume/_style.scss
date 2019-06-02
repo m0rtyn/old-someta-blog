@@ -246,12 +246,6 @@
     height: 13.3em;
     margin: 3.3em auto 0;
 
-    @media screen and (max-width: 500px) {
-      width: 13.3em;
-      height: 13.3em;
-      margin: 3.3em auto 0;
-    }
-
     &:hover .avatar {
       transform: rotateY(180deg);
     }
