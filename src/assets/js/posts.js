@@ -11,7 +11,7 @@ const createPosts = (data) => {
   const postList = document.createElement('UL');
 
   data.map((el, i) => {
-    if (data[i].isPublished === false) return;
+    if (!data[i].status) return;
 
     const postItem = document.createElement('LI');
     const postLink = document.createElement('A');
@@ -34,8 +34,10 @@ const createPosts = (data) => {
     postDescr.innerHTML = `${data[i].description}..`;
 
     postDate.classList.add('post-date');
-    postDate.dateTime = data[i].date.replace(/(\d{1,2})\.(\d{1,2})\.(\d{4})/g, '$3-$2-$1');
-    postDate.innerHTML = data[i].date;
+    if (data[i].date) {
+      postDate.dateTime = data[i].date.replace(/(\d{1,2})\.(\d{1,2})\.(\d{4})/g, '$3-$2-$1');
+      postDate.innerHTML = data[i].date;
+    }
 
     postTag.classList.add('post-tag');
     postTag.innerHTML = data[i].tag ? `#${data[i].tag} ` : '';
