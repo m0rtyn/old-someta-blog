@@ -47,6 +47,7 @@
     "gulp-html-remove": "^0.1.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0",
+    "gulp-sitemap": "^6.2.0",
     "jstransformer-markdown-it": "^2.1.0",
     "run-sequence": "^2.2.1",
     "stylelint": "^9.9.0",
