@@ -1,0 +1,14 @@
+extends ../../base/layout.pug
+
+block variables
+  - var scriptSrc = '/assets/js/likely.js';
+
+block content
+  //date:
+  //tags:
+  main#post.basic-page
+    +link-back()
+    :markdown-it(linkify langPrefix='highlight-')
+      # Скука
+
+    +likely-buttons()
