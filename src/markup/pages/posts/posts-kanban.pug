@@ -1,0 +1,15 @@
+extends ../../base/layout.pug
+
+block variables
+  - let scriptSrc = '/assets/js/posts-kanban.js'
+
+block content
+  main#posts-kanban.basic-page
+    h1.title Статусы постов
+    .container
+      .column-draft
+        h2 Черновики
+        ul.post-list
+      .column-published
+        h2 Oпубликованы
+        ul.post-list

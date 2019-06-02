@@ -94,3 +94,22 @@
   //   margin-top: 3.3em;
   // }
 }
+
+#posts-kanban {
+  margin: 0 auto;
+
+  .container {
+    margin-top: 1.3em;
+    display: grid;
+    gap: 3.3em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .column-draft {
+
+  }
+
+  .column-published {
+
+  }
+}
