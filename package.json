@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build && node posts-json-generator",
+    "build": "gulp build",
     "deploy": "yarn build && node deploy.js",
     "generate-posts-json": "node posts-json-generator"
   },
