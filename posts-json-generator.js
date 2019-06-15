@@ -37,6 +37,6 @@ const tree = dirTree('./public/posts/', { exclude: /posts-kanban.html|index.html
 
 
 setTimeout(() => {
-  console.log(posts);
+  // console.log(posts);
   fs.writeFileSync('public/posts.json', JSON.stringify(posts));
 }, 1000);
