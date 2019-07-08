@@ -8,7 +8,7 @@ block variables
 block content
   //date:02.07.2019
   //tags:
-  //status:published
+  //status:
   //platforms:website,
   main#post.basic-page
     +link-back()
