@@ -1,4 +1,4 @@
-#achievements {
+#achievements-page {
   width: 100%;
   padding: 4vmax 4vmax 21vmax 4vmax;
   box-sizing: border-box;
@@ -115,7 +115,7 @@
 /*DESKTOP=====================================================================*/
 
 @media screen and (min-width: 800px) {
-  .achievements {
+  .achievements-page {
     font-family: 'Pixel Cyr', Arial, sans-serif;
     display: grid;
     grid-template-areas:
