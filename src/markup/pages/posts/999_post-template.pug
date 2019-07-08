@@ -1,0 +1,20 @@
+extends ../../base/layout.pug
+
+block variables
+  - var scriptSrc = '/assets/js/likely.js';
+  - var title = ''
+  - var description = ''
+
+block content
+  //date:
+  //tags:
+  //status:
+  //platforms:
+  main#post.basic-page
+    +link-back()
+    h1=title
+    p=description
+    :markdown-it(linkify langPrefix='highlight-')
+      ## SUBTITLE
+
+    +likely-buttons()
