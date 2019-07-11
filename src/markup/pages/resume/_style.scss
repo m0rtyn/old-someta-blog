@@ -19,30 +19,12 @@
     margin-top: 1.3em;
   }
 
-  .work-experience {
-    #time {
-      font-size: var(--font-size-extra-large);
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    span {
-      font-size: var(--font-size-small);
-      margin: 0;
-    }
-  }
-
-  .text-lead,
-  .location {
-    margin: 0 0.3em;
-  }
-
   .resume-part {
     position: relative;
     margin: 3.3em;
     padding: 1.3em;
     border: 3px solid currentColor;
-
+    
     h2 {
       position: absolute;
       margin: 0;
@@ -53,7 +35,7 @@
       padding-right: 0.3em;
       color: $dark-color;
       background-color: $light-color;
-
+      
       &::after {
         content: '';
         display: block;
@@ -67,18 +49,24 @@
         z-index: -1;
       }
     }
-
+    
     @media screen and (max-width: 768px) {
       margin-left: 0;
       margin-right: 0;
     }
   }
   
-  .key {
-    padding: 0.3em;
-    text-align: center;
-    margin-top: 1.3em;
-    font-weight: 700;
+  .work-experience {
+    #time {
+      font-size: var(--font-size-extra-large);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    span {
+      font-size: var(--font-size-small);
+      margin: 0;
+    }
   }
 
   .speeches {
@@ -87,7 +75,7 @@
   }
 
   .books {
-    .link {
+    .key {
       display: block;
       width: 160px;
       margin-left: auto;
@@ -200,16 +188,6 @@
     color: $dark-color;
     border-color: $light-color;
 
-    // h2 {
-    //   color: $light-color;
-    //   background-color: $dark-color;
-
-    //   &::after {
-    //     border-bottom-color: $dark-color;
-    //     border-right-color: $dark-color;
-    //   }
-    // }
-
     a,
     a:active,
     a:focus {
@@ -266,12 +244,25 @@
     }
   }
 
+  .key {
+    padding: 0.3em;
+    text-align: center;
+    margin-top: 1.3em;
+    font-weight: 700;
+  }
+
+  .profession {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-large);
+    color: var(--color-g);
+  }
+
   // === AVATAR ===
 
   .avatar-container {
     width: 13.3em;
     height: 13.3em;
-    margin: 3.3em auto 0;
+    margin: 1.3em auto 0;
     display: flex;
     position: relative;
     align-items: center;
