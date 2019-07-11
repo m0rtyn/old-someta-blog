@@ -1,6 +1,17 @@
 #resume {
   margin: auto;
-  // position: relative;
+  
+  @media screen and (max-width: 768px) {
+    max-width: 99%;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+
+  @media screen and (max-width: 500px) {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   h2,
   h3,
@@ -49,7 +60,7 @@
       margin-right: 0;
     }
   }
-
+  
   .key {
     padding: 0.3em;
     text-align: center;
@@ -241,57 +252,21 @@
       box-sizing: border-box;
     }
   }
+
+  // === AVATAR ===
+
   .avatar-container {
     width: 13.3em;
     height: 13.3em;
     margin: 3.3em auto 0;
+    display: flex;
+    position: relative;
+    align-items: center;
 
     &:hover .avatar {
       transform: rotateY(180deg);
     }
   } 
-
-  .avatar {
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.3s var(--magic-bezier);
-    transform-style: preserve-3d;
-
-    .hideaway {
-      transition: all var(--magic-bezier) 0.3s;
-      bottom: -134px;
-      right: 0;
-      position: fixed;
-      
-      &:hover {
-        bottom: 0;
-      }
-    }
-
-    .avatar-front, .avatar-back {
-      position: absolute;
-      width: 100%;
-      filter: grayscale(1);
-      backface-visibility: hidden;
-    }
-    
-    figcaption {
-      background-color: $dark-color;
-    }
-  }
-  
-  .avatar-front {
-    border-radius: 50%;
-  }
-
-  .avatar-back {
-    box-sizing: border-box;
-    background-color: var(--color-dark);
-    transform: rotateY(180deg);
-    padding: 3.3em;
-  }
 
   .title {
     margin-top: .3em;
@@ -354,25 +329,80 @@
     }
   }
 
-  .evil-martians-logo {
-    width: 3.3em;
+  .avatar {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s var(--magic-bezier);
+    transform-style: preserve-3d;
+
+    .hideaway {
+      transition: all var(--magic-bezier) 0.3s;
+      bottom: -134px;
+      right: 0;
+      position: fixed;
+      
+      &:hover {
+        bottom: 0;
+      }
+    }
+
+    .avatar-front, .avatar-back {
+      position: absolute;
+      width: 100%;
+      filter: grayscale(1);
+      backface-visibility: hidden;
+    }
+    
+    figcaption {
+      background-color: $dark-color;
+    }
+  }
+  
+  .avatar-front {
+    border-radius: 50%;
+  }
+
+  .avatar-back {
+    box-sizing: border-box;
+    background-color: var(--color-dark);
+    transform: rotateY(180deg);
+    padding: 3.3em;
+  }
+
+  .external-profiles {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 100%;
+  }
+
+  .profile-link {
+    display: flex;
+    padding: .3em;
+    margin: .3em;
+    
+  }
+  
+  .profile-label {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-1.3em);
+    transition-property: opacity, transform; 
+    transition-duration: .3s;
+    transition-timing-function: var(--magic-bezier);
+    left: 100%;
+  }
+  
+  .profile-link:hover .profile-label {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .profile-logo {
     width: 24px;
     margin-left: .3em;
     vertical-align: middle;
-  }
-
-  @media screen and (max-width: 768px) {
-    max-width: 99%;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-  }
-
-  @media screen and (max-width: 500px) {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
