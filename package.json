@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "deploy": "yarn build && node posts-json-generator && node deploy.js",
+    "deploy": "yarn build && yarn gulp sitemap && node posts-json-generator && node deploy.js",
     "generate-posts-json": "node posts-json-generator"
   },
   "postinstall": "gulp",

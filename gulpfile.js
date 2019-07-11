@@ -12,7 +12,7 @@ const babel = require('gulp-babel');
 const postcssFixes = require('postcss-fixes');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const remove = require('gulp-html-remove');
+// const remove = require('gulp-html-remove');
 const sitemap = require('gulp-sitemap');
 
 const handleError = (error) => {
@@ -133,7 +133,6 @@ gulp.task('sitemap', () => gulp
 gulp.task('dev', [
   'clean',
   'copy',
-  // 'exported-html-cleaner',
   'pug',
   'style',
   'jsDebug',
@@ -146,9 +145,9 @@ gulp.task('build', [
   'clean',
   'copy',
   'pug',
-  'sitemap',
   'style',
   'js',
   'images',
   'svg',
+  // 'sitemap',
 ]);
