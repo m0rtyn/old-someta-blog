@@ -55,6 +55,14 @@
       margin-right: 0;
     }
   }
+
+  header.resume-part {
+    border: none;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
+  }
   
   .work-experience {
     #time {
@@ -79,10 +87,11 @@
       display: block;
       width: 160px;
       margin-left: auto;
+      margin-top: .3em;
     }
   }
 
-  .motivation {
+  .others {
     padding-bottom: 3.3em;
   }
 
@@ -255,6 +264,20 @@
     font-family: var(--font-heading);
     font-size: var(--font-size-large);
     color: var(--color-g);
+  }
+
+  .collapsed-block {
+    summary:hover {
+      color: var(--color-g);
+    }
+
+    h3 {
+      display: inline-block;
+    }
+
+    ul {
+      margin: .3em 0;
+    }
   }
 
   // === AVATAR ===
