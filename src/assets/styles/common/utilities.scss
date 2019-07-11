@@ -31,12 +31,12 @@
     justify-content: space-between;
 }
 
-.horizontally-centered {
+.vertically-centered {
     display: flex;
     align-items: center;
 }
 
-.vertically-centered {
+.horizontally-centered {
     display: flex;
     justify-content: center;
 }

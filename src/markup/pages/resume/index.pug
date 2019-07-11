@@ -8,7 +8,7 @@ block variables
 
 block content
     main#resume.basic-page
-        header
+        header.resume-part
             figure.avatar-container
                 .avatar
                     img.avatar-front(src="/assets/img/mrtnsn-resume-avatar.jpg" alt="фотография Мартына")
@@ -35,18 +35,19 @@ block content
                     span.accented а
                     |ртынa
                 span Мартыненко Владимира Андреевича 
-                .version ver. 2.6.0
-        p.space-between
-            span.text-lead Front-end разработчик
-            span.location.text-right
-                |⚓ Санкт-Петербург
-                br
-                |🚇 Чкаловская / Петроградская
+                .version ver. 2.6.2
+            p.space-between.vertically-centered
+                span.text-lead Front-end разработчик
+                span.location.text-right
+                    |⚓ SPB
+                    //- br
+                    //- |🚇 Чкаловская / Петроградская
         
         section.resume-part.experience
             h2 Опыт
-            span.no-margin ⏱️ Работаю в IT 
-            span#time
+            .work-experience
+                #time
+                span Работаю в IT 
             h3 Где верстал/разрабатывал
             ul.timeline
                 li.milestone 

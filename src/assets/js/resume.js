@@ -21,4 +21,4 @@ const output = document.getElementById('time');
 // const passedTime = `${integerYears}y ${integerMonthes}m ${integerDays}d`;
 const roundedPassedDays = Math.floor(diffInDays / 10) * 10;
 
-output.innerHTML = `~${roundedPassedDays} дней`;
+output.innerHTML = `${roundedPassedDays} дней`;
