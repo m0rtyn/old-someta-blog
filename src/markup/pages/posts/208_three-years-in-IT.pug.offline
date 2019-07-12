@@ -9,7 +9,7 @@ block content
   //date:02.07.2019
   //tags:
   //status:
-  //platforms:website,
+  //platforms:telegram,hexlet
   main#post.basic-page
     +link-back()
     h1=title
