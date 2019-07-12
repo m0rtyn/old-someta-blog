@@ -409,27 +409,30 @@
     display: flex;
     padding: .3em;
     margin: .3em;
-    
   }
   
   .profile-label {
     position: absolute;
     opacity: 0;
-    transform: translateX(-1.3em);
+    transform: translateX(-0.3em);
     transition-property: opacity, transform; 
     transition-duration: .3s;
     transition-timing-function: var(--magic-bezier);
     left: 100%;
   }
-  
-  .profile-link:hover .profile-label {
+
+  .avatar-container:hover .profile-logo {
+    opacity: 0;
+  }
+
+  .avatar-container:hover .profile-label {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(-3.3em);
   }
 
   .profile-logo {
     width: 24px;
-    margin-left: .3em;
+    height: 24px;
     vertical-align: middle;
   }
 }
