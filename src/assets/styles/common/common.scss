@@ -259,14 +259,17 @@ ul {
     &::before {
       border: 1px solid var(--color-y);
       height: 100%;
-      left: -3px;
-      padding: 0 3px;
+      padding: 0 .13em;
+      transform: translateX(-.13em);
+      width: 100%;
     }
   }
 
   &::after {
     color: $light-color;
     content: 'ꜛ';
+    position: absolute;
+    font-size: var(--font-size-small);
   }
 
   &::before {
@@ -278,8 +281,8 @@ ul {
     left: 0;
     padding: 0;
     position: absolute;
-    transition: all 0.13s ease-out;
-    width: calc(100% - 1ch);
+    transition: all 0.13s var(--magic-bezier);
+    width: 100%;
     z-index: -1;
   }
 
