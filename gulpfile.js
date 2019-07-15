@@ -149,5 +149,4 @@ gulp.task('build', [
   'js',
   'images',
   'svg',
-  // 'sitemap',
 ]);
