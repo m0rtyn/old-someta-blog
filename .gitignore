@@ -15,6 +15,7 @@ dist
 
 public/**/
 public/*.html
+public/sitemap.xml
 public.temp
 
 src/markup/blocks/metabaza/**/*
