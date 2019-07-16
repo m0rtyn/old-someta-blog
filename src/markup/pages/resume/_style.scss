@@ -63,6 +63,10 @@
       margin-top: 0;
     }
   }
+
+  .experience {
+    padding-bottom: 3.3em;
+  }
   
   .work-experience {
     #time {
@@ -77,6 +81,37 @@
     }
   }
 
+  .benefits {}
+
+  .skill-table {
+    width: 100%;
+    font-weight: 100;
+    padding: 0 1.3em;
+  }
+  .skill {
+    
+    .expert::after {
+      content: "■■■■■";
+      color: var(--color-b);
+    }
+    .experienced::after {
+      content: "■■■■";
+      color: var(--color-g);
+    }
+    .skillful::after {
+      content: "■■■";
+      color: var(--color-y);
+    }
+    .beginner::after {
+      content: "■■";
+      color: var(--color-o);
+    }
+    .novice::after {
+      content: "■";
+      color: var(--color-r);
+    }
+  }
+  
   .speeches {
     margin: 0;
     list-style-type: square;
@@ -267,6 +302,8 @@
   }
 
   .collapsed-block {
+    cursor: pointer;
+
     summary:hover {
       color: var(--color-g);
     }
