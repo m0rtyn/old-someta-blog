@@ -35,7 +35,7 @@ block content
                     span.accented а
                     |ртынa
                 span Мартыненко Владимира Андреевича 
-                .version ver. 2.8.0
+                .version ver. 2.8.1
             p.space-between.vertically-centered
                 span.profession Front-end разработчик
                 span.text-right
@@ -312,19 +312,16 @@ block content
             h3 Хобби
             span Менеджмент задач, выступления с докладами, продуктивность и ведение проектов, ведение блогов, книги
     
-    #disqus_thread.disqus-wrapper
-    script.
-      /**
-      *RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-      var disqus_config = function () {
-        this.page.url = 'https://martyn.guru/resume';;
-        this.page.identifier = 'resume';
-        this.page.title = 'resume';
-      };
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://mrtnsn.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
+        #disqus_thread.disqus-wrapper
+        script.
+            var disqus_config = function () {
+                this.page.url = 'https://martyn.guru/resume';
+                this.page.identifier = 'resume';
+                this.page.title = 'resume';
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://mrtnsn.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
