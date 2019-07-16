@@ -457,6 +457,7 @@
     transition-duration: .3s;
     transition-timing-function: var(--magic-bezier);
     left: 100%;
+    text-decoration: underline;
   }
 
   .avatar-container:hover .profile-logo {
