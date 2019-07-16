@@ -26,7 +26,7 @@
   }
   .masonry-grid-item {
     margin: 0.66em;
-    border: 1px solid $light-color;
+    border: 1px solid var(--color-light);
     width: calc(33% - 1.3em);
     display: inline-block;
     overflow: hidden;
@@ -58,11 +58,11 @@
     figcaption {
       position: absolute;
       width: 100%;
-      background-color: $dark-color;
+      background-color: var(--color-dark);
       transform: translate(0px, 0px);
       transition: transform .33s ease-out 0s;
       padding: .66em .99em;
-      border-top: 1px solid $light-color;
+      border-top: 1px solid var(--color-light);
       font-weight: bold;
       max-width: calc(100% - 1.3em);
     }
@@ -127,7 +127,7 @@
   
   //mrtnsn-achievements logo
   .achievements-logo {
-    background-color: $light-color;
+    background-color: var(--color-light);
     padding: 0.3em;
     margin: 0;
     display: grid;
@@ -163,7 +163,7 @@
       grid-area: text;
       display: flex;
       flex-flow: column nowrap;
-      color: $dark-color;
+      color: var(--color-dark);
       font-family: 'Pixel Cyr', Arial, sans-serif;
     }
   }

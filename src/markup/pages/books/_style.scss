@@ -69,9 +69,9 @@
 
   // cells
   th {
-    background-color: $dark-color;
+    background-color: var(--color-dark);
     text-align: left;
-    border-bottom: 3px solid $light-color;
+    border-bottom: 3px solid var(--color-light);
     padding: 0.3em;
     top: 0;
     position: sticky;

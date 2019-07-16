@@ -33,15 +33,15 @@
       display: inline-block;
       padding-left: 0.3em;
       padding-right: 0.3em;
-      color: $dark-color;
-      background-color: $light-color;
+      color: var(--color-dark);
+      background-color: var(--color-light);
       
       &::after {
         content: '';
         display: block;
         width: 0;
         height: 0;
-        border-bottom: 1.3em solid $light-color;
+        border-bottom: 1.3em solid var(--color-light);
         border-right: 1.3em solid transparent currentColor;
         position: absolute;
         top: 0;
@@ -112,7 +112,7 @@
 
   .features {
     h3 {
-      color: $y-color;
+      color: var(--color-y);
     }
   }
 
@@ -178,8 +178,8 @@
   .sale {
     width: 100%;
     display: inline-block;
-    background-color: $light-color;
-    color: $dark-color;
+    background-color: var(--color-light);
+    color: var(--color-dark);
     padding: 0.3em;
     text-align: center;
     margin-top: 0;
@@ -193,14 +193,14 @@
   }
 
   .contacts {
-    background-color: $light-color;
-    color: $dark-color;
-    border-color: $light-color;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-color: var(--color-light);
 
     a,
     a:active,
     a:focus {
-      color: $dark-color;
+      color: var(--color-dark);
     }
 
     .contact-list {
@@ -314,7 +314,7 @@
       position: absolute;
       height: 100%;
       width: 1px;
-      border-left: 1px dotted $light-color;
+      border-left: 1px dotted var(--color-light);
       margin-left: 2.3em;
       left: 0;
     }
@@ -383,7 +383,7 @@
     }
     
     figcaption {
-      background-color: $dark-color;
+      background-color: var(--color-dark);
     }
   }
   

@@ -87,7 +87,7 @@ button {
 //OTHER================================================================================================================//
 ::selection {
   background-color: var(--color-b);
-  color: $light-color;
+  color: var(--color-light);
 }
 
 @media screen and (max-width: 768px) {
@@ -121,15 +121,15 @@ button {
 //OTHER================================================================================================================//
 ::selection {
   background-color: var(--color-b);
-  color: $light-color;
+  color: var(--color-light);
 }
 
 html {
-  background-color: $dark-color;
-  color: $light-color;
+  background-color: var(--color-dark);
+  color: var(--color-light);
   font-family: system-ui, Arial, SansSerif;
-  font-size: $font-size;
-  line-height: $line-height;
+  font-size: 100%;
+  line-height: 1.3;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -160,14 +160,14 @@ main {
 }
 
 a {
-  color: $light-color;
+  color: var(--color-light);
 
   &:active {
-    color: $light-color;
+    color: var(--color-light);
   }
 
   &:focus {
-    color: $light-color;
+    color: var(--color-light);
   }
 }
 
@@ -223,16 +223,16 @@ ul {
   display: inline-block;
   height: calc(1em + 0.1em);
   position: relative;
-  text-shadow: 0 1px 0 $dark-color, 0.1em 0 0 $dark-color,
-    -0.1em 0 0 $dark-color;
+  text-shadow: 0 1px 0 var(--color-dark), 0.1em 0 0 var(--color-dark),
+    -0.1em 0 0 var(--color-dark);
 
   &+span {
     display: none;
   }
 
   &:hover+span {
-    background-color: $light-color;
-    color: $dark-color;
+    background-color: var(--color-light);
+    color: var(--color-dark);
     display: inline-block;
     font-family: system-ui, Arial, SansSerif;
     font-size: calc(1rem / 1.3);
@@ -243,10 +243,10 @@ ul {
 }
 
 .link {
-  color: $light-color;
+  color: var(--color-light);
   position: relative;
   text-decoration: none;
-  text-shadow: 1px 1px 0 $dark-color;
+  text-shadow: 1px 1px 0 var(--color-dark);
 
   &:hover {
     color: var(--color-y);
@@ -266,7 +266,7 @@ ul {
   }
 
   &::after {
-    color: $light-color;
+    color: var(--color-light);
     content: 'ꜛ';
     position: absolute;
     font-size: var(--font-size-small);
@@ -288,14 +288,14 @@ ul {
 
   &.person {
     &::before {
-      border-color: $light-color;
+      border-color: var(--color-light);
     }
 
     &:hover {
-      color: $light-color;
+      color: var(--color-light);
 
       ::before {
-        border-color: $light-color;
+        border-color: var(--color-light);
       }
     }
   }

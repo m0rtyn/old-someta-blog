@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1.3em;
-  background-color: $dark-color;
+  background-color: var(--color-dark);
   position: relative;
   width: 636px;
 
   &::before {
     content: "";
     display: block;
-    background-color: $light-color;
+    background-color: var(--color-light);
     position: absolute;
     width: 77.4%;
     height: 100%;
@@ -51,16 +51,16 @@
     margin: auto;
     padding: 0.3em;
     padding-bottom: 1.3em;
-    background-color: $light-color;
-    color: $dark-color;
+    background-color: var(--color-light);
+    color: var(--color-dark);
     position: absolute;
     top: calc(100% - 10px);
     box-sizing: border-box;
-    border-left: 7px solid $dark-color;
+    border-left: 7px solid var(--color-dark);
 
     &::after {
       content: "Свернуть";
-      border-bottom: 1px dashed $dark-color;
+      border-bottom: 1px dashed var(--color-dark);
     }
 
     &::before {
@@ -75,7 +75,7 @@
   #post-number {
     position: absolute;
     top: 0;
-    color: $dark-color;
+    color: var(--color-dark);
   }
 
   @media screen and (max-width: 1024px) {
@@ -88,7 +88,7 @@
   background-color: transparent;
   border: none;
   font-size: 3.3em;
-  color: $light-color;
+  color: var(--color-light);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -124,7 +124,7 @@
       top: 0.3em;
       right: 1.3em;
       font-size: 1.3em;
-      color: $dark-color;
+      color: var(--color-dark);
 
       &:last-of-type {
         right: 0;

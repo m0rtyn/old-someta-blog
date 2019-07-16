@@ -57,8 +57,8 @@
       Courier,
       monospace;
     font-size: 12px;
-    background-color: $light-color;
-    color: $dark-color;
+    background-color: var(--color-light);
+    color: var(--color-dark);
     padding: 0 0.3em;
     padding-left: 1.3em;
     margin-right: 1.3em;
@@ -72,7 +72,7 @@
       width: 0;
       position: absolute;
       pointer-events: none;
-      border-left-color: $light-color;
+      border-left-color: var(--color-light);
       border-width: 7px;
       margin-top: -7px;
     }
@@ -86,7 +86,7 @@
       width: 0;
       position: absolute;
       pointer-events: none;
-      border-left-color: $dark-color;
+      border-left-color: var(--color-dark);
       border-width: 7px;
       margin-top: -7px;
       z-index: 1;

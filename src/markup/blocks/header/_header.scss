@@ -1,5 +1,5 @@
 #header {
-  background-color: $dark-color;
+  background-color: var(--color-dark);
   z-index: 2;
 
   @media screen and (max-width: 500px) {
@@ -39,8 +39,8 @@
 
   .item-nav {
     transition: background-color, border-color, color, font-size 0.3s var(--magic-bezier);
-    border: 1px solid $light-color;
-    background-color: $dark-color;
+    border: 1px solid var(--color-light);
+    background-color: var(--color-dark);
 
     &:hover.dropdown,
     &:focus.dropdown,
@@ -51,9 +51,9 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: $light-color;
-      border-color: $dark-color;
-      color: $dark-color;
+      background-color: var(--color-light);
+      border-color: var(--color-dark);
+      color: var(--color-dark);
     }
   }
 
@@ -129,9 +129,9 @@
     width: 100%;
     box-sizing: border-box;
     margin-bottom: -1px;
-    background-color: $light-color;
-    color: $dark-color;
-    border-color: $dark-color;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-color: var(--color-dark);
     cursor: pointer;
     border: 1px solid var(--color-dark);
 

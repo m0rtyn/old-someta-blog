@@ -5,7 +5,7 @@
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: $light-color;
+  background-color: var(--color-light);
 
   .post-card {
     // position: relative;
@@ -20,7 +20,7 @@
     padding: 1.3em;
     width: 33em;
     min-height: 13em;
-    background-color: $dark-color;
+    background-color: var(--color-dark);
     background-image: url(http://1.bp.blogspot.com/-ZTmN5tIbtSM/UQflO4foesI/AAAAAAAAR4g/698044hMkhw/s450/Abstract+Paintings+Wallpapers+06.jpg);
     background-blend-mode: soft-light;
   }
@@ -34,7 +34,7 @@
   .post-mod {
     display: inline-block;
     padding: 0.3em;
-    border: 1px solid $y-color;
+    border: 1px solid var(--color-y);
     margin-right: 0.3em;
     font-size: var(--font-size-small);
   }

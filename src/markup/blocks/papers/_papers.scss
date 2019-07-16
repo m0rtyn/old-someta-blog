@@ -95,7 +95,7 @@
       top: 0;
       transform: translate(0);
       transition: transform 0.3s ease-out;
-      background-color: $dark-color;
+      background-color: var(--color-dark);
       mix-blend-mode: difference;
       z-index: -2;
     }

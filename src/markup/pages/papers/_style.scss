@@ -14,7 +14,7 @@
 	padding: 3.3em 0;
 	width: 66vw;
 	margin: 0 auto;
-	color: $light-color;
+	color: var(--color-light);
 
 	h1,
 	h2,
@@ -44,7 +44,7 @@
 	@media screen and (max-width: 1023px) {
 		width: 90vw;
 		margin: 0 auto;
-		color: $light-color;
+		color: var(--color-light);
 
 		ul {
 			list-style: none;
@@ -64,9 +64,9 @@
 		background-position: right;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-color: $dark-color;
+		background-color: var(--color-dark);
 		background-blend-mode: luminosity;
-		border: 1px solid $light-color;
+		border: 1px solid var(--color-light);
 
 		@media screen and (max-width: 1023px) {
 			margin-left: 0;
@@ -106,7 +106,7 @@
 	margin: 47px 1.3em 1.3em 0;
 	display: flex;
 	align-items: center;
-	border: 1px solid $light-color;
+	border: 1px solid var(--color-light);
 
 	video {
 		width: 240px;
@@ -130,8 +130,8 @@
 .quote {
 	font-family: Roboto Slab, 'Times New Roman', Times, serif;
 	font-size: 1.3rem;
-	color: $dark-color;
-	background-color: $light-color;
+	color: var(--color-dark);
+	background-color: var(--color-light);
 	position: relative;
 	padding: 1em 3em;
 	margin: 3em 3em;
@@ -209,7 +209,7 @@
 .hint {
 	padding: 1.3em;
 	margin: 62px 0 1.3em 1.3em;
-	border: 1px solid $light-color;
+	border: 1px solid var(--color-light);
 	width: 180px;
 	float: right;
 	display: flex;
@@ -224,7 +224,7 @@
 	@media screen and (max-width: 1023px) {
 		padding: 1.3em;
 		margin: 3em auto 0;
-		border: 1px solid $light-color;
+		border: 1px solid var(--color-light);
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
@@ -233,7 +233,7 @@
 }
 
 .disqus-wrapper {
-	background-color: $dark-color;
+	background-color: var(--color-dark);
 
 	iframe {
 		mix-blend-mode: difference;
