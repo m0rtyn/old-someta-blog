@@ -304,13 +304,14 @@
 
   .collapsed-block {
     cursor: pointer;
-
+    
     summary:hover {
       color: var(--color-g);
     }
-
+    
     h3 {
       display: inline-block;
+      border-bottom: 1px dashed var(--color-light);
     }
 
     ul {
