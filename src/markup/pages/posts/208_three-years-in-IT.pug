@@ -1,0 +1,21 @@
+extends ../../base/layout.pug
+
+block variables
+  - var scriptSrc = '/assets/js/posts.js';
+  - var scriptSrc2 = '/assets/js/likely.js';
+  - var title = 'Три урока за 3 года в IT'
+  - var description = ''
+
+block content
+  //date:18.07.2019
+  //tags:
+  //status:published
+  //platforms:telegram,hexlet,website
+  main#post.basic-page
+    +link-back()
+    h1=title
+    p Написал первую статью о работе в IT. До этого боялся облажаться в сообществе и сложно было что-либо написать.
+    p Статья опубликована в блоге образовательной платформы Хекслет для эксперимента. 
+      a.link(href="https://ru.hexlet.io/blog/posts/tri-uroka-za-tri-goda-v-it" target="_blank") Ссылка на статью
+
+    +likely-buttons()
