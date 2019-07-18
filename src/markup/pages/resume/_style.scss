@@ -416,7 +416,7 @@
     .avatar-front, .avatar-back {
       position: absolute;
       width: 100%;
-      filter: grayscale(1);
+      // filter: grayscale(1);
       backface-visibility: hidden;
     }
     
