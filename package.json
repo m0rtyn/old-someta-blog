@@ -40,12 +40,12 @@
     "gulp-rename": "^1.4.0",
     "gulp-sitemap": "^6.2.0",
     "jstransformer-markdown-it": "^2.1.0",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "directory-tree": "^2.2.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.0",
     "browser-sync": "^2.24.4",
-    "directory-tree": "^2.2.2",
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "^2.14.0",

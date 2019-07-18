@@ -3,7 +3,7 @@ const fs = require('fs');
 const dirTree = require('directory-tree');
 
 const posts = [];
-const tree = dirTree('./public/posts/', { exclude: /posts-kanban.html|index.html/ }, null, (item) => {
+dirTree('./public/posts/', { exclude: /posts-kanban.html|index.html/ }, null, (item) => {
   // console.log(item);
   item.children.map((element) => {
     // console.log(element.name);
