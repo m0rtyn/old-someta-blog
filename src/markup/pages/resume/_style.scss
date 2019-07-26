@@ -86,26 +86,35 @@
   .skill-table {
     width: 100%;
     font-weight: 100;
+    text-align: right;
+
+    col:first-of-type {
+      width: 33%;
+    }
   }
-  .skill {
-    
-    .expert::after {
+  
+  .skills {
+    tr:last-child td{
+      padding-bottom: .3em;
+    }
+
+    &.expert .score::after {
       content: "■■■■■";
       color: var(--color-b);
     }
-    .experienced::after {
+    &.experienced .score::after {
       content: "■■■■";
       color: var(--color-g);
     }
-    .skillful::after {
+    &.skillful .score::after {
       content: "■■■";
       color: var(--color-y);
     }
-    .beginner::after {
+    &.beginner .score::after {
       content: "■■";
       color: var(--color-o);
     }
-    .novice::after {
+    &.novice .score::after {
       content: "■";
       color: var(--color-r);
     }
