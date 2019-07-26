@@ -13,6 +13,10 @@
     display: none;
   }
 
+  & > p {
+    text-align: center;
+  }
+
   .title {
     font-size: var(--font-size-extra-large);
     margin: 1.3em auto 0;
