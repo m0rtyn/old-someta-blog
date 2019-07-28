@@ -10,70 +10,80 @@ block content
       ul.code-examples
 
         li.code-example
-          .description Сайт-визитка для друга
-            br
-            |(HTML&CSS&JS)
-            span.comment Писал стили на чистом CSS без сборки и без оглядки на поддержку. Сделал дальнейшую правку доступной и простой. Использовал custom properties для декларативной конфигурации адаптивности.
+          .description Прототип приложения для просмотра интерактивных слайдов
+            .stack Vue, Nuxt.js
+            .comment 
           .links
-            a.link(target="_blank" href="https://github.com/martyns0n/website-for-sanch") repo
+            a.link(target="_blank" href="https://github.com/martyns0n/vue-project") code
             br
-            a.link(target="_blank" href="https://martyn.guru/website-for-sanch/") webpage
+            a.link(target="_blank" href="https://optimistic-tesla-b9f404.netlify.com/") demo
+
+        li.code-example
+          .description Страница настроек пользователя
+            .stack Agular 8, Scss
+            .comment Тестовое задание на вёрстку, в котором я сделал акцент на изучении Angular
+          .links
+            a.link(target="_blank" href="https://github.com/martyns0n/angular-project/tree/src") code
+            br
+            a.link(target="_blank" href="https://brave-lumiere-27e83e.netlify.com/") demo
 
         li.code-example
           .description Интерфейс игры «Go to IT»
-            br
-            |(React, PostCSS, Bootstrap)
-            span.comment Горжусь этим проектом. Начал работу с имеющегося прототипа на Bootstrap 3. Делал переход на купленную тему для Bootstrap 4. А затем писал стили для кастомного дизайна по макету. Был единственным верстальщиком на проекте.
+            .stack React, PostCSS, Bootstrap
+            .comment Горжусь этим проектом. Начал работу с имеющегося прототипа на Bootstrap 3. Делал переход на купленную тему для Bootstrap 4. А затем писал стили для кастомного дизайна по макету.
           .links
             a.link(target="_blank" href="http://gotoit.blackdeckcrew.com/") demo
 
         li.code-example
           .description Лендинг для конференции JFALL в Польше
-            br
-            |(PUG, Scss, JS)
-            br
-            span.comment Сделал простой лендинг и реализовал паралакс-эффект на js. Также добавил поддержку и переключение двух языков.
+            .stack PUG, Scss, JS
+            .comment Сделал лендинг и реализовал паралакс-эффект на js. Также добавил поддержку и переключение языков.
           .links
-            a.link(target="_blank" href="https://github.com/martyns0n/it-nonstop-landing") repo
+            a.link(target="_blank" href="https://github.com/martyns0n/it-nonstop-landing") code
             br
-            a.link(target="_blafk" href="https://martyn.guru/it-nonstop-landing") webpage
-
-        //- li.code-example
-        //-   .description Парсинг данных с телеграм-канала
-        //-     br
-        //-     |(React, CSS, telegram-channel-scraper)
-        //-     br
-        //-     span.comment Тестовое задание благодаря которому я почувствовал себя JS-разработчиком. Две недели преодолевал себя повторяя мантру «ты талантливый программист». Скэпер собирает данные с канала и отправляет на сервер, а тот пересылает на клиент, где генерируются карточки. Карточки можно фильтровать. На код смотреть больно.
-        //-   .links
-        //-     a.link(target="_blank" href="https://github.com/martyns0n/breadhead-test-task/blob/master/src/components/screens/Dealfinder/Dealfinder.js") client&nbsp;repo
+            a.link(target="_blafk" href="https://martyn.guru/it-nonstop-landing") demo
 
         li.code-example
           .description Oборачивание в react-компонент ссылок и имейлов из текста оферты 
-            br
-            |(React, TypeScript, RegExp)
-            br
-            span.comment Первая задача которую я решал в качестве JS-разработчика. Сложность заключалась в том, что структуру данных, текст или компоненты нельзя было менять. В решении помогли регулярки.
+            .stack React, TypeScript, RegExp
+            .comment Сложность примера в том, что структуру данных, текст или компоненты нельзя было изменять. В решении помогли регулярки.
           .links
             a.link(target="_blank" href="https://gist.github.com/martyns0n/1811fdde774523a44e1004a6ba369307") gist
 
         li.code-example
           .description Получение данных с Google Sheets и генерация таблицы
-            br
-            |(HTML&CSS&JS)
-            br
-            span.comment Вывел и стилизовал данные, добавил построчную асинхронную подрузку с плавной анимацией.
+            .stack HTML&CSS&JS
+            .comment Вывел и стилизовал данные, добавил построчную асинхронную подрузку с плавной анимацией.
           .links
             a.link(target="_blank" href="https://github.com/martyns0n/martyns0n.github.io/blob/sources/src/assets/js/booksheets.js") code
             br
             a.link(target="_blank" href="https://martyn.guru/books") webpage
+
+        li.code-example
+          .description Сайт-визитка для друга
+            .stack HTML&CSS&JS
+            .comment Писал стили на чистом CSS без сборки и без оглядки на поддержку. Сделал дальнейшую правку доступной и простой. Использовал custom properties для декларативной конфигурации адаптивности.
+          .links
+            a.link(target="_blank" href="https://github.com/martyns0n/website-for-sanch") code
+            br
+            a.link(target="_blank" href="https://martyn.guru/website-for-sanch/") demo
+
+
+
+
+        //- li.code-example
+        //-   .description Вывод постов с фильтрацией из канала Telegram
+        //-     br
+        //-     |(React, CSS, telegram-channel-scraper)
+        //-     br
+        //-     .comment Скэпер собирает данные с канала и отправляет на сервер, а тот пересылает на клиент, где генерируются карточки.
+        //-   .links
+        //-     a.link(target="_blank" href="https://github.com/martyns0n/breadhead-test-task/blob/master/src/components/screens/Dealfinder/Dealfinder.js") client&nbsp;repo
+
 
         //- li.code-example
         //-   .description Весь этот сайт
         //-     br
         //-     |(HTML&CSS&JS) 
         //-   a.link(target="_blank" href="https://github.com/martyns0n/mrtnsn-website") repo
-        //- li.code-example
-        //-   .description Календарь-таблица событий
-        //-     br
-        //-     |(Angular 2+, HTML, CSS) *Старое тестовое задание* 
-        //-   a.link(target="_blank" href="https://github.com/martyns0n/test-timetable") repo
+        
