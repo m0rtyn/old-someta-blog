@@ -36,7 +36,7 @@ block content
                     span.accented а
                     |ртынa
                 span Мартыненко Владимира Андреевича 
-                .version ver. 2.10.1
+                .version ver. 2.10.2
             p.space-between.vertically-centered
                 span.profession Front-end разработчик
                 span.text-right
@@ -56,7 +56,7 @@ block content
                 |Хочу вырасти в Team Lead || DevRel.
 
             h3 Стэк
-            span ES6, Vue, Scss, Pug, PostCSS, Bootstrap
+            span ES6, Vue, React, Scss, Pug, PostCSS, Bootstrap
             
             h3 Навыки
             table.skill-table
@@ -354,10 +354,11 @@ block content
     
         #disqus_thread.disqus-wrapper
         script.
+            var pageName = 'resume';
             var disqus_config = function () {
-                this.page.url = 'https://martyn.guru/resume';
-                this.page.identifier = 'resume';
-                this.page.title = 'resume';
+                this.page.url = 'https://martyn.guru/' + pageName;
+                this.page.identifier = pageName;
+                this.page.title = pageName;
             };
             (function() {
                 var d = document, s = d.createElement('script');
