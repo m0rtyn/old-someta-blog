@@ -1,0 +1,35 @@
+extends ../../../base/layout.pug
+
+block variables
+  - var title = 'Не QWERTY единой';
+  - var description = 'Статья о раскадке QWERTY и о том, как я создал ей замену';
+  - var keywords = 'qwerty, dvorak, colemak, martyn, мартын, слепой ввод, десятипальцевый метод, Никита Прокопов, печать вслепую, клавогонки, martynak, тунельный синдром, запястья, клавиатура, клавиши';
+
+block content
+  main#no-more-qwerty.paper
+    header
+      
+
+      .intro.text-container
+        h1 Слабость воли. Как разгрузить и сохранить.
+          .version 5.08.19
+        p Доклад для волевом ресурсе с точки зрения XXI века.
+    .md-text
+      include:markdown-it(linkify langPrefix='highlight-') ./paper.md
+        
+    #disqus_thread.disqus-wrapper
+    script.
+      var pageName = 'weakness-of-will';
+      var disqus_config = function () {
+          this.page.url = 'https://martyn.guru/' + pageName;
+          this.page.identifier = pageName;
+          this.page.title = pageName;
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://mrtnsn.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    noscript
+      | Пожалуйста включите JavaScript для просмотра комментариев.
