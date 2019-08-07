@@ -1,5 +1,9 @@
 #resume {
   margin: auto;
+
+  * {
+    outline: none;
+  }
   
   @media screen and (max-width: 768px) {
     max-width: 99%;
@@ -11,6 +15,7 @@
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+    overflow-x: hidden;
   }
 
   h2,
@@ -87,8 +92,6 @@
     }
   }
 
-  .benefits {}
-
   .skill-table {
     width: 100%;
     font-weight: 100;
@@ -100,6 +103,12 @@
 
     col:last-of-type {
       text-align: right;
+    }
+
+    @media screen and (max-width: 500px) {
+      col:first-of-type {
+        width: 50%;
+      }
     }
   }
   
