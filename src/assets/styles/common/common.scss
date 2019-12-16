@@ -1,4 +1,8 @@
-//TYPOGRAPHY================================================================================================================//
+/*
+==============================================================================
+? TYPOGRAPHY ======================================================================
+==============================================================================
+*/
 h1,
 h2,
 h3 {
@@ -43,10 +47,7 @@ p {
   margin: 0;
 
   .version {
-    font-family: 'Anonymous Pro',
-      'Courier New',
-      Courier,
-      monospace;
+    font-family: 'Anonymous Pro', 'Courier New', Courier, monospace;
     font-size: 1rem;
   }
 
@@ -54,10 +55,10 @@ p {
     position: relative;
 
     &::after {
-      content: "´";
+      content: '´';
       position: absolute;
       right: -0.04ch;
-      top: -.04ch;
+      top: -0.04ch;
       line-height: 1;
     }
   }
@@ -73,7 +74,6 @@ button {
   }
 }
 
-
 .title {
   margin-top: 1.3em;
   text-align: center;
@@ -84,7 +84,11 @@ button {
   }
 }
 
-//OTHER================================================================================================================//
+/*
+==============================================================================
+? OTHER ======================================================================
+==============================================================================
+*/
 ::selection {
   background-color: var(--color-b);
   color: var(--color-light);
@@ -96,7 +100,11 @@ button {
   text-align: left !important;
 }
 
-//SCROLLBAR===================================================================//
+/*
+==============================================================================
+? SCROLLBAR ======================================================================
+==============================================================================
+*/
 * {
   &::-webkit-scrollbar {
     background-color: var(--color-light);
@@ -109,7 +117,7 @@ button {
 
   &::-webkit-scrollbar-track {
     background-color: var(--color-light);
-    border: .3em solid var(--color-dark);
+    border: 0.3em solid var(--color-dark);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -155,7 +163,6 @@ main {
 
   @media screen and (max-width: 768px) {
     max-width: 99%;
-
   }
 }
 
@@ -213,7 +220,6 @@ ul {
 
   @media screen and (max-width: 768px) {
     max-width: 99%;
-
   }
 }
 
@@ -226,11 +232,11 @@ ul {
   text-shadow: 0 1px 0 var(--color-dark), 0.1em 0 0 var(--color-dark),
     -0.1em 0 0 var(--color-dark);
 
-  &+span {
+  & + span {
     display: none;
   }
 
-  &:hover+span {
+  &:hover + span {
     background-color: var(--color-light);
     color: var(--color-dark);
     display: inline-block;
@@ -259,8 +265,8 @@ ul {
     &::before {
       border: 1px solid var(--color-y);
       height: 100%;
-      padding: 0 .13em;
-      transform: translateX(-.13em);
+      padding: 0 0.13em;
+      transform: translateX(-0.13em);
       width: 100%;
     }
   }

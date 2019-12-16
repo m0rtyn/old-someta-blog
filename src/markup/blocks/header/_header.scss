@@ -1,5 +1,4 @@
 #header {
-  background-color: var(--color-dark);
   z-index: 2;
 
   @media screen and (max-width: 500px) {
@@ -13,7 +12,7 @@
   }
 
   li {
-    transition-duration: .3s;
+    transition-duration: 0.3s;
   }
 
   a {
@@ -38,7 +37,8 @@
   }
 
   .item-nav {
-    transition: background-color, border-color, color, font-size 0.3s var(--magic-bezier);
+    transition: background-color, border-color, color,
+      font-size 0.3s var(--magic-bezier);
     border: 1px solid var(--color-light);
     background-color: var(--color-dark);
 
@@ -85,7 +85,6 @@
     }
   }
 
-
   //SUBNAVS------------------------------
 
   .dropdown {
@@ -96,18 +95,17 @@
     cursor: pointer;
     padding: 1.3em;
 
-    &:hover>.list-subnav,
-    &:focus>.list-subnav,
-    &:active>.list-subnav {
+    &:hover > .list-subnav,
+    &:focus > .list-subnav,
+    &:active > .list-subnav {
       transform: translateY(0) scale(1) translateX(0);
     }
 
     &::after {
-      content: "▼";
+      content: '▼';
       position: absolute;
       right: 1.3em;
     }
-
   }
 
   .title-item {
@@ -120,12 +118,12 @@
     top: 100%;
     width: 100%;
     z-index: -1;
-    transition: transform .3s var(--magic-bezier);
+    transition: transform 0.3s var(--magic-bezier);
   }
 
   .item-subnav {
     transform: translateX(0);
-    transition: transform .3s val(--magic-bezier);
+    transition: transform 0.3s val(--magic-bezier);
     width: 100%;
     box-sizing: border-box;
     margin-bottom: -1px;
@@ -145,6 +143,6 @@
   .link-subnav {
     position: relative;
     color: currentColor;
-    padding: .3em 1.3em;
+    padding: 0.3em 1.3em;
   }
 }

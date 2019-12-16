@@ -1,0 +1,23 @@
+#nice-and-easy {
+  background-color: white;
+  color: var(--color-dark);
+
+  .intro {
+    width: 100%;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      text-align: center;
+      margin: 1em auto 0;
+      // max-width: 66%;
+      font-size: 1rem;
+    }
+  }
+
+  li ul {
+    margin-top: 0.3em;
+  }
+}

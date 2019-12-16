@@ -1,44 +1,44 @@
 /*COMMON*/
-@import "./common/variables";
-@import "./common/fonts";
-@import "./common/mixins";
-@import "./common/normalize";
-@import "./common/animations";
-@import "./common/common";
-@import "./common/utilities";
-@import "./common/likely";
+@import './common/variables';
+@import './common/fonts';
+@import './common/mixins';
+@import './common/normalize';
+@import './common/animations';
+@import './common/common';
+@import './common/utilities';
+@import './common/likely';
 
 /*BLOCKS*/
-@import "../../markup/blocks/main-logo/main-logo";
-@import "./blocks/telegram-post";
-@import "../../markup/blocks/footer/footer";
-@import "../../markup/blocks/header/header";
-@import "../../markup/blocks/metabaza/style";
-@import "../../markup/blocks/papers/papers";
-@import "../../markup/blocks/posts/posts";
-@import "../../markup/blocks/link-back/link-back";
+@import '../../markup/blocks/main-logo/main-logo';
+@import './blocks/telegram-post';
+@import '../../markup/blocks/footer/footer';
+@import '../../markup/blocks/header/header';
+@import '../../markup/blocks/metabaza/style';
+@import '../../markup/blocks/papers/papers';
+@import '../../markup/blocks/posts/posts';
+@import '../../markup/blocks/link-back/link-back';
 
 /*PAGES*/
-@import "../../markup/pages/style";
-@import "../../markup/pages/achievements/style";
-@import "../../markup/pages/projects/style";
-@import "../../markup/pages/portfolio/style";
-@import "../../markup/pages/log/style";
-@import "../../markup/pages/metabaza-generator/style";
-@import "../../markup/pages/donation/style";
-@import "../../markup/pages/resume/style";
-@import "../../markup/pages/resume/code/style";
-@import "../../markup/pages/shows/style";
-@import "../../markup/pages/contacts/style";
-@import "../../markup/pages/books/style";
-@import "../../markup/pages/dopamine-the-cat/style";
-@import "../../markup/pages/posts/style";
-@import "../../markup/pages/home/style";
-@import "../../markup/pages/hello-stranger/style";
-
+@import '../../markup/pages/style';
+@import '../../markup/pages/achievements/style';
+@import '../../markup/pages/projects/style';
+@import '../../markup/pages/portfolio/style';
+@import '../../markup/pages/log/style';
+@import '../../markup/pages/metabaza-generator/style';
+@import '../../markup/pages/donation/style';
+@import '../../markup/pages/resume/style';
+@import '../../markup/pages/resume/code/style';
+@import '../../markup/pages/shows/style';
+@import '../../markup/pages/contacts/style';
+@import '../../markup/pages/books/style';
+@import '../../markup/pages/dopamine-the-cat/style';
+@import '../../markup/pages/posts/style';
+@import '../../markup/pages/home/style';
+@import '../../markup/pages/hello-stranger/style';
 
 //papers
-@import "../../markup/pages/papers/style";
-@import "../../markup/pages/papers/invalid-martyn/style";
-@import "../../markup/pages/papers/how-to-sleep/style";
-@import "../../markup/pages/papers/pmdr/style";
+@import '../../markup/pages/papers/style';
+@import '../../markup/pages/papers/invalid-martyn/style';
+@import '../../markup/pages/papers/how-to-sleep/style';
+@import '../../markup/pages/papers/pmdr/style';
+@import '../../markup/pages/papers/nice-and-easy/style';
