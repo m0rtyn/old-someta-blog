@@ -1,0 +1,35 @@
+extends ../../../base/layout.pug
+
+block variables
+  - var title = 'Легко, просто и спасибо';
+  - var description = '';
+  - var keywords = '';
+
+block content
+  main#nice-and-easy.paper
+    header
+      
+
+      .intro.text-container
+        h1 Легко, приятно и спасибо
+          .version 14.12.19
+        p Этот публичное письмо адресовано автору проекта Nice&Easy — Тимуру Зарудному.
+    .md-text
+      include:markdown-it(linkify langPrefix='highlight-') ./paper.md
+        
+    #disqus_thread.disqus-wrapper
+    script.
+      var pageName = 'nice-and-easy';
+      var disqus_config = function () {
+          this.page.url = 'https://martyn.guru/' + pageName;
+          this.page.identifier = pageName;
+          this.page.title = pageName;
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://mrtnsn.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    noscript
+      | Пожалуйста включите JavaScript для просмотра комментариев.
