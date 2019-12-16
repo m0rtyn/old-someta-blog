@@ -1,6 +1,15 @@
 #nice-and-easy {
+  padding: 1.3em;
   background-color: white;
   color: var(--color-dark);
+
+  @media (min-width: 768px) {
+    padding: 3.3em;
+
+    ul {
+      list-style-type: square;
+    }
+  }
 
   .intro {
     width: 100%;
@@ -12,7 +21,6 @@
     p {
       text-align: center;
       margin: 1em auto 0;
-      // max-width: 66%;
       font-size: 1rem;
     }
   }
