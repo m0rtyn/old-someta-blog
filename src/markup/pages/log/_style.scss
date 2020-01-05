@@ -23,9 +23,20 @@
     }
   }
 
-  h3.year {
+  details {
+    margin-left: -33px;
+    margin-bottom: 1.3em;
+
+    ul {
+      list-style-type: square;
+    }
+  }
+
+  h2.year {
+    text-align: left;
     color: var(--color-y);
     margin-left: -33px;
+    margin-bottom: 0.3em;
 
     @media screen and (max-width: 768px) {
       margin-left: 1.3em;
@@ -52,10 +63,7 @@
   }
 
   .date {
-    font-family: 'Anonymous Pro',
-      'Courier New',
-      Courier,
-      monospace;
+    font-family: 'Anonymous Pro', 'Courier New', Courier, monospace;
     font-size: 12px;
     background-color: var(--color-light);
     color: var(--color-dark);
@@ -67,7 +75,7 @@
       left: 100%;
       top: 50%;
       border: solid transparent;
-      content: " ";
+      content: ' ';
       height: 0;
       width: 0;
       position: absolute;
@@ -81,7 +89,7 @@
       left: 0;
       top: 50%;
       border: solid transparent;
-      content: " ";
+      content: ' ';
       height: 0;
       width: 0;
       position: absolute;
@@ -114,8 +122,9 @@
   @media screen and (max-width: 768px) {
     display: none;
   }
-  
-  &::before, &::after  {
+
+  &::before,
+  &::after {
     position: absolute;
     display: block;
     text-align: center;
@@ -125,13 +134,13 @@
   }
 
   &::before {
-    content: "Прожито";
+    content: 'Прожито';
     color: var(--color-dark);
     margin-top: 1.3em;
   }
 
   &::after {
-    content: "Недожито";
+    content: 'Недожито';
     color: var(--color-light);
     margin-bottom: 1.3em;
     bottom: 0;
@@ -141,18 +150,18 @@
     position: relative;
     display: block;
   }
-  
+
   .week::before {
     content: '';
     display: block;
     width: 100%;
     padding-bottom: 100%;
   }
-  
+
   .week-passed::before {
     background: var(--color-r);
   }
-  
+
   .week::after {
     position: absolute;
     left: calc(100% + 1.3em);
@@ -161,15 +170,15 @@
     font-size: var(--font-size-small);
     line-height: 1;
   }
-  
+
   .week:nth-child(52)::after {
     content: 'Год';
   }
-  
+
   .week:nth-child(52n) {
     counter-increment: year;
   }
-  
+
   .week:nth-child(520n)::after {
     content: counter(year);
   }

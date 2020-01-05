@@ -1,8 +1,12 @@
-@import "../../../node_modules/system-font-css/_system-font";
+@import '../../../node_modules/system-font-css/_system-font';
+
+html {
+  font-display: block;
+}
+
 @font-face {
   font-family: 'Pixel Cyr';
-  src: 
-    url('../fonts/PixelCyr.svg#PixelCyr') format('svg'),
+  src: url('../fonts/PixelCyr.svg#PixelCyr') format('svg'),
     url('../fonts/PixelCyr.woff2') format('woff2'),
     url('../fonts/PixelCyr.woff') format('woff');
   font-weight: normal;
@@ -11,8 +15,7 @@
 
 @font-face {
   font-family: 'Visitor';
-  src: 
-    url('../fonts/visitor2.woff2') format('woff2'),
+  src: url('../fonts/visitor2.woff2') format('woff2'),
     url('../fonts/visitor2.woff') format('woff');
   font-weight: normal;
   font-style: normal;
