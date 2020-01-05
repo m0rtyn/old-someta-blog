@@ -17,7 +17,7 @@ export default {
   ...chronoblogTheme,
   initialColorMode: 'dark',
   colors: {
-    ...chronoblogTheme.colors,
+    // ...chronoblogTheme.colors,
     // ? Monokai theme
     // dark: '#2D2A2E',
     // light: '#FCFCFA',
@@ -33,7 +33,19 @@ export default {
     link: '#FFD866',
     primary: '#AB9DF2',
     secondary: '#78DCE8',
-    muted: '#939293'
+    muted: '#939293',
+    modes: {
+      ...chronoblogTheme.colors.modes,
+      dark: {
+        ...chronoblogTheme.colors.modes.dark,
+          text: '#FCFCFA',
+          background: '#2D2A2E',
+          link: '#FFD866',
+          primary: '#AB9DF2',
+          secondary: '#78DCE8',
+          muted: '#939293',
+      }
+    }
   },
   fontSizes: [14, 16, 18, 20, 22, 24, 28, 36],
   borderRadius: {
