@@ -1,0 +1,368 @@
+import styles from './log.module.css';
+
+<main>
+  <h1 className={styles.pageTitle}>Метапись</h1>
+  <p className={styles.pageDescription}>Лог жизни Мартына*</p>
+  {/* <div id="life-calendar"></div> */}
+  <section>
+    <h2 className={styles.year}>2020</h2>
+  </section>
+  <section>
+    <h2 className={styles.year}>2019</h2>
+    <details className={styles.collapsedBlock}>
+      <h4>Потребление</h4>
+      <ul>
+        <li>Прочитал/прослушал книг: 31 (-19 от прошлого года)</li>
+        <li>Книга: А. Курпатов «Чертоги разума»</li>
+        <li>Фильм/Сериал: Космос. Пространство и Время.</li>
+        <li>Подкаст: Мысли и Методы</li>
+        <li>Музыка: Птицу ЕМЪ</li>
+        <li>Блог: Вастрик.ру</li>
+        <li>Telegram-канал: …</li>
+        <li>Игра: Dark Souls 3</li>
+      </ul>
+      <h4>Созидание</h4>
+      <ul>
+        <li>Событие: Сходка Мастридеров в СПБ #2</li>
+        <li>Место: Coffee Prana (Спб)</li>
+        <li>Увлечение: Agile-методологии</li>
+        <li>Проект: Моушен</li>
+        <li>Провал: тестовое задание в Wrike</li>
+      </ul>
+      <h4>Артефакты</h4>
+      <ul>
+        <li>Подарок: миниатюрная вилочка от Венеры</li>
+        <li>Инструмент: Fantastical 2</li>
+        <li>Покупка: Macbook 12 (2017)</li>
+        <li>Одежда: Рубашка с заклёпками из Спасибо</li>
+        <li>Блюдо: Соба с тофу из Coffee3</li>
+        <li>Наркотик: двойной эспрессо</li>
+      </ul>
+      <h4>Люди</h4>
+      <ul>
+        <li>Сообщество: Indie Hackers SPB</li>
+        <li>Знакомство: Александр Губарев</li>
+        <li>Человек: Фёдор Борщёв</li>
+        <li>Кумир: Игорь Камышев</li>
+        <li>Автор: Фёдор Достоевский</li>
+      </ul>
+      <summary>
+        <h3 className={styles.yearSnapshotTitle}>Слепок года</h3>
+      </summary>
+    </details>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>30 Nov</span>Переезд с Петроградки на
+        Московские ворота (Спб)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>27 Nov</span>Пройден тренинг
+        «Производительность Agile-команд» у Анны Обуховой (Scrumtrek)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>21 Nov</span>Пройден испытательный срок в
+        Semrush
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>26 Oct</span>Участие в хакатоне Indie
+        Hackers Spb
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>10 Oct</span>Собрана Mastermind группа
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>28 Sep</span>Alcotalk для встречи
+        мастридеров в Пино (Спб)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>04 Sep</span>Пройден тренинг «Agile for
+        developers» у Никиты Романова (SEMrush)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>30 Aug</span>Доклад{' '}
+        <a className={styles.link} href="https://youtu.be/QjmcSvZV_pg">
+          «Слабость воли»
+        </a>{' '}
+        на митапе Burning Lead (Спб)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>03 Aug</span>Организована сходка проекта
+        «Nice and Easy» в Пино (Спб)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>23 Jul</span>Доклад{' '}
+        <a className={styles.link} href="https://youtu.be/FG6rZegtAck?t=3047">
+          «Не QWERTY единой»
+        </a>{' '}
+        на митапе PiterPy (Спб)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>13 Jul</span>Попал в эфир подкаста Веб
+        стандарты
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? May</span>Опубликован проект С.У.К.А в
+        сотрудничестве с Сашей
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>07 Mar</span>Куплен третий ноутбук
+        (MacBook 12)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Feb</span>Придуман метод Матадоро
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>10 Jan</span>Запуск проекта Куб
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Jan</span>Начало исследования ритмов
+        активности
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2018</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>31 Dec</span>Прочитано 50 книг за год
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>02 Dec</span>Стрим первого Митдауна
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Dec</span>Прочитаны все романы Виктора
+        Пелевина
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>29 Oct</span>Знакомство с Милославом
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>11 Sen</span>Знакомство с Александром
+        Губаревым
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>20 Nov</span>Доклад{' '}
+        <a className={styles.link} href="https://youtu.be/4MQ-gY05CY4?t=304">
+          «255 оттенков серого»
+        </a>{' '}
+        на митапе PiterCSS (Спб)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>17 Nov</span>Релиз{' '}
+        <a
+          className={styles.link}
+          href="https://store.steampowered.com/app/953060/Go_to_IT/"
+        >
+          «Go to IT»
+        </a>{' '}
+        от Black Deck Crew в Steam
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>10 Nov</span>Окончен курс о долговременных
+        начинаниях Тимура Зарудного
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>20 Sep</span>Успешное окончание обучения
+        первого ученика в HTML Academy
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>10 Sep</span>Переезд в Санкт-Петербург
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>26 Aug</span>V «ПБИ», лекция «Слабость
+        воли» (Нск)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>19 Jul</span>Рождение бренда «Martyn
+        Son»{' '}
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>17 Jun</span>Публикация этого списка
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>10 Jun</span>Начало работы с Black Deck
+        Crew
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>26 May</span>IV встреча «ПБИ» в культурном
+        центре «Этаж» (Нск)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>25 May</span>Секретное памятное событие
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>09 May</span>Знакомство с Александром
+        Гапаком
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>01 May</span>Переход на «Logout mode» для
+        vk.com
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>07 Apr</span>III встреча «ПБИ» в
+        культурном пространстве «Крыша» (Нск)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>24 Mar</span> Доклад «Не QWERTY единой» на
+        митапе DEVNSK (Нск)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>11 Mar</span> Запущен сайт mrtnsn.me
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>07 Mar</span> Создан канал «Метабаза» в
+        Telegram
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>25 Feb</span> II встреча «ПБИ» в
+        культурном пространстве «Крыша» (Нск)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>10 Feb</span> Лекция на тему «HTML, CSS,
+        DevTools» в Noveo Intership 2018 (Нск)
+      </li>
+      <li className={styles.record}>
+        {' '}
+        <span className={styles.date}>?? Feb</span> Прочтена первая книга на английском
+        языке
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2017</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>31 Dec</span> II Великое Новогоднее
+        Путешествие Саши и Володи
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>10 Dec</span> I встреча «Проблемы Белых
+        Идей» в культурном центре «Этаж» (Нск)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Dec</span> Создан формат встреч
+        «Проблемы Белых Идей» с Санчо и Дашей
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>13 Oct</span> Языческий день рождения
+        Володи
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Oct</span> Создана клавиатурная
+        раскладка Martynak
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>19 Aug</span> Опубликован первый выпуск
+        подкаста «Протопилот Альфаᵝ»
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>12 Aug</span> Создан проект «Протопилот
+        Альфаᵝ» с Санчо{' '}
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Aug</span> Начало работы в Noveo
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>30 Jul</span> Запущена первая страничка в
+        интернете
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>20 Mar</span> Знакомство с Александром
+        Лебедько
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2016</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>31 Dec</span> I Великое Новогоднее
+        Путешествие Саши и Володи
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>18 Jul</span> Переезд с Затулинки на
+        Красный Проспект (Нск)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Jun</span> Начало работы на «Армасети»
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? May</span> Начало обучения
+        web-разработке у Руслана
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>30 May</span> Знакомство с Русланом
+        Жубанищевым
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Apr</span>Заключён договор с Сашей об
+        отказе от сахара
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>02 Jan</span> Запущен паблик
+        «мартинсоновая яма» на vk.com
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2015</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Oct</span> Куплен второй ноутбук (Acer)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>27 Jun</span> Написана первая статья
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Jun</span> Рождение бренда «Володя
+        Мартинсон»
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2014</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Nov</span> Начало проекта (Лампакалада
+        > O'meal > По вкусу) с Паханом
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Nov</span> Знакомство с Павлом
+        Дашевским
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2013</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>07 May</span> Знакомство с Александрой
+        Попковой
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2012</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>08 Aug</span> Переезд в Новосибирск
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2 className={styles.year}>2011</h2>
+    <ul>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Oct</span> Куплен первый ноутбук (Acer)
+      </li>
+      <li className={styles.record}>
+        <span className={styles.date}>?? Jul</span> Окончена МБОУ СОШ №3 г.
+        Ленска
+      </li>
+    </ul>
+  </section>
+  <p className={styles.explanation}>
+    * — События написаны в обезличенной форме для непредвзятой оценки со
+    стороны.
+  </p>
+</main>

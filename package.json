@@ -1,0 +1,39 @@
+{
+  "name": "martynpit",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Martyn's website",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Martyn <zogacc@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "dev": "gatsby develop",
+    "deploy": "gatsby build && surge public/ martyn.surge.sh"
+  },
+  "dependencies": {
+    "gatsby": "^2.18.7",
+    "gatsby-plugin-google-analytics": "^2.1.23",
+    "gatsby-plugin-manifest": "^2.2.27",
+    "gatsby-plugin-postcss": "^2.1.18",
+    "gatsby-plugin-sitemap": "^2.2.21",
+    "gatsby-theme-chronoblog": "^0.14.5",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-scss": "^2.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typeface-anonymous-pro": "^0.0.72"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "node": ">=10.15.0"
+  },
+  "starter-name": "gatsby-starter-chronoblog"
+}

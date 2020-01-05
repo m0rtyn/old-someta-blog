@@ -1,0 +1,22 @@
+.siteFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+  color: #ffd866;
+}
+
+.siteFooter .Ampersand {
+  font-size: 0.6em;
+  margin: 0 0.3em;
+}
+
+.siteFooter svg {
+  width: 1em;
+}
+
+.siteFooter path {
+  fill: currentColor;
+}

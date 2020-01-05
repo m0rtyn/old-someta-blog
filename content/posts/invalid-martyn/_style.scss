@@ -1,0 +1,99 @@
+#invalid-martyn {
+  ul {
+    list-style: none;
+  }
+
+  .intro {
+    width: calc(100% - (384px + 3em));
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
+  }
+
+  .jean-martin {
+    float: right;
+    margin: 1.3em;
+    margin-top: 62px;
+    width: 33%;
+    max-width: 333px;
+    font-size: 0.8rem;
+
+    img {
+      width: calc(100% - 2px);
+      border: 1px solid var(--color-light);
+    }
+
+    p {
+      padding: 1.3em;
+      border: 1px solid var(--color-light);
+      margin-top: -5px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      float: none;
+      display: flex;
+      margin: auto;
+      margin-top: 3em;
+      width: 200px;
+      border: 1px solid var(--color-light);
+      flex-flow: column nowrap;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--color-light);
+      }
+
+      p {
+        padding: 1.3em;
+        margin-top: 0px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .death {
+    svg {
+      width: 200px;
+      padding: 1.3em;
+      margin: 1.3em;
+      margin-top: 66px;
+      border: 1px solid var(--color-light);
+      float: right;
+    }
+
+    @media screen and (max-width: 1023px) {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      svg {
+        width: 200px;
+        padding: 1.3em;
+        margin: 3em auto 0 auto;
+        border: 1px solid var(--color-light);
+      }
+    }
+  }
+
+  .brain-animation {
+    margin-top: 1.3em;
+    width: 384px;
+    height: 384px;
+    margin-right: 3em;
+    background-image: url(/assets/img/brain-sprite.jpg);
+    background-color: var(--color-light);
+    background-blend-mode: darken;
+    animation: brain 3s infinite steps(35, start);
+    animation-direction: alternate;
+    transform: translate3d(0, 0, 0);
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+}

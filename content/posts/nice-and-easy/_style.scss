@@ -1,0 +1,31 @@
+#nice-and-easy {
+  padding: 1.3em;
+  background-color: white;
+  color: var(--color-dark);
+
+  @media (min-width: 768px) {
+    padding: 3.3em;
+
+    ul {
+      list-style-type: square;
+    }
+  }
+
+  .intro {
+    width: 100%;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      text-align: center;
+      margin: 1em auto 0;
+      font-size: 1rem;
+    }
+  }
+
+  li ul {
+    margin-top: 0.3em;
+  }
+}
