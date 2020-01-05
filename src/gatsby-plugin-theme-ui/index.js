@@ -50,6 +50,7 @@ export default {
     search: 3
   },
   fonts: {
-    ...chronoblogTheme.fonts
+    ...chronoblogTheme.fonts,
+    heading: '"Anonymous Pro", Helvetica Neue, Helvetica, Arial, sans-serif'
   }
 };
