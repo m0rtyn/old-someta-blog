@@ -1,1 +1,6 @@
-
+article:not([class])/* hack for apply styles only for article pages not preview */
+{
+  background-color: var(--theme-ui-colors-light);
+  color: var(--theme-ui-colors-dark);
+  padding: 2em;
+}
