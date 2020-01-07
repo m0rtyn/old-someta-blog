@@ -1,6 +1,19 @@
+:root {
+  /* ? Monokai theme */
+  --color-dark: #2d2a2e;
+  --color-light: #fcfcfa;
+  --color-red: #ff6188;
+  --color-green: #a9dc76;
+  --color-orange: #fc9867;
+  --color-cyan: #78dce8;
+  --color-purple: #ab9df2;
+  --color-yellow: #ffd866;
+  --color-gray: #939293;
+}
+
 article:not([class])/* hack for apply styles only for article pages not preview */
-{
-  background-color: var(--theme-ui-colors-light);
-  color: var(--theme-ui-colors-dark);
+ {
+  background-color: var(--color-light);
+  color: var(--color-dark);
   padding: 2em;
 }
