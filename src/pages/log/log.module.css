@@ -1,26 +1,30 @@
-section {
-  margin-bottom: 1.3em;
+.logPage {
+  section {
+    margin-bottom: 1.3em;
 
-  &:first-of-type {
-    margin-top: 1.3em;
+    &:first-of-type {
+      margin-top: 1.3em;
+    }
   }
-}
-
-ul {
-  /* list-style: none; */
-  margin-top: 0.3em;
-
-  @media screen and (max-width: 768px) {
-    padding: 0 1.3em;
-  }
-}
-
-details {
-  margin-left: -33px;
-  margin-bottom: 1.3em;
 
   ul {
-    list-style-type: square;
+    display: inline-flex;
+    flex-flow: column;
+    list-style: none;
+    margin-top: 0.3em;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 1.3em;
+    }
+  }
+
+  details {
+    margin-left: -33px;
+    margin-bottom: 1.3em;
+
+    ul {
+      list-style-type: square;
+    }
   }
 }
 
@@ -35,7 +39,7 @@ details {
 
 .year {
   text-align: left;
-  color: #e0d75a;
+  color: var(--color-yellow);
   margin-left: -33px;
   margin-bottom: 1.3em;
 
@@ -51,26 +55,23 @@ details {
   position: relative;
   padding-left: 0.3em;
 
-  span {
-    position: absolute;
-    left: -70px;
-    top: 3px;
-  }
-
   @media screen and (max-width: 768px) {
     max-width: 50ch;
     margin-left: 3.3em;
   }
 }
 
-.date {
+.dateLabel {
   font-family: monospace;
   font-size: 12px;
-  background-color: #f6f7ee;
-  color: #1d1e19;
+  background-color: var(--color-light);
+  color: var(--color-dark);
   padding: 0 0.3em;
   padding-left: 1.3em;
   margin-right: 1.3em;
+  position: absolute;
+  left: -6em;
+  top: 0.6em;
 
   &::after {
     left: 100%;
@@ -81,7 +82,7 @@ details {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-left-color: #f6f7ee;
+    border-left-color: var(--color-light);
     border-width: 9px;
     margin-top: -9px;
   }
@@ -95,7 +96,7 @@ details {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-left-color: #1d1e19;
+    border-left-color: var(--color-dark);
     border-width: 9px;
     margin-top: -9px;
     z-index: 0;
@@ -104,5 +105,5 @@ details {
 
 .explanation {
   margin-top: 3.3em;
-  font-size: var(--font-size-small);
+  color: var(--color-yellow);
 }
