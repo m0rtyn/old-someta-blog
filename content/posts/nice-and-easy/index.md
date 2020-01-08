@@ -4,9 +4,8 @@ cover: ./image.jpg
 date: 2019-12-16
 description: Публичное письмо посвящённое Тимуру Зарудному и его проекту Nice&Easy
 tags: ['article', 'public-letter']
+slug: papers/nice-and-easy
 ---
-
-<!-- var keywords = 'благодарность, Тимур Зарудный, Легко и просто, Nice&Easy' -->
 
 Этот публичное письмо адресовано автору проекта Nice&Easy — Тимуру Зарудному.
 
