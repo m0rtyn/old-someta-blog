@@ -15,17 +15,17 @@ module.exports = {
     social: [
       {
         icon: `github`,
-        url: `https://github.com/martyns0n`
+        url: `https://github.com/martyns0n`,
       },
       {
         icon: `telegram`,
-        url: `https://tele.click/martyns0n`
+        url: `https://tele.click/martyns0n`,
       },
       {
         icon: `google`,
-        url: `mailto:mrtnsn.dev@gmail.com`
-      }
-    ]
+        url: `mailto:mrtnsn.dev@gmail.com`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -36,7 +36,7 @@ module.exports = {
           feedShowMoreButton: 'Показать ещё',
           feedSearchPlaceholder: 'Поиск',
           cardReadMoreButton: 'Читать →',
-          allTagsButton: 'Все тэги'
+          allTagsButton: 'Все тэги',
         },
         feedItems: {
           limit: 33,
@@ -44,14 +44,14 @@ module.exports = {
           yearSeparatorSkipFirst: true,
           contentTypes: {
             links: {
-              beforeTitle: '🔗 '
-            }
-          }
+              beforeTitle: '🔗 ',
+            },
+          },
         },
         feedSearch: {
-          symbol: '🔍'
-        }
-      }
+          symbol: '🔍',
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -62,18 +62,24 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#3a5f7d`,
         display: `standalone`,
-        icon: `src/assets/favicon.png`
-      }
+        icon: `src/assets/favicon.png`,
+      },
     },
     {
-      resolve: `gatsby-plugin-sitemap`
+      resolve: `gatsby-plugin-sitemap`,
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: 'UA-XXXXXXXXX-X'
-      }
-    }
-  ]
+        trackingId: 'UA-XXXXXXXXX-X',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `mrtnsn`,
+      },
+    },
+  ],
 };
