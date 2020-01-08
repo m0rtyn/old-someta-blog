@@ -1,12 +1,8 @@
----
-title: Легко, просто и спасибо
-cover: ./image.jpg
-date: 2019-12-16
-description: Публичное письмо посвящённое Тимуру Зарудному и его проекту Nice&Easy
-tags: ['article', 'public-letter']
----
+<!-- копия статьи для совместимости путей -->
 
-<!-- var keywords = 'благодарность, Тимур Зарудный, Легко и просто, Nice&Easy' -->
+[Актуальная версия письма](https://martyn.guru/nice-and-easy)
+
+# Легко, просто и спасибо
 
 Этот публичное письмо адресовано автору проекта Nice&Easy — Тимуру Зарудному.
 
@@ -91,14 +87,3 @@ tags: ['article', 'public-letter']
 Это моё первое публичное письмо. Мне интересна реакция на такой формат благодарности.
 
 Я посвятил письмо Тимуру, однако оно написано и для участников проекта Nice&Easy. Надеюсь это полезно и приятно.
-
-Спасибо за прочтение и оставь комментарий всяк сюда входящий ⬇
-
-<!-- DISQUS DATA
-var pageName = 'nice-and-easy';
-var disqus_config = function () {
-    this.page.url = 'https://martyn.guru/' + pageName;
-    this.page.identifier = pageName;
-    this.page.title = pageName;
-};
--->
