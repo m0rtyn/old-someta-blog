@@ -18,6 +18,10 @@ module.exports = {
         url: `https://github.com/martyns0n`,
       },
       {
+        icon: `patreon`,
+        url: `https://patreon.com/mrtnsn`,
+      },
+      {
         icon: `telegram`,
         url: `https://tele.click/martyns0n`,
       },
@@ -79,6 +83,22 @@ module.exports = {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `mrtnsn`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: 'Table of Contents',
+              tight: false,
+              fromHeading: 2,
+              toHeading: 3,
+            },
+          },
+        ],
       },
     },
   ],
