@@ -1,28 +1,18 @@
-import chronoblogTheme from 'gatsby-theme-chronoblog/src/gatsby-plugin-theme-ui';
+import base from '@theme-ui/preset-base';
+import prism from '@theme-ui/prism/presets/theme-ui';
 
-export default {
-  ...chronoblogTheme,
+import buttons from './buttons';
+import colors from './colors';
+import styles from './styles';
+
+const theme = {
+  ...base,
   initialColorMode: 'dark',
+  useColorSchemeMediaQuery: false,
   colors: {
-    // ...chronoblogTheme.colors,
-    text: '#FCFCFA',
-    background: '#2D2A2E',
-    link: '#FFD866',
-    primary: '#AB9DF2',
-    secondary: '#78DCE8',
-    muted: '#939293',
-    modes: {
-      dark: {
-        ...chronoblogTheme.colors.modes.dark,
-        text: '#FCFCFA',
-        background: '#2D2A2E',
-        link: '#FFD866',
-        primary: '#AB9DF2',
-        secondary: '#78DCE8',
-        muted: '#939293',
-      },
-    },
+    ...colors,
   },
+  breakpoints: ['768px', '1024px'],
   fontSizes: [14, 16, 18, 20, 22, 24, 28, 36],
   borderRadius: {
     card: 0,
@@ -36,10 +26,41 @@ export default {
   borderWidth: {
     card: 3,
     search: 3,
+    blockquote: 3,
   },
   fonts: {
-    ...chronoblogTheme.fonts,
+    body:
+      '-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif',
     heading:
       '"Anonymous Pro", Helvetica Neue, Helvetica, Arial, sans-serif',
+    monospace: 'Menlo, monospace',
+  },
+  prism,
+  styles: {
+    ...base.styles,
+    ...styles,
+  },
+  badges: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+    },
+    tags: {
+      color: 'inherit',
+      bg: 'transparent',
+      opacity: 0.7,
+    },
+  },
+  buttons: {
+    ...buttons,
+  },
+  images: {
+    avatar: {
+      width: 140,
+      height: '100%',
+      borderRadius: 99999,
+    },
   },
 };
+
+export default theme;
