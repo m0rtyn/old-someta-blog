@@ -13,9 +13,18 @@
   --magic-bezier: cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-article:not([class])/* hack for apply styles only for article pages not preview */
+main > article /* hack for apply styles only for article pages not preview */
  {
   background-color: var(--color-light);
   color: var(--color-dark);
   padding: 2em;
+
+  ul a {
+    color: var(--color-dark) !important;
+  }
+
+  blockquote ~ cite {
+    display: block;
+    text-align: right;
+  }
 }
