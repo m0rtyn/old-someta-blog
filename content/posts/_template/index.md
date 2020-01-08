@@ -4,6 +4,12 @@ cover: ./image.jpg
 date: 2000-01-01
 description: Описание статьи
 tags: ['article']
+draft: true
+hide: true
+link: http://example.com
+slug: invisible-ghost-post
 ---
+
+# Заголовок
 
 текст
