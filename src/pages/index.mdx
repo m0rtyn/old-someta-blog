@@ -1,34 +1,8 @@
 <!-- @mdx mdx -->
 
 import { jsx } from 'theme-ui';
-import CommentsBlock from '../components/CommentsBlock';
-import styles from './index.module.css';
-import logoAvatar from './avatar.jpg'
 
-<AuthorBanner
-  sx={{
-    bg: 'background',
-    borderColor: 'secondary',
-    borderWidth: '3px',
-    borderStyle: 'solid',
-    boxShadow: 'initial',
-  }}
->
-  <figure className={styles.avatarContainer}>
-    <div className={styles.avatar}>
-      <div className={styles.avatarFront}>
-        <AuthorBannerAvatar sx={{ margin: 0, width: "100%" }} />
-      </div>
-      <img className={styles.avatarBack} src={logoAvatar} />
-    </div>
-  </figure>
-
-  <div>
-    <AuthorBannerHeading as="h1" sx={{ fontSize: [7] }} />
-    <AuthorBannerDescription />
-    <SocialLinks fontSize="32px" />
-  </div>
-</AuthorBanner>
+<AuthorBanner />
 
 Блог о внимании, сознании и потреблении. А ещё о проектах.
 

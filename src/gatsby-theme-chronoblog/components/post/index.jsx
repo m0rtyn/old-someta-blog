@@ -93,7 +93,7 @@ export const Post = ({ data }) => {
           </header>
           <PostContent data={data} />
           <footer sx={{ marginTop: '20px' }}>
-            <Tags type="item" tags={data.mdx.frontmatter.tags} />
+            {/* <Tags type="item" tags={data.mdx.frontmatter.tags} /> */}
             <PostFooter />
             <CommentsBlock
               pathName={data.mdx.fields.slug}
