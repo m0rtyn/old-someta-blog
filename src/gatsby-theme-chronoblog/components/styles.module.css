@@ -1,6 +1,6 @@
 .avatarContainer {
-  width: 13.3em;
-  height: 13.3em;
+  width: 200px;
+  height: 200px;
   display: flex;
   position: relative;
   align-items: center;

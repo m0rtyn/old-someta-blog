@@ -38,9 +38,7 @@ export const AuthorBannerDescription = ({ children, ...props }) => {
 export const AuthorBannerAvatar = ({ src = '', ...props }) => {
   const siteMeta = useSiteMetadata();
   const style = {
-    marginX: '30px',
-    my: '10px',
-    boxShadow: '0 2px 4px 0 hsla(0, 0%, 0%, .2)',
+    boxShadow: 0,
   };
 
   if (src) return <Avatar sx={style} src={src} {...props} />;
@@ -87,17 +85,13 @@ const AuthorBannerMain = ({ children, ...props }) => {
   return (
     <div
       sx={{
-        bg: 'muted',
         borderRadius: 'authorBanner',
-        px: '4px',
-        py: '16px',
+        p: '24px',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: ['center', 'flex-start'],
         textAlign: ['center', 'left'],
-        boxShadow: `0 1px 3px hsla(0,0%,0%,.2)`,
-        textShadow: `0 1px 2px hsla(0,0%,0%,.1)`,
       }}
       {...props}
     >
