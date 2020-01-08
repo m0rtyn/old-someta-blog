@@ -9,6 +9,8 @@
   --color-purple: #ab9df2;
   --color-yellow: #ffd866;
   --color-gray: #939293;
+
+  --magic-bezier: cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 article:not([class])/* hack for apply styles only for article pages not preview */

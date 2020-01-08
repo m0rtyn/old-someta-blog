@@ -1,0 +1,53 @@
+.avatarContainer {
+  width: 13.3em;
+  height: 13.3em;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &:hover .avatar {
+    transform: rotateY(180deg);
+  }
+}
+
+.avatar {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1.3s var(--magic-bezier);
+  transform-style: preserve-3d;
+
+  .avatarFront,
+  .avatarBack {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+  }
+
+  figcaption {
+    background-color: var(--color-dark);
+  }
+}
+
+.avatarFront {
+  border-radius: 50%;
+
+  img {
+    display: block;
+  }
+}
+
+.avatarBack {
+  box-sizing: border-box;
+  background-color: var(--color-dark);
+  transform: rotateY(180deg);
+}
+
+.external-profiles {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 100%;
+}
