@@ -1,6 +1,6 @@
 ---
 date: 2019-03-31
-tags: ['attention-management', 'note']
+tags: ['attention-management', 'short']
 ---
 
 # Motion #0

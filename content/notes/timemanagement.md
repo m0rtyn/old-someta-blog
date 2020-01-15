@@ -1,6 +1,6 @@
 ---
 date:
-tags: ['attention-management', 'note']
+tags: ['attention-management', 'short']
 ---
 
 # Управление временем

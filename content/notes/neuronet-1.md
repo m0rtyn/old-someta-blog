@@ -1,6 +1,6 @@
 ---
 date: 2018-03-13
-tags: ['meditation', 'note']
+tags: ['meditation', 'short']
 ---
 
 # Нейронет #1

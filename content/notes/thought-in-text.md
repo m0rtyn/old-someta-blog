@@ -1,6 +1,6 @@
 ---
 date: 2019-04-22
-tags: ['meditation', 'note']
+tags: ['meditation', 'short']
 ---
 
 # Мысли в текст

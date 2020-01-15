@@ -3,7 +3,7 @@ title: Матадоро?
 cover: ./image.jpg
 date: 2019-08-03
 description: Гайд по методу Матадоро
-tags: ['article', 'матадоро']
+tags: ['long', 'матадоро']
 draft: true
 hide: true
 ---

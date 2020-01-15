@@ -1,6 +1,6 @@
 ---
 date: 2019-03-29
-tags: ['biofix', 'note']
+tags: ['biofix', 'short']
 ---
 
 # Биофикс #0

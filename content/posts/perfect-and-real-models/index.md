@@ -1,7 +1,7 @@
 ---
 title: Идеальные и реальные модели
 date: 2019-08-12
-tags: ['note', 'mental-model']
+tags: ['short', 'mental-model']
 draft: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 date:
-tags: ['biofix', 'note']
+tags: ['biofix', 'short']
 draft: true
 hide: true
 ---

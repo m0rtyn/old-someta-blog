@@ -1,6 +1,6 @@
 ---
 date: 2019-03-07
-tags: ['game', 'note']
+tags: ['game', 'short']
 ---
 
 # Oтказ от сахара

@@ -3,7 +3,7 @@ title: Шаблон статьи
 cover: ./image.jpg
 date: 2000-01-01
 description: Описание статьи
-tags: ['article']
+tags: ['post', 'note', 'link']
 draft: true
 hide: true
 link: http://example.com

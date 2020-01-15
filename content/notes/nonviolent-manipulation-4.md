@@ -1,6 +1,6 @@
 ---
 date: 2019-03-20
-tags: ['manipulation', 'note']
+tags: ['manipulation', 'short']
 ---
 
 # Ненасильственная манипуляция #4

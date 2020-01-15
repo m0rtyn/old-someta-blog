@@ -1,9 +1,11 @@
 ---
 title: 'Не QWERTY единой'
-cover: ./image.jpg
+cover: ./image.png
 date: 2019-07-21
 description: 'Статья о раскадке QWERTY и о том, как я создал ей замену'
-tags: ['article']
+tags: ['long']
+draft: true
+hide: true
 ---
 
 <!--

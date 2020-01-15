@@ -1,6 +1,6 @@
 ---
 date: 2019-08-10
-tags: ['attention-management', 'note']
+tags: ['attention-management', 'short']
 ---
 
 # Окончено исследование ритмов

@@ -1,6 +1,6 @@
 ---
 date: 2018-03-09
-tags: ['game', 'note']
+tags: ['game', 'short']
 ---
 
 # Игра

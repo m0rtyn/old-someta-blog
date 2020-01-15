@@ -1,6 +1,6 @@
 ---
 date: 2019-06-23
-tags: ['meditation', 'drugs', 'note']
+tags: ['meditation', 'drugs', 'short']
 ---
 
 # Квант мышления

@@ -1,6 +1,6 @@
 ---
 date: 2019-04-27
-tags: ['biofix', 'note']
+tags: ['biofix', 'short']
 ---
 
 # Биофикс #1

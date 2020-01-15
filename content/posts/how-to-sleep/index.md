@@ -1,9 +1,9 @@
 ---
 title: Как починить сон
-cover: ./image.jpg
+cover: ./tom-cat.jpg
 date: 2018-12-20
 description: Статья о том как починить сон
-tags: ['article']
+tags: ['long']
 ---
 
 <!-- keywords = 'сон, синий, световая температура, красный, мелатонин, ритм, образ жизни'; -->

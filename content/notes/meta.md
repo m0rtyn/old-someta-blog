@@ -1,6 +1,6 @@
 ---
 date: 2018-03-11
-tags: ['note']
+tags: ['short']
 ---
 
 # Мета
