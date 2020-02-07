@@ -1,35 +1,28 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: 'Яма Мартына',
-    siteDescription: 'Блог и хранилище проектов. Странное место 🧿',
+    siteTitle: 'Такая Мета',
+    siteDescription:
+      'О том как быть «над собой»: этология, нейробиология, когнитивистика, рациональность 🧿',
     siteImage: '/banner.png',
-    siteUrl: 'https://martyn.guru/',
+    siteUrl: 'https://someta.site/',
     pathPrefix: '/',
     siteLanguage: 'ru',
     ogLanguage: `ru_RU`,
     author: 'Мартын',
-    authorDescription: 'Frontend-разработчик @ Semrush',
+    authorDescription: '«Трансцедентально»',
     avatar: '/avatar.jpg',
     twitterSite: '', // website account on twitter
     twitterCreator: '', // creator account on twitter
     social: [
       {
-        icon: `github`,
-        url: `https://github.com/martyns0n`,
-      },
-      {
         icon: `patreon`,
-        url: `https://patreon.com/mrtnsn`,
+        url: `https://patreon.com/someta`
       },
       {
         icon: `telegram`,
-        url: `https://tele.click/martyns0n`,
-      },
-      {
-        icon: `google`,
-        url: `mailto:mrtnsn.dev@gmail.com`,
-      },
-    ],
+        url: `https://tele.click/sometach`
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -40,7 +33,7 @@ module.exports = {
           feedShowMoreButton: 'Показать ещё',
           feedSearchPlaceholder: 'Поиск',
           cardReadMoreButton: 'Читать →',
-          allTagsButton: 'Все тэги',
+          allTagsButton: 'Все тэги'
         },
         feedItems: {
           limit: 33,
@@ -48,14 +41,14 @@ module.exports = {
           yearSeparatorSkipFirst: true,
           contentTypes: {
             links: {
-              beforeTitle: '🔗 ',
-            },
-          },
+              beforeTitle: '🔗 '
+            }
+          }
         },
         feedSearch: {
-          symbol: '🔍',
-        },
-      },
+          symbol: '🔍'
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -66,24 +59,24 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#3a5f7d`,
         display: `standalone`,
-        icon: `src/assets/favicon.png`,
-      },
+        icon: `src/assets/favicon.png`
+      }
     },
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: `gatsby-plugin-sitemap`
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: 'UA-XXXXXXXXX-X',
-      },
+        trackingId: 'UA-XXXXXXXXX-X'
+      }
     },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `mrtnsn`,
-      },
+        shortname: `mrtnsn`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -92,14 +85,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
-              exclude: 'Table of Contents',
-              tight: false,
-              fromHeading: 2,
-              toHeading: 3,
-            },
-          },
-        ],
-      },
-    },
-  ],
+              exclude: 'Table of Contents'
+            }
+          }
+        ]
+      }
+    }
+  ]
 };
