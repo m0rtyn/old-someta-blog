@@ -1,12 +1,11 @@
 /** @jsx jsx */
-import { Avatar, Heading, Text } from '@theme-ui/components';
+import { Avatar, Heading, Text, Box } from '@theme-ui/components';
 import { jsx } from 'theme-ui';
 
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
 import SocialLinks from 'gatsby-theme-chronoblog/src/components/social-links';
 import logoAvatar from './avatar.jpg';
 import styles from './styles.module.css';
-
 /**
  * @typedef {object} AuthorBannerDescriptionProps
  * @property {React.ReactNode=} children
@@ -35,17 +34,33 @@ export const AuthorBannerDescription = ({ children, ...props }) => {
   return <div />;
 };
 
+const AvatarWrapper = ({ children, style }) => (
+  <figure className={styles.avatarContainer}>
+    <Box className={styles.avatar} sx={style}>
+      <div className={styles.avatarFront}>{children}</div>
+      <Avatar
+        className={styles.avatarBack}
+        src={logoAvatar}
+        alt="martyn's logo"
+      />
+    </Box>
+  </figure>
+);
+
 export const AuthorBannerAvatar = ({ src = '', ...props }) => {
   const siteMeta = useSiteMetadata();
   const style = {
-    boxShadow: 0,
+    width: '144px',
+    height: '144px'
   };
 
-  if (src) return <Avatar sx={style} src={src} {...props} />;
-  if (siteMeta.avatar)
-    return <Avatar sx={style} src={siteMeta.avatar} {...props} />;
-
-  return <div sx={{ marginX: '10px' }} />;
+  return src || siteMeta.avatar ? (
+    <AvatarWrapper style={style}>
+      <Avatar sx={style} src={src || siteMeta.avatar} {...props} />
+    </AvatarWrapper>
+  ) : (
+    <div sx={{ marginX: '10px' }}>No image data</div>
+  );
 };
 
 /**
@@ -91,7 +106,7 @@ const AuthorBannerMain = ({ children, ...props }) => {
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: ['center', 'flex-start'],
-        textAlign: ['center', 'left'],
+        textAlign: ['center', 'left']
       }}
       {...props}
     >
@@ -105,7 +120,6 @@ const AuthorBanner = ({ children, ...props }) => {
     return <AuthorBannerMain {...props}>{children}</AuthorBannerMain>;
   }
 
-  //
   return (
     <AuthorBannerMain
       {...props}
@@ -114,21 +128,10 @@ const AuthorBanner = ({ children, ...props }) => {
         borderColor: 'secondary',
         borderWidth: '3px',
         borderStyle: 'solid',
-        boxShadow: 'initial',
+        boxShadow: 'initial'
       }}
     >
-      <figure className={styles.avatarContainer}>
-        <div className={styles.avatar}>
-          <div className={styles.avatarFront}>
-            <AuthorBannerAvatar sx={{ margin: 0, width: '100%' }} />
-          </div>
-          <img
-            className={styles.avatarBack}
-            src={logoAvatar}
-            alt="martyn's logo"
-          />
-        </div>
-      </figure>
+      <AuthorBannerAvatar sx={{ margin: 0, width: '100%' }} />
 
       <div>
         <AuthorBannerHeading as="h2" sx={{ fontSize: [7] }} />
