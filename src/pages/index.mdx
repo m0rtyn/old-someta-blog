@@ -1,12 +1,12 @@
-<!-- @mdx mdx -->
-
 import { jsx } from 'theme-ui';
+import { Heading } from '@theme-ui/components';
 
-<AuthorBanner />
-
-Блог о внимании, сознании и потреблении. А ещё о проектах.
-
----
+<AuthorBanner sx={{dispay: 'flex', flexDirection: 'column', }}>
+  <Heading sx={{ fontSize: [7] }} as={'h2'} >
+    Такая Мета
+  </Heading>
+  <SocialLinks fontSize="30px" />
+</AuthorBanner>
 
 <FeedSearch />
 <Tags />
