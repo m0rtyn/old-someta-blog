@@ -2,14 +2,14 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Такая Мета',
     siteDescription:
-      'О том как быть «над собой»: этология, нейробиология, когнитивистика, рациональность 🧿',
+      'Блог о том как быть «над собой»: этология, нейробиология, когнитивистика, рациональность 🧿',
     siteImage: '/banner.png',
     siteUrl: 'https://someta.site/',
     pathPrefix: '/',
     siteLanguage: 'ru',
     ogLanguage: `ru_RU`,
     author: 'Мартын',
-    authorDescription: '«Трансцедентально»',
+    authorDescription: '( играет в проекты )',
     avatar: '/avatar.jpg',
     twitterSite: '', // website account on twitter
     twitterCreator: '', // creator account on twitter
@@ -25,6 +25,7 @@ module.exports = {
     ]
   },
   plugins: [
+    `gatsby-alias-imports`,
     `gatsby-plugin-postcss`,
     {
       resolve: 'gatsby-theme-chronoblog',

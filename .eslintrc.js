@@ -3,19 +3,20 @@ module.exports = {
   extends: ['react-app', 'airbnb', 'prettier', 'prettier/react'],
   env: {
     es6: true,
-    browser: true,
+    browser: true
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   parser: 'babel-eslint',
   rules: {
     //common
     camelcase: 0, // off
+    'import/extensions': 0, // off
     'no-nested-ternary': [2],
     complexity: ['error', { max: 4 }],
     // react
@@ -44,18 +45,18 @@ module.exports = {
       {
         blankLine: 'always',
         prev: ['const', 'let'],
-        next: '*',
+        next: '*'
       },
       {
         blankLine: 'any',
         prev: ['const', 'let'],
-        next: ['const', 'let'],
+        next: ['const', 'let']
       },
       {
         blankLine: 'always',
         prev: '*',
-        next: 'return',
-      },
-    ],
-  },
+        next: 'return'
+      }
+    ]
+  }
 };
