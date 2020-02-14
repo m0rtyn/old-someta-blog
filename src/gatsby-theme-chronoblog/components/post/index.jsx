@@ -3,22 +3,20 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import get from 'lodash/get';
 import { jsx, Styled } from 'theme-ui';
 
-// @ts-ignore
 import ContentBottomMdx from 'gatsby-theme-chronoblog/src/content-bottom.mdx';
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
-// @ts-ignore
 import CoverImage from 'gatsby-theme-chronoblog/src/components/cover-image';
 import Date from 'gatsby-theme-chronoblog/src/components/date';
 import Layout from 'gatsby-theme-chronoblog/src/components/layout';
 import SEO from 'gatsby-theme-chronoblog/src/components/seo';
 import Tags from 'gatsby-theme-chronoblog/src/components/tags';
-import CommentsBlock from '../../../components/CommentsBlock';
-import PostFooterMdx from '../../post-footer.mdx';
+import CommentsBlock from 'components/CommentsBlock';
+import PostFooterMdx from 'gatsby-theme-chronoblog/post-footer';
 
 const PostTitle = ({
   data: {
-    mdx: { frontmatter },
-  },
+    mdx: { frontmatter }
+  }
 }) => {
   return (
     <div>
@@ -33,8 +31,8 @@ const PostTitle = ({
 
 const PostContent = ({
   data: {
-    mdx: { body },
-  },
+    mdx: { body }
+  }
 }) => {
   return <MDXRenderer>{body}</MDXRenderer>;
 };

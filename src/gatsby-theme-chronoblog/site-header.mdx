@@ -1,7 +1,8 @@
 <!-- @mdx mdx -->
 import { jsx } from 'theme-ui'
+import styles from './site-header.module.css';
 
-<MenuMain>
+<MenuMain className={styles.Header}>
   <MenuBlock>
     <Link
       to="/"
@@ -15,6 +16,7 @@ import { jsx } from 'theme-ui'
       }}
     >
       <svg
+        className={styles.Logo}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 180 98"

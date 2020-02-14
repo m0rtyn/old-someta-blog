@@ -1,5 +1,12 @@
 /** @jsx jsx */
-import { Avatar, Heading, Text, Box } from '@theme-ui/components';
+
+import {
+  Avatar,
+  Heading,
+  Text,
+  Flex,
+  Box
+} from '@theme-ui/components';
 import { jsx } from 'theme-ui';
 
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
@@ -14,6 +21,7 @@ import styles from './styles.module.css';
 /**
  * @param {AuthorBannerDescriptionProps=} props
  */
+
 export const AuthorBannerDescription = ({ children, ...props }) => {
   const siteMeta = useSiteMetadata();
   const style = { fontSize: [2], px: '2px', mb: '8px' };
@@ -98,12 +106,9 @@ export const AuthorBannerHeading = ({
 
 const AuthorBannerMain = ({ children, ...props }) => {
   return (
-    <div
+    <Flex
       sx={{
         borderRadius: 'authorBanner',
-        p: '24px',
-        display: 'flex',
-        flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: ['center', 'flex-start'],
         textAlign: ['center', 'left']
@@ -111,7 +116,7 @@ const AuthorBannerMain = ({ children, ...props }) => {
       {...props}
     >
       {children}
-    </div>
+    </Flex>
   );
 };
 

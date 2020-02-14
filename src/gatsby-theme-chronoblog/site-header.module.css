@@ -1,0 +1,17 @@
+.Header {
+  box-shadow: 0 12px 0px 0px rgba(255, 255, 255, 0.33);
+  padding-bottom: 12px;
+}
+
+.Logo,
+.Header {
+  opacity: 1;
+  transition: opacity 0.33s var(--magic-bezier);
+}
+
+[class*='headroom--unfixed'] {
+  .Logo,
+  .Header {
+    opacity: 0;
+  }
+}

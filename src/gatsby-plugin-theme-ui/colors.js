@@ -10,7 +10,7 @@ export default {
     dark: {
       text: '#FCFCFA',
       background: '#2D2A2E',
-      muted: '#939293',
-    },
-  },
+      muted: '#939293'
+    }
+  }
 };
