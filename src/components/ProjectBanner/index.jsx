@@ -8,22 +8,22 @@ import SocialLinks from 'gatsby-theme-chronoblog/src/components/social-links';
 const ProjectBanner = () => {
   return (
     <AuthorBanner
+      mb="64px"
       sx={{
         flexDirection: 'column',
         bg: 'transparent',
-        boxShadow: 'initial',
-        marginBottom: 4
+        boxShadow: 'initial'
       }}
     >
       <Avatar
         src="/someta-logo-light.png"
         sx={{ width: '133px', borderRadius: '0' }}
-        my={3}
+        mb={3}
       />
-      <Heading sx={{ fontSize: [7] }} as="h2">
+      <Heading mb={13} sx={{ fontSize: [6] }} as="h2">
         Такая Мета
       </Heading>
-      <SocialLinks fontSize="30px" />
+      {/* <SocialLinks fontSize={4} /> */}
     </AuthorBanner>
   );
 };

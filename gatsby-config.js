@@ -15,12 +15,14 @@ module.exports = {
     twitterCreator: '', // creator account on twitter
     social: [
       {
-        icon: `patreon`,
-        url: `https://patreon.com/someta`
+        icon: `telegram`,
+        url: `https://tele.click/sometach`,
+        altText: `Чат сообщества`
       },
       {
-        icon: `telegram`,
-        url: `https://tele.click/sometach`
+        icon: `patreon`,
+        url: `https://patreon.com/someta`,
+        altText: `Поддержи проект на Patreon`
       }
     ]
   },
@@ -37,7 +39,7 @@ module.exports = {
           allTagsButton: 'Все тэги'
         },
         feedItems: {
-          limit: 33,
+          limit: 13,
           yearSeparator: true,
           yearSeparatorSkipFirst: true,
           contentTypes: {
@@ -54,8 +56,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Martyn's pit`,
-        short_name: `Martynpit`,
+        name: `Такая мета`,
+        short_name: `someta.site`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#3a5f7d`,
@@ -69,8 +71,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: 'UA-XXXXXXXXX-X'
+        trackingId: 'UA-158600568-1'
       }
     },
     {
