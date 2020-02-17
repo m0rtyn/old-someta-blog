@@ -79,19 +79,6 @@ module.exports = {
       options: {
         shortname: `mrtnsn`
       }
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: 'Table of Contents'
-            }
-          }
-        ]
-      }
     }
   ]
 };

@@ -1,6 +1,7 @@
-.Header {
+.Header.Header {
   box-shadow: 0 12px 0px 0px var(--color-gray);
   padding-bottom: 12px;
+  justify-content: flex-start;
 }
 
 .Logo,
