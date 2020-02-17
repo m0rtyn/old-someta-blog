@@ -1,10 +1,47 @@
 import styles from './martyn.module.css';
 import { Heading } from '@theme-ui/components';
-import ProjectBanner from 'components/ProjectBanner/index'
 
 # Об авторе
 
-Выгул эго для Мартына
+Автор этого сайта — Мартын. На этой странице он выгуливает своё эго.
 
-<ProjectBanner sx={{dispay: 'flex', flexDirection: 'column', }}></ProjectBanner>
+## Кто такой Мартын
+
+Человек ~30 лет. С 10 лет болен рассеянным склерозом. С 19 лет живёт с Попсой. С 20 лет живёт с Дофамином. С 21 года непрерывно читает книги. С 23 лет развивается как программист. С 24? лет ведет Метапись. С 26? лет играет в проекты.
+
+## Что сделал Мартын
+
+- Подкаст Протопилот Альфаᵝ
+- Канал Метабаза
+- Видеоблог БОРЯ
+- Книжная таблица Мартына
+- Инстаграм «DOPAMINE THE CAT»
+- Метод Мидеяция
+- Метод Матадоро
+- Раскладка Мартынак
+- Инстаграм «Саша, но Мартын»
+- Праздник Годень
+- Марафон по книге «Время Молотков»
+
+<AuthorBanner
+  sx={{ marginTop: '32px' }}
+  socialLinks={[
+    {
+      icon: `telegram`,
+      url: `https://tele.click/martyns0n`,
+      altText: `Телеграм Мартына`
+    },
+    {
+      icon: `vk`,
+      url: `https://vk.com/martyns0n`,
+      altText: `Вконтакт Мартына`
+    },
+    {
+      icon: `github`,
+      url: `https://github.com/martyns0n`,
+      altText: `Гитхаб Мартына`
+    }
+  ]}
+>
+</AuthorBanner>
 

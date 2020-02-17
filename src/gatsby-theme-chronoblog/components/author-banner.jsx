@@ -121,6 +121,8 @@ const AuthorBannerMain = ({ children, ...props }) => {
 };
 
 const AuthorBanner = ({ children, ...props }) => {
+  const { socialLinks } = props;
+
   if (children) {
     return <AuthorBannerMain {...props}>{children}</AuthorBannerMain>;
   }
@@ -133,7 +135,8 @@ const AuthorBanner = ({ children, ...props }) => {
         borderColor: 'secondary',
         borderWidth: '3px',
         borderStyle: 'solid',
-        boxShadow: 'initial'
+        boxShadow: 'initial',
+        ...props.sx
       }}
     >
       <AuthorBannerAvatar sx={{ margin: 0, width: '100%' }} />
@@ -141,7 +144,7 @@ const AuthorBanner = ({ children, ...props }) => {
       <div>
         <AuthorBannerHeading as="h2" sx={{ fontSize: [7] }} />
         <AuthorBannerDescription />
-        <SocialLinks fontSize="32px" />
+        <SocialLinks fontSize="32px" socialLinks={socialLinks} />
       </div>
     </AuthorBannerMain>
   );
