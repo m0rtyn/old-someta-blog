@@ -25,7 +25,8 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-scss": "^2.0.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-uid": "^2.2.0"
   },
   "devDependencies": {
     "@openfonts/anonymous-pro_cyrillic": "^1.44.0",
