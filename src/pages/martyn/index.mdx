@@ -1,5 +1,6 @@
 import styles from './martyn.module.css';
-import { Heading } from '@theme-ui/components';
+import { Heading, Link as LinkUI } from '@theme-ui/components';
+import authorLinks from './authorLinks'
 
 # Об авторе
 
@@ -7,7 +8,7 @@ import { Heading } from '@theme-ui/components';
 
 ## Кто такой Мартын
 
-Человек ~30 лет. С 10 лет болен рассеянным склерозом. С 19 лет живёт с Попсой. С 20 лет живёт с Дофамином. С 21 года непрерывно читает книги. С 23 лет развивается как программист. С 24? лет ведет Метапись. С 26? лет играет в проекты.
+Человек ~30 лет. С 10 лет болен рассеянным склерозом. С 19 лет живёт с <LinkUI href="https://instagram.com/extropia_tyan" target="_blank" rel="noopener noreferrer">Попсой</LinkUI>. С 20 лет живёт с <LinkUI href="https://instagram.com/dopamine_the_cat" target="_blank" rel="noopener noreferrer">Дофамином</LinkUI>. С 21 года непрерывно читает книги. С 23 лет развивается как программист. С 24? лет ведет Метапись. С 26? лет играет в проекты.
 
 ## Что сделал Мартын
 
@@ -16,7 +17,6 @@ import { Heading } from '@theme-ui/components';
 - Видеоблог БОРЯ
 - <Link to="martyn/log">Лог жизни Мартына</Link>
 - <Link to="martyn/books">Книжная таблица Мартына</Link>
-- Инстаграм «DOPAMINE THE CAT»
 - Метод Мидеяция
 - Метод Матадоро
 - Раскладка Мартынак
@@ -24,25 +24,12 @@ import { Heading } from '@theme-ui/components';
 - Праздник Годень
 - Марафон по книге «Время Молотков»
 
+## Статьи
+
 <AuthorBanner
   sx={{ marginTop: '32px' }}
-  socialLinks={[
-    {
-      icon: `telegram`,
-      url: `https://tele.click/martyns0n`,
-      altText: `Телеграм Мартына`
-    },
-    {
-      icon: `vk`,
-      url: `https://vk.com/martyns0n`,
-      altText: `Вконтакт Мартына`
-    },
-    {
-      icon: `github`,
-      url: `https://github.com/martyns0n`,
-      altText: `Гитхаб Мартына`
-    }
-  ]}
+  socialLinks={authorLinks}
 >
 </AuthorBanner>
+<FeedItems filterByTags={['by-martyn']}/>
 
