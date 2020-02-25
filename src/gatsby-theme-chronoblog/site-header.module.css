@@ -1,18 +1,3 @@
-.Header.Header {
-  box-shadow: 0 12px 0px 0px var(--color-gray);
-  padding-bottom: 12px;
-  justify-content: flex-start;
-}
-
-.Logo,
-.Header {
-  opacity: 1;
-  transition: opacity 0.33s var(--magic-bezier);
-}
-
-[class*='headroom--unfixed'] {
-  .Logo,
-  .Header {
-    opacity: 0;
-  }
+.siteHeader {
+  
 }

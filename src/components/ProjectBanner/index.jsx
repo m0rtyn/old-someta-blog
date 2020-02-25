@@ -8,8 +8,8 @@ import SocialLinks from 'gatsby-theme-chronoblog/src/components/social-links';
 const ProjectBanner = () => {
   return (
     <AuthorBanner
-      mb="64px"
       sx={{
+        mb: '32px',
         flexDirection: 'column',
         bg: 'transparent',
         boxShadow: 'initial'

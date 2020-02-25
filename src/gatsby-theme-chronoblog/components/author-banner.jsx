@@ -12,7 +12,7 @@ import { jsx } from 'theme-ui';
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
 import SocialLinks from 'gatsby-theme-chronoblog/src/components/social-links';
 import logoAvatar from './avatar.jpg';
-import styles from './styles.module.css';
+import styles from './author-banner.module.css';
 /**
  * @typedef {object} AuthorBannerDescriptionProps
  * @property {React.ReactNode=} children
@@ -67,8 +67,8 @@ export const AuthorBannerAvatar = ({ src = '', ...props }) => {
       <Avatar sx={style} src={src || siteMeta.avatar} {...props} />
     </AvatarWrapper>
   ) : (
-    <div sx={{ marginX: '10px' }}>No image data</div>
-  );
+      <div sx={{ marginX: '10px' }}>No image data</div>
+    );
 };
 
 /**
