@@ -78,12 +78,9 @@ const MenuBlock = ({ children, ...props }) => (
 );
 
 const ChronoblogHeader = ({ location, ...props }) => {
-  const { pathname } = window.location;
+  const { pathname } =
+    typeof window !== 'undefined' && window.location;
   const isMainPage = pathname === '/';
-  const headroomMainPageStyles = {
-    transform: 'translateY(-100%)',
-    transition: 'transform .33s var(--magic-bezier)'
-  };
   const headroomMainpageClassName = isMainPage
     ? 'headroom--mainpage-wrapper'
     : null;
