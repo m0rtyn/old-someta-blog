@@ -9,7 +9,7 @@
 #### **Шум**
 
 Итак, друзья, знакомьтесь это Шум. Шум, знакомься это друзья. 
-<img href="https://martyn.guru/assets/img/papers/pomodoro/white-noise.png" alt="Белый шум" width="50px"/>
+<img href="https://someta.site/assets/img/papers/pomodoro/white-noise.png" alt="Белый шум" width="50px"/>
 
 Белый шум — это метафора на окружающую среду, которая непредсказуемым образом рождает множество сигналов привлекающиx внимание.
 

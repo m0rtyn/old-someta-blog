@@ -21,7 +21,7 @@ hide: true
 #### **Шум**
 
 Итак, друзья, знакомьтесь это Шум. Шум, знакомься это друзья.
-<img href="https://martyn.guru/assets/img/papers/pomodoro/white-noise.png" alt="Белый шум" width="50px"/>
+<img href="https://someta.site/assets/img/papers/pomodoro/white-noise.png" alt="Белый шум" width="50px"/>
 
 Белый шум — это метафора на окружающую среду, которая непредсказуемым образом рождает множество сигналов привлекающиx внимание.
 
@@ -285,7 +285,7 @@ _Примеры..._
 
 Утверждать это мне позволяет таблица с [личным исследованием](https://docs.google.com/spreadsheets/d/1Dy9XEgLmvgeHIRT72u-0y3DrZCqk8l39e6R2DCzAIzs/edit?usp=sharing)
 
-<!-- DISQUS DATA   var pageUrl = 'https://martyn.guru/papers/pmdr';
+<!-- DISQUS DATA   var pageUrl = 'https://someta.site/papers/pmdr';
 var pageIdentifier = '3';
 var pageTitle = 'pmdr'
 

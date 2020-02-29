@@ -9,7 +9,7 @@ const CommentsBlock = ({
   postId = 'common-tread',
   postTitle = 'common-tread'
 }) => {
-  const siteUrl = 'https://martyn.guru';
+  const siteUrl = 'https://someta.site';
 
   const disqusConfig = {
     url: `${siteUrl + pathName}`,

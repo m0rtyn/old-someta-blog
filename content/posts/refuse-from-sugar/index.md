@@ -24,4 +24,4 @@ tags: ['long']
 
 ---
 
-[О том почему дорогое удовольствие предпочтительнее дешёвого ->](https://martyn.guru/about-evolution-drugs-and-success)
+[О том почему дорогое удовольствие предпочтительнее дешёвого ->](https://someta.site/about-evolution-drugs-and-success)

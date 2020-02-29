@@ -107,7 +107,7 @@
 ### Материалы
 
 — Слайд с перечислением названий двух типов мышления:
-<https://www.martyn.guru/shows/weakness-of-will/#5>
+<https://www.someta.site/shows/weakness-of-will/#5>
 — O книге Канемана про два мышления:
 [https://www.wikiwand.com/ru/%D0%94%D1%83%D0%BC%D0%B0%D0%B9_%D0%BC%D0%B5%D0%B4%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE..._%D1%80%D0%B5%D1%88%D0%B0%D0%B9\_%D0%B1%D1%8B%D1%81%D1%82%D1%80%D0%BE](https://www.wikiwand.com/ru/%D0%94%D1%83%D0%BC%D0%B0%D0%B9_%D0%BC%D0%B5%D0%B4%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE..._%D1%80%D0%B5%D1%88%D0%B0%D0%B9_%D0%B1%D1%8B%D1%81%D1%82%D1%80%D0%BE)
 — Таблица с исследованием ритма:

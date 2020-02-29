@@ -104,7 +104,7 @@ DISQUS data
 
 var pageName = 'how-to-sleep';
 var disqus_config = function () {
-    this.page.url = 'https://martyn.guru/' + pageName;
+    this.page.url = 'https://someta.site/' + pageName;
     this.page.identifier = pageName;
     this.page.title = pageName;
 };

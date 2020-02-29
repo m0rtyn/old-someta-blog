@@ -92,12 +92,3 @@ slug: papers/nice-and-easy
 Я посвятил письмо Тимуру, однако оно написано и для участников проекта Nice&Easy. Надеюсь это полезно и приятно.
 
 Спасибо за прочтение и оставь комментарий всяк сюда входящий ⬇
-
-<!-- DISQUS DATA
-var pageName = 'nice-and-easy';
-var disqus_config = function () {
-    this.page.url = 'https://martyn.guru/' + pageName;
-    this.page.identifier = pageName;
-    this.page.title = pageName;
-};
--->

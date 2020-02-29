@@ -19,6 +19,6 @@ tags: ['short']
 
 ---
 
-- Посты на сайте Мартына: https://martyn.guru/posts
+- Посты на сайте Мартына: https://someta.site/posts
 - Напиши Мартыну «Привет, бла-бла-бла»: <tg://resolve?domain=martyns0n>
 - Нетократия: https://www.wikiwand.com/ru/%D0%9D%D0%B5%D1%82%D0%BE%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D1%8F
