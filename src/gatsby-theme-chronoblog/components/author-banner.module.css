@@ -41,6 +41,7 @@
   box-sizing: border-box;
   background-color: var(--color-dark);
   transform: rotateY(180deg);
+  left: 0;
 }
 
 .external-profiles {

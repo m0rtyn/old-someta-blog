@@ -1,5 +1,6 @@
-/** @jsx jsx */
+// @jsx jsx
 
+import { jsx } from 'theme-ui'
 import {
   Avatar,
   Heading,
@@ -7,8 +8,7 @@ import {
   Flex,
   Box
 } from '@theme-ui/components';
-import { jsx } from 'theme-ui';
-
+import React from 'react';
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
 import SocialLinks from 'gatsby-theme-chronoblog/src/components/social-links';
 import logoAvatar from './avatar.jpg';
@@ -22,9 +22,9 @@ import styles from './author-banner.module.css';
  * @param {AuthorBannerDescriptionProps=} props
  */
 
-export const AuthorBannerDescription = ({ children, ...props }) => {
+export const AuthorBannerDescription = ({ children, sx, ...props }) => {
   const siteMeta = useSiteMetadata();
-  const style = { fontSize: [2], px: '2px', mb: '8px' };
+  const style = { fontSize: [2], px: '2px', mb: '8px', ...sx };
 
   if (children)
     return (
@@ -55,11 +55,13 @@ const AvatarWrapper = ({ children, style }) => (
   </figure>
 );
 
-export const AuthorBannerAvatar = ({ src = '', ...props }) => {
+export const AuthorBannerAvatar = ({ src = '', sx, ...props }) => {
   const siteMeta = useSiteMetadata();
+  const avatarSize = [100, 144];
   const style = {
-    width: '144px',
-    height: '144px'
+    width: avatarSize,
+    height: avatarSize,
+    ...sx
   };
 
   return src || siteMeta.avatar ? (
@@ -67,26 +69,27 @@ export const AuthorBannerAvatar = ({ src = '', ...props }) => {
       <Avatar sx={style} src={src || siteMeta.avatar} {...props} />
     </AvatarWrapper>
   ) : (
-      <div sx={{ marginX: '10px' }}>No image data</div>
+      <div>No image data</div>
     );
 };
 
 /**
  * @typedef {object} AuthorBannerHeadingProps
- * @property {React.ReactNode=} children
- * @property {string=} as
+ * @property {React.ReactNode =} children
+ * @property {string =} as
  */
 
 /**
- * @param {AuthorBannerHeadingProps=} props
+ * @param {AuthorBannerHeadingProps =} props
  */
 export const AuthorBannerHeading = ({
   as = 'h3',
   children,
+  sx,
   ...props
 }) => {
   const siteMeta = useSiteMetadata();
-  const style = { fontSize: [5] };
+  const style = { fontSize: [1, 5], ...sx };
 
   if (children)
     return (
@@ -104,14 +107,15 @@ export const AuthorBannerHeading = ({
   return <div />;
 };
 
-const AuthorBannerMain = ({ children, ...props }) => {
+const AuthorBannerMain = ({ children, sx, ...props }) => {
   return (
     <Flex
       sx={{
         borderRadius: 'authorBanner',
         alignItems: 'center',
         justifyContent: ['center', 'flex-start'],
-        textAlign: ['center', 'left']
+        textAlign: ['center', 'left'],
+        ...sx
       }}
       {...props}
     >
@@ -120,7 +124,7 @@ const AuthorBannerMain = ({ children, ...props }) => {
   );
 };
 
-const AuthorBanner = ({ children, ...props }) => {
+const AuthorBanner = ({ children, sx, ...props }) => {
   const { socialLinks } = props;
 
   if (children) {
@@ -136,15 +140,17 @@ const AuthorBanner = ({ children, ...props }) => {
         borderWidth: '3px',
         borderStyle: 'solid',
         boxShadow: 'initial',
-        ...props.sx
+        flexDirection: ['column', 'row'],
+        padding: [2, 3],
+        ...sx
       }}
     >
-      <AuthorBannerAvatar sx={{ margin: 0, width: '100%' }} />
+      <AuthorBannerAvatar sx={{ mr: [0, 3], width: '100%' }} />
 
       <div>
-        <AuthorBannerHeading as="h2" sx={{ fontSize: [7] }} />
-        <AuthorBannerDescription />
-        <SocialLinks fontSize="32px" socialLinks={socialLinks} />
+        <AuthorBannerHeading as="h2" sx={{ fontSize: [3, 7] }} />
+        <AuthorBannerDescription sx={{ fontSize: [1, 3] }} />
+        <SocialLinks sx={{ fontSize: [3, 6] }} socialLinks={socialLinks} />
       </div>
     </AuthorBannerMain>
   );
