@@ -3,7 +3,7 @@ title: Легко, просто и спасибо
 cover: ./image.jpg
 date: 2019-12-16
 description: Публичное письмо посвящённое Тимуру Зарудному и его проекту Nice&Easy
-tags: ['long', 'public-letter', 'by-martyn']
+tags: ['long', 'public-letter', 'personal']
 slug: papers/nice-and-easy
 ---
 

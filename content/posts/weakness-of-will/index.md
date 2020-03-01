@@ -1,14 +1,16 @@
 ---
-title: Слабость воли
+title: Слабость воли.Как разгрузить и сохранить.
 cover: ./evil-monkey.jpg
 date: 2019-08-05
 description: Доклад о волевом ресурсе с точки зрения XXI века.
 tags: ['attention-management', 'long']
+slug: papers/weakness-of-will
 ---
 
-# Слабость воли. Как разгрузить и сохранить.
 
 Доклад о волевом ресурсе с точки зрения XXI века.
+
+> [ℹ️ Слайды доклада](/weakness-of-will)
 
 ## Введение
 
