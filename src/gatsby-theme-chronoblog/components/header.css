@@ -13,13 +13,7 @@
   }
   
   
-  &--unpinned {
-    position: fixed;
-    transform: translateY(0);
-  }
-  
-  
-  &--pinned {
+  &--unpinned, &--pinned {
     position: fixed;
     transform: translateY(0);
   }
@@ -30,6 +24,7 @@
 .headroom--secondary-page-wrapper { 
   .headroom {
     transform: translateY(0) !important;
+    transition: all .33s var(--magic-bezier);
   }
   
   .headroom--unfixed {
@@ -39,6 +34,7 @@
   
   .headroom--unpinned {
     transform: translateY(-100%) !important;
+    transition: opacity 0s var(--magic-bezier) !important;
     opacity: 0;
   }
   
@@ -47,5 +43,4 @@
     transform: translateY(0%) !important;
     opacity: 1;
   }
-
 }

@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { Link as LinkGatsby } from 'gatsby';
 import Headroom from 'react-headroom';
@@ -7,10 +8,11 @@ import SiteHeader from 'gatsby-theme-chronoblog/site-header.mdx';
 import styles from './header.css';
 
 // https://theme-ui.com/sx-prop#using-the-sx-prop-in-mdx
-const Link = ({ to, ...props }) => (
+const Link = ({ to, sx, ...props }) => (
   <LinkGatsby
     sx={{
-      marginRight: ['8px', '16px'],
+      ...sx,
+      marginRight: ['12px', '16px'],
       color: 'text',
       textDecoration: 'none',
       ':hover': {
@@ -50,13 +52,13 @@ const MenuMain = ({ children, ...props }) => (
       sx={{
         width: '100%',
         display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: ['space-between'],
+        flexWrap: 'nowrap',
+        justifyContent: ['flex-start'],
         alignItems: 'center',
         fontSize: [1],
         pb: ['8px', '16px'],
         borderBottom: '3px solid var(--color-gray)',
-        px: 3
+        px: [2, 3]
       }}
     >
       {children}
@@ -64,13 +66,15 @@ const MenuMain = ({ children, ...props }) => (
   </Container>
 );
 
-const MenuBlock = ({ children, ...props }) => (
+const MenuBlock = ({ children, sx, ...props }) => (
   <div
     {...props}
     sx={{
+      ...sx,
       display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'center'
+      flexWrap: 'nowrap',
+      alignItems: 'center',
+      fontSize: [1, 2]
     }}
   >
     {children}
@@ -78,12 +82,22 @@ const MenuBlock = ({ children, ...props }) => (
 );
 
 const ChronoblogHeader = ({ location, ...props }) => {
-  const { pathname } =
-    typeof window !== 'undefined' && window.location;
-  const isMainPage = pathname === '/';
-  const headroomMainpageClassName = isMainPage
-    ? 'headroom--mainpage-wrapper'
-    : null;
+  const [
+    headroomMainpageClassName,
+    setHeadroomMainpageClassName
+  ] = React.useState(null);
+
+  React.useEffect(() => {
+    const { pathname } =
+      typeof window !== 'undefined' && window.location;
+    const isMainPage = pathname !== '/';
+
+    if (isMainPage) {
+      setHeadroomMainpageClassName(
+        'headroom--secondary-page-wrapper'
+      );
+    }
+  }, []);
 
   return (
     <Headroom

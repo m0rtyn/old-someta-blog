@@ -9,8 +9,8 @@ import SometaLogo from 'components/common/SometaLogo';
       to="/"
       title="So Meta — Такая Мета"
       sx={{
-        width: '64px',
-        mr: '32px',
+        width: [40, 64],
+        mr: [3, 4],
         color: 'text',
         display: 'flex',
         alignItems: 'center'
@@ -28,7 +28,16 @@ import SometaLogo from 'components/common/SometaLogo';
     <Link to="/martyn">Об авторе</Link>
   </MenuBlock>
 
-  <MenuBlock css={{marginLeft: "auto"}}>
-    <Link to="/donate">Toss a coin ♪</Link>
+  <MenuBlock sx={{marginRight: 0, marginLeft: "auto", overflow: "hidden"}}>
+    <Link
+      to="/donate"
+      sx={{
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap'
+      }}
+    >
+      Toss a coin ♪
+    </Link>
   </MenuBlock>
 </MenuMain>
