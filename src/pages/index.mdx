@@ -4,4 +4,6 @@ import ProjectBanner from 'components/ProjectBanner';
 <ProjectBanner />
 <FeedSearch />
 <Tags />
-<FeedItems filterByTags={['attention-management', 'manipulation', 'mental-model', 'consuption', 'meditation', 'biofix', 'drugs', 'game']}/>
+<FeedItems
+  filter={(item) => !item.frontmatter.tags.includes('личное')}
+/>
