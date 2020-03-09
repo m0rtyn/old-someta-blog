@@ -1,6 +1,7 @@
-import styles from './martyn.module.css';
 import { Heading, Link as LinkUI } from '@theme-ui/components';
-import authorLinks from './authorLinks'
+import socialLinks from 'constants/socialLinks'
+import styles from './martyn.module.css';
+import { Link as LinkGatsby } from 'gatsby';
 
 # Об авторе
 
@@ -12,24 +13,25 @@ import authorLinks from './authorLinks'
 
 ## Что сделал Мартын
 
-- Подкаст Протопилот Альфаᵝ
+- <LinkUI href="https://anchor.fm/protopilotalpha">Подкаст Протопилот Альфаᵝ</LinkUI>
 - Канал Метабаза
 - Видеоблог БОРЯ
-- <Link to="martyn/log">Лог жизни Мартына</Link>
-- <Link to="martyn/books">Книжная таблица Мартына</Link>
+- <LinkUI href="https://someta.site/martyn/log">Лог жизни Мартына</LinkUI>
+- <LinkUI href="https://someta.site/martyn/books">Книжная таблица Мартына</LinkUI>
 - Метод Мидеяция
 - Метод Матадоро
 - Раскладка Мартынак
-- Инстаграм «Саша, но Мартын»
+- <LinkUI href="https://instagram.com/martynsons">Инстаграм «Саша, но Мартын»</LinkUI>
 - Праздник Годень
 - Марафон по книге «Время Молотков»
 
-## Статьи
-
 <AuthorBanner
   sx={{ marginTop: '32px' }}
-  socialLinks={authorLinks}
->
-</AuthorBanner>
-<FeedItems filterByTags={['by-martyn']}/>
+  socialLinks={socialLinks}
+/>
+
+---
+
+## Статьи
+<FeedItems filterByTags={['личное']}/>
 
