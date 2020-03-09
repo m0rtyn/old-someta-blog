@@ -1,6 +1,6 @@
 ---
 date: 2019-05-28
-tags: ['attention-management', 'short', 'mental-model']
+tags: ['управление-вниманием' ]
 ---
 
 # Внимание → Время → Деньги

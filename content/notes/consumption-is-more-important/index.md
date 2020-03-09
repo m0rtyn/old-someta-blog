@@ -1,6 +1,6 @@
 ---
 date: 2017-02-14
-tags: ['short', 'consuption']
+tags: [ 'потребление']
 cover: ./image.jpg
 ---
 

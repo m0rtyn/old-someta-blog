@@ -3,7 +3,7 @@ title: Метод Помодоро
 cover: ./image.jpg
 date: 2019-02-18
 description: Статья о методе Помодоро
-tags: ['long']
+tags: []
 draft: true
 hide: true
 ---

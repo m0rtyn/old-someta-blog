@@ -1,6 +1,6 @@
 ---
 date:
-tags: ['short', 'mental-model']
+tags: []
 draft: true
 hide: true
 ---

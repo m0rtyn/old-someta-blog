@@ -1,6 +1,6 @@
 ---
 date: 2019-04-21
-tags: ['attention-management', 'short']
+tags: ['управление-вниманием' ]
 ---
 
 # Матадоро #1

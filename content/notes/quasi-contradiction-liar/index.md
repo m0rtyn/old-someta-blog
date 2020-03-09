@@ -1,6 +1,6 @@
 ---
 date: 2016-08-12
-tags: ['short']
+tags: []
 cover: ./cover.jpg
 ---
 

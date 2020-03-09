@@ -3,7 +3,7 @@ title: 'Не QWERTY единой'
 cover: ./image.png
 date: 2019-07-21
 description: 'Статья о раскадке QWERTY и о том, как я создал ей замену'
-tags: ['long']
+tags: []
 draft: true
 hide: true
 ---
