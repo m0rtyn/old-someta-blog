@@ -17,7 +17,7 @@ main > article /* hack for apply styles only for article pages not preview */
  {
   background-color: var(--color-light);
   color: var(--color-dark);
-  padding: 2em;
+  padding: 16px 56px;
 
   ul a {
     color: var(--color-dark) !important;

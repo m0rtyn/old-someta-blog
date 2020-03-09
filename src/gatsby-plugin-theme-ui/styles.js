@@ -4,14 +4,14 @@ const heading = {
   fontFamily: 'heading',
   fontWeight: 'heading',
   lineHeight: 'heading',
-  mt: 3,
-  mb: 2
+  mt: '1.6em',
+  mb: '1em'
 };
 
 export default {
   Container: {
-    px: [2, 3],
-    py: 3,
+    px: [1, 3],
+    py: 0,
     maxWidth: 768,
     mx: 'auto'
   },
@@ -34,6 +34,17 @@ export default {
     lineHeight: 'body',
     fontWeight: 'body'
   },
+  // links: {
+  //   textDecoration: 'secondary',
+  //   bold: {
+  //     fontWeight: 'bold',
+  //   },
+  //   nav: {
+  //     fontWeight: 'bold',
+  //     color: 'inherit',
+  //     textDecoration: 'none',
+  //   }
+  // },
   h1: {
     ...heading,
     fontSize: [6, 7]
@@ -59,10 +70,10 @@ export default {
     fontSize: [2]
   },
   p: {
-    fontSize: [3]
+    fontSize: [2]
   },
   li: {
-    fontSize: [3]
+    fontSize: [2]
   },
   a: {
     color: 'link',

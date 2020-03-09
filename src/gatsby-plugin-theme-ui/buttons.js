@@ -12,7 +12,7 @@ const buttonStyle = {
   '&:hover': {
     opacity: 0.8,
     cursor: 'pointer',
-    boxShadow: theme => `inset 0 0 0 2px ${theme.colors.secondary}`,
+    boxShadow: (theme) => `inset 0 0 0 2px ${theme.colors.secondary}`,
   },
   '&:focus': {
     outline: '0px',
@@ -30,7 +30,7 @@ export default {
   },
   special: {
     ...buttonStyle,
-    boxShadow: theme => `inset 0 0 0 2px ${theme.colors.muted}`,
-    bg: `rgba(0,0,0,0)`,
+    boxShadow: (theme) => `inset 0 0 0 2px ${theme.colors.muted}`,
+    bg: 'rgba(0,0,0,0)',
   },
 };
