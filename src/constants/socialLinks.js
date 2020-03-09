@@ -1,4 +1,4 @@
-export default [
+const socialLinks = [
   {
     icon: `telegram`,
     url: `https://tele.click/martyns0n`,
@@ -14,4 +14,6 @@ export default [
     url: `https://github.com/martyns0n`,
     altText: `Гитхаб Мартына`
   }
-];
+]
+
+export default socialLinks
