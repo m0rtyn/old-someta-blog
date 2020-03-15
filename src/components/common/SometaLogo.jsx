@@ -1,13 +1,17 @@
 /** @jsx jsx */
 
-import React from 'react';
 import { jsx } from 'theme-ui';
 
-const SometaLogo = () => (
-  <svg
+const SometaLogo = ({ logoColor = "dark", ...props }) => {
+  const color = logoColor === "dark" ? "2D2A2E" : "#FCFCFA"
+
+  return (<svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 180 98"
+    width="100%"
+    color={color}
+    {...props}
   >
     <defs />
     <path
@@ -20,7 +24,8 @@ const SometaLogo = () => (
       fill="currentColor"
       d="M25 98L12 77 0 98h25zM124 0l16 28h-32l16-28z"
     />
-  </svg>
-);
+  </svg>)
+
+}
 
 export default SometaLogo;
