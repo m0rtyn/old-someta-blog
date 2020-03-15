@@ -1,6 +1,17 @@
 module.exports = {
-  plugins: ['prettier', 'react', 'react-hooks'],
-  extends: ['react-app', 'airbnb', 'prettier', 'prettier/react'],
+  globals: {
+    __PATH_PREFIX__: true,
+  },
+  plugins: [
+    'prettier',
+    'react',
+    'react-hooks'
+  ],
+  extends: [
+    'airbnb',
+    'prettier',
+    'prettier/react'
+  ],
   env: {
     es6: true,
     browser: true
@@ -35,7 +46,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     // other
     'jsx-a11y/label-has-associated-control': [0], // off
-    'prettier/prettier': 'error',
+    // 'prettier/prettier': 'error',
     'jsx-a11y/label-has-associated-control': [0],
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/anchor-has-content': 0,
