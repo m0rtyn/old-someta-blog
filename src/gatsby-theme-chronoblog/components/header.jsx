@@ -5,6 +5,7 @@ import { Link as LinkGatsby } from 'gatsby';
 import Headroom from 'react-headroom';
 import { Container, Header, jsx } from 'theme-ui';
 import SiteHeader from 'gatsby-theme-chronoblog/site-header.mdx';
+/* eslint-disable no-unused-vars */
 import styles from './header.css';
 
 // https://theme-ui.com/sx-prop#using-the-sx-prop-in-mdx
@@ -13,7 +14,7 @@ const Link = ({ to, sx, ...props }) => (
     sx={{
       ...sx,
       marginRight: ['12px', '16px'],
-      color: 'text',
+      color: 'background',
       textDecoration: 'none',
       ':hover': {
         opacity: 0.7
@@ -57,7 +58,6 @@ const MenuMain = ({ children, ...props }) => (
         alignItems: 'center',
         fontSize: [1],
         pb: ['8px', '16px'],
-        borderBottom: '3px solid var(--color-gray)',
         px: [2, 3]
       }}
     >
@@ -115,7 +115,7 @@ const ChronoblogHeader = ({ location, ...props }) => {
               marginX: 'auto',
               marginBottom: ['2px', '2px'],
               marginTop: ['0px', '0px'],
-              backgroundColor: 'background'
+              backgroundColor: 'text',
             }}
           >
             <SiteHeader />

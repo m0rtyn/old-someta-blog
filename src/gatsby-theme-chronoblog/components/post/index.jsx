@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import get from 'lodash/get';
-import { jsx, Styled } from 'theme-ui';
-
+import { jsx, Styled, useColorMode } from 'theme-ui';
+import { Flex } from '@theme-ui/components';
 import ContentBottomMdx from 'gatsby-theme-chronoblog/src/content-bottom.mdx';
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
 import CoverImage from 'gatsby-theme-chronoblog/src/components/cover-image';
@@ -23,8 +23,8 @@ const PostTitle = ({
       {frontmatter.title ? (
         <Styled.h1>{frontmatter.title}</Styled.h1>
       ) : (
-        ''
-      )}
+          ''
+        )}
     </div>
   );
 };
@@ -33,13 +33,10 @@ const PostContent = ({
   data: {
     mdx: { body }
   }
-}) => {
-  return <MDXRenderer>{body}</MDXRenderer>;
-};
+}) => <MDXRenderer>{body}</MDXRenderer>;
 
 const getDescriptionForSeo = (fromFrontmatter, fromExcerpt) => {
-  if (fromFrontmatter && fromFrontmatter !== '')
-    return fromFrontmatter;
+  if (fromFrontmatter && fromFrontmatter !== '') return fromFrontmatter;
   if (fromExcerpt && fromExcerpt !== '') return fromExcerpt;
 
   return '';
@@ -49,12 +46,12 @@ const PostFooter = () => {
   const siteMetadata = useSiteMetadata();
 
   return (
-    <div sx={{ mt: '30px', mb: '30px' }}>
+    <div sx={{ mt: '32px', mb: '32px' }}>
       {PostFooterMdx && PostFooterMdx !== '' ? (
         <PostFooterMdx siteMetadata={siteMetadata} />
       ) : (
-        ''
-      )}
+          ''
+        )}
     </div>
   );
 };
@@ -69,6 +66,19 @@ export const Post = ({ data }) => {
     'mdx.frontmatter.cover.childImageSharp.fluid.src',
     ''
   );
+  const postInfoStyles = {
+    opacity: 1,
+    zIndex: 1,
+    backgroundColor: 'transparent',
+    color: 'background',
+    fontSize: 1,
+    fontFamily: 'monospace',
+    // fontWeight: 'bold',
+    textShadow: '0px 0px 2px var(--color-dark), 0 0 8px var(--color-dark)',
+    textAlign: 'right',
+    p: 0,
+    ml: 'auto',
+  }
 
   //
   return (
@@ -79,19 +89,29 @@ export const Post = ({ data }) => {
         description={description}
         image={imagePath}
       />
+
       <main>
         <article>
           <header>
+            <Flex sx={{ zIndex: 1, position: "relative", mb: "-38px", px: 4, pt: 2 }}>
+              <Tags
+                type="item"
+                tags={data.mdx.frontmatter.tags}
+                tagStyle={postInfoStyles}
+              />
+              <Date
+                date={data.mdx.frontmatter.date}
+                sx={postInfoStyles}
+              />
+            </Flex>
+
             <CoverImage data={data.mdx} type="post" />
             <PostTitle data={data} />
-            <Date date={data.mdx.frontmatter.date} />
-            <div sx={{ mt: 20, mb: 3 }}>
-              <Tags type="item" tags={data.mdx.frontmatter.tags} />
-            </div>
           </header>
+
           <PostContent data={data} />
-          <footer sx={{ marginTop: '20px' }}>
-            {/* <Tags type="item" tags={data.mdx.frontmatter.tags} /> */}
+
+          <footer sx={{ marginTop: '16px' }}>
             <PostFooter />
             <CommentsBlock
               pathName={data.mdx.fields.slug}
@@ -101,6 +121,7 @@ export const Post = ({ data }) => {
           </footer>
         </article>
       </main>
+
       <aside>
         <ContentBottomMdx />
       </aside>

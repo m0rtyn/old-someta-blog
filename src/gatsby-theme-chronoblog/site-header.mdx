@@ -1,9 +1,8 @@
 <!-- @mdx mdx -->
 import { jsx } from 'theme-ui'
-import styles from './site-header.module.css';
 import SometaLogo from 'components/common/SometaLogo';
 
-<MenuMain className={styles.siteHeader}>
+<MenuMain>
   <MenuBlock>
     <Link
       to="/"
@@ -11,21 +10,16 @@ import SometaLogo from 'components/common/SometaLogo';
       sx={{
         width: [40, 64],
         mr: [3, 4],
-        color: 'text',
         display: 'flex',
         alignItems: 'center'
       }}
     >
-      <SometaLogo />
+      <SometaLogo logoColor="light"/>
     </Link>
   </MenuBlock>
 
   <MenuBlock>
     <Link to="/about">О проекте</Link>
-  </MenuBlock>
-
-  <MenuBlock>
-    <Link to="/martyn">Об авторе</Link>
   </MenuBlock>
 
   <MenuBlock sx={{marginRight: 0, marginLeft: "auto", overflow: "hidden"}}>

@@ -1,6 +1,6 @@
 const buttonStyle = {
   bg: 'muted',
-  color: 'text',
+  color: 'background',
   userSelect: 'none',
   display: 'inline-block',
   px: '16px',

@@ -10,7 +10,7 @@ const heading = {
 
 export default {
   Container: {
-    px: [1, 3],
+    px: [3, 3],
     py: 0,
     maxWidth: 768,
     mx: 'auto'

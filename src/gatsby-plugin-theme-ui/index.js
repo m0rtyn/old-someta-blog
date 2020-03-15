@@ -7,7 +7,7 @@ import styles from './styles';
 
 const theme = {
   ...base,
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useColorSchemeMediaQuery: false,
   colors: {
     ...colors,
