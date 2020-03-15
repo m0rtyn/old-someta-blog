@@ -2,24 +2,23 @@
 
 import { jsx } from 'theme-ui';
 import React from 'react';
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus';
+import { Disqus } from 'gatsby-plugin-disqus';
+import { SITE_URL } from 'constants/common'
 
 const CommentsBlock = ({
   pathName = '/common-tread',
   postId = 'common-tread',
   postTitle = 'common-tread'
 }) => {
-  const siteUrl = 'https://someta.site';
 
   const disqusConfig = {
-    url: `${siteUrl + pathName}`,
+    url: `${SITE_URL}${pathName}`,
     identifier: postId,
     title: postTitle
   };
 
   return (
     <>
-      {/* <CommentCount config={disqusConfig} placeholder="..." /> */}
       <Disqus config={disqusConfig} />
     </>
   );
