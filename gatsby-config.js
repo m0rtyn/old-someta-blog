@@ -29,6 +29,7 @@ module.exports = {
   plugins: [
     `gatsby-alias-imports`,
     `gatsby-plugin-postcss`,
+    // resolve: 'gatsby-theme-chronoblog',
     {
       resolve: 'gatsby-theme-chronoblog',
       options: {
@@ -53,6 +54,7 @@ module.exports = {
         }
       }
     },
+    // resolve: `gatsby-plugin-manifest`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -65,21 +67,25 @@ module.exports = {
         icon: `src/assets/favicon.png`
       }
     },
+    // resolve: `gatsby-plugin-sitemap`
     {
       resolve: `gatsby-plugin-sitemap`
     },
+    // resolve: `gatsby-plugin-google-analytics`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-158600568-1'
       }
     },
+    // resolve: `gatsby-plugin-disqus`,
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `mrtnsn`
       }
     },
+    // resolve: `gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
@@ -139,6 +145,28 @@ module.exports = {
           },
         ],
       },
+    },
+    // resolve: 'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.someta.site/',
+        sitemap: 'https://www.someta.site/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    // resolve: 'gatsby-plugin-eslint',
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
     }
   ]
 };
