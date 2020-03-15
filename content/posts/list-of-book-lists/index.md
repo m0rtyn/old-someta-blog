@@ -1,6 +1,6 @@
 ---
 title: Список списков книг
-cover: ./cover.jpg
+cover: ./book-shelf-pixelized.jpg
 date: 2017-12-01
 description: Ультимативно фундаментальный список книг
 tags: [ 'книги']

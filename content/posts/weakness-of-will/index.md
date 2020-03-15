@@ -1,16 +1,38 @@
 ---
 title: Слабость воли.Как разгрузить и сохранить.
-cover: ./evil-monkey.jpg
 date: 2019-08-05
-description: Доклад о волевом ресурсе с точки зрения XXI века.
-tags: ['attention-management', 'long']
+description: Доклад о волевом ресурсе с точки зрения XXI века
+tags: ['управление-вниманием' ]
 slug: papers/weakness-of-will
 ---
 
+<Embed
+  src="https://www.youtube.com/watch?v=QjmcSvZV_pg"
+/>
 
-Доклад о волевом ресурсе с точки зрения XXI века.
+## Содержание
 
-> [ℹ️ Слайды доклада](/weakness-of-will)
+- [Слайды](#слайды)
+- [Введение](#введение)
+- [Два мышления](#два-мышления)
+- [О мозгах](#два-мозга)
+- [Когнитивные искажения](#когнитивные-искажения)
+- [Как теперь быть](#как-теперь-быть)
+
+
+## Слайды
+
+Переключение слайдов на клавиши ←, → 
+
+<iframe src="https://someta.site/weakness-of-will/#cover"
+        width="100%" height="300" frameborder="0"
+        allowfullscreen sandbox>
+  <p> 
+    <a href="/weakness-of-will" target="_blank">
+       Ссылка на слайды
+    </a>
+  </p>
+</iframe>
 
 ## Введение
 

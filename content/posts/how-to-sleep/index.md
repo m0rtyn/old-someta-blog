@@ -1,6 +1,6 @@
 ---
 title: Как починить сон
-cover: ./tom-cat.jpg
+cover: ./sleepy-tom-cat.jpg
 date: 2018-12-20
 description: Статья о том как починить сон
 tags: []

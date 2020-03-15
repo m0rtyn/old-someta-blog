@@ -1,6 +1,6 @@
 ---
 title: Невалидный Мартын
-cover: ./image.jpg
+cover: ./red-brain-outlined-pixelized.jpg
 date: 2018-01-28
 description: Рефлексия на тему смерти и немного о жизни
 tags: [ 'личное']
