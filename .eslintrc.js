@@ -8,22 +8,23 @@ module.exports = {
     'react-hooks'
   ],
   extends: [
+    'react-app',
     'airbnb',
     'prettier',
     'prettier/react'
   ],
-  env: {
-    es6: true,
-    browser: true
-  },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
-  parser: 'babel-eslint',
+  // env: {
+  //   es6: true,
+  //   browser: true
+  // },
+  // parserOptions: {
+  //   ecmaVersion: 6,
+  //   sourceType: 'module',
+  //   ecmaFeatures: {
+  //     jsx: true
+  //   }
+  // },
+  // parser: 'babel-eslint',
   rules: {
     //common
     camelcase: 0, // off
