@@ -25,6 +25,7 @@ import Button from 'gatsby-theme-chronoblog/src/components/button';
 /**
  * @param {TagProps=} props
  */
+/* eslint-disable */
 const Tag = ({ tagWithStat, style, pageContextTag, showStatsNumber }) => {
   const active = tagWithStat.tagName === pageContextTag;
   const link = active ? '/tags' : `/tags/${_.kebabCase(tagWithStat.tagName)}`;
@@ -107,18 +108,18 @@ const Tags = ({
   //
   return (
     <div>
-      {type === 'feed' && showAllTagsButton ? (
-        <AllTagsButton style={style} />
-      ) : (
-          ''
-        )}
+      {type === 'feed' && showAllTagsButton
+        ? <AllTagsButton style={style} />
+        : ''
+      }
+
       {tagsWithStat.map((tws) => (
         <Tag
           key={tws.tagName}
           showStatsNumber={showStatsNumber}
           tagWithStat={tws}
-          style={style}
           pageContextTag={pageContextTag}
+          style={style}
         />
       ))}
     </div>
