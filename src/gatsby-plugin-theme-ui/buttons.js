@@ -1,10 +1,10 @@
 const buttonStyle = {
-  bg: 'muted',
+  bg: 'text',
   color: 'background',
   userSelect: 'none',
   display: 'inline-block',
   px: '16px',
-  py: '10px',
+  py: '8px',
   fontSize: [1],
   fontFamily: 'inherit',
   border: '0px',

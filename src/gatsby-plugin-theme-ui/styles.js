@@ -10,12 +10,14 @@ const heading = {
 
 export default {
   Container: {
-    px: [3, 3],
+    px: [0, 3],
     py: 0,
+    // minHeight: 'calc(100vh - 169px)', // 169px is temporary sum of header and footer heights
     maxWidth: 768,
     mx: 'auto'
   },
   Footer: {
+    py: ["16px !important", "24px !important"],
     color: 'modes.dark.text',
     bg: 'modes.dark.background'
   },
@@ -70,7 +72,7 @@ export default {
     fontSize: [2]
   },
   p: {
-    fontSize: [2]
+    fontSize: [1, 2]
   },
   li: {
     fontSize: [2]
@@ -105,9 +107,9 @@ export default {
     borderRadius: 'blockquote',
     borderStyle: 'solid',
     borderColor: 'primary',
-    bg: 'text',
+    bg: 'transparent',
     marginX: 0,
     marginY: 1,
-    color: 'primary'
-  }
+    color: 'text'
+  },
 };
