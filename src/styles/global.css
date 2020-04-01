@@ -28,3 +28,8 @@ main > article /* hack for apply styles only for article pages not preview */
     text-align: right;
   }
 }
+
+sup a {
+  color: var(--color-gray) !important;
+  text-decoration: none;
+}
