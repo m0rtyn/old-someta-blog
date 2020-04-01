@@ -10,12 +10,11 @@ import preloadedData from './preloadedData';
 
 const BookSheet = () => {
   const [loading, setLoading] = React.useState(true);
-  const [isSecondStageRender, setSecondStage] = React.useState(false);
   const [bookArray, setBookArray] = React.useState([]);
 
   React.useEffect(() => {
     const fetchBookArray = async () => {
-      const apiURL = `https://script.google.com/macros/s/AKfycbyncOZcKRu3_shSLYYescpIelkontkjdTuCRONzfXIXK0Jl5Vqb/exec`;
+      const apiURL = 'https://script.google.com/macros/s/AKfycbyncOZcKRu3_shSLYYescpIelkontkjdTuCRONzfXIXK0Jl5Vqb/exec';
       const response = await fetch(apiURL);
       const json = await response.json();
 
