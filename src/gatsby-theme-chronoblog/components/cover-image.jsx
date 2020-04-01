@@ -12,9 +12,6 @@ const CoverImageBase = ({
   coverFluidImage,
   objectFit = 'scale-down'
 }) => {
-  const { pathname } =
-    typeof window !== 'undefined' && window.location;
-
   const borderRadiusForCard =
     type === 'card'
       ? {
@@ -32,7 +29,6 @@ const CoverImageBase = ({
     <div
       sx={{
         maxHeight: height,
-        // margin: isNotMainPage ? "-56px" : null,
         mb: 0,
       }}
     >

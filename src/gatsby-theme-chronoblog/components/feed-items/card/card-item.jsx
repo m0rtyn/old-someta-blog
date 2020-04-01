@@ -26,20 +26,19 @@ export default ({ item, isHovering, linksBeforeTitle = '' }) => {
         </Card.Link>
         <Card.Body item={item}>
           <Card.Link item={item}>
-            <div sx={{ pt: ['8px', '16px'], mb: 2 }}>
-              <Card.Title item={item} linksBeforeTitle={linksBeforeTitle} />
-              <Card.LinkText item={item} />
-              <Date date={item.frontmatter.date} sx={{ display: 'inline', mr: 4 }} />
-              <CommentCount config={disqusConfig} placeholder="no comments" sx={{ opacity: "0.8" }} />
-            </div>
+            <Card.Title item={item} linksBeforeTitle={linksBeforeTitle} />
+            <Card.LinkText item={item} />
+            <CommentCount config={disqusConfig} placeholder="no comments" sx={{ opacity: "0.8", mr: 3 }} />
+            <Date date={item.frontmatter.date} sx={{ display: 'inline' }} />
           </Card.Link>
+
           <Card.Content item={item} />
+
           <Card.Link item={item}>
             <Card.ReadMoreButton item={item} />
           </Card.Link>
-          <div sx={{ marginTop: '20px' }}>
-            <Tags type="item" tags={item.frontmatter.tags} />
-          </div>
+
+          <Tags type="item" tags={item.frontmatter.tags} tagStyle={{ py: 1, px: 2, fontSize: 0, color: 'text', backgroundColor: 'background' }} showStatsNumber={false}/>
         </Card.Body>
       </Card.HoveringStyle>
     </article>

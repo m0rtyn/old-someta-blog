@@ -176,7 +176,7 @@ const ItemBody = ({ item, children }) => {
         borderRadius: 'card',
         backgroundColor: 'background',
         pb: [2, 4],
-        px: [2, 4],
+        px: [4, 4],
         borderTopLeftRadius: coverFluidImage ? 0 : null,
         borderTopRightRadius: coverFluidImage ? 0 : null
       }}
