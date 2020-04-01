@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import get from 'lodash/get';
-import { jsx, Styled, useColorMode } from 'theme-ui';
+import { jsx, Styled } from 'theme-ui';
 import { Flex } from '@theme-ui/components';
 import ContentBottomMdx from 'gatsby-theme-chronoblog/src/content-bottom.mdx';
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
@@ -35,6 +35,7 @@ const PostContent = ({
   }
 }) => <MDXRenderer>{body}</MDXRenderer>;
 
+/* eslint-disable complexity */
 const getDescriptionForSeo = (fromFrontmatter, fromExcerpt) => {
   if (fromFrontmatter && fromFrontmatter !== '') return fromFrontmatter;
   if (fromExcerpt && fromExcerpt !== '') return fromExcerpt;
@@ -88,6 +89,7 @@ export const Post = ({ data }) => {
         slug={data.mdx.fields.slug}
         description={description}
         image={imagePath}
+        canonical={data.mdx.fields.slug}
       />
 
       <main>
