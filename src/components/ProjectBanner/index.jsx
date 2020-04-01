@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx } from 'theme-ui';
-import { Avatar, Heading, Box } from '@theme-ui/components';
+import { Heading, Box } from '@theme-ui/components';
 import AuthorBanner from 'gatsby-theme-chronoblog/components/author-banner.jsx';
 import SometaLogo from 'components/common/SometaLogo';
 
@@ -19,6 +19,7 @@ const ProjectBanner = () => {
       <Box
         sx={{ width: '133px', borderRadius: '0' }}
         mb={3}
+        title="So Meta — Такая Мета"
       >
         <SometaLogo />
       </Box>
