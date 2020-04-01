@@ -1,22 +1,26 @@
 .siteFooter {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   line-height: 1;
   cursor: default;
   user-select: none;
-  color: #ffd866;
+  
+  * {
+    color: var(--color-yellow);
+  }
 }
 
-.siteFooter .Ampersand {
+.madeBy .Ampersand {
   font-size: 0.6em;
   margin: 0 0.3em;
 }
 
-.siteFooter svg {
+.madeBy svg {
   width: 1em;
 }
 
-.siteFooter path {
+.madeBy path {
   fill: currentColor;
 }
