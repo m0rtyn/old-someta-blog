@@ -10,7 +10,7 @@ const heading = {
 
 export default {
   Container: {
-    px: [0, 3],
+    px: 3,
     py: 0,
     // minHeight: 'calc(100vh - 169px)', // 169px is temporary sum of header and footer heights
     maxWidth: 768,
@@ -102,14 +102,20 @@ export default {
     borderColor: 'muted'
   },
   blockquote: {
-    px: 4,
-    py: 1,
+    px: 3,
+    py: 3,
+    mx: 0,
+    my: 4,
     borderRadius: 'blockquote',
     borderStyle: 'solid',
     borderColor: 'primary',
     bg: 'transparent',
-    marginX: 0,
-    marginY: 1,
-    color: 'text'
+    color: 'text',
+    fontSize: 3,
+
+    "ul, ol": {
+      px: 4,
+      my: 0,
+    }
   },
 };

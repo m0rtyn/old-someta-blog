@@ -33,3 +33,8 @@ sup a {
   color: var(--color-gray) !important;
   text-decoration: none;
 }
+
+blockquote ul {
+  padding: 0;
+  margin: 0;
+}
