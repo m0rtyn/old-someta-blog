@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx } from 'theme-ui';
-import { Heading, Box } from '@theme-ui/components';
+import { Box } from '@theme-ui/components';
 import AuthorBanner from 'gatsby-theme-chronoblog/components/author-banner.jsx';
 import SometaLogo from 'components/common/SometaLogo';
 
@@ -21,13 +21,8 @@ const ProjectBanner = () => {
         mb={3}
         title="So Meta — Такая Мета"
       >
-        <SometaLogo />
+        <SometaLogo withTitle />
       </Box>
-
-      <Heading mb={13} sx={{ fontSize: [6] }} as="h2">
-        Такая Мета
-      </Heading>
-      {/* <SocialLinks fontSize={4} /> */}
     </AuthorBanner>
   );
 };
