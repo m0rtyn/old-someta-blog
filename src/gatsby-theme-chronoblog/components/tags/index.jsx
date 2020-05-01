@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Badge } from '@theme-ui/components';
+import { Badge, Flex } from '@theme-ui/components';
 import { Link } from 'gatsby';
 import _ from 'lodash';
 import { jsx } from 'theme-ui';
@@ -96,33 +96,35 @@ const Tags = ({
       boxShadow: '0 0 0 8px transparent, 0 0 0 3px var(--theme-ui-colors-secondary,#78DCE8)'
     },
     color: 'background',
-    mr: '4px',
-    my: '2px',
-    px: '12px',
-    py: '8px',
-    fontSize: [1],
+    mr: [1, 1],
+    mb: [1, 1],
+    px: [2, 3],
+    py: [1, 2],
+    fontSize: [0, 1],
     opacity: 1,
     ...tagStyle
   };
 
   //
   return (
-    <div>
+    <Flex sx={{ flexWrap: 'wrap' }}>
       {type === 'feed' && showAllTagsButton
         ? <AllTagsButton style={style} />
         : ''
       }
 
-      {tagsWithStat.map((tws) => (
-        <Tag
-          key={tws.tagName}
-          showStatsNumber={showStatsNumber}
-          tagWithStat={tws}
-          pageContextTag={pageContextTag}
-          style={style}
-        />
-      ))}
-    </div>
+      {
+        tagsWithStat.map((tws) => (
+          <Tag
+            key={tws.tagName}
+            showStatsNumber={showStatsNumber}
+            tagWithStat={tws}
+            pageContextTag={pageContextTag}
+            style={style}
+          />
+        ))
+      }
+    </Flex >
   );
 };
 
