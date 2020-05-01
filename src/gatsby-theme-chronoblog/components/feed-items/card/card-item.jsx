@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-
 import CoverImage from 'gatsby-theme-chronoblog/src/components/cover-image';
 import Date from 'gatsby-theme-chronoblog/src/components/date';
 import { CommentCount } from 'gatsby-plugin-disqus';
@@ -38,7 +37,7 @@ export default ({ item, isHovering, linksBeforeTitle = '' }) => {
             <Card.ReadMoreButton item={item} />
           </Card.Link>
 
-          <Tags type="item" tags={item.frontmatter.tags} tagStyle={{ py: 1, px: 2, fontSize: 0, color: 'text', backgroundColor: 'background' }} showStatsNumber={false}/>
+          <Tags type="item" tags={item.frontmatter.tags} tagStyle={{ py: 1, px: 2, fontSize: 0, color: 'text', backgroundColor: 'background' }} showStatsNumber={false} />
         </Card.Body>
       </Card.HoveringStyle>
     </article>
