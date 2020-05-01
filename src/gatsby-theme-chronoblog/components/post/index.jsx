@@ -2,7 +2,7 @@
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import get from 'lodash/get';
 import { jsx, Styled } from 'theme-ui';
-import { Flex } from '@theme-ui/components';
+import { Flex, Box } from '@theme-ui/components';
 import ContentBottomMdx from 'gatsby-theme-chronoblog/src/content-bottom.mdx';
 import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
 import CoverImage from 'gatsby-theme-chronoblog/src/components/cover-image';
@@ -24,8 +24,9 @@ const PostTitle = ({
         <Styled.h1>{frontmatter.title}</Styled.h1>
       ) : (
           ''
-        )}
-    </div>
+        )
+      }
+    </div >
   );
 };
 
@@ -33,7 +34,11 @@ const PostContent = ({
   data: {
     mdx: { body }
   }
-}) => <MDXRenderer>{body}</MDXRenderer>;
+}) => (
+    <Box px={[3, 0]}>
+      <MDXRenderer>{body}</MDXRenderer>
+    </Box>
+  )
 
 /* eslint-disable complexity */
 const getDescriptionForSeo = (fromFrontmatter, fromExcerpt) => {
@@ -72,11 +77,10 @@ export const Post = ({ data }) => {
     zIndex: 1,
     backgroundColor: 'transparent',
     color: 'background',
-    fontSize: 1,
+    fontSize: [0, 1],
     fontFamily: 'monospace',
-    // fontWeight: 'bold',
     textShadow: '0px 0px 2px var(--color-dark), 0 0 8px var(--color-dark)',
-    textAlign: 'right',
+    textAlign: ['left', 'right'],
     p: 0,
     ml: 'auto',
   }
@@ -95,7 +99,7 @@ export const Post = ({ data }) => {
       <main>
         <article>
           <header>
-            <Flex sx={{ zIndex: 1, position: "relative", mb: "-38px", px: 4, pt: 2 }}>
+            <Flex sx={{ zIndex: 1, position: "relative", mb: ["-62px", "-38px"], px: 4, pt: 2 }}>
               <Tags
                 type="item"
                 tags={data.mdx.frontmatter.tags}
@@ -108,7 +112,7 @@ export const Post = ({ data }) => {
             </Flex>
 
             <CoverImage data={data.mdx} type="post" />
-            <PostTitle data={data} />
+            <PostTitle px={[3, 0]} data={data} />
           </header>
 
           <PostContent data={data} />
