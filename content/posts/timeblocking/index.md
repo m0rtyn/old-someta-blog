@@ -1,6 +1,6 @@
 ---
 date: 2020-03-15
-tags: ['attention-management']
+tags: ['attention-management', "long"]
 title: Таймблокинг без ограничений
 cover: ./macos-fantastical.png
 description: Как внедрить продвинутое ведение дел без насилия над собой

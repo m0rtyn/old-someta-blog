@@ -2,7 +2,7 @@
 title: Слабость воли.Как разгрузить и сохранить.
 date: 2019-08-05
 description: Доклад о волевом ресурсе с точки зрения XXI века
-tags: ['attention-management' ]
+tags: ['attention-management' , "long"]
 slug: papers/weakness-of-will
 ---
 
