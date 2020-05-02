@@ -154,6 +154,10 @@ const sortTags = (array) => {
   return array;
 };
 
+const getTrendyTags = array => {
+  return array.filter(tag => tag.tagStat > 2)
+}
+
 /**
  * @typedef {object} Props
  * @property {'feed' | 'item'=} type
@@ -185,6 +189,7 @@ export default ({
   let tagsWithStat = createTagsStatistics(tagsFromItems);
 
   tagsWithStat = sortTags(tagsWithStat);
+  tagsWithStat = getTrendyTags(tagsWithStat);
   //
   if (type === 'feed') {
     return (
@@ -216,6 +221,7 @@ export default ({
     //
     if (tagsToShowWithStat) {
       tagsToShowWithStat = sortTags(tagsToShowWithStat);
+      tagsToShowWithStat = getTrendyTags(tagsToShowWithStat);
 
       return (
         <div>
