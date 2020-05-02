@@ -109,7 +109,7 @@ const Tags = ({
   return (
     <Flex sx={{ flexWrap: 'wrap' }}>
       {type === 'feed' && showAllTagsButton
-        ? <AllTagsButton style={style} />
+        ? <AllTagsButton style={{ ...style, color: "muted" }} />
         : ''
       }
 
