@@ -1,6 +1,8 @@
 <!-- @mdx mdx -->
 import { jsx } from 'theme-ui'
 import SometaLogo from 'components/common/SometaLogo';
+import { Link as LinkUI } from '@theme-ui/components'
+
 
 <MenuMain>
   <MenuBlock>
@@ -19,24 +21,36 @@ import SometaLogo from 'components/common/SometaLogo';
   </MenuBlock>
 
   <MenuBlock>
-    <Link to="/about">О проекте</Link>
+    <Link to="/about" sx={{flexShrink: 0}}>О проекте</Link>
+  </MenuBlock>
+
+  <MenuBlock>
+    <LinkUI href="https://t.me/sometachat" sx={{textDecoration: "none", color: "background"}}>
+      <Flex alignItems="flex-start">
+        Чат
+        {' '}
+        <FontAwesomeIcon icon={['fab', 'telegram-plane']} size="xs"/>
+      </Flex>
+    </LinkUI>
   </MenuBlock>
 
   <MenuBlock sx={{marginRight: 0, marginLeft: "auto", overflow: "hidden"}}>
     <Link
       to="/donate"
       sx={{
+        display: ["none", "flex"],
         textOverflow: 'ellipsis',
         overflow: 'hidden',
         whiteSpace: 'nowrap'
       }}
     >
       Toss a coin ♪
+      
     </Link>
   </MenuBlock>
 
   <MenuBlock>
-    <SocialLinks sx={{ color: 'background' }} />
+    <SocialLinks sx={{ marginLeft: ["auto", 0], color: 'background' }} />
   </MenuBlock>
 
 </MenuMain>
