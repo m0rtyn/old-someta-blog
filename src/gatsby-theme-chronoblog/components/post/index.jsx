@@ -73,16 +73,14 @@ export const Post = ({ data }) => {
     ''
   );
   const postInfoStyles = {
-    opacity: 1,
     zIndex: 1,
-    backgroundColor: 'transparent',
     color: 'background',
     fontSize: [0, 1],
     fontFamily: 'monospace',
-    textShadow: '0px 0px 2px var(--color-dark), 0 0 8px var(--color-dark)',
     textAlign: ['left', 'right'],
-    p: 0,
+    padding: [1, 2],
     ml: 'auto',
+    flexShrink: 0,
   }
 
   //
@@ -98,12 +96,15 @@ export const Post = ({ data }) => {
 
       <main>
         <article>
-          <header>
-            <Flex sx={{ zIndex: 1, position: "relative", mb: ["-62px", "-38px"], px: 4, pt: 2 }}>
+          <header sx={{ position: "relative" }}>
+            <Flex sx={{
+              zIndex: 1, position: "absolute", p: [0, 1], backgroundColor: ['text'], opacity: 0.66, width: "100%"
+            }}>
               <Tags
                 type="item"
                 tags={data.mdx.frontmatter.tags}
                 tagStyle={postInfoStyles}
+                showStatsNumber={false}
               />
               <Date
                 date={data.mdx.frontmatter.date}
