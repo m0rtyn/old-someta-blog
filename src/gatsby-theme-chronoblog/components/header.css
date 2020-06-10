@@ -4,18 +4,29 @@
   right: 0;
   z-index: 1;
   transition: all .33s var(--magic-bezier);
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
+  /* background-color: var(--color-light);
+  color: var(--color-light); */
   
   
   &--unfixed {
     position: relative;
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
+    background-color: var(--color-light);
+    color: var(--color-gray);
+
+    #HeaderLogo {
+      width: 0px;
+      overflow: hidden;
+    }
   }
   
   
   &--unpinned, &--pinned {
     position: fixed;
-    transform: translateY(0);
+    /* transform: translateY(0); */
+    background-color: var(--color-dark);
+    color: var(--color-light);
   }
 }
 
@@ -25,11 +36,20 @@
   .headroom {
     transform: translateY(0) !important;
     transition: all .33s var(--magic-bezier);
+    background-color: var(--color-dark);
+    color: var(--color-light);
   }
   
   .headroom--unfixed {
     position: relative;
     transform: translateY(0) !important;
+    /* background-color: var(--color-light);
+    color: var(--color-gray); */
+
+    #HeaderLogo {
+      width: initial;
+      overflow: initial;
+    }
   }
   
   .headroom--unpinned {

@@ -36,17 +36,18 @@ export default {
     lineHeight: 'body',
     fontWeight: 'body'
   },
-  // links: {
-  //   textDecoration: 'secondary',
-  //   bold: {
-  //     fontWeight: 'bold',
-  //   },
-  //   nav: {
-  //     fontWeight: 'bold',
-  //     color: 'inherit',
-  //     textDecoration: 'none',
-  //   }
-  // },
+  links: {
+    // textDecoration: 'secondary',
+    color: 'link',
+    // bold: {
+    //   fontWeight: 'bold',
+    // },
+    // nav: {
+    //   fontWeight: 'bold',
+    //   color: 'inherit',
+    //   textDecoration: 'none',
+    // }
+  },
   h1: {
     ...heading,
     fontSize: [6, 7]
@@ -78,7 +79,7 @@ export default {
     fontSize: [2]
   },
   a: {
-    color: 'link',
+    color: 'currentcolor',
     ':hover': {
       opacity: 0.7
     }

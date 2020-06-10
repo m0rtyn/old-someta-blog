@@ -5,13 +5,13 @@ import { Link as LinkUI } from '@theme-ui/components'
 
 
 <MenuMain>
-  <MenuBlock>
+  <MenuBlock id="HeaderLogo" /* for control of disapearing main page logo */>
     <Link
       to="/"
       title="So Meta — Такая Мета"
       sx={{
         width: [40, 64],
-        mr: [3, 4],
+        mr: [3, 5],
         display: 'flex',
         alignItems: 'center'
       }}
@@ -25,7 +25,7 @@ import { Link as LinkUI } from '@theme-ui/components'
   </MenuBlock>
 
   <MenuBlock>
-    <LinkUI href="https://t.me/sometachat" sx={{textDecoration: "none", color: "background"}}>
+    <LinkUI href="https://t.me/sometachat" sx={{textDecoration: "none"}}>
       <Flex alignItems="flex-start">
         Чат
         {' '}
@@ -34,14 +34,14 @@ import { Link as LinkUI } from '@theme-ui/components'
     </LinkUI>
   </MenuBlock>
 
-  <MenuBlock sx={{marginRight: 0, marginLeft: "auto", overflow: "hidden"}}>
+  <MenuBlock sx={{marginRight: 0, marginLeft: "auto", overflow: "hidden", color: 'background'}}>
     <Link
       to="/donate"
       sx={{
         display: ["none", "flex"],
         textOverflow: 'ellipsis',
         overflow: 'hidden',
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
       }}
     >
       Toss a coin ♪
