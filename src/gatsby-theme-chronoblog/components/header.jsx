@@ -83,17 +83,17 @@ const MenuBlock = ({ children, sx, ...props }) => (
 
 const ChronoblogHeader = ({ location, ...props }) => {
   const [
-    headroomMainpageClassName,
-    setHeadroomMainpageClassName
+    headroomSecondaryPageClassName,
+    setHeadroomSecondaryPageClassName
   ] = React.useState(null);
 
   React.useEffect(() => {
     const { pathname } =
       typeof window !== 'undefined' && window.location;
-    const isMainPage = pathname !== '/';
+    const isSecondaryPage = pathname !== '/';
 
-    if (isMainPage) {
-      setHeadroomMainpageClassName(
+    if (isSecondaryPage) {
+      setHeadroomSecondaryPageClassName(
         'headroom--secondary-page-wrapper'
       );
     }
@@ -103,7 +103,7 @@ const ChronoblogHeader = ({ location, ...props }) => {
     <Headroom
       {...props}
       disableInlineStyles
-      className={headroomMainpageClassName}
+      className={headroomSecondaryPageClassName}
     >
       <Header>
         <MDXProvider
