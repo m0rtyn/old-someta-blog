@@ -16,7 +16,7 @@ module.exports = {
     social: [
       {
         icon: 'telegram',
-        url: 'https://tele.click/sometachat',
+        url: 'https://t.me/metabaza/',
         altText: 'Чат сообщества',
       },
       {
