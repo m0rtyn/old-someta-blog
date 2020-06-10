@@ -8,6 +8,7 @@ main() {
         testRegExp) testRegExp "$@";;
         publishPost) publishPost "$@";;
         postToTelegram) postToTelegram "$@";;
+        noteToTelegram) noteToTelegram "$@";;
         *) echo "Run as: $0 command
     "; exit;;
     esac
@@ -24,6 +25,7 @@ testRegExp() {
 
   POST_URL=$(grep -o '\w*/index.md' <<< $FILE)
   echo ${POST_URL:-6}
+  echo ${POST_URL}
 }
 
 publishPost() {
@@ -43,6 +45,15 @@ postToTelegram() {
   # POST_DESC=
 
   cat FILE_PATH | 
+  https_proxy=https://151.253.165.70:8080 telegram-send --timeout 50.0 --format markdown --stdin
+}
+
+noteToTelegram() { #Done
+  FILE=$1
+  FILE_PATH="./notes/${FILE}"
+
+  node ./postToTelegram.js ${FILE_PATH}
+  cat './temp.md' | 
   https_proxy=https://151.253.165.70:8080 telegram-send --timeout 50.0 --format markdown --stdin
 }
 
