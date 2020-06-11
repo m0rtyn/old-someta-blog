@@ -1,10 +1,10 @@
 export default {
   text: '#2D2A2E',
   background: '#FFFFFF',
-  link: '#02C3BD',
-  primary: '#02C3BD', // primary button and link color
-  secondary: '#02C3BD', // secondary color - can be used for hover states
-  accent: '#02C3BD', // accent	a contrast color for emphasizing UI
+  link: '#2D2A2E',
+  primary: '#AB9DF2', // primary button and link color
+  secondary: '#78DCE8', // secondary color - can be used for hover states
+  accent: '#a9dc76', // accent	a contrast color for emphasizing UI
   muted: '#777777',
   modes: {
     dark: {
