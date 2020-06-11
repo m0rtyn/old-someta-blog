@@ -2,13 +2,13 @@
   /* ? Monokai theme */
   --color-dark: #2d2a2e;
   --color-light: #fcfcfa;
-  --color-red: #ff6188;
-  --color-green: #a9dc76;
-  --color-orange: #fc9867;
-  --color-cyan: #78dce8;
-  --color-purple: #ab9df2;
-  --color-yellow: #ffd866;
-  --color-gray: #939293;
+  --color-gray: #777777;
+  /* --color-red: #ff6188; */
+  /* --color-green: #a9dc76; */
+  /* --color-orange: #fc9867; */
+  /* --color-cyan: #78dce8; */
+  /* --color-purple: #ab9df2; */
+  /* --color-yellow: #ffd866; */
 
   --magic-bezier: cubic-bezier(0.25, 0.8, 0.25, 1);
 }
