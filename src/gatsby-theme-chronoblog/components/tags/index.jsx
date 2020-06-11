@@ -93,7 +93,7 @@ const Tags = ({
       color: 'secondary',
       opacity: 1,
       backgroundColor: 'transparent',
-      boxShadow: '0 0 0 8px transparent, 0 0 0 3px var(--theme-ui-colors-secondary,#78DCE8)'
+      boxShadow: '0 0 0 8px transparent, 0 0 0 3px secondary'
     },
     color: 'background',
     mr: [1, 1],
