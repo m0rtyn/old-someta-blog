@@ -14,7 +14,7 @@ const Link = ({ to, sx, ...props }) => (
     sx={{
       ...sx,
       marginRight: ['12px', '16px'],
-      color: 'background',
+      color: 'currentcolor',
       textDecoration: 'none',
       ':hover': {
         opacity: 0.7
@@ -112,10 +112,6 @@ const ChronoblogHeader = ({ location, ...props }) => {
           <div
             sx={{
               width: '100%',
-              marginX: 'auto',
-              marginBottom: ['2px', '2px'],
-              marginTop: ['0px', '0px'],
-              backgroundColor: 'text',
             }}
           >
             <SiteHeader />
