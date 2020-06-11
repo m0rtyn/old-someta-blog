@@ -8,7 +8,7 @@
   user-select: none;
   
   * {
-    color: var(--color-yellow);
+    color: var(--theme-ui-colors-primary);
   }
 }
 
