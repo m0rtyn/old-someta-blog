@@ -39,7 +39,7 @@
 
 .year {
   text-align: left;
-  color: var(--color-yellow);
+  color: var(--theme-ui-colors-accent);
   margin-left: -33px;
   margin-bottom: 1.3em;
 
@@ -105,5 +105,5 @@
 
 .explanation {
   margin-top: 3.3em;
-  color: var(--color-yellow);
+  color: var(--theme-ui-colors-primary);
 }
