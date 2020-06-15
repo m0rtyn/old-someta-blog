@@ -2,7 +2,7 @@
 date: 2020-03-20
 tags: ['rationality']
 title: Умное разбиение задач
-cover: 'someta-site-cover-image.webp'
+cover: 'cover-image.jpg'
 ---
 
 Эта заметка вдохновлена эссе из цикла об инструментальной рациональности «Время молотков».

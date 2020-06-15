@@ -1,7 +1,7 @@
 ---
 date: 2016-04-02
 tags: []
-cover: 'someta-site-cover-image.webp'
+cover: 'cover-image.jpg'
 ---
 
 Тезисы, однажды сформированные мной, касаемо религии:
