@@ -3,7 +3,7 @@ date: 2019-03-29
 tags: ['biofix']
 title: Биофикс #0
 description: Понятие Биохак у всех на слуху. Oтчего-то романтична идея о том, что в нашем теле можно, что-то хакнуть и поиметь с этого сверхвыгоду.
-cover: 'someta-site-cover-image.webp
+cover: 'someta-site-cover-image.webp'
 ---
 
 ### Серое Джедайство
