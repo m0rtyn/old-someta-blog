@@ -50,27 +50,27 @@ export default {
   },
   h1: {
     ...heading,
-    fontSize: [6, 7]
+    fontSize: [6, 8]
   },
   h2: {
     ...heading,
-    fontSize: [5, 6]
+    fontSize: [5, 7]
   },
   h3: {
     ...heading,
-    fontSize: [4, 5]
+    fontSize: [4, 6]
   },
   h4: {
     ...heading,
-    fontSize: [4]
+    fontSize: [5]
   },
   h5: {
     ...heading,
-    fontSize: [3]
+    fontSize: [4]
   },
   h6: {
     ...heading,
-    fontSize: [2]
+    fontSize: [3]
   },
   p: {
     fontSize: [1, 2]
