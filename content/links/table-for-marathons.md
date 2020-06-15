@@ -1,5 +1,5 @@
 ---
-title: Табличка для квартального планирования
+title: Таблица для плана на квартал
 date: 2020-05-21
 tags: ["attention-management"]
 link: https://www.loom.com/share/5abc3c09a1c844509d59055732920a9f
