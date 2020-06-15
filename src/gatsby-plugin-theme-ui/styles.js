@@ -4,7 +4,7 @@ const heading = {
   fontFamily: 'heading',
   fontWeight: 'heading',
   lineHeight: 'heading',
-  mt: '1.6em',
+  mt: '1.3em',
   mb: '1em'
 };
 
@@ -50,33 +50,33 @@ export default {
   },
   h1: {
     ...heading,
-    fontSize: [6, 8]
+    fontSize: [5, 6]
   },
   h2: {
     ...heading,
-    fontSize: [5, 7]
+    fontSize: [4, 5]
   },
   h3: {
     ...heading,
-    fontSize: [4, 6]
+    fontSize: [3, 4]
   },
   h4: {
     ...heading,
-    fontSize: [5]
+    fontSize: [3]
   },
   h5: {
     ...heading,
-    fontSize: [4]
+    fontSize: [2]
   },
   h6: {
     ...heading,
-    fontSize: [3]
+    fontSize: [1]
   },
   p: {
-    fontSize: [1, 2]
+    fontSize: [2, 3]
   },
   li: {
-    fontSize: [2]
+    fontSize: [2, 3]
   },
   a: {
     color: 'currentcolor',
@@ -86,7 +86,7 @@ export default {
   },
   pre: {
     fontFamily: 'monospace',
-    fontSize: 1,
+    fontSize: [2, 3],
     bg: 'muted',
     p: 3,
     borderRadius: 'code',

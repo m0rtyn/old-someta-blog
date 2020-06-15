@@ -35,7 +35,7 @@ const PostContent = ({
     mdx: { body }
   }
 }) => (
-    <Box px={[3, 0]}>
+    <Box px={[0]}>
       <MDXRenderer>{body}</MDXRenderer>
     </Box>
   )

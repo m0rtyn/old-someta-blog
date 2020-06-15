@@ -13,7 +13,17 @@ const theme = {
     ...colors,
   },
   breakpoints: ['768px', '1024px'],
-  fontSizes: [14, 16, 18, 20, 22, 24, 28, 36],
+  fontSizes: [
+    12,
+    14,
+    16,
+    20,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
   borderRadius: {
     card: 0,
     button: 0,
