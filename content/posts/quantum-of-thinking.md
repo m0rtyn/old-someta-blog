@@ -3,6 +3,7 @@ date: 2019-06-23
 tags: ['meditation', 'drugs' ]
 title:  Квант мышления
 description: Так совпало, что этот пост состоит из «глубокомысленной» и абстрактной чепухи. Наслаждайся.'
+cover: 'someta-site-cover-image.webp'
 ---
 ### Дано
 

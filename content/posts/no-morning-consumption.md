@@ -2,6 +2,7 @@
 date: 2020-04-23
 title: Ограничение утреннего потребления
 tags: ['biofix', 'brain', 'consumption', 'attention-management']
+cover: 'someta-site-cover-image.webp'
 ---
 
 ### Что

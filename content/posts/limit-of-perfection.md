@@ -2,6 +2,7 @@
 date: 2019-02-04
 tags: []
 title:  Предел совершенства
+cover: 'someta-site-cover-image.webp'
 ---
 
 ### Стремление к идеалу

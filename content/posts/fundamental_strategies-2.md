@@ -2,6 +2,7 @@
 date: 2019-04-07
 tags: []
 title:  Фундаментальные стратегии #2
+cover: 'someta-site-cover-image.webp'
 ---
 
 ### «Индивидуально» и «Коллективно»

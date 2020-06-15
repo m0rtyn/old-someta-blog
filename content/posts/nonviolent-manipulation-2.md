@@ -2,6 +2,7 @@
 date: 2019-03-05
 tags: ['manipulation' ]
 title: Ненасильственная манипуляция #2
+cover: 'someta-site-cover-image.webp'
 ---
 
 - Что такое манипуляция?
