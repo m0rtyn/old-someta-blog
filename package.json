@@ -7,7 +7,7 @@
   "license": "MIT",
   "author": "Martyn <zogacc@gmail.com>",
   "scripts": {
-    "build": "gatsby build",
+    "build": "node scripts/optimize.js && gatsby build",
     "clean": "gatsby clean",
     "dev": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d public -b master"
@@ -52,6 +52,5 @@
   },
   "engines": {
     "node": ">=10.15.0"
-  },
-  "starter-name": "gatsby-starter-chronoblog"
+  }
 }
