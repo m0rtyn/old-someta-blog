@@ -17,8 +17,7 @@ const ProjectBanner = () => {
       }}
     >
       <Box
-        sx={{ width: '133px', borderRadius: '0' }}
-        mb={4}
+        sx={{ width: 160, mt: 2, mb: 4, borderRadius: '0' }}
         title="So Meta — Такая Мета"
       >
         <SometaLogo withTitle />
