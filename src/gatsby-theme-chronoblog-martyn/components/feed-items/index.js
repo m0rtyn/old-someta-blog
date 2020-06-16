@@ -1,1 +1,1 @@
-export { default } from 'gatsby-theme-chronoblog/components/feed-items/feed-items';
+export { default } from 'gatsby-theme-someta/components/feed-items/feed-items';

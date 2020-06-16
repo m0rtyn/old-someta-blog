@@ -1,5 +1,6 @@
 // @jsx jsx
 
+// eslint-disable-next-line no-unused-vars
 import { jsx } from 'theme-ui'
 import {
   Avatar,
@@ -9,8 +10,8 @@ import {
   Box
 } from '@theme-ui/components';
 import React from 'react';
-import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
-import SocialLinks from 'gatsby-theme-chronoblog/src/components/social-links';
+import useSiteMetadata from 'gatsby-theme-someta/src/hooks/use-site-metadata';
+import SocialLinks from 'gatsby-theme-someta/src/components/social-links';
 import logoAvatar from './avatar.jpg';
 import styles from './author-banner.module.css';
 /**

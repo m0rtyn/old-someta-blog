@@ -4,9 +4,9 @@ import { Link } from 'gatsby';
 import _ from 'lodash';
 import { jsx } from 'theme-ui';
 
-import useFeed from 'gatsby-theme-chronoblog/src/hooks/use-feed';
-import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
-import Button from 'gatsby-theme-chronoblog/src/components/button';
+import useFeed from 'gatsby-theme-someta/src/hooks/use-feed';
+import useSiteMetadata from 'gatsby-theme-someta/src/hooks/use-site-metadata';
+import Button from 'gatsby-theme-someta/src/components/button';
 
 /**
  * @typedef {object} TagWithStat
