@@ -1,15 +1,15 @@
 {
-  "name": "martynpit",
-  "version": "0.0.1",
-  "private": false,
-  "description": "Martyn's website",
+  "name": "someta",
+  "version": "1.0.0",
+  "description": "So meta site",
   "keywords": [],
   "license": "MIT",
   "author": "Martyn <zogacc@gmail.com>",
   "scripts": {
-    "build": "node scripts/optimize.js && gatsby build",
     "clean": "gatsby clean",
     "dev": "gatsby develop",
+    "optimize": "node scripts/optimize.js",
+    "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
