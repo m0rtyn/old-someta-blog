@@ -5,56 +5,24 @@ main() {
     shift
 
     case $CMD in
-        testRegExp) testRegExp "$@";;
-        publishPost) publishPost "$@";;
-        postToTelegram) postToTelegram "$@";;
-        noteToTelegram) noteToTelegram "$@";;
+        postToTelegram) publishToTelegram "$@";;
         *) echo "Run as: $0 command
     "; exit;;
     esac
 }
 
-testRegExp() {
-  FILE=$1
-  FILE_PATH="./_inProgress/${FILE}"
-  # FILE_CONTENTS=$(cat $FILE_PATH)
-  # echo $FILE_CONTENTS
-
-  POST_TITLE=$(grep '^title: .*$' $FILE_PATH)
-  POST_DESCRIPTION=$(grep '^description: .*$' $FILE_PATH)
-
-  POST_URL=$(grep -o '\w*/index.md' <<< $FILE)
-  echo ${POST_URL:-6}
-  echo ${POST_URL}
-}
-
-publishPost() {
-  FILE=$1
-  echo $FILE
-  FILE_PATH="./_inProgress/${FILE}"
-  DEST_PATH="./posts/${FILE}"
+publishToTelegram()) {
+  FILE_NAME=$1
+  echo $FILE_NAME
+  FILE_PATH="./_inProgress/${FILE_NAME}"
+  echo $FILE_PATH
+  TEMP_PATH="./temp.md"
   
-  mv FILE_PATH DEST_PATH
-}
+  node postToTelegram.js $FILE_PATH
 
-postToTelegram() {
-  FILE=$1
-  echo $FILE
-  FILE_PATH="./posts/${FILE}"
-  # POST_TITLE=
-  # POST_DESC=
-
-  cat FILE_PATH | 
-  https_proxy=https://151.253.165.70:8080 telegram-send --timeout 50.0 --format markdown --stdin
-}
-
-noteToTelegram() { #Done
-  FILE=$1
-  FILE_PATH="./notes/${FILE}"
-
-  node ./postToTelegram.js ${FILE_PATH}
-  cat './temp.md' | 
-  https_proxy=https://151.253.165.70:8080 telegram-send --timeout 50.0 --format markdown --stdin
+  # cat FILE_PATH | 
+  # https_proxy=https://151.253.165.70:8080 telegram-send --timeout 50.0 --format markdown --stdin
+  cat TEMP_PATH | telegram-send --timeout 50.0 --format markdown --stdin
 }
 
 main "$@"
