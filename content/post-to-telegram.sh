@@ -5,13 +5,13 @@ main() {
     shift
 
     case $CMD in
-        postToTelegram) publishToTelegram "$@";;
+        publishToTelegram) publishToTelegram "$@";;
         *) echo "Run as: $0 command
     "; exit;;
     esac
 }
 
-publishToTelegram()) {
+publishToTelegram() {
   FILE_NAME=$1
   echo $FILE_NAME
   FILE_PATH="./_inProgress/${FILE_NAME}"
