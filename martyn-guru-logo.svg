@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <g id="Layer_1" stroke="currentColor" fill="transparent" stroke-width="2">
+    <path d="M58.3 33.5L75 0h25L66.5 33.5h-8.2z"/>
+    <path d="M66.5 33.5v21.1L75 57l25 43V0L66.5 33.5z"/>
+    <path d="M50 43v4.7l8.3-14.2L75 0 50 43z"/>
+    <path d="M50 66.5V100l25-43-16.7-4.7L50 66.5z"/>
+    <path d="M33.5 33.5L0 0h25l16.7 33.5h-8.2z"/>
+    <path d="M0 0v100l25-43 8.5-2.4V33.5L0 0z"/>
+    <path d="M25 0l16.7 33.5L50 47.8V43L25 0z"/>
+    <path d="M41.7 52.3L25 57l25 43V66.6l-8.3-14.3z"/>
+  </g>
+</svg>
