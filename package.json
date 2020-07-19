@@ -10,7 +10,7 @@
     "dev": "gatsby develop",
     "optimize": "node scripts/optimize.js",
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && node deploy.js"
   },
   "dependencies": {
     "eslint-config-react-app": "^5.2.1",
