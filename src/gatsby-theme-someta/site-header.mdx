@@ -25,7 +25,11 @@ import { Link as LinkUI } from '@theme-ui/components'
   </MenuBlock>
 
   <MenuBlock>
-    <LinkUI href="https://t.me/sometachat" sx={{textDecoration: "none"}}>
+    <Link to="/meetings" sx={{flexShrink: 0}}>Консультации</Link>
+  </MenuBlock>
+
+  <MenuBlock>
+    <LinkUI href="https://t.me/sometachat" target="_blank" rel="norefferer noopener" sx={{textDecoration: "none"}}>
       <Flex alignItems="flex-start">
         Чат
         {' '}
