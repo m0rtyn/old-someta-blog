@@ -1,13 +1,14 @@
 ---
 title: 'Ghost Post'
-cover: ./image.jpg
 date: 2010-01-01
-link: http://example.com
-slug: invisible-ghost-post
-description: 'this post has all of the right fields'
+link: https://www.youtube.com/watch?v=h_4oiS8a0EI&t
 tags: ['notags']
 draft: true
 hide: true
 ---
+
+<Embed
+  src="https://www.youtube.com/embed/h_4oiS8a0EI"
+/>
 
 This exists to populate GraphQL fields and avoid null errors. It should contain all of the available frontmatter.
