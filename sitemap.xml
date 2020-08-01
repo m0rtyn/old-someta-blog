@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://someta.site/tags/attention-management/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://someta.site/tags/brain/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://someta.site/tags/notion/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/rationality/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/personal/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/long/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://someta.site/tags/brain/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/meditation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/biofix/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/consumption/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -12,6 +13,7 @@
 <url> <loc>https://someta.site/tags/drugs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/manipulation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/books/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://someta.site/links/notion-for-everyday/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/links/table-for-marathons/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/links/rhythm-study-for-transhumanists/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/links/weakness-of-will/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
