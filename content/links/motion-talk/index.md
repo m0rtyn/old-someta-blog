@@ -2,7 +2,7 @@
 title: 'Моушен － система ведения дел в Notion'
 date: 2020-08-01
 link: https://www.youtube.com/watch?v=DeWI3x3k4xo
-tags: ['attention-management', 'brain', 'notion']
+tags: ['attention-management', 'brain', 'notion', 'talk']
 ---
 
 <Embed

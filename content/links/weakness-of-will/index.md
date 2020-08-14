@@ -2,7 +2,7 @@
 title: Слабость воли.Как разгрузить и сохранить.
 date: 2019-08-05
 link: 'https://www.youtube.com/watch?v=QjmcSvZV_pg'
-tags: ['attention-management']
+tags: ['attention-management', 'brain', 'talk']
 ---
 
 <Embed
