@@ -1,50 +1,39 @@
+/* eslint-disable complexity */
 /** @jsx jsx */
 import Layout from 'gatsby-theme-someta/src/components/layout';
 import SEO from 'gatsby-theme-someta/src/components/seo';
 import React from 'react';
 import { Box, jsx } from 'theme-ui';
 
+const RESOLUTION = 8;
+const { screen } = window;
+
 const SecretPage = () => {
-  React.useEffect(() => {
-    const canvas = document.getElementById('game-of-life');
-    const ctx = canvas.getContext('2d');
+  const buildGrid = React.useCallback((colsNum, rowsNum) => {
+    return new Array(colsNum)
+      .fill(null)
+      .map(() =>
+        new Array(rowsNum)
+          .fill(null)
+          .map(() => Math.floor(Math.random() * 2))
+      );
+  }, []);
 
-    const resolution = 8;
-    const { screen } = window;
+  const nextCell = React.useCallback((cell, numNeighbours) => {
+    const isDeadlyNeighbours = numNeighbours < 2 || numNeighbours > 3;
 
-    canvas.width = screen.width;
-    canvas.height = screen.height;
-
-    const COLS = Math.round(canvas.width / resolution);
-    const ROWS = Math.round(canvas.height / resolution);
-
-    function buildGrid() {
-      return new Array(COLS)
-        .fill(null)
-        .map(() =>
-          new Array(ROWS)
-            .fill(null)
-            .map(() => Math.floor(Math.random() * 2))
-        );
+    if (cell === 1 && isDeadlyNeighbours) {
+      return 0;
+    }
+    if (cell === 0 && numNeighbours === 3) {
+      return 1;
     }
 
-    let grid = buildGrid();
+    return cell;
+  }, []);
 
-    const nextCell = (cell, numNeighbours) => {
-      const isDeadlyNeighbours =
-        numNeighbours < 2 || numNeighbours > 3;
-
-      if (cell === 1 && isDeadlyNeighbours) {
-        return 0;
-      }
-      if (cell === 0 && numNeighbours === 3) {
-        return 1;
-      }
-
-      return cell;
-    };
-
-    function makeNextGen(grid) {
+  const makeNextGen = React.useCallback(
+    (grid, cols, rows) => {
       const nextGen = grid.map(arr => [...arr]);
 
       for (let col = 0; col < grid.length; col++) {
@@ -63,8 +52,8 @@ const SecretPage = () => {
               const isWithinBoundaries =
                 xCell >= 0 &&
                 yCell >= 0 &&
-                xCell < COLS &&
-                yCell < ROWS;
+                xCell < cols &&
+                yCell < rows;
 
               if (isWithinBoundaries) {
                 const currentNeighbour = grid[col + x][row + y];
@@ -79,45 +68,59 @@ const SecretPage = () => {
       }
 
       return nextGen;
-    }
+    },
+    [nextCell]
+  );
 
-    function render(grid) {
-      for (let col = 0; col < grid.length; col++) {
-        for (let row = 0; row < grid[col].length; row++) {
-          const cell = grid[col][row];
+  const render = React.useCallback((ctx, grid) => {
+    for (let col = 0; col < grid.length; col++) {
+      for (let row = 0; row < grid[col].length; row++) {
+        const cell = grid[col][row];
 
-          ctx.beginPath();
-          ctx.rect(
-            col * resolution,
-            row * resolution,
-            resolution,
-            resolution
-          );
-          ctx.fillStyle = cell ? '#EEE' : '#FFF';
-          ctx.fill();
-        }
+        ctx.beginPath();
+        ctx.rect(
+          col * RESOLUTION,
+          row * RESOLUTION,
+          RESOLUTION,
+          RESOLUTION
+        );
+        ctx.fillStyle = cell ? '#EEE' : '#FFF';
+        ctx.fill();
       }
     }
+  }, []);
+
+  React.useEffect(() => {
+    const canvas = document.getElementById('game-of-life');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = screen.width;
+    canvas.height = screen.height;
+
+    const COLS_NUM = Math.round(canvas.width / RESOLUTION);
+    const ROWS_NUM = Math.round(canvas.height / RESOLUTION);
+
+    let grid = buildGrid(COLS_NUM, ROWS_NUM);
 
     let prevTimestamp;
 
-    function update(timestamp) {
+    const update = timestamp => {
       if (!prevTimestamp) {
         prevTimestamp = timestamp;
       }
 
       if (timestamp - prevTimestamp > 1000) {
         prevTimestamp = timestamp;
-        grid = makeNextGen(grid);
+        grid = makeNextGen(grid, COLS_NUM, ROWS_NUM);
 
-        render(grid);
+        render(ctx, grid);
       }
 
       requestAnimationFrame(update);
-    }
+    };
 
     requestAnimationFrame(update);
-  }, []);
+  }, [buildGrid, makeNextGen, render]);
 
   return (
     <Layout>
