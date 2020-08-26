@@ -13227,10 +13227,10 @@ react-focus-lock@^2.3.1:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
-react-game-of-life-background@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-game-of-life-background/-/react-game-of-life-background-1.1.0.tgz#ef52d05fa5feb30dca4e35f8883586355196f574"
-  integrity sha512-YqDsvYzVZoIep8jtJow6DtsrxPauTJP05tmrnXD7NQ16GOjkptzx715DnSvjHBWXqW5JFzhqKtjtwgh965PZDw==
+react-game-of-life-background@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-game-of-life-background/-/react-game-of-life-background-1.1.1.tgz#e9f56889d9678a7e21abec4fd8844d6ed1bddad5"
+  integrity sha512-KnSvBz9QHVn0KitOXa3iKxfW/eHgpB3V6/FjDgl/XANQifJtPmtZ9wJPari6a00VctzN3p6Oso85K7mcH017Gw==
 
 react-headroom@^3.0.0:
   version "3.0.0"

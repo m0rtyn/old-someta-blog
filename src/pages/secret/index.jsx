@@ -17,14 +17,10 @@ const MatrixMarquee = ({ children, delay }) => (
 );
 
 const SecretPage = () => {
-  const isBrowser = () => typeof window !== 'undefined';
-
   return (
     <Layout>
       <SEO title="0х00" />
-      {isBrowser() && (
-        <GameOfLifeBackground delay={1000} color="#EEE" />
-      )}
+      <GameOfLifeBackground delay={1000} color="#EEE" />
 
       <Flex
         sx={{
