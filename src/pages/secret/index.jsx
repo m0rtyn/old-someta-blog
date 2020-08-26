@@ -9,13 +9,14 @@ const SecretPage = () => {
     const canvas = document.getElementById('game-of-life');
     const ctx = canvas.getContext('2d');
 
-    const resolution = 20;
+    const resolution = 8;
+    const { screen } = window;
 
-    canvas.width = window.screen.width;
-    canvas.height = window.screen.height;
+    canvas.width = screen.width;
+    canvas.height = screen.height;
 
-    const COLS = canvas.width / resolution;
-    const ROWS = canvas.height / resolution;
+    const COLS = Math.round(canvas.width / resolution);
+    const ROWS = Math.round(canvas.height / resolution);
 
     function buildGrid() {
       return new Array(COLS)
@@ -29,7 +30,21 @@ const SecretPage = () => {
 
     let grid = buildGrid();
 
-    function nextGen(grid) {
+    const nextCell = (cell, numNeighbours) => {
+      const isDeadlyNeighbours =
+        numNeighbours < 2 || numNeighbours > 3;
+
+      if (cell === 1 && isDeadlyNeighbours) {
+        return 0;
+      }
+      if (cell === 0 && numNeighbours === 3) {
+        return 1;
+      }
+
+      return cell;
+    };
+
+    function makeNextGen(grid) {
       const nextGen = grid.map(arr => [...arr]);
 
       for (let col = 0; col < grid.length; col++) {
@@ -37,35 +52,29 @@ const SecretPage = () => {
           const cell = grid[col][row];
           let numNeighbours = 0;
 
-          for (let i = -1; i < 2; i++) {
-            for (let j = -1; j < 2; j++) {
-              if (i === 0 && j === 0) {
+          for (let x = -1; x < 2; x++) {
+            for (let y = -1; y < 2; y++) {
+              if (x === 0 && y === 0) {
                 continue;
               }
-              const x_cell = col + i;
-              const y_cell = row + j;
 
-              if (
-                x_cell >= 0 &&
-                y_cell >= 0 &&
-                x_cell < COLS &&
-                y_cell < ROWS
-              ) {
-                const currentNeighbour = grid[col + i][row + j];
+              const xCell = col + x;
+              const yCell = row + y;
+              const isWithinBoundaries =
+                xCell >= 0 &&
+                yCell >= 0 &&
+                xCell < COLS &&
+                yCell < ROWS;
+
+              if (isWithinBoundaries) {
+                const currentNeighbour = grid[col + x][row + y];
 
                 numNeighbours += currentNeighbour;
               }
             }
           }
 
-          // rules
-          if (cell === 1 && numNeighbours < 2) {
-            nextGen[col][row] = 0;
-          } else if (cell === 1 && numNeighbours > 3) {
-            nextGen[col][row] = 0;
-          } else if (cell === 0 && numNeighbours === 3) {
-            nextGen[col][row] = 1;
-          }
+          nextGen[col][row] = nextCell(cell, numNeighbours);
         }
       }
 
@@ -99,7 +108,7 @@ const SecretPage = () => {
 
       if (timestamp - prevTimestamp > 1000) {
         prevTimestamp = timestamp;
-        grid = nextGen(grid);
+        grid = makeNextGen(grid);
 
         render(grid);
       }
