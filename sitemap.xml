@@ -84,12 +84,12 @@
 <url> <loc>https://someta.site/about-stereotypes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/about-sleep-problems/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/tags/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://someta.site/secret/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/donate/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://someta.site/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/martyn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/martyn/log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://someta.site/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/meetings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://someta.site/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://someta.site/secret/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
