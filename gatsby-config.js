@@ -9,7 +9,7 @@ module.exports = {
     siteLanguage: 'ru',
     ogLanguage: 'ru_RU',
     author: 'Мартын',
-    authorDescription: '( играет в проекты )',
+    authorDescription: 'Программирует и пишет',
     avatar: '/avatar.jpg',
     twitterSite: '', // website account on twitter
     twitterCreator: '', // creator account on twitter
@@ -17,14 +17,14 @@ module.exports = {
       {
         icon: 'telegram',
         url: 'https://t.me/metabaza/',
-        altText: 'Чат сообщества',
+        altText: 'Чат сообщества'
       },
       {
         icon: 'patreon',
         url: 'https://patreon.com/someta',
-        altText: 'Поддержи проект на Patreon',
-      },
-    ],
+        altText: 'Поддержи проект на Patreon'
+      }
+    ]
   },
   plugins: [
     'gatsby-alias-imports',
@@ -37,7 +37,7 @@ module.exports = {
           feedShowMoreButton: 'Показать ещё',
           feedSearchPlaceholder: 'Поиск',
           cardReadMoreButton: 'Читать →',
-          allTagsButton: 'Все тэги',
+          allTagsButton: 'Все тэги'
         },
         feedItems: {
           limit: 13,
@@ -45,14 +45,14 @@ module.exports = {
           yearSeparatorSkipFirst: true,
           contentTypes: {
             links: {
-              beforeTitle: '🔗 ',
-            },
-          },
+              beforeTitle: '🔗 '
+            }
+          }
         },
         feedSearch: {
-          symbol: '🔍',
-        },
-      },
+          symbol: '🔍'
+        }
+      }
     },
     // `gatsby-plugin-manifest`,
     {
@@ -64,26 +64,26 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#3a5f7d',
         display: 'standalone',
-        icon: 'src/assets/favicon.png',
-      },
+        icon: 'src/assets/favicon.png'
+      }
     },
     // `gatsby-plugin-sitemap`
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: 'gatsby-plugin-sitemap'
     },
     // `gatsby-plugin-google-analytics`,
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-158600568-1',
-      },
+        trackingId: 'UA-158600568-1'
+      }
     },
     // `gatsby-plugin-disqus`,
     {
       resolve: 'gatsby-plugin-disqus',
       options: {
-        shortname: 'mrtnsn',
-      },
+        shortname: 'mrtnsn'
+      }
     },
     // `gatsby-plugin-feed-mdx`,
     {
@@ -103,14 +103,17 @@ module.exports = {
           `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) => allMdx.edges.map((edge) => ({
-              ...edge.node.frontmatter,
-              description: edge.node.excerpt,
-              date: edge.node.frontmatter.date,
-              url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-              guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-              custom_elements: [{ 'content:encoded': edge.node.html }],
-            })),
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.edges.map(edge => ({
+                ...edge.node.frontmatter,
+                description: edge.node.excerpt,
+                date: edge.node.frontmatter.date,
+                url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+                guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+                custom_elements: [
+                  { 'content:encoded': edge.node.html }
+                ]
+              })),
             query: `
               {
                 allMdx(
@@ -138,10 +141,10 @@ module.exports = {
             // if not provided or `undefined`, all pages will have feed reference inserted
             match: '^/',
             // optional configuration to specify external rss feed, such as feedburner
-            link: 'https://feeds.feedburner.com/someta',
-          },
-        ],
-      },
+            link: 'https://feeds.feedburner.com/someta'
+          }
+        ]
+      }
     },
     // 'gatsby-plugin-robots-txt',
     {
@@ -149,8 +152,8 @@ module.exports = {
       options: {
         host: 'https://www.someta.site/',
         sitemap: 'https://www.someta.site/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     // 'gatsby-plugin-eslint',
     {
@@ -161,18 +164,18 @@ module.exports = {
         stages: ['develop'],
         options: {
           emitWarning: true,
-          failOnError: false,
-        },
-      },
+          failOnError: false
+        }
+      }
     },
     // "gatsby-plugin-react-svg",
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /\.inline\.svg$/
         }
       }
     }
-  ],
+  ]
 };
