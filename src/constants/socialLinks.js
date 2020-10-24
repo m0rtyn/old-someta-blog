@@ -1,7 +1,7 @@
 const socialLinks = [
   {
     icon: `telegram`,
-    url: `https://tele.click/martyns0n`,
+    url: `https://t.me/martyns0n`,
     altText: `Телеграм Мартына`
   },
   {
@@ -14,6 +14,6 @@ const socialLinks = [
     url: `https://github.com/martyns0n`,
     altText: `Гитхаб Мартына`
   }
-]
+];
 
 export default socialLinks
