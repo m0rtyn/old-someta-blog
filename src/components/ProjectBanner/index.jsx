@@ -2,7 +2,7 @@
 
 import { jsx } from 'theme-ui';
 import { Box } from '@theme-ui/components';
-import AuthorBanner from 'gatsby-theme-someta/components/author-banner.jsx';
+import AuthorBanner from 'gatsby-theme-chronoblog/components/author-banner.jsx';
 import SometaLogo from 'components/common/SometaLogo';
 
 

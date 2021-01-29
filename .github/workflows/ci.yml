@@ -38,5 +38,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           email: zogacc@gmail.com
-          build_dir: public  # optional
-          branch: master   # optional
+          build_dir: public
+          branch: master

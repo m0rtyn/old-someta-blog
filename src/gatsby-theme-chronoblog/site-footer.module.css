@@ -1,0 +1,26 @@
+.siteFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+  
+  * {
+    color: var(--theme-ui-colors-primary);
+  }
+}
+
+.madeBy .Ampersand {
+  font-size: 0.6em;
+  margin: 0 0.3em;
+}
+
+.madeBy svg {
+  width: 1em;
+}
+
+.madeBy path {
+  fill: currentColor;
+}
