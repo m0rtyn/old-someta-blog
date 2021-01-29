@@ -29,9 +29,19 @@ import { Link as LinkUI } from '@theme-ui/components'
   </MenuBlock>
 
   <MenuBlock>
-    <LinkUI href="https://t.me/sometachat" target="_blank" rel="norefferer noopener" sx={{textDecoration: "none"}}>
+    <LinkUI href="https://t.me/sometachat" target="_blank" rel="norefferer noopener" sx={{textDecoration: "none", marginRight: [3]}}>
       <Flex alignItems="flex-start">
         Чат
+        {' '}
+        <FontAwesomeIcon icon={['fab', 'telegram-plane']} size="xs"/>
+      </Flex>
+    </LinkUI>
+  </MenuBlock>
+
+  <MenuBlock>
+    <LinkUI href="https://t.me/metabaza" target="_blank" rel="norefferer noopener" sx={{textDecoration: "none"}}>
+      <Flex alignItems="flex-start">
+        Канал
         {' '}
         <FontAwesomeIcon icon={['fab', 'telegram-plane']} size="xs"/>
       </Flex>
