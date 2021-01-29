@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{NQOn:function(t,c,n){"use strict";n.r(c);n("q1tI");var a=n("m/It"),l=n("fitS"),u=n("93y1"),e=n("JKzC"),s=n("4thJ"),o=n("qKvR");c.default=function(){return Object(o.c)(u.a,null,Object(o.c)(e.a,{slug:"tags",canonical:"tags"}),Object(o.c)(l.a,null),Object(o.c)(s.a,{showAllTagsButton:!0}),Object(o.c)(a.a,null))}}}]);
-//# sourceMappingURL=component---node-modules-gatsby-theme-someta-src-pages-tags-js-3010658ffd6a49a9f3d9.js.map

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{pssB:function(t,n,e){"use strict";e.r(n);var c=e("txSG"),u=e("fitS"),i=e("93y1"),l=e("4thJ");e("qKvR");n.default=function(){return Object(c.k)(i.a,null,Object(c.k)(u.a,null),Object(c.k)(l.a,null),Object(c.k)("h1",{sx:{fontSize:"72px",textAlign:"center",my:"2em"}},"¯\\_(ツ)_/¯"))}}}]);
-//# sourceMappingURL=component---src-pages-404-jsx-9968327feaceecd246a9.js.map
