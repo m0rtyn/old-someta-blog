@@ -1,1 +1,0 @@
-export { default } from 'gatsby-theme-someta/components/feed-items/feed-items';

@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import CoverImage from 'gatsby-theme-someta/src/components/cover-image';
-import Date from 'gatsby-theme-someta/src/components/date';
+import CoverImage from 'gatsby-theme-chronoblog/src/components/cover-image';
+import Date from 'gatsby-theme-chronoblog/src/components/date';
 import { CommentCount } from 'gatsby-plugin-disqus';
-import Tags from 'gatsby-theme-someta/components/tags';
+import Tags from 'gatsby-theme-chronoblog/components/tags';
 import { SITE_URL } from 'constants/common'
 import CardComponents from './card-components';
 

@@ -3,11 +3,11 @@ import { Location } from '@reach/router';
 import _ from 'lodash';
 import { useContext, useState } from 'react';
 import { jsx } from 'theme-ui';
-import FeedContext from 'gatsby-theme-someta/src/contexts/context-feed';
-import useFeed from 'gatsby-theme-someta/src/hooks/use-feed';
-import useSiteMetadata from 'gatsby-theme-someta/src/hooks/use-site-metadata';
-import Button from 'gatsby-theme-someta/src/components/button';
-import Compact from 'gatsby-theme-someta/src/components/feed-items/compact';
+import FeedContext from 'gatsby-theme-chronoblog/src/contexts/context-feed';
+import useFeed from 'gatsby-theme-chronoblog/src/hooks/use-feed';
+import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
+import Button from 'gatsby-theme-chronoblog/src/components/button';
+import Compact from 'gatsby-theme-chronoblog/src/components/feed-items/compact';
 import Card from './card';
 
 /**
@@ -272,7 +272,7 @@ export default ({
   // context
   const { value } = useContext(FeedContext);
   // search from input
-  const searchFromInput = value.searchInput;
+  const searchFromInput = value?.searchInput;
 
   if (searchFromInput && searchFromInput !== '') {
     feedItems = feedItems.filter((i) =>

@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import FeedSearch from 'gatsby-theme-someta/src/components/feed-search';
-import Layout from 'gatsby-theme-someta/src/components/layout';
-import Tags from 'gatsby-theme-someta/components/tags';
+import FeedSearch from 'gatsby-theme-chronoblog/src/components/feed-search';
+import Layout from 'gatsby-theme-chronoblog/src/components/layout';
+import Tags from 'gatsby-theme-chronoblog/components/tags';
 
 // eslint-disable-next-line react/display-name
 export default () => {

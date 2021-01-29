@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { Link as LinkGatsby } from 'gatsby';
 import Headroom from 'react-headroom';
 import { Container, Header, jsx } from 'theme-ui';
-import SiteHeader from 'gatsby-theme-someta/site-header.mdx';
+import SiteHeader from 'gatsby-theme-chronoblog/site-header.mdx';
 /* eslint-disable no-unused-vars */
 import styles from './header.css';
 

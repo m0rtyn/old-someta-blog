@@ -3,15 +3,15 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import get from 'lodash/get';
 import { jsx, Styled } from 'theme-ui';
 import { Flex, Box } from '@theme-ui/components';
-import ContentBottomMdx from 'gatsby-theme-someta/src/content-bottom.mdx';
-import useSiteMetadata from 'gatsby-theme-someta/src/hooks/use-site-metadata';
-import CoverImage from 'gatsby-theme-someta/src/components/cover-image';
-import Date from 'gatsby-theme-someta/src/components/date';
-import Layout from 'gatsby-theme-someta/src/components/layout';
-import SEO from 'gatsby-theme-someta/src/components/seo';
-import Tags from 'gatsby-theme-someta/src/components/tags';
+import ContentBottomMdx from 'gatsby-theme-chronoblog/src/content-bottom.mdx';
+import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
+import CoverImage from 'gatsby-theme-chronoblog/src/components/cover-image';
+import Date from 'gatsby-theme-chronoblog/src/components/date';
+import Layout from 'gatsby-theme-chronoblog/src/components/layout';
+import SEO from 'gatsby-theme-chronoblog/src/components/seo';
+import Tags from 'gatsby-theme-chronoblog/src/components/tags';
 import CommentsBlock from 'components/CommentsBlock';
-import PostFooterMdx from 'gatsby-theme-someta/post-footer';
+import PostFooterMdx from 'gatsby-theme-chronoblog/post-footer';
 
 const PostTitle = ({
   data: {

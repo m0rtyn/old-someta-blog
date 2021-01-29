@@ -5,7 +5,7 @@ import get from 'lodash/get';
 import normalizeUrl from 'normalize-url';
 import { jsx, Styled } from 'theme-ui';
 
-import useSiteMetadata from 'gatsby-theme-someta/src/hooks/use-site-metadata';
+import useSiteMetadata from 'gatsby-theme-chronoblog/src/hooks/use-site-metadata';
 
 const noStyleLink = {
   display: 'block',

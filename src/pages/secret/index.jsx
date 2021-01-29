@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import Layout from 'gatsby-theme-someta/src/components/layout';
-import SEO from 'gatsby-theme-someta/src/components/seo';
+import Layout from 'gatsby-theme-chronoblog/src/components/layout';
+import SEO from 'gatsby-theme-chronoblog/src/components/seo';
 import { GameOfLifeBackground } from 'react-game-of-life-background';
 import { Flex, jsx } from 'theme-ui';
 
