@@ -3,7 +3,7 @@ import GatsbyImage from 'gatsby-image';
 import get from 'lodash/get';
 import { jsx } from 'theme-ui';
 
-const Image = (props) => <GatsbyImage {...props} />;
+const Image = props => <GatsbyImage {...props} />;
 
 const CoverImageBase = ({
   data,
@@ -15,21 +15,21 @@ const CoverImageBase = ({
   const borderRadiusForCard =
     type === 'card'
       ? {
-        borderBottomLeftRadius: 0,
-        borderBottomRightRadius: 0
-      }
+          borderBottomLeftRadius: 0,
+          borderBottomRightRadius: 0
+        }
       : {};
   //
   //
   const imageTitle = get(data, 'frontmatter.title', '');
-  const backdropFilterValue = `blur(9px) contrast(100%)`
+  const backdropFilterValue = `blur(9px) contrast(100%)`;
 
   //
   return (
     <div
       sx={{
         maxHeight: height,
-        mb: 0,
+        mb: 0
       }}
     >
       <div
@@ -73,7 +73,6 @@ const CoverImageBase = ({
     </div>
   );
 };
-
 
 // eslint-disable-next-line react/display-name
 export default ({ data, type = 'post' }) => {

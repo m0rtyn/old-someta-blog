@@ -17,7 +17,7 @@ export default {
     mx: 'auto'
   },
   Footer: {
-    py: ["16px !important", "24px !important"],
+    py: ['16px !important', '24px !important'],
     color: 'modes.dark.text',
     bg: 'modes.dark.background'
   },
@@ -38,7 +38,7 @@ export default {
   },
   links: {
     // textDecoration: 'secondary',
-    color: 'link',
+    color: 'link'
     // bold: {
     //   fontWeight: 'bold',
     // },
@@ -114,9 +114,9 @@ export default {
     color: 'text',
     fontSize: 3,
 
-    "ul, ol": {
+    'ul, ol': {
       px: 4,
-      my: 0,
+      my: 0
     }
-  },
+  }
 };

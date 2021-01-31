@@ -35,7 +35,11 @@ const ItemLink = ({ item, children }) => {
 
   // posts / rest
   return (
-    <GatsbyLink className="hover-on" to={item.fields.slug} sx={noStyleLink}>
+    <GatsbyLink
+      className="hover-on"
+      to={item.fields.slug}
+      sx={noStyleLink}
+    >
       {children}
     </GatsbyLink>
   );
@@ -78,7 +82,9 @@ const ItemTitle = ({ item, linksBeforeTitle = '' }) => {
     );
   }
 
-  return <Styled.h2 sx={style}>{`${item.frontmatter.title}`}</Styled.h2>;
+  return (
+    <Styled.h2 sx={style}>{`${item.frontmatter.title}`}</Styled.h2>
+  );
 };
 
 /* eslint-disable complexity */
@@ -158,7 +164,9 @@ const ItemReadMoreButton = ({ item, text = '' }) => {
   if (item.fields.type !== 'posts') return <div />;
   if (text) return <ReadMoreButton>{text}</ReadMoreButton>;
   if (uiText.cardReadMoreButton)
-    return <ReadMoreButton>{uiText.cardReadMoreButton}</ReadMoreButton>;
+    return (
+      <ReadMoreButton>{uiText.cardReadMoreButton}</ReadMoreButton>
+    );
 
   return <div />;
 };
@@ -202,7 +210,7 @@ const ItemHoveringStyle = ({ children, isHovering = false }) => (
       opacity: isHovering ? 0.8 : 1,
       borderWidth: 'card',
       borderStyle: 'solid',
-      borderInlineStyle: ["hidden", "solid"],
+      borderInlineStyle: ['hidden', 'solid'],
       borderRadius: 'card',
       borderColor: isHovering ? 'secondary' : 'muted',
       backgroundColor: isHovering ? 'secondary' : 'muted'

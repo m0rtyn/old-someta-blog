@@ -13,25 +13,33 @@ import CardItem from './card-item';
 const eClassCheck = (eTarget, className = '') => {
   if (!className || !eTarget) return false;
   if (eTarget.className.includes(className)) return true;
-  if (eTarget.parentElement.className.includes(className)) return true;
-  if (eTarget.parentElement.parentElement.className.includes(className)) return true;
+  if (eTarget.parentElement.className.includes(className))
+    return true;
+  if (
+    eTarget.parentElement.parentElement.className.includes(className)
+  )
+    return true;
 
   if (
     eTarget.parentElement.parentElement.parentElement.className.includes(
-      className,
+      className
     )
-  ) return true;
+  )
+    return true;
 
   if (
     eTarget.parentElement.parentElement.parentElement.parentElement.className.includes(
-      className,
+      className
     )
-  ) return true;
+  )
+    return true;
 
   if (
-    eTarget.parentElement.parentElement.parentElement.parentElement.parentElement.className
-      .includes(className)
-  ) return true;
+    eTarget.parentElement.parentElement.parentElement.parentElement.parentElement.className.includes(
+      className
+    )
+  )
+    return true;
 
   return false;
 };
@@ -50,18 +58,21 @@ export default ({ item, linksBeforeTitle = '' }) => {
   const { type } = item.fields;
 
   //
-  if (type === 'notes') return <ItemMain isHovering={false} item={item} />;
+  if (type === 'notes')
+    return <ItemMain isHovering={false} item={item} />;
 
   //
   return (
     <ReactHoverObserver
       {...{
-        onMouseOver: ({ e, setIsHovering, unsetIsHovering }) => (eClassCheck(e.target, 'hover-on')
-          ? setIsHovering()
-          : unsetIsHovering()),
-        onFocus: ({ e, setIsHovering, unsetIsHovering }) => (eClassCheck(e.target, 'hover-on')
-          ? setIsHovering()
-          : unsetIsHovering()),
+        onMouseOver: ({ e, setIsHovering, unsetIsHovering }) =>
+          eClassCheck(e.target, 'hover-on')
+            ? setIsHovering()
+            : unsetIsHovering(),
+        onFocus: ({ e, setIsHovering, unsetIsHovering }) =>
+          eClassCheck(e.target, 'hover-on')
+            ? setIsHovering()
+            : unsetIsHovering()
       }}
     >
       {({ isHovering }) => (

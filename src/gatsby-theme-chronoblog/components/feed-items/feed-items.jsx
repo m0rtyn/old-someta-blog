@@ -14,16 +14,22 @@ import Card from './card';
  * @param {string[]=} tagsArray
  * @returns {string}
  */
-const tagsToString = (tagsArray) =>
+const tagsToString = tagsArray =>
   tagsArray ? tagsArray.toString().toLowerCase() : '';
 
 const filterSearchSymbols = (input, symbolsToSearch) => {
   let result = false;
   const sToSearch = symbolsToSearch.toLowerCase();
 
-  result = _.includes(input.frontmatter.title.toLowerCase(), sToSearch);
+  result = _.includes(
+    input.frontmatter.title.toLowerCase(),
+    sToSearch
+  );
   if (result) return result;
-  result = _.includes(tagsToString(input.frontmatter.tags), sToSearch);
+  result = _.includes(
+    tagsToString(input.frontmatter.tags),
+    sToSearch
+  );
   if (result) return result;
 
   return result;
@@ -68,7 +74,11 @@ const ButtonShowMore = ({
     );
   }
   //
-  if (itemsFormat === 'card' && showMoreButton && feedItemsLength > showLimit) {
+  if (
+    itemsFormat === 'card' &&
+    showMoreButton &&
+    feedItemsLength > showLimit
+  ) {
     return (
       <div sx={{ my: '20px' }}>
         <Button
@@ -87,7 +97,7 @@ const ButtonShowMore = ({
 
 const filterBySlug = (feedItems, pathname) => {
   if (pathname && pathname !== '' && pathname !== '/') {
-    return feedItems.filter((item) => item.fields.slug !== pathname);
+    return feedItems.filter(item => item.fields.slug !== pathname);
   }
 
   return feedItems;
@@ -106,7 +116,7 @@ const getItemYear = (item, lang) => {
   return year;
 };
 const getYears = (items, lang = 'en-US') => {
-  let years = items.map((item) => getItemYear(item, lang));
+  let years = items.map(item => getItemYear(item, lang));
 
   years = [...new Set(years)];
 
@@ -233,7 +243,8 @@ export default ({
 
   if (yearSeparator !== undefined) yearSeparatorType = yearSeparator;
   //
-  let yearSeparatorSkipFirstUse = siteMeta.feedItems.yearSeparatorSkipFirst;
+  let yearSeparatorSkipFirstUse =
+    siteMeta.feedItems.yearSeparatorSkipFirst;
 
   if (yearSeparator === 'space') yearSeparatorSkipFirstUse = true;
   if (yearSeparatorSkipFirst !== undefined)
@@ -245,9 +256,9 @@ export default ({
   // props
   // Tags array from props
   if (filterByTags && filterByTags.length > 0) {
-    feedItems = feedItems.filter((i) => {
+    feedItems = feedItems.filter(i => {
       if (i.frontmatter.tags && i.frontmatter.tags.length > 0) {
-        const filteredTags = i.frontmatter.tags.filter((t) =>
+        const filteredTags = i.frontmatter.tags.filter(t =>
           filterByTags.includes(t)
         );
 
@@ -259,7 +270,7 @@ export default ({
   }
   // Types array from props
   if (filterByTypes && filterByTypes.length > 0) {
-    feedItems = feedItems.filter((i) => {
+    feedItems = feedItems.filter(i => {
       if (i.fields.type) return filterByTypes.includes(i.fields.type);
 
       return false;
@@ -267,7 +278,9 @@ export default ({
   }
   // search from props
   if (filterBySearch && filterBySearch !== '') {
-    feedItems = feedItems.filter((i) => filterSearchSymbols(i, filterBySearch));
+    feedItems = feedItems.filter(i =>
+      filterSearchSymbols(i, filterBySearch)
+    );
   }
   // context
   const { value } = useContext(FeedContext);
@@ -275,7 +288,7 @@ export default ({
   const searchFromInput = value?.searchInput;
 
   if (searchFromInput && searchFromInput !== '') {
-    feedItems = feedItems.filter((i) =>
+    feedItems = feedItems.filter(i =>
       filterSearchSymbols(i, searchFromInput)
     );
   }
@@ -305,7 +318,7 @@ export default ({
           //
           return (
             <div sx={listStyleObject}>
-              {yearsArray.map((year) => {
+              {yearsArray.map(year => {
                 return (
                   <YearSeparator
                     key={year}
@@ -316,7 +329,7 @@ export default ({
                     yearSeparatorType={yearSeparatorType}
                   >
                     <div sx={listStyleObject}>
-                      {feedItemsToShow.map((item) => {
+                      {feedItemsToShow.map(item => {
                         if (getItemYear(item) === year) {
                           return (
                             <Item
@@ -337,6 +350,7 @@ export default ({
           );
         }}
       </Location>
+
       <ButtonShowMore
         showMoreButton={showMoreButton}
         feedItemsLength={feedItems.length}

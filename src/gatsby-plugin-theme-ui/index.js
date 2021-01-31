@@ -10,20 +10,10 @@ const theme = {
   initialColorMode: 'light',
   useColorSchemeMediaQuery: false,
   colors: {
-    ...colors,
+    ...colors
   },
   breakpoints: ['768px', '1024px'],
-  fontSizes: [
-    12,
-    14,
-    16,
-    20,
-    24,
-    32,
-    48,
-    64,
-    96
-  ],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   borderRadius: {
     card: 0,
     button: 0,
@@ -31,46 +21,46 @@ const theme = {
     code: 0,
     img: 0,
     authorBanner: 0,
-    blockquote: 0,
+    blockquote: 0
   },
   borderWidth: {
     card: 3,
     search: 3,
-    blockquote: 3,
+    blockquote: 3
   },
   fonts: {
     body:
       '-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif',
     heading:
       '"Anonymous Pro", Helvetica Neue, Helvetica, Arial, sans-serif',
-    monospace: 'Menlo, monospace',
+    monospace: 'Menlo, monospace'
   },
   prism,
   styles: {
     ...base.styles,
-    ...styles,
+    ...styles
   },
   badges: {
     primary: {
       color: 'background',
-      bg: 'primary',
+      bg: 'primary'
     },
     tags: {
       color: 'inherit',
       bg: 'transparent',
-      opacity: 0.7,
-    },
+      opacity: 0.7
+    }
   },
   buttons: {
-    ...buttons,
+    ...buttons
   },
   images: {
     avatar: {
       width: 140,
       height: '100%',
-      borderRadius: 99999,
-    },
-  },
+      borderRadius: 99999
+    }
+  }
 };
 
 export default theme;

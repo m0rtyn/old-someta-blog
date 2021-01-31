@@ -111,7 +111,7 @@ const ChronoblogHeader = ({ location, ...props }) => {
         >
           <div
             sx={{
-              width: '100%',
+              width: '100%'
             }}
           >
             <SiteHeader />

@@ -16,4 +16,4 @@ const socialLinks = [
   }
 ];
 
-export default socialLinks
+export default socialLinks;

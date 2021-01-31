@@ -21,12 +21,12 @@ const PostTitle = ({
   return (
     <div>
       {frontmatter.title ? (
+        /* eslint-disable-next-line react/jsx-pascal-case */
         <Styled.h1>{frontmatter.title}</Styled.h1>
       ) : (
-          ''
-        )
-      }
-    </div >
+        ''
+      )}
+    </div>
   );
 };
 
@@ -35,14 +35,15 @@ const PostContent = ({
     mdx: { body }
   }
 }) => (
-    <Box px={[0]}>
-      <MDXRenderer>{body}</MDXRenderer>
-    </Box>
-  )
+  <Box px={[0]}>
+    <MDXRenderer>{body}</MDXRenderer>
+  </Box>
+);
 
 /* eslint-disable complexity */
 const getDescriptionForSeo = (fromFrontmatter, fromExcerpt) => {
-  if (fromFrontmatter && fromFrontmatter !== '') return fromFrontmatter;
+  if (fromFrontmatter && fromFrontmatter !== '')
+    return fromFrontmatter;
   if (fromExcerpt && fromExcerpt !== '') return fromExcerpt;
 
   return '';
@@ -56,8 +57,8 @@ const PostFooter = () => {
       {PostFooterMdx && PostFooterMdx !== '' ? (
         <PostFooterMdx siteMetadata={siteMetadata} />
       ) : (
-          ''
-        )}
+        ''
+      )}
     </div>
   );
 };
@@ -80,8 +81,8 @@ export const Post = ({ data }) => {
     textAlign: ['left', 'right'],
     padding: [1, 2],
     ml: 'auto',
-    flexShrink: 0,
-  }
+    flexShrink: 0
+  };
 
   //
   return (
@@ -96,10 +97,17 @@ export const Post = ({ data }) => {
 
       <main>
         <article>
-          <header sx={{ position: "relative" }}>
-            <Flex sx={{
-              zIndex: 1, position: "absolute", p: [0, 1], backgroundColor: ['text'], opacity: 0.66, width: "100%"
-            }}>
+          <header sx={{ position: 'relative' }}>
+            <Flex
+              sx={{
+                zIndex: 1,
+                position: 'absolute',
+                p: [0, 1],
+                backgroundColor: ['text'],
+                opacity: 0.66,
+                width: '100%'
+              }}
+            >
               <Tags
                 type="item"
                 tags={data.mdx.frontmatter.tags}
