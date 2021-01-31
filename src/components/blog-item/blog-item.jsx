@@ -134,7 +134,30 @@ const CoverImage = ({ image, slug }) => {
   );
 };
 
-const BlogItem = ({ data }) => {
+const BlogNote = ({ item }) => {
+  const {
+    name,
+    tags,
+    publish_date,
+    cover_image,
+    slug,
+    content_type,
+    html
+  } = item;
+
+  return (
+    <article sx={wrapperStyles}>
+      <CoverImage image={cover_image} slug={slug} />
+      <Date date={publish_date?.startDate} />
+      <PostType type={content_type} />
+      <div>{html}</div>
+      <Title title={name} />
+      <Tags tags={tags} />
+    </article>
+  );
+};
+
+const BlogArticle = ({ item }) => {
   const {
     name,
     tags,
@@ -144,7 +167,7 @@ const BlogItem = ({ data }) => {
     content_type,
     cover_image,
     slug
-  } = data;
+  } = item;
 
   return (
     <Link to={`/${url}`} sx={{ ...linkSyles, ...hoverStyles }}>
@@ -160,6 +183,19 @@ const BlogItem = ({ data }) => {
       </LinkUI>
     </Link>
   );
+};
+
+const BlogItem = ({ item }) => {
+  console.log('🚀 ~ BlogItem ~ item', item);
+  if (item.content_type === 'article') {
+    return <BlogArticle item={item} />;
+  }
+
+  if (item.content_type === 'note') {
+    return <BlogNote item={item} />;
+  }
+
+  return null;
 };
 
 export default BlogItem;

@@ -16,7 +16,7 @@ const HomePage = ({ data }) => {
     <Layout>
       <ProjectBanner />
       {/* <Tags /> */}
-      <BlogItems posts={allPosts} />
+      <BlogItems items={allPosts} />
 
       {/* 
         // old blog post local source
