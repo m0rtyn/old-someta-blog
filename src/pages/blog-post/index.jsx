@@ -24,7 +24,7 @@ const BlogPostPage = ({ data }) => {
 export default BlogPostPage;
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String) {
     posts(slug: { eq: $slug }) {
       html
       name
