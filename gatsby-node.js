@@ -1,32 +1,37 @@
 // graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
-const path = require(`path`)
+const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   const blogPost = await graphql(`
     query {
-        allPosts(filter: {status: {eq: "published"}, content_type: {eq: "article"}}) {
-            nodes {
-              slug
-              url
-            }
-          }
+      allPosts(
+        filter: {
+          status: { eq: "published" }
+          content_type: { eq: "article" }
         }
+      ) {
+        nodes {
+          slug
+          url
+        }
+      }
+    }
   `).then(result => {
     if (result.errors) {
       Promise.reject(result.errors);
     }
-    
+
     result.data.allPosts.nodes.forEach(({ slug, url }) => {
       createPage({
         path: `/${url || slug}`,
         component: path.resolve(`./src/pages/blog-post/index.jsx`),
         context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug,
-        },
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug
+        }
       });
     });
   });
