@@ -1,4 +1,12 @@
+*:focus {
+  outline-offset: 8px;
+  outline-style: solid;
+  outline-color: #7777;
+  outline-width: 4px;
+}
+
 :root {
+
   /* ? Monokai theme */
   --color-dark: #2d2a2e;
   --color-light: #fcfcfa;
