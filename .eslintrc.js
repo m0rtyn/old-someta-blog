@@ -31,26 +31,33 @@ module.exports = {
     'import/extensions': 0, // off
     'no-nested-ternary': [2],
     complexity: ['error', { max: 4 }],
+    'no-unused-vars': 'warn',
+    
     // react
     'react/prop-types': 0, // off
     'react/jsx-props-no-spreading': 0, // off
     'react/destructuring-assignment': 0, // off
     'react/jsx-no-bind': 2,
     'react/display-name': 'error',
+    
     // imports
+    'import/prefer-default-export': 0, // off
     'import/no-extraneous-dependencies': 0, // off
     'import/no-named-as-default': 0, // off
     'import/no-unresolved': ['off'], // off
     'import/no-relative-parent-imports': 'error',
+
     // React Hooks
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+
     // other
     'jsx-a11y/label-has-associated-control': [0], // off
-    // 'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
     'jsx-a11y/label-has-associated-control': [0],
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/anchor-has-content': 0,
+
     // complex
     'padding-line-between-statements': [
       'error',

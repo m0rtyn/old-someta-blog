@@ -5,6 +5,7 @@ import { GameOfLifeBackground } from 'react-game-of-life-background';
 import { Flex, jsx } from 'theme-ui';
 
 const MatrixMarquee = ({ children, delay }) => (
+  /* eslint-disable-next-line jsx-a11y/no-distracting-elements */
   <marquee
     direction="down"
     width="30px"
