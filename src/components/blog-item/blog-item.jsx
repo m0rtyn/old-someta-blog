@@ -186,7 +186,6 @@ const BlogArticle = ({ item }) => {
 };
 
 const BlogItem = ({ item }) => {
-  console.log('🚀 ~ BlogItem ~ item', item);
   if (item.content_type === 'article') {
     return <BlogArticle item={item} />;
   }
