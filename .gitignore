@@ -1,12 +1,12 @@
 node_modules
 public
 .cache
-.DS_Store
+**/.DS_Store
 Рациональные привычки.md
 content/posts/test-toc-generator/image.jpg
 content/posts/test-toc-generator/index.md
 content/posts/.DS_Store
-**/.DS_Store
 content/posts/.DS_Store
 content/temp.md
 .vscode
+content/.DS_Store
