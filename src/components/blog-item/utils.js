@@ -1,6 +1,6 @@
 const NOTION_BASE_URL = 'https://www.notion.so';
 
-export default (url, width, slug) => {
+export const parseNotionImageUrl = (url, width, slug) => {
   let rUrl;
 
   if (url.startsWith('https://s3')) {

@@ -43,6 +43,7 @@ export const query = graphql`
         content_type
         status
         url
+        html
         slug
         cover_image
         publish_date {
