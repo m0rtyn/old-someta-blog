@@ -6,7 +6,12 @@ import SometaLogoRounded from './someta-logo-rounded.inline.svg';
 import SometaLogoWithTitle from './someta-logo-with-title.inline.svg';
 import SometaLogoOnly from './someta-logo.inline.svg';
 
-const SometaLogo = ({ width, withTitle = false, ...props }) => {
+const SometaLogo = ({
+  width,
+  withTitle = false,
+  logoColor,
+  ...props
+}) => {
   const result = withTitle ? (
     <SometaLogoRounded width={width} {...props} />
   ) : (
