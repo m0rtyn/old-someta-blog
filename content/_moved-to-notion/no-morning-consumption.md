@@ -1,6 +1,6 @@
 ---
 date: 2020-04-23
-title: Ограничение утреннего потребления
+title: Отказ от утреннего потребления
 tags: ['biofix', 'brain', 'consumption', 'attention-management']
 cover: 'cover-image.jpg'
 ---
