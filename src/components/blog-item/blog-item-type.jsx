@@ -5,9 +5,15 @@ import NoteIcon from './note.inline.svg';
 import SequenceIcon from './queue.inline.svg';
 
 const typeToEmojiMap = {
-  article: <ArticleIcon title="статья" />,
-  note: <NoteIcon title="заметка" />,
-  sequence: <SequenceIcon title="цепочка" />
+  article: <ArticleIcon />,
+  note: <NoteIcon />,
+  sequence: <SequenceIcon />
+};
+
+const typeToTitleMap = {
+  article: 'Статья — длинный текст с картинками',
+  note: 'Заметка — небольше 100 слов',
+  sequence: 'Цепочка — серия связанных текстов'
 };
 
 export const BlogItemType = ({ type }) => {
@@ -15,15 +21,17 @@ export const BlogItemType = ({ type }) => {
 
   return (
     <span
-      title={type}
+      title={typeToTitleMap[type]}
       sx={{
-        // fontSize: '2em',
         position: 'absolute',
         top: '0',
         left: '0',
-        mx: 4,
-        my: 2,
-        color: 'var(--color-gray)'
+        m: 2,
+        color: 'var(--color-gray)',
+        cursor: 'help',
+        '&:hover': {
+          opacity: 0.6
+        }
       }}
     >
       {typeToEmojiMap[type]}

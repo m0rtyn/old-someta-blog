@@ -15,7 +15,7 @@ const theme = {
   breakpoints: ['768px', '1024px'],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   borderRadius: {
-    card: 0,
+    card: 4,
     button: 0,
     search: 0,
     code: 0,

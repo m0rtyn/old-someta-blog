@@ -10,8 +10,7 @@ export const Date = ({ date }) => {
         position: 'absolute',
         right: 0,
         top: 0,
-        mx: 4,
-        my: 2,
+        m: 2,
         color: 'var(--color-gray)'
       }}
     >

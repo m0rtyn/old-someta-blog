@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui';
-import { Link as LinkUI } from '@theme-ui/components';
+import { jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 import { Description } from './blog-item-description';
 import { CoverImage } from './blog-item-cover-image';
@@ -10,13 +9,11 @@ import { Title } from './blog-item-title';
 import { Tags } from './blog-item-tags';
 
 export const wrapperStyles = {
-  paddingTop: [2],
-  paddingBottom: [4],
-  paddingLeft: [4],
-  paddingRight: [4],
-  margin: '32px 0',
+  py: [2],
+  px: [4],
+  my: [4],
   border: '2px solid var(--color-dark)',
-  borderRadius: '4px',
+  borderRadius: 'card',
   position: 'relative'
 };
 
@@ -24,7 +21,7 @@ export const linkSyles = {
   display: 'block',
   color: 'initial',
   textDecoration: 'none',
-  borderRadius: '4px',
+  borderRadius: 'card',
   boxShadow: '-4px 4px 0px 0px var(--color-gray)'
 };
 
