@@ -1,12 +1,18 @@
 // graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
 const path = require(`path`);
+const { createRemoteFileNode } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPost = await graphql(`
     query {
-      allPosts(filter: { status: { eq: "published" } }) {
+      allPosts(
+        filter: {
+          status: { eq: "published" }
+          content_type: { eq: "article" }
+        }
+      ) {
         nodes {
           slug
           url
