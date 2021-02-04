@@ -8,10 +8,14 @@ export const Date = ({ date }) => {
     <span
       sx={{
         position: 'absolute',
+        display: 'inline-block',
         right: 0,
         top: 0,
         m: 2,
-        color: 'var(--color-gray)'
+        color: '#000a',
+        backgroundColor: '#fffa',
+        borderRadius: 'card',
+        px: 1
       }}
     >
       {date}

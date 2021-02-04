@@ -24,11 +24,15 @@ export const BlogItemType = ({ type }) => {
       title={typeToTitleMap[type]}
       sx={{
         position: 'absolute',
+        display: 'flex',
         top: '0',
         left: '0',
         m: 2,
-        color: 'var(--color-gray)',
         cursor: 'help',
+        color: '#000a',
+        backgroundColor: '#fffa',
+        borderRadius: 'card',
+        px: 1,
         '&:hover': {
           opacity: 0.6
         }

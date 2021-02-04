@@ -39,11 +39,8 @@ const BlogPostPage = ({ data }) => {
     }
   } = data;
 
-  const coverImageURL = parseNotionImageUrl(
-    cover_image[0],
-    400,
-    slug
-  );
+  const coverImageURL =
+    cover_image && parseNotionImageUrl(cover_image[0], 400, slug);
 
   const postInfoStyles = {
     zIndex: 1,
