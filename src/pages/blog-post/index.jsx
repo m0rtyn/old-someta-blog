@@ -42,16 +42,16 @@ const BlogPostPage = ({ data }) => {
   const coverImageURL =
     cover_image && parseNotionImageUrl(cover_image[0], 400, slug);
 
-  const postInfoStyles = {
-    zIndex: 1,
-    color: 'background',
-    fontSize: [0, 1],
-    fontFamily: 'monospace',
-    textAlign: ['left', 'right'],
-    padding: [1, 2],
-    ml: 'auto',
-    flexShrink: 0
-  };
+  // const postInfoStyles = {
+  //   zIndex: 1,
+  //   color: 'background',
+  //   fontSize: [0, 1],
+  //   fontFamily: 'monospace',
+  //   textAlign: ['left', 'right'],
+  //   padding: [1, 2],
+  //   ml: 'auto',
+  //   flexShrink: 0
+  // };
 
   return (
     <Layout>
@@ -59,15 +59,15 @@ const BlogPostPage = ({ data }) => {
         title={name}
         slug={url}
         description={desc}
-        image={coverImageURL}
+        image={coverImageURL || ''}
         canonical={url}
       />
 
       <main>
         <article>
           <header sx={{ position: 'relative' }}>
-            <Tags tags={tags} tagStyle={postInfoStyles} />
-            <Date date={publish_date.startDate} sx={postInfoStyles} />
+            <Tags tags={tags} />
+            <Date date={publish_date.startDate} />
 
             {/* <CoverImage data={data.mdx} type="post" /> */}
           </header>
