@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{srSZ:function(t,n,e){"use strict";e.r(n);var a=e("txSG"),s=e("zzhW");e("qKvR");n.default=function(t){var n=t.data.posts,e=n.name,u=(n.tags,n.html);n.url,n.slug;return Object(a.k)(s.a,null,Object(a.k)("div",{id:"main"},Object(a.k)("h1",null,e),Object(a.k)("div",{dangerouslySetInnerHTML:{__html:u}})))}}}]);
-//# sourceMappingURL=component---src-pages-blog-post-index-jsx-a1cfc9c9613104f69c04.js.map
