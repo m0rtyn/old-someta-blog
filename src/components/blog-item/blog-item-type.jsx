@@ -3,17 +3,20 @@ import { jsx } from 'theme-ui';
 import ArticleIcon from './article.inline.svg';
 import NoteIcon from './note.inline.svg';
 import SequenceIcon from './queue.inline.svg';
+import MediaIcon from './media.inline.svg';
 
 const typeToEmojiMap = {
   article: <ArticleIcon />,
   note: <NoteIcon />,
-  sequence: <SequenceIcon />
+  sequence: <SequenceIcon />,
+  media: <MediaIcon />
 };
 
 const typeToTitleMap = {
   article: 'Статья — длинный текст с картинками',
   note: 'Заметка — небольше 100 слов',
-  sequence: 'Цепочка — серия связанных текстов'
+  sequence: 'Цепочка — серия связанных текстов',
+  media: 'Медиа — видео, аудио или что-то не текстовое'
 };
 
 export const BlogItemType = ({ type }) => {

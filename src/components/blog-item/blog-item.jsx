@@ -1,16 +1,26 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import { BlogArticle } from './blog-article';
 import { BlogNote } from './blog-note';
+import { BlogMedia } from './blog-media';
+import { BlogItemWrapper } from './blog-item-wrapper';
+
+const blogItemComponentMap = {
+  article: BlogArticle,
+  note: BlogNote,
+  media: BlogMedia
+};
 
 export const BlogItem = ({ item }) => {
-  if (item.content_type === 'article') {
-    return <BlogArticle item={item} />;
-  }
+  const contentType = item.content_type;
 
-  if (item.content_type === 'note') {
-    return <BlogNote item={item} />;
-  }
+  if (contentType === '') return null;
 
-  return null;
+  const BlogItemComponent = blogItemComponentMap[contentType];
+
+  return (
+    <BlogItemWrapper type={contentType} url={item.url}>
+      <BlogItemComponent item={item} />
+    </BlogItemWrapper>
+  );
 };

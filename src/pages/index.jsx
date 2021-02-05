@@ -35,7 +35,7 @@ export const query = graphql`
     allPosts(
       filter: {
         status: { eq: "published" }
-        content_type: { eq: "article" }
+        tags: { ne: "personal" }
       }
       sort: { fields: [publish_date___startDate], order: DESC }
     ) {

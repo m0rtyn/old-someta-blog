@@ -10,19 +10,13 @@ const heightArray = [heightMobile, heightMain];
 const backdropFilterValue = `blur(9px) contrast(100%)`;
 
 const imageStyles = {
-  // objectFit: 'cover',
-
+  width: '100%',
   backdropFilter: backdropFilterValue,
   WebkitBackdropFilter: backdropFilterValue,
   maxHeight: heightArray,
   minHeight: heightArray,
   objectFit: 'scale-down',
   objectPosition: '50% 50%'
-  // borderRadius: 'card',
-  // ...borderRadiusForCard
-  // }}
-  // imgStyle={{
-  // }}
 };
 
 export const CoverImage = ({ image, slug }) => {

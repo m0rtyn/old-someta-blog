@@ -11,6 +11,8 @@ import { parseNotionImageUrl } from 'components/blog-item/utils';
 import { Date } from 'components/blog-item/blog-item-date';
 import { Tags } from 'components/blog-item/blog-item-tags';
 
+const { h1: FirstTitle } = Styled;
+
 const PostFooter = () => {
   const siteMetadata = useSiteMetadata();
 
@@ -42,17 +44,6 @@ const BlogPostPage = ({ data }) => {
   const coverImageURL =
     cover_image && parseNotionImageUrl(cover_image[0], 400, slug);
 
-  // const postInfoStyles = {
-  //   zIndex: 1,
-  //   color: 'background',
-  //   fontSize: [0, 1],
-  //   fontFamily: 'monospace',
-  //   textAlign: ['left', 'right'],
-  //   padding: [1, 2],
-  //   ml: 'auto',
-  //   flexShrink: 0
-  // };
-
   return (
     <Layout>
       <SEO
@@ -72,14 +63,14 @@ const BlogPostPage = ({ data }) => {
             {/* <CoverImage data={data.mdx} type="post" /> */}
           </header>
 
-          <Styled.h1>{name}</Styled.h1>
+          <FirstTitle>{name}</FirstTitle>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: html }} />
 
           <footer sx={{ marginTop: '16px' }}>
             <PostFooter />
             <CommentsBlock
-              pathName={url}
+              pathName={`/${url}`}
               postTitle={name}
               // postId={data.mdx.id}
               postId={slug}
