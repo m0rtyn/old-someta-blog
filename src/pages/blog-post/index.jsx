@@ -44,6 +44,8 @@ const BlogPostPage = ({ data }) => {
   const coverImageURL =
     cover_image && parseNotionImageUrl(cover_image[0], 400, slug);
 
+  const postDate = publish_date?.startDate;
+
   return (
     <Layout>
       <SEO
@@ -58,7 +60,7 @@ const BlogPostPage = ({ data }) => {
         <article>
           <header sx={{ position: 'relative' }}>
             <Tags tags={tags} />
-            <Date date={publish_date.startDate} />
+            <Date date={postDate} />
 
             {/* <CoverImage data={data.mdx} type="post" /> */}
           </header>
