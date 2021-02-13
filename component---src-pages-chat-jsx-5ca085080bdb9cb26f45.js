@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{lTB8:function(n,t,e){"use strict";e.r(t);var o=e("q1tI"),i=e.n(o),c=e("txSG"),w=e("IcXi");e("qKvR");t.default=function(){return i.a.useEffect((function(){"undefined"!=typeof window&&window.location&&(window.location.href="https://t.me/sometach")})),Object(c.k)(w.a,null,Object(c.k)("h1",{sx:{fontSize:"72px",textAlign:"center",my:"2em"}},"¯_(ツ)_/¯"))}}}]);
+//# sourceMappingURL=component---src-pages-chat-jsx-5ca085080bdb9cb26f45.js.map
