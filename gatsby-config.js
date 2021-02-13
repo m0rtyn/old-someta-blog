@@ -181,12 +181,13 @@ module.exports = {
     {
       resolve: `@conradlin/gatsby-source-notion-database`,
       options: {
-        sourceConfig : [
+        sourceConfig: [
           {
-            name: "posts",
-            table: "https://www.notion.so/martyns0n/68ece14c9e0a4ceeb652be6f82604c3c?v=c92f3246c4bd47beb7b4794ae42371e9",
-            cacheType: "html"
-          },
+            name: 'posts',
+            table:
+              'https://www.notion.so/martyns0n/68ece14c9e0a4ceeb652be6f82604c3c?v=c92f3246c4bd47beb7b4794ae42371e9',
+            cacheType: 'html'
+          }
           //  {
           //     "name": "posts",
           //     "table": "https://www.notion.so/gine/99623ef9630940cdb8524ba355831677?v=8366741ca7dd4b339c19484712e13563",
@@ -194,7 +195,7 @@ module.exports = {
           //  }
         ]
       }
-    },
+    }
     // "gatsby-source-notion-contents"
     // {
     //   resolve: `gatsby-source-notion-contents`,
