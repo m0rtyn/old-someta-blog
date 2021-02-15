@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{H2mt:function(t,n,e){"use strict";e.r(n);var o=e("q1tI"),i=e.n(o),c=e("txSG"),w=e("IcXi");e("qKvR");n.default=function(){return i.a.useEffect((function(){"undefined"!=typeof window&&window.location&&(window.location.href="https://t.me/sometachat")})),Object(c.k)(w.a,null,Object(c.k)("h1",{sx:{fontSize:"72px",textAlign:"center",my:"2em"}},"¯_(ツ)_/¯"))}}}]);
+//# sourceMappingURL=component---src-pages-group-jsx-368d7a78f245b7c8f7c2.js.map
