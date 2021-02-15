@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query {
       allPosts(
         filter: {
-          status: { eq: "published" }
+          status: { eq: true }
           content_type: { eq: "article" }
         }
       ) {

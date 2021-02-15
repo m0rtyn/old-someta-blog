@@ -33,10 +33,7 @@ export default HomePage;
 export const query = graphql`
   query {
     allPosts(
-      filter: {
-        status: { eq: "published" }
-        tags: { ne: "personal" }
-      }
+      filter: { status: { eq: true }, tags: { ne: "personal" } }
       sort: { fields: [publish_date___startDate], order: DESC }
     ) {
       nodes {
