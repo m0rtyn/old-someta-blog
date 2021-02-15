@@ -7,7 +7,7 @@ import Layout from 'gatsby-theme-chronoblog/src/components/layout';
 export default () => {
   React.useEffect(() => {
     if (typeof window !== 'undefined' && window.location) {
-      window.location.href = 'https://t.me/sometach';
+      window.location.href = 'https://t.me/sometachat';
     }
   });
 
