@@ -15,11 +15,6 @@ module.exports = {
     twitterCreator: '', // creator account on twitter
     social: [
       {
-        icon: 'telegram',
-        url: 'https://t.me/metabaza/',
-        altText: 'Чат сообщества'
-      },
-      {
         icon: 'patreon',
         url: 'https://patreon.com/someta',
         altText: 'Поддержи проект на Patreon'
