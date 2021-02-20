@@ -173,6 +173,7 @@ module.exports = {
       }
     },
     // "gatsby-source-notion-database"
+
     {
       resolve: `@conradlin/gatsby-source-notion-database`,
       options: {
@@ -183,39 +184,8 @@ module.exports = {
               'https://www.notion.so/martyns0n/68ece14c9e0a4ceeb652be6f82604c3c?v=c92f3246c4bd47beb7b4794ae42371e9',
             cacheType: 'html'
           }
-          //  {
-          //     "name": "posts",
-          //     "table": "https://www.notion.so/gine/99623ef9630940cdb8524ba355831677?v=8366741ca7dd4b339c19484712e13563",
-          //     "cacheType": "static"
-          //  }
         ]
       }
     }
-    // "gatsby-source-notion-contents"
-    // {
-    //   resolve: `gatsby-source-notion-contents`,
-    //   options: {
-    //     token: '0c1c4545e76f57218e25fc2b61ec80a091f99a2d66acc0ef5bbd5b9508c670cd69941ccda0dd1dbd0db25c87aad96751714d1720103ba4a2d082772f12a5b6773515dae143eee580c6df2e29b425',
-    //     ids: ['68ece14c9e0a4ceeb652be6f82604c3c'],
-    //     prefix: '/',
-    //     removeStyle: true,
-    //   },
-    // },
-    // {
-    //   resolve: 'gatsby-source-notionso',
-    //   options: {
-    //     rootPageUrl: process.env.GATSBY_NOTIONSO_ROOT_PAGE_URL, // the notion page URL of the root page
-    //     tokenv2: process.env.GATSBY_NOTIONSO_TOKEN, // not used yet (the page needs to be public)
-    //     name: 'blog', // name of your data set to identify the data for the instance of plugin
-    //     debug: false, // set to true to enable debugging information
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `pages`,
-    //     path: `${__dirname}/src/pages`,
-    //   },
-    // },
   ]
 };
