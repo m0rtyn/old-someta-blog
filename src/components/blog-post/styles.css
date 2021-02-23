@@ -1,0 +1,7 @@
+.notion-cursor-default > div > div > div > div > div > div {
+  opacity: 1 !important;
+}
+
+.loading-spinner {
+  display: none !important;
+}

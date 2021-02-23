@@ -46,3 +46,8 @@ blockquote ul {
   padding: 0;
   margin: 0;
 }
+
+/* from https://conradlin.com/blog/posts/host-gatsbyjs-blog-with-notion-cms-and-netlify-for-free/ */
+[data-block-id] {
+  max-width: 100%!important;
+}

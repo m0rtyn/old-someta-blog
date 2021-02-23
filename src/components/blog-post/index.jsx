@@ -10,6 +10,7 @@ import PostFooterMdx from 'gatsby-theme-chronoblog/post-footer';
 import { parseNotionImageUrl } from 'components/blog-item/utils';
 import { Date } from 'components/blog-item/blog-item-date';
 import { Tags } from 'components/blog-item/blog-item-tags';
+import './styles.css';
 
 const { h1: FirstTitle } = Styled;
 
