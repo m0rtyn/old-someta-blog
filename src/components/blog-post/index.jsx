@@ -74,7 +74,7 @@ const BlogPostPage = ({ data }) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
-          <footer sx={{ marginTop: '16px' }}>
+          <footer sx={{ marginTop: [2, 3] }}>
             <PostFooter />
             <CommentsBlock
               pathName={`/${url}`}

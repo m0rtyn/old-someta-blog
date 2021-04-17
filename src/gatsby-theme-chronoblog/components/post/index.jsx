@@ -126,7 +126,7 @@ export const Post = ({ data }) => {
 
           <PostContent data={data} />
 
-          <footer sx={{ marginTop: '16px' }}>
+          <footer sx={{ marginTop: [2, 3] }}>
             <PostFooter />
             <CommentsBlock
               pathName={data.mdx.fields.slug}

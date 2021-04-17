@@ -23,7 +23,7 @@ export default {
   },
   lineHeights: {
     body: 1.75,
-    heading: 1.25
+    heading: 1.125
   },
   letterSpacings: {
     body: 'normal',

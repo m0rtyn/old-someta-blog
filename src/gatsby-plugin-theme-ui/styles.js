@@ -4,8 +4,8 @@ const heading = {
   fontFamily: 'heading',
   fontWeight: 'heading',
   lineHeight: 'heading',
-  mt: '1.3em',
-  mb: '1em'
+  mt: '1.13em',
+  mb: '0.9em'
 };
 
 export default {

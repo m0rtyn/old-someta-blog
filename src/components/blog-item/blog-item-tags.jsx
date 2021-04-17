@@ -5,7 +5,8 @@ import { uid } from 'react-uid';
 const tagStyles = {
   display: 'inline-block',
   padding: [1],
-  marginRight: [2]
+  marginRight: [2],
+  fontSize: [2]
 };
 
 export const Tags = ({ tags }) => {
