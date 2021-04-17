@@ -34,7 +34,7 @@ export const query = graphql`
   query {
     allPosts(
       filter: { status: { eq: true }, tags: { ne: "personal" } }
-      sort: { fields: [publish_date___startDate], order: DESC }
+      sort: { fields: [last_edited_time], order: DESC }
     ) {
       nodes {
         name
@@ -49,6 +49,7 @@ export const query = graphql`
         publish_date {
           startDate(formatString: "DD MMM YYYY", fromNow: false)
         }
+        last_edited_time
       }
     }
   }
