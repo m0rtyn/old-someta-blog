@@ -4,16 +4,17 @@ import prism from '@theme-ui/prism/presets/theme-ui';
 import buttons from './buttons';
 import colors from './colors';
 import styles from './styles';
+import typography from './typography';
 
 const theme = {
   ...base,
+  ...typography,
   initialColorMode: 'light',
   useColorSchemeMediaQuery: false,
   colors: {
     ...colors
   },
   breakpoints: ['768px', '1024px'],
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   borderRadius: {
     card: 4,
     button: 0,
@@ -27,13 +28,6 @@ const theme = {
     card: 3,
     search: 3,
     blockquote: 3
-  },
-  fonts: {
-    body:
-      '-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif',
-    heading:
-      '"Anonymous Pro", Helvetica Neue, Helvetica, Arial, sans-serif',
-    monospace: 'Menlo, monospace'
   },
   prism,
   styles: {

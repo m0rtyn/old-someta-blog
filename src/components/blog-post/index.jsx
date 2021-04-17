@@ -45,6 +45,7 @@ const BlogPostPage = ({ data }) => {
   const coverImageURL =
     cover_image && parseNotionImageUrl(cover_image[0], 400, slug);
 
+  const postId = `post-${slug}`;
   const postDate = publish_date?.startDate;
 
   return (
@@ -58,7 +59,7 @@ const BlogPostPage = ({ data }) => {
       />
 
       <main>
-        <article>
+        <section>
           <header sx={{ position: 'relative' }}>
             <Tags tags={tags} />
             <Date date={postDate} />
@@ -68,7 +69,10 @@ const BlogPostPage = ({ data }) => {
 
           <FirstTitle>{name}</FirstTitle>
           {/* eslint-disable-next-line react/no-danger */}
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <article
+            id={postId}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
 
           <footer sx={{ marginTop: '16px' }}>
             <PostFooter />
@@ -79,7 +83,7 @@ const BlogPostPage = ({ data }) => {
               postId={slug}
             />
           </footer>
-        </article>
+        </section>
       </main>
     </Layout>
   );
