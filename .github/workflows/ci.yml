@@ -25,34 +25,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Caching Gatsby
-        id: gatsby-cache-build
-        uses: actions/cache@v2
-        with:
-          path: |
-            public
-            .cache
-          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-gatsby-build-
-
-      # - name: Gatsby Cache Folder
-      #   uses: actions/cache@v2.1.3
-      #   id: gatsby-cache-folder
+      # not working caching for incremental building
+      # - name: Caching Gatsby
+      #   id: gatsby-cache-build
+      #   uses: actions/cache@v2
       #   with:
-      #     path: .cache
-      #     key: ${{ runner.os }}-cache-gatsby
+      #     path: |
+      #       public
+      #       .cache
+      #     key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
       #     restore-keys: |
-      #       ${{ runner.os }}-cache-gatsby
-
-      # - name: Gatsby Public Folder
-      #   uses: actions/cache@v2.1.3
-      #   id: gatsby-public-folder
-      #   with:
-      #     path: public/
-      #     key: ${{ runner.os }}-public-gatsby
-      #     restore-keys: |
-      #       ${{ runner.os }}-public-gatsby
+      #       ${{ runner.os }}-gatsby-build-
 
       - run: npm install -g yarn # Extra Step
       - run: yarn install --frozen-lockfile
