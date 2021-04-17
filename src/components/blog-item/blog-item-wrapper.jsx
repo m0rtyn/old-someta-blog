@@ -31,7 +31,7 @@ export const hoverStyles = {
 };
 
 export const BlogItemWrapper = ({ children, url, type }) => {
-  const withLink = type === 'article';
+  const withLink = type !== 'note';
 
   return withLink ? (
     <Link to={`/${url}`} sx={{ ...linkSyles, ...hoverStyles }}>
