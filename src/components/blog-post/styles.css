@@ -28,12 +28,14 @@ article {
     right: 0;
     overflow: hidden;
     display: block;
-    opacity: 0.3;
+    opacity: 0.6;
     transition: opacity ease-out 0.3s;
-    background-color: #ffffffff
+    background-color: #ffffff;
+    filter: blur(4px)
   }
   
   .notion-table_of_contents-block:hover {
+    filter: none;
     opacity: 1;
   }
 }
