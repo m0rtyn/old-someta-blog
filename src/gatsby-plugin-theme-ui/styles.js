@@ -15,7 +15,7 @@ export default {
     // minHeight: 'calc(100vh - 169px)', // 169px is temporary sum of header and footer heights
     maxWidth: 768,
     mx: 'auto',
-    fontSize: [2] // 18px
+    fontSize: [2, 3] // 18px
   },
   Footer: {
     py: ['16px !important', '24px !important'],
