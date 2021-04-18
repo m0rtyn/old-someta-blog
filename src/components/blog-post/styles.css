@@ -14,24 +14,36 @@ article {
 .notion-table_of_contents-block > div > div:hover {
   background-color: #777;
   color: white !important;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 0 4px;
 }
 
 @media screen and (min-width: 768px) {
   .notion-table_of_contents-block {
-    margin-top: 72px !important;
-    width: 240px !important;
-    padding: 1em;
+    width: 256px !important;
+    box-sizing: border-box;
+    padding: 0 1em;
     position: fixed;
-    top: 0;
+    top: 33%;
+    transform: translateY(-66%);
     right: 0;
     overflow: hidden;
     display: block;
-    opacity: 0.6;
+    opacity: 0.13;
     transition: opacity ease-out 0.3s;
     background-color: #ffffff;
-    filter: blur(4px)
+    max-height: 33%;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 0px 2px #7777;
+    border-radius: 4px;
+    z-index: 1;
+  }
+
+  .notion-table_of_contents-block:before {
+    display: block;
+    content: 'Содержание';
+    color: #777;
+    margin: 0.6em 0;
   }
   
   .notion-table_of_contents-block:hover {
