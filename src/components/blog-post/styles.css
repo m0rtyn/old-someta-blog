@@ -36,7 +36,6 @@ article {
     top: 33%;
     right: 0;
     transform: translateY(-66%);
-    overflow: hidden;
     opacity: 0.13;
     transition: opacity ease-out 0.3s;
     background-color: #ffffff;
