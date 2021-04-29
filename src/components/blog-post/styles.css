@@ -62,14 +62,14 @@ article {
   font-size: 3em;
   font-weight: bold;
   margin: 0 1em;
-  /* line-height: 1; */
+  line-height: 1;
   color: black;
   opacity: 1;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   transition: opacity ease-out 0.3s, transform ease-out 0.3s;
 }
 .notion-table_of_contents-block:hover:after {
-  transform: rotate(0deg);
+  transform: rotate(0deg) translateY(0.3em);
   opacity: 0;
 }
 
