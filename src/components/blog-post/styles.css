@@ -1,13 +1,16 @@
+
+article {
+  font-size: 18px;
+}
+
+/* notion-cms styles tweaks */
+
 .notion-cursor-default > div > div > div > div > div > div {
   opacity: 1 !important;
 }
 
 .loading-spinner {
   display: none !important;
-}
-
-article {
-  font-size: 18px;
 }
 
 /* styles for notion table of contents */
@@ -54,4 +57,8 @@ article {
   content: 'Содержание';
   color: #777;
   margin: 0.6em 0;
+}
+
+.notion-image-block {
+  margin: 1em 0;
 }
