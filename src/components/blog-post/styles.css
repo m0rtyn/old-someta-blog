@@ -78,6 +78,10 @@ article {
   content: 'Содержание';
   color: #777;
   margin: 0.6em 0;
+  opacity: 0;
+}
+.notion-table_of_contents-block:hover:before {
+  opacity: 1;
 }
 
 
