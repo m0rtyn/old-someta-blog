@@ -52,12 +52,35 @@ article {
   }
 }
 
+.notion-table_of_contents-block:after {
+  display: block;
+  position: absolute;
+  content: '⃛';
+  top: 0;
+  left: 0;
+  font-family: monospace;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0 1em;
+  /* line-height: 1; */
+  color: black;
+  opacity: 1;
+  transform: rotate(90deg);
+  transition: opacity ease-out 0.3s, transform ease-out 0.3s;
+}
+.notion-table_of_contents-block:hover:after {
+  transform: rotate(0deg);
+  opacity: 0;
+}
+
 .notion-table_of_contents-block:before {
   display: block;
   content: 'Содержание';
   color: #777;
   margin: 0.6em 0;
 }
+
+
 
 .notion-image-block {
   margin: 1em 0;
