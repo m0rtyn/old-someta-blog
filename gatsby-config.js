@@ -81,66 +81,62 @@ module.exports = {
       }
     },
     // `gatsby-plugin-feed-mdx`,
-    {
-      resolve: 'gatsby-plugin-feed-mdx',
-      options: {
-        query: `
-            {
-              site {
-                siteMetadata {
-                  siteTitle
-                  siteDescription
-                  siteUrl
-                  site_url: siteUrl
-                }
-              }
-            }
-          `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) =>
-              allMdx.edges.map(edge => ({
-                ...edge.node.frontmatter,
-                description: edge.node.excerpt,
-                date: edge.node.frontmatter.date,
-                url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-                guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-                custom_elements: [
-                  { 'content:encoded': edge.node.html }
-                ]
-              })),
-            query: `
-              {
-                allMdx(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: 'Такая Мета',
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: '^/',
-            // optional configuration to specify external rss feed, such as feedburner
-            link: 'https://feeds.feedburner.com/someta'
-          }
-        ]
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-feed-mdx',
+    //   options: {
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             siteTitle
+    //             siteDescription
+    //             siteUrl
+    //             site_url: siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     feeds: [
+    //       {
+    //         serialize: ({ query: { site, posts } }) =>
+    //           posts.map(post => ({
+    //             ...post.frontmatter,
+    //             description: post.desc,
+    //             date: post.publish_date.startDate,
+    //             url: `${site.siteMetadata.siteUrl}/${post.url}`,
+    //             guid: `${site.siteMetadata.siteUrl}/${post.slug}`,
+    //             custom_elements: [{ 'content:encoded': post.html }]
+    //           })),
+    //         query: `
+    //           posts(slug: { eq: $slug }) {
+    //             name
+    //             tags
+    //             desc
+    //             content_type
+    //             status
+    //             url
+    //             html
+    //             slug
+    //             cover_image
+    //             publish_date {
+    //               startDate(formatString: "DD MMM YYYY", fromNow: false)
+    //             }
+    //             last_edited_time
+    //           }
+    //         `,
+    //         output: '/rss.xml',
+    //         title: 'Такая Мета',
+    //         // optional configuration to insert feed reference in pages:
+    //         // if `string` is used, it will be used to create RegExp and then test if pathname of
+    //         // current page satisfied this regular expression;
+    //         // if not provided or `undefined`, all pages will have feed reference inserted
+    //         match: '^/',
+    //         // optional configuration to specify external rss feed, such as feedburner
+    //         link: 'https://feeds.feedburner.com/someta'
+    //       }
+    //     ]
+    //   }
+    // },
     // 'gatsby-plugin-robots-txt',
     {
       resolve: 'gatsby-plugin-robots-txt',
