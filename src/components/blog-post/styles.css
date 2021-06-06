@@ -89,3 +89,11 @@ article {
 .notion-image-block {
   margin: 1em 0;
 }
+
+.notion-text-block:first-of-type [data-root="true"]::first-letter {
+  font-size: 3em;
+  padding: 8px;
+  margin-top: 8px;
+  float: left;
+  line-height: 0.33em;
+}
