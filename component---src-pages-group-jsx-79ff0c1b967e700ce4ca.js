@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{H2mt:function(t,n,e){"use strict";e.r(n);var i=e("q1tI"),o=e.n(i),c=e("txSG"),w=e("IcXi");e("qKvR");n.default=function(){return o.a.useEffect((function(){"undefined"!=typeof window&&window.location&&(window.location.href="https://t.me/metaunity")})),Object(c.k)(w.a,null,Object(c.k)("h1",{sx:{fontSize:"72px",textAlign:"center",my:"2em"}},"¯_(ツ)_/¯"))}}}]);
-//# sourceMappingURL=component---src-pages-group-jsx-79ff0c1b967e700ce4ca.js.map
