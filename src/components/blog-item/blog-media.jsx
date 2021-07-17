@@ -14,23 +14,33 @@ export const BlogMedia = ({ item }) => {
     tags,
     publish_date,
     content_type,
-    html,
     desc,
     cover_image,
-    slug
+    slug,
+    url
   } = item;
 
+  const noStyleLink = {
+    display: 'block',
+    textDecoration: 'none',
+    color: 'inherit'
+  };
+
   return (
-    <>
+    <a
+      className="hover-on"
+      rel="noopener noreferrer"
+      target="_blank"
+      href={url}
+      sx={noStyleLink}
+    >
       <CoverImage image={cover_image} slug={slug} />
       <Date date={publish_date?.startDate} />
       <BlogItemType type={content_type} />
       <Title title={name} />
 
       <Description description={desc} />
-      {/* commented to avoid many embed youtube videos */}
-      {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
       <Tags tags={tags} />
-    </>
+    </a>
   );
 };
