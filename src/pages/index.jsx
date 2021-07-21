@@ -4,26 +4,40 @@ import { jsx } from 'theme-ui';
 import { graphql } from 'gatsby';
 import ProjectBanner from 'components/ProjectBanner';
 import BlogItems from 'components/BlogItems';
-import Tags from 'gatsby-theme-chronoblog/src/components/tags';
 import Layout from 'gatsby-theme-chronoblog/src/components/layout';
-
-// import FeedItems from 'gatsby-theme-chronoblog/src/components/feed-items';
+import Button from 'gatsby-theme-chronoblog/src/components/button';
 
 const HomePage = ({ data }) => {
   const { allPosts } = data;
+  const [toShowCount, setShowCount] = React.useState(13);
+
+  const showMorePosts = React.useCallback(
+    () => setShowCount(130),
+    []
+  );
+
+  const buttonStyles = {
+    fontSize: [3, 4],
+    mx: 'auto',
+    my: [3, 4],
+    display: 'block'
+  };
 
   return (
     <Layout>
       <ProjectBanner />
       {/* <Tags /> */}
-      <BlogItems items={allPosts} />
+      <BlogItems items={allPosts} limit={toShowCount} />
 
-      {/* 
-        // old blog post local source
-        <FeedItems
-          filter={(item) => !item.frontmatter.tags.includes('personal')}
-        />
-      */}
+      {toShowCount === 13 ? (
+        <Button
+          onClick={showMorePosts}
+          sx={buttonStyles}
+          type="button"
+        >
+          Показать больше постов
+        </Button>
+      ) : null}
     </Layout>
   );
 };
