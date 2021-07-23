@@ -1,0 +1,25 @@
+.logoTitle{
+  position: relative;
+  font-size: 2em;
+
+  &::after {
+    line-height: 1.3em;
+    font-size: .8em;
+    content: "Такая Мета";
+    background-color: var(--color-light);
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    width: auto;
+    white-space: nowrap;
+    transform: translateX(-50%) translateY(8px);
+    transition: opacity ease-out 0.3s, transform ease-out 0.3s;
+  }
+
+  &:hover, &:focus, &:active{
+    &::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}

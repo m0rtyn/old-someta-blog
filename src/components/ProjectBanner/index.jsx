@@ -5,7 +5,6 @@ import { Box } from '@theme-ui/components';
 import AuthorBanner from 'gatsby-theme-chronoblog/components/author-banner.jsx';
 import SometaLogo from 'components/common/SometaLogo';
 
-
 const ProjectBanner = () => {
   return (
     <AuthorBanner
@@ -17,10 +16,16 @@ const ProjectBanner = () => {
       }}
     >
       <Box
-        sx={{ width: 160, mt: 2, mb: 4, borderRadius: '0' }}
+        sx={{
+          width: 160,
+          mt: 2,
+          mb: 4,
+          borderRadius: '0',
+          textAlign: 'center'
+        }}
         title="So Meta — Такая Мета"
       >
-        <SometaLogo withTitle />
+        <SometaLogo withTitle width="100%" />
       </Box>
     </AuthorBanner>
   );
