@@ -22,6 +22,20 @@ module.exports = {
     ]
   },
   plugins: [
+    // "gatsby-source-notion-database"
+    {
+      resolve: `@conradlin/gatsby-source-notion-database`,
+      options: {
+        sourceConfig: [
+          {
+            name: 'posts',
+            table:
+              'https://www.notion.so/martyns0n/68ece14c9e0a4ceeb652be6f82604c3c?v=c92f3246c4bd47beb7b4794ae42371e9',
+            cacheType: 'html'
+          }
+        ]
+      }
+    },
     'gatsby-alias-imports',
     'gatsby-plugin-postcss',
     // 'gatsby-theme-someta',
@@ -80,63 +94,7 @@ module.exports = {
         shortname: 'mrtnsn'
       }
     },
-    // `gatsby-plugin-feed-mdx`,
-    // {
-    //   resolve: 'gatsby-plugin-feed-mdx',
-    //   options: {
-    //     query: `
-    //       {
-    //         site {
-    //           siteMetadata {
-    //             siteTitle
-    //             siteDescription
-    //             siteUrl
-    //             site_url: siteUrl
-    //           }
-    //         }
-    //       }
-    //     `,
-    //     feeds: [
-    //       {
-    //         serialize: ({ query: { site, posts } }) =>
-    //           posts.map(post => ({
-    //             ...post.frontmatter,
-    //             description: post.desc,
-    //             date: post.publish_date.startDate,
-    //             url: `${site.siteMetadata.siteUrl}/${post.url}`,
-    //             guid: `${site.siteMetadata.siteUrl}/${post.slug}`,
-    //             custom_elements: [{ 'content:encoded': post.html }]
-    //           })),
-    //         query: `
-    //           posts(slug: { eq: $slug }) {
-    //             name
-    //             tags
-    //             desc
-    //             content_type
-    //             status
-    //             url
-    //             html
-    //             slug
-    //             cover_image
-    //             publish_date {
-    //               startDate(formatString: "DD MMM YYYY", fromNow: false)
-    //             }
-    //             last_edited_time
-    //           }
-    //         `,
-    //         output: '/rss.xml',
-    //         title: 'Такая Мета',
-    //         // optional configuration to insert feed reference in pages:
-    //         // if `string` is used, it will be used to create RegExp and then test if pathname of
-    //         // current page satisfied this regular expression;
-    //         // if not provided or `undefined`, all pages will have feed reference inserted
-    //         match: '^/',
-    //         // optional configuration to specify external rss feed, such as feedburner
-    //         link: 'https://feeds.feedburner.com/someta'
-    //       }
-    //     ]
-    //   }
-    // },
+
     // 'gatsby-plugin-robots-txt',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -168,17 +126,69 @@ module.exports = {
         }
       }
     },
-    // "gatsby-source-notion-database"
 
     {
-      resolve: `@conradlin/gatsby-source-notion-database`,
+      resolve: `@theowenyoung/gatsby-plugin-feed`,
       options: {
-        sourceConfig: [
+        query: `
           {
-            name: 'posts',
-            table:
-              'https://www.notion.so/martyns0n/68ece14c9e0a4ceeb652be6f82604c3c?v=c92f3246c4bd47beb7b4794ae42371e9',
-            cacheType: 'html'
+            site {
+              siteMetadata {
+                siteTitle
+                siteDescription
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allPosts } }) =>
+              allPosts.nodes.map(post => ({
+                ...post,
+                description: post.desc,
+                date: post.publish_date.startDate,
+                url: `${site.siteMetadata.siteUrl}/${post.url}`,
+                guid: `${site.siteMetadata.siteUrl}/${post.slug}`,
+                custom_elements: [{ 'content:encoded': post.html }]
+              })),
+            customQuery: async ({ runQuery }) => {
+              // eslint-disable-next-line no-return-await
+              return await runQuery(`{
+                allPosts(
+                  filter: {
+                    status: { eq: true }
+                  }
+                  sort: { fields: [last_edited_time], order: DESC }
+                ) {
+                  nodes {
+                    name
+                    tags
+                    desc
+                    content_type
+                    status
+                    url
+                    html
+                    slug
+                    cover_image
+                    publish_date {
+                      startDate(formatString: "DD MMM YYYY", fromNow: false)
+                    }
+                    last_edited_time
+                  }
+                }
+              }`);
+            },
+            output: '/rss.xml',
+            title: 'Такая Мета',
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: '^/',
+            // optional configuration to specify external rss feed, such as feedburner
+            link: 'https://feeds.feedburner.com/someta'
           }
         ]
       }
