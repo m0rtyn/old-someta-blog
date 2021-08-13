@@ -76,6 +76,7 @@ const ItemTitle = ({ item, linksBeforeTitle = '' }) => {
     item.fields.type === 'links'
   ) {
     return (
+      // eslint-disable-next-line react/jsx-pascal-case
       <Styled.h2 sx={style}>
         {`${linksBeforeTitle}${item.frontmatter.title}`}
       </Styled.h2>
@@ -83,6 +84,7 @@ const ItemTitle = ({ item, linksBeforeTitle = '' }) => {
   }
 
   return (
+    // eslint-disable-next-line react/jsx-pascal-case
     <Styled.h2 sx={style}>{`${item.frontmatter.title}`}</Styled.h2>
   );
 };
