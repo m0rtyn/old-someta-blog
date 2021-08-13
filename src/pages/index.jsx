@@ -5,10 +5,16 @@ import { graphql } from 'gatsby';
 import ProjectBanner from 'components/ProjectBanner';
 import BlogItems from 'components/BlogItems';
 import Layout from 'gatsby-theme-chronoblog/src/components/layout';
-import Button from 'gatsby-theme-chronoblog/src/components/button';
+import { ShowMoreButton } from 'components/show-more-button';
 
 const HomePage = ({ data }) => {
   const { allPosts } = data;
+  const { group: tags, nodes: posts } = allPosts;
+  const adaptedTags = tags.map(tag => ({
+    tagName: tag.fieldValue,
+    tagStat: tag.totalCount
+  }));
+
   const [toShowCount, setShowCount] = React.useState(13);
 
   const showMorePosts = React.useCallback(
@@ -16,28 +22,16 @@ const HomePage = ({ data }) => {
     []
   );
 
-  const buttonStyles = {
-    fontSize: [3, 4],
-    mx: 'auto',
-    my: [3, 4],
-    display: 'block'
-  };
-
   return (
     <Layout>
       <ProjectBanner />
-      {/* <Tags /> */}
-      <BlogItems items={allPosts} limit={toShowCount} />
+      {/* <Tags tags={adaptedTags} /> */}
+      <BlogItems items={posts} limit={toShowCount} />
 
-      {toShowCount === 13 ? (
-        <Button
-          onClick={showMorePosts}
-          sx={buttonStyles}
-          type="button"
-        >
-          Показать больше постов
-        </Button>
-      ) : null}
+      <ShowMoreButton
+        toShowCount={toShowCount}
+        showMorePosts={showMorePosts}
+      />
     </Layout>
   );
 };
@@ -68,6 +62,10 @@ export const query = graphql`
           startDate(formatString: "DD MMM YYYY", fromNow: false)
         }
         last_edited_time
+      }
+      group(field: tags) {
+        fieldValue
+        totalCount
       }
     }
   }

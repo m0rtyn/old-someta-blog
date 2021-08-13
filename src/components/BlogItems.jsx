@@ -10,7 +10,7 @@ const BlogItems = ({ items, limit }) => {
 
   return (
     <>
-      {items.nodes.map((node, index) => {
+      {items.map((node, index) => {
         if (index >= limit) return null;
 
         const key = uid(node);
