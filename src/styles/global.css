@@ -51,3 +51,14 @@ blockquote ul {
 [data-block-id] {
   max-width: 100%!important;
 }
+
+/* NOTE: to fix missing list items markers */
+.pseudoBefore::before {
+  color: var(--pseudoBefore--color);
+  content: var(--pseudoBefore--content);
+  border: var(--pseudoBefore--border);
+  width: var(--pseudoBefore--width);
+  height: var(--pseudoBefore--height);
+  display: var(--pseudoBefore--display) !important;
+  background: var(--pseudoBefore--background);
+}
