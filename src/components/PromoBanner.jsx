@@ -28,7 +28,7 @@ const PromoBanner = () => {
         <ul sx={{ fontSize: 3 }}>
           <li>
             <LinkUI
-              href="https://t.me/metaunity"
+              href="https://t.me/metabaza"
               target="_blank"
               rel="norefferer noopener"
             >
@@ -37,7 +37,7 @@ const PromoBanner = () => {
           </li>
           <li>
             <LinkUI
-              href="https://t.me/metabaza"
+              href="https://t.me/metaunity"
               target="_blank"
               rel="norefferer noopener"
             >
