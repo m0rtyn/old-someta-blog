@@ -147,6 +147,7 @@ module.exports = {
             serialize: ({ query: { site, allPosts } }) =>
               allPosts.nodes.map(post => ({
                 ...post,
+                title: post.name,
                 description: post.desc,
                 date: post.publish_date.startDate,
                 url: `${site.siteMetadata.siteUrl}/${post.url}`,
